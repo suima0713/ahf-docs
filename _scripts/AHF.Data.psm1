@@ -9,6 +9,7 @@ function Get-AHFPrices {
     .DESCRIPTION
     環境変数AHF_DATASOURCEに基づいて内部ETLまたはPolygonから価格データを取得します。
     autoの場合は内部ETL→失敗時にPolygonにフォールバックします。
+    キルスイッチが発動中の場合はInternal ETL専用で動作します。
     
     .PARAMETER Ticker
     銘柄コード（例：WOLF, AAPL）
@@ -32,8 +33,17 @@ function Get-AHFPrices {
         [ValidateSet("day","week","month")][string]$Timespan="day"
     )
     
-    $provider = $env:AHF_DATASOURCE
-    if (-not $provider) { $provider = "auto" }
+    # キルスイッチ状態確認
+    $killSwitchFile = ".\ahf\.killswitch"
+    if (Test-Path $killSwitchFile) {
+        $killInfo = Get-Content $killSwitchFile | ConvertFrom-Json
+        Write-Host "🚨 キルスイッチ発動中: $($killInfo.reason)" -ForegroundColor Red
+        Write-Host "→ Internal ETL専用で動作します" -ForegroundColor Yellow
+        $provider = "internal"
+    } else {
+        $provider = $env:AHF_DATASOURCE
+        if (-not $provider) { $provider = "auto" }
+    }
     
     Write-Host "=== AHF価格データ取得: $Ticker ===" -ForegroundColor Green
     Write-Host "プロバイダ: $provider" -ForegroundColor Yellow
@@ -50,6 +60,12 @@ function Get-AHFPrices {
             throw 
         }
         Write-Warning "内部ETL取得失敗、Polygonにフォールバック: $($_.Exception.Message)"
+    }
+    
+    # キルスイッチ発動中はPolygonを使用しない
+    if (Test-Path $killSwitchFile) {
+        Write-Error "キルスイッチ発動中のため、Polygonデータは取得できません。"
+        throw "キルスイッチ発動中: Polygonアクセス禁止"
     }
     
     Write-Host "Polygonから取得中..." -ForegroundColor Cyan

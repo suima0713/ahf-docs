@@ -1,10 +1,10 @@
-# Add-AHFTicker.ps1 - 銘柄の骨組み作成スクリプト
+# Add-AHFTicker.ps1 - 銘柄の骨組み作成スクリプト（v0.3）
 param(
     [Parameter(Mandatory)][string]$Ticker,
     [string]$Root = ".\ahf"
 )
 
-Write-Host "=== AHF銘柄追加: $Ticker ===" -ForegroundColor Green
+Write-Host "=== AHF銘柄追加（v0.3 - 最小構成）: $Ticker ===" -ForegroundColor Green
 
 # 銘柄ディレクトリ構造作成
 $tickerRoot = Join-Path $Root "tickers\$Ticker"
@@ -33,7 +33,7 @@ $shot = Join-Path $tickerRoot "snapshots\$stamp"
 New-Item -ItemType Directory -Force -Path $shot | Out-Null
 Write-Host "  ✓ $shot" -ForegroundColor Green
 
-# テンプレートからファイルをコピーして銘柄名を更新
+# テンプレートからファイルをコピー（v0.3最小構成）
 $templates = @("A.yaml", "B.yaml", "C.yaml", "facts.md")
 $templatePath = Join-Path $Root "_templates"
 
@@ -43,12 +43,11 @@ foreach ($template in $templates) {
     
     if (Test-Path $sourceFile) {
         $content = Get-Content $sourceFile -Raw -Encoding UTF8
-        # テンプレートのXXXを実際の銘柄名に置換
-        $content = $content -replace "XXX", $Ticker
-        $content = $content -replace "2025-09-13", $stamp
+        # 日付を更新
+        $content = $content -replace "YYYY-MM-DD", $stamp
         
         Set-Content -Path $targetFile -Value $content -Encoding UTF8
-        Write-Host "  ✓ $template (ticker: $Ticker, date: $stamp)" -ForegroundColor Green
+        Write-Host "  ✓ $template (date: $stamp)" -ForegroundColor Green
     }
 }
 
@@ -65,15 +64,11 @@ Write-Host "`n=== カタログ更新が必要 ===" -ForegroundColor Yellow
 Write-Host "以下の行を _catalog/tickers.csv に手動追加してください:" -ForegroundColor Cyan
 Write-Host "$Ticker,<name>,<sector>,USD,12,0.12" -ForegroundColor White
 
-Write-Host "`n=== 銘柄 $Ticker 追加完了 ===" -ForegroundColor Green
+Write-Host "`n=== 銘柄 $Ticker 追加完了（v0.3 - 最小構成） ===" -ForegroundColor Green
 Write-Host "次のステップ:" -ForegroundColor Cyan
-Write-Host "  1. 環境変数設定:" -ForegroundColor White
-Write-Host "     `$env:AHF_DATASOURCE = 'auto'" -ForegroundColor Gray
-Write-Host "     `$env:AHF_INTERNAL_BASEURL = 'https://your-etl-host/api'" -ForegroundColor Gray
-Write-Host "     `$env:AHF_INTERNAL_TOKEN = 'your-bearer-token'" -ForegroundColor Gray
-Write-Host "  2. データ取得:" -ForegroundColor White
-Write-Host "     pwsh .\ahf\_scripts\Get-AHFData.ps1 -Ticker $Ticker -From 2024-01-01 -To 2025-09-13" -ForegroundColor Gray
-Write-Host "  3. facts.md にT1事実を追加" -ForegroundColor White
-Write-Host "  4. A.yaml の該当配列に1レコード追加" -ForegroundColor White
-Write-Host "  5. B.yaml のHorizonとC.yamlの3テストを更新" -ForegroundColor White
-Write-Host "  6. pwsh .\ahf\_scripts\New-AHFSnapshot.ps1 -Ticker $Ticker" -ForegroundColor White
+Write-Host "  1. データ取得: Get-AHFPrices -Ticker $Ticker -From 2024-01-01 -To 2024-12-31" -ForegroundColor White
+Write-Host "  2. 運用ループ（A/B/C）:" -ForegroundColor White
+Write-Host "     A) facts.md にT1逐語を1行 → A.yaml の該当配列へ写経" -ForegroundColor Gray
+Write-Host "     B) B.yaml のHorizon更新／Go/保留/No-Go／KPI×2" -ForegroundColor Gray
+Write-Host "     C) C.yaml の反証3テスト" -ForegroundColor Gray
+Write-Host "  3. スナップショット: New-AHFSnapshot -Ticker $Ticker" -ForegroundColor White

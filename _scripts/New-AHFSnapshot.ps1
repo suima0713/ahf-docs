@@ -1,10 +1,10 @@
-# New-AHFSnapshot.ps1 - スナップショット作成スクリプト（差分を残す）
+# New-AHFSnapshot.ps1 - スナップショット作成スクリプト（v0.3）
 param(
     [Parameter(Mandatory)][string]$Ticker,
     [string]$Root = ".\ahf"
 )
 
-Write-Host "=== AHFスナップショット作成: $Ticker ===" -ForegroundColor Green
+Write-Host "=== AHFスナップショット作成（v0.3 - 最小構成）: $Ticker ===" -ForegroundColor Green
 
 $tickerRoot = Join-Path $Root "tickers\$Ticker"
 $currentPath = Join-Path $tickerRoot "current"
@@ -43,14 +43,14 @@ foreach ($file in $files) {
     Write-Host "  ✓ $($file.Name)" -ForegroundColor Green
 }
 
-# メタデータ更新（日付を今日に更新）
+# メタデータ更新（v0.3最小構成）
 $yamlFiles = @("A.yaml", "B.yaml", "C.yaml")
 foreach ($yamlFile in $yamlFiles) {
     $filePath = Join-Path $shotPath $yamlFile
     if (Test-Path $filePath) {
         $content = Get-Content $filePath -Raw -Encoding UTF8
         # asof日付を更新
-        $content = $content -replace "asof: \d{4}-\d{2}-\d{2}", "asof: $stamp"
+        $content = $content -replace "YYYY-MM-DD", $stamp
         Set-Content -Path $filePath -Value $content -Encoding UTF8
         Write-Host "  ✓ $yamlFile メタデータ更新" -ForegroundColor Green
     }
@@ -90,9 +90,8 @@ if ($previousSnapshots.Count -gt 0) {
 }
 
 # スナップショット完了
-Write-Host "`n=== スナップショット作成完了 ===" -ForegroundColor Green
+Write-Host "`n=== スナップショット作成完了（v0.3 - 最小構成） ===" -ForegroundColor Green
 Write-Host "スナップショット: $shotPath" -ForegroundColor Cyan
 Write-Host "次のステップ:" -ForegroundColor Yellow
-Write-Host "  1. _catalog/horizon_index.csv に手動追記" -ForegroundColor White
-Write-Host "  2. 必要に応じて current/ を最新で更新" -ForegroundColor White
-Write-Host "  3. git add . && git commit -m 'Snapshot $Ticker $stamp'" -ForegroundColor White
+Write-Host "  1. _catalog/horizon_index.csv に手動1行追記（MVP）" -ForegroundColor White
+Write-Host "  2. 運用ループ継続（A/B/C）" -ForegroundColor White
