@@ -1,10 +1,12 @@
-# AHF（Analytic Homeostasis）腐らないディレクトリ
+# AHF（Analytic Homeostasis Framework）v0.2
 
 **合言葉: Facts in, balance out.**
 
 ## 概要
 
 AHFを「腐らないディレクトリ」として設計した最小構成。MVP原則（軽く・速く・戻せる）に従い、過去データは腐らず、鮮度・精度・量・深さをA→B→Cに減衰なく流せる構造。
+
+**v0.2の特徴**: 内部ETL主軸、Polygonフォールバックのデータ戦略で「使い勝手と出力範囲」を最大化。
 
 ## ディレクトリ構造
 
@@ -22,9 +24,17 @@ AHFを「腐らないディレクトリ」として設計した最小構成。MV
 ├── _rules/              # 運用原則（1枚）
 │   └── operating_principles.md
 ├── _ingest/             # 新規素材の置き場（PDF, 8-K等）
+├── _scripts/            # PowerShell自動化スクリプト
+│   ├── AHF.Data.psm1    # データ取得モジュール（v0.2）
+│   ├── Get-AHFData.ps1  # データ取得スクリプト
+│   ├── Add-AHFTicker.ps1
+│   └── New-AHFSnapshot.ps1
 ├── tickers/
 │   └── WOLF/
-│       ├── attachments/     # 一次PDF等（必要ならGit LFS）
+│       ├── attachments/
+│       │   └── providers/    # プロバイダ別データ保存（v0.2）
+│       │       ├── internal/ # 内部ETLデータ
+│       │       └── polygon/  # Polygonデータ
 │       ├── snapshots/
 │       │   └── 2025-09-13/    # "その日の真実"を丸ごと保存
 │       │       ├── A.yaml
@@ -37,6 +47,20 @@ AHFを「腐らないディレクトリ」として設計した最小構成。MV
 
 ## 使用方法
 
+### 環境変数設定（v0.2）
+
+```powershell
+# データソース選択
+$env:AHF_DATASOURCE = "auto"  # internal|polygon|auto
+
+# 内部ETL設定
+$env:AHF_INTERNAL_BASEURL = "https://your-etl-host/api"
+$env:AHF_INTERNAL_TOKEN = "your-bearer-token"
+
+# Polygon設定（フォールバック用）
+$env:POLYGON_API_KEY = "your-polygon-key"
+```
+
 ### 基本実行
 
 ```bash
@@ -47,14 +71,30 @@ python main.py
 python main.py --interactive
 ```
 
+### データ取得（v0.2）
+
+```powershell
+# 価格データ取得（自動プロバイダ選択）
+pwsh .\_scripts\Get-AHFData.ps1 -Ticker WOLF -From 2024-01-01 -To 2025-09-13
+
+# ファンダメンタルデータ取得
+pwsh .\_scripts\Get-AHFData.ps1 -Ticker WOLF -DataType fundamentals -Period quarter
+
+# イベントデータ取得
+pwsh .\_scripts\Get-AHFData.ps1 -Ticker WOLF -DataType events -From 2024-01-01 -To 2025-09-13
+
+# トランスクリプト取得
+pwsh .\_scripts\Get-AHFData.ps1 -Ticker WOLF -DataType transcripts -Period 2025-Q3
+```
+
 ### インタラクティブコマンド
 
 ```
 dashboard          # ダッシュボード表示
 tickers           # 銘柄一覧
 analyze WOLF      # 銘柄分析表示
-new PLTR          # 新規スナップショット作成
 fact WOLF 2025-09-13 T1-P Core① "Revenue up 15%" Revenue  # 事実追加
+scripts           # PowerShellスクリプト一覧
 quit              # 終了
 ```
 
@@ -140,3 +180,6 @@ tests:
 3. **速い**: 3クリック運用
 4. **戻せる**: 差分1行＋KPI×2で即巻き戻し
 5. **検索最強**: タグと日付で一撃検索
+6. **データ戦略v0.2**: 内部ETL主軸、Polygonフォールバック
+7. **使い勝手最大化**: 自動プロバイダ選択で安定性確保
+8. **拡張性**: ファンダメンタル、イベント、トランスクリプト対応

@@ -17,6 +17,16 @@ $paths | ForEach-Object {
     Write-Host "  ✓ $path" -ForegroundColor Green
 }
 
+# providersディレクトリ構造作成（v0.2対応）
+$providerPaths = @("attachments\providers\internal", "attachments\providers\polygon")
+Write-Host "プロバイダディレクトリ構造を作成中..." -ForegroundColor Yellow
+
+$providerPaths | ForEach-Object { 
+    $path = Join-Path $tickerRoot $_
+    New-Item -ItemType Directory -Force -Path $path | Out-Null
+    Write-Host "  ✓ $path" -ForegroundColor Green
+}
+
 # 今日の日付でスナップショット作成
 $stamp = Get-Date -Format "yyyy-MM-dd"
 $shot = Join-Path $tickerRoot "snapshots\$stamp"
@@ -57,7 +67,13 @@ Write-Host "$Ticker,<name>,<sector>,USD,12,0.12" -ForegroundColor White
 
 Write-Host "`n=== 銘柄 $Ticker 追加完了 ===" -ForegroundColor Green
 Write-Host "次のステップ:" -ForegroundColor Cyan
-Write-Host "  1. facts.md にT1事実を追加" -ForegroundColor White
-Write-Host "  2. A.yaml の該当配列に1レコード追加" -ForegroundColor White
-Write-Host "  3. B.yaml のHorizonとC.yamlの3テストを更新" -ForegroundColor White
-Write-Host "  4. pwsh .\ahf\_scripts\New-AHFSnapshot.ps1 -Ticker $Ticker" -ForegroundColor White
+Write-Host "  1. 環境変数設定:" -ForegroundColor White
+Write-Host "     `$env:AHF_DATASOURCE = 'auto'" -ForegroundColor Gray
+Write-Host "     `$env:AHF_INTERNAL_BASEURL = 'https://your-etl-host/api'" -ForegroundColor Gray
+Write-Host "     `$env:AHF_INTERNAL_TOKEN = 'your-bearer-token'" -ForegroundColor Gray
+Write-Host "  2. データ取得:" -ForegroundColor White
+Write-Host "     pwsh .\ahf\_scripts\Get-AHFData.ps1 -Ticker $Ticker -From 2024-01-01 -To 2025-09-13" -ForegroundColor Gray
+Write-Host "  3. facts.md にT1事実を追加" -ForegroundColor White
+Write-Host "  4. A.yaml の該当配列に1レコード追加" -ForegroundColor White
+Write-Host "  5. B.yaml のHorizonとC.yamlの3テストを更新" -ForegroundColor White
+Write-Host "  6. pwsh .\ahf\_scripts\New-AHFSnapshot.ps1 -Ticker $Ticker" -ForegroundColor White
