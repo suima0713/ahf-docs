@@ -1,0 +1,5 @@
+meta: { ticker: XXX, asof: 2025-09-13 }
+tests:
+  time_off:            { result: "維持|後退", note: "④無効化時の影響" }
+  delay_plus_0_5Q:     { result: "維持|後退", note: "t1/t2 を +0.5Q" }
+  alignment_sales_pnl: { result: "整合|逆行", note: "売上↔GM/CF/在庫 の整合" }

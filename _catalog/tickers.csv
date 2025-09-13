@@ -1,0 +1,5 @@
+ticker,name,sector,currency,fye_month,default_wacc
+WOLF,Wolfpack Research,Technology,USD,12,0.12
+PLTR,Palantir Technologies,Technology,USD,12,0.15
+AAPL,Apple Inc,Technology,USD,9,0.10
+TSLA,Tesla Inc,Automotive,USD,12,0.14

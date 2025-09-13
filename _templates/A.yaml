@@ -1,0 +1,13 @@
+meta: { ticker: XXX, asof: 2025-09-13 }
+core:
+  right_shoulder:   # ① 右肩上がり（逐語1行×最大3）
+    - { date: YYYY-MM-DD, tag: T1-F|T1-P|T1-C, verbatim: "...", impact_kpi: ["Revenue"], note: "" }
+  slope_quality:    # ② 傾きの質（ROIC−WACC/FCF/ROIIC）
+    - { date: YYYY-MM-DD, tag: T1-F, verbatim: "...", impact_kpi: ["FCF","ROIC"] }
+  time_profile:     # ③ t1/t2＋制約
+    - { date: YYYY-MM-DD, tag: T1-P, verbatim: "...", impact_kpi: ["GM","Capacity"] }
+time_annotation:    # ④〔Time〕＝"注釈"は一度だけ（外付け係数は使わない）
+  delta_t_quarters: 0        # ±0.25〜0.5Q
+  delta_g_pct: 0             # 必要時のみ ±5–10%
+  window_quarters: 2
+  note: "近接イベント（例：Q3ガイドなど）"

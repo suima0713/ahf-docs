@@ -1,0 +1,32 @@
+# A.yaml（A＝集める／T1のみ・CoreとTimeを"1回だけ"）
+meta:
+  ticker: WOLF
+  asof: 2025-09-13
+
+core:
+  right_shoulder:   # ① 右肩上がり
+    - date: 2025-07-29
+      tag: T1-P
+      verbatim: "Q3 revenue guidance raised to $2.1B-$2.3B from $1.9B-$2.1B"
+      impact_kpi: ["Revenue"]
+      note: "Strong demand in core segments"
+  
+  slope_quality:    # ② 傾きの質（ROIC−WACC/FCF/ROIIC）
+    - date: 2025-08-01
+      tag: T1-F
+      verbatim: "FCF margin improved to 18.5% vs 15.2% prior quarter"
+      impact_kpi: ["FCF","ROIC"]
+      note: "Operational efficiency gains"
+  
+  time_profile:     # ③ t1/t2＋制約
+    - date: 2025-07-31
+      tag: T1-P
+      verbatim: "New facility capacity expansion delayed to Q4 2025"
+      impact_kpi: ["GM","Capacity"]
+      note: "Supply chain constraints"
+
+time_annotation:    # ④ 〔Time〕＝"注釈"を一度だけ
+  delta_t_quarters: -0.5    # ±0.25〜0.5Qの範囲
+  delta_g_pct: 0            # 必要時のみ ±5–10%
+  window_quarters: 2
+  note: "Q3 earnings call scheduled for Oct 15"

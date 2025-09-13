@@ -1,0 +1,13 @@
+meta: { ticker: XXX, asof: 2025-09-13 }
+horizon:
+  six_months:   { verdict: "はい|△|いいえ", delta_irr_bp: 0, note: "" }
+  one_year:     { verdict: "はい|△|いいえ", delta_irr_bp: 0, note: "" }
+  three_years:  { verdict: "はい|△|いいえ", delta_irr_bp: 0, note: "" }
+  five_years:   { verdict: "はい|△|いいえ", delta_irr_bp: 0, note: "" }
+stance:
+  decision: "Go|保留|No-Go"
+  size: "S|M|L"             # ボラで配分
+  reason: "主語＝①②。③は___で検証。"
+kpi_watch:
+  - "KPI①（質：GM/FCF 等）"
+  - "KPI②（実行：在庫/未稼働/入金 等）"
