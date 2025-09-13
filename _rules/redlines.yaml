@@ -1,0 +1,85 @@
+# AHF Redlines - 自動アラートルール
+# 標準ライブラリのみで動作（YAML依存なし）
+# 最小セット：STOP/HOLD/FLAG
+
+redlines:
+  # 上場維持関連
+  listing_deficiency_301:
+    alert_level: "HOLD"
+    banner: "WARNING"
+    trigger: "listing_compliance.deficiency_notice.flag == true"
+    reason: "Item 3.01 deficiency (deadline {cure_deadline})"
+    b_yaml_patch:
+      decision: "保留"
+      size: 0
+      reason: "Redline: LISTING_DEF_301"
+    facts_line: "[{date}][T1-K][Time] \"Notice under Nasdaq Rule 5550(a)(2); {days}-day cure to {cure_deadline}.\" (impact: listing) <{url}>"
+
+  # Going Concern
+  going_concern:
+    alert_level: "HOLD"
+    banner: "WARNING"
+    trigger: "accounting.going_concern == true"
+    reason: "Going concern uncertainty"
+    b_yaml_patch:
+      decision: "保留"
+      size: 0
+      reason: "Redline: GOING_CONCERN"
+    facts_line: "[{date}][T1-F][Core②] \"Going concern uncertainty noted in financial statements.\" (impact: going_concern) <{url}>"
+
+  # ARR vs GAAP売上の乖離
+  arr_revrec_bridge_missing:
+    alert_level: "HOLD"
+    banner: "WARNING"
+    trigger: "arr_revrec_bridge.missing == true"
+    reason: "ARR but RevRec bridge missing"
+    b_yaml_patch:
+      decision: "保留"
+      size: 0
+      reason: "Redline: ARR_REVREC_BRIDGE_MISSING"
+    facts_line: "[{date}][T1-P][Core①] \"ARR ${arr_m} but GAAP revenue bridge not disclosed.\" (impact: revrec_bridge) <{url}>"
+
+  # 逆分割承認済みだが未実施
+  reverse_split_approved_not_effected:
+    alert_level: "HOLD"
+    banner: "WARNING"
+    trigger: "listing_compliance.reverse_split_authorization.flag == true and listing_compliance.reverse_split_effective.flag == false"
+    reason: "Reverse split approved, not effected"
+    b_yaml_patch:
+      decision: "保留"
+      size: 0
+      reason: "Redline: REVERSE_SPLIT_APPROVED_NOT_EFFECTED"
+    facts_line: "[{date}][T1-P][Time] \"EGM approved reverse split {ratio_range}; not yet effected.\" (impact: option_to_cure) <{url}>"
+
+  # 重大な希薄化リスク
+  significant_dilution_risk:
+    alert_level: "HOLD"
+    banner: "WARNING"
+    trigger: "dilution.warrants.potential_dilution >= 0.10"
+    reason: "Significant dilution risk ({dilution_pct}% potential)"
+    b_yaml_patch:
+      decision: "保留"
+      size: 0
+      reason: "Redline: SIGNIFICANT_DILUTION_RISK"
+    facts_line: "[{date}][T1-F][Core②] \"Warrants {warrants_m}M @ ${strike}; potential dilution {dilution_pct}%.\" (impact: dilution_base) <{url}>"
+
+  # 顧客集中リスク
+  customer_concentration_high:
+    alert_level: "FLAG"
+    banner: "INFO"
+    trigger: "customer_concentration.top1_percent >= 20"
+    reason: "High customer concentration ({concentration}% top customer)"
+    b_yaml_patch:
+      decision: "条件付きGo"
+      size: 0
+      reason: "Redline: CUSTOMER_CONCENTRATION_HIGH"
+    facts_line: "[{date}][T1-F][Core②] \"Top customer {concentration}% of revenue.\" (impact: concentration_risk) <{url}>"
+
+# デフォルト設定
+defaults:
+  alert_level: "INFO"
+  banner: "INFO"
+  b_yaml_patch:
+    decision: "Go"
+    size: 1
+    reason: "No redlines triggered"
