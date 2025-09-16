@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AHF v0.4.0 Edge Minimal Schema",
+  "type": "object",
+  "additionalProperties": false,
+  "definitions": {
+    "core_t1": {
+      "description": "Core T1 records (unchanged from existing)",
+      "type": "object",
+      "properties": {
+        "kpi": { "type": "string" },
+        "value": { "type": ["number", "string", "null"] },
+        "unit": { "type": "string" },
+        "asof": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+        "tag": { "type": "string", "enum": ["T1-core", "T1-adj"] },
+        "url": { "type": "string" },
+        "quote": { "type": "string" },
+        "section": { "type": "string" }
+      },
+      "required": ["kpi", "asof", "tag"]
+    },
+    "edge_provisional": {
+      "description": "Edge provisional records with P confidence",
+      "type": "object",
+      "properties": {
+        "kpi": { "type": "string" },
+        "class": { "type": "string", "enum": ["EDGE", "LEAD"] },
+        "p": { "type": "number", "minimum": 0, "maximum": 100 },
+        "status": { "type": "string", "enum": ["Lead", "expected_absent_on_edgar_if_144a", "not_found", "blocked_source"] },
+        "url_index": { "type": "string" },
+        "ttl_days": { "type": "integer", "minimum": 1, "maximum": 365 },
+        "contradiction": { "type": "boolean" },
+        "source_summary": { "type": "string", "maxLength": 35 },
+        "edge_impact": {
+          "type": "object",
+          "properties": {
+            "star_adjustment": { "type": "integer", "minimum": -1, "maximum": 1 },
+            "confidence_adjustment": { "type": "integer", "minimum": -5, "maximum": 5 },
+            "annotation": { "type": "string", "maxLength": 25 }
+          }
+        }
+      },
+      "required": ["kpi", "class", "p", "status", "url_index", "ttl_days", "contradiction"]
+    }
+  },
+  "oneOf": [
+    { "$ref": "#/definitions/core_t1" },
+    { "$ref": "#/definitions/edge_provisional" }
+  ]
+}

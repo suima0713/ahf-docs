@@ -1,0 +1,1355 @@
+{
+  "as_of": "2025-09-15",
+  "CONFIRMED": [
+    {
+      "kpi": "rev_split_q2_total",
+      "value": 300596,
+      "unit": "USD_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "10-Q Note 2"
+    },
+    {
+      "kpi": "rev_split_q2_smartphone",
+      "value": 235084,
+      "unit": "USD_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "10-Q Note 2"
+    },
+    {
+      "kpi": "rev_split_q2_ce_iot_auto",
+      "value": 65331,
+      "unit": "USD_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "10-Q Note 2"
+    },
+    {
+      "kpi": "rev_policy_time_based",
+      "value": "verbatim≤40",
+      "unit": "—",
+      "asof": "FY2024",
+      "tag": "T1-core",
+      "url": "10-K Revenue Recognition"
+    },
+    {
+      "kpi": "rpo_equiv_cash_due_total",
+      "value": 2000000,
+      "unit": "USD_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "MD&A"
+    },
+    {
+      "kpi": "deferred_rev_total",
+      "value": 291922,
+      "unit": "USD_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "MD&A/BS"
+    },
+    {
+      "kpi": "deferred_rev_amort_next12m",
+      "value": 178300,
+      "unit": "USD_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "MD&A"
+    },
+    {
+      "kpi": "revenue_from_opening_defrev_H1",
+      "value": 108500,
+      "unit": "USD_th",
+      "asof": "H1'25",
+      "tag": "T1-core",
+      "url": "Notes"
+    },
+    {
+      "kpi": "guidance_FY25_revenue_mid",
+      "value": 820000,
+      "unit": "USD_th",
+      "asof": "FY2025",
+      "tag": "T1-core",
+      "url": "EX-99.1"
+    },
+    {
+      "kpi": "samsung_dyn_fixed_fee_recurring",
+      "value": 131000,
+      "unit": "USD_th_per_year",
+      "asof": "2025-07-28",
+      "tag": "T1-core",
+      "url": "MD&A/8-K"
+    },
+    {
+      "kpi": "defrev_total",
+      "value": 291922,
+      "unit": "USD_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "MD&A Deferred Revenue表"
+    },
+    {
+      "kpi": "defrev_reduce_next12m",
+      "value": "reduce the deferred revenue balance by $178.3 million over the next twelve months",
+      "unit": "—",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "MD&A Other"
+    },
+    {
+      "kpi": "recognized_from_opening_defrev_H1",
+      "value": 185128,
+      "unit": "USD_th",
+      "asof": "H1'25",
+      "tag": "T1-core",
+      "url": "Note 2 Revenue"
+    },
+    {
+      "kpi": "contracted_cash_due_fixed_price",
+      "value": "nearly $2.0 billion of cash payments due under contracted fixed price agreements",
+      "unit": "—",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "MD&A Liquidity"
+    },
+    {
+      "kpi": "contracted_dyn_fixed_fee_total",
+      "value": 1922425,
+      "unit": "USD_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "Note 2 Contracted Revenue表"
+    },
+    {
+      "kpi": "defrev_amort_schedule_2025H2",
+      "value": 107702,
+      "unit": "USD_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "MD&A Deferred Revenue表"
+    },
+    {
+      "kpi": "deferred_rev_amort_next12m",
+      "value": 178300000,
+      "unit": "USD",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm#idc4d56c4d7e8b4e789c3664d9ac421c43_82"
+    },
+    {
+      "kpi": "contract_liabilities_recognized_q2_3m",
+      "value": 108500,
+      "unit": "USD_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm#i1b8162269a834246a482d7f884f32371_26"
+    },
+    {
+      "kpi": "contract_liabilities_recognized_h1_6m",
+      "value": 185128,
+      "unit": "USD_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm#i1b8162269a834246a482d7f884f32371_26"
+    },
+    {
+      "kpi": "issuer_purchases_avg_price_usd",
+      "value": 114.71,
+      "unit": "USD_per_share",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm#i4313b5e4063f4b46b7a5a3a78044f776_91"
+    },
+    {
+      "kpi": "issuer_purchases_total_cost_usd",
+      "value": 12434000,
+      "unit": "USD",
+      "asof": "2025-06-30",
+      "tag": "T1-adj",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm#i4313b5e4063f4b46b7a5a3a78044f776_91"
+    },
+    {
+      "kpi": "ocf",
+      "value": 145941,
+      "unit": "USD_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm#i1b8162269a834246a482d7f884f32371_17"
+    },
+    {
+      "kpi": "fcf",
+      "value": 141973,
+      "unit": "USD_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000050/ex991q263025pressrelease.htm#d218209d784z"
+    },
+    {
+      "kpi": "fcf_definition",
+      "value": "verbatim≤40",
+      "unit": "—",
+      "asof": "2025-07-31",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000050/ex991q263025pressrelease.htm#d218209d1303z"
+    },
+    {
+      "kpi": "rev_concentration_fy2024_samsung_pct",
+      "value": 31,
+      "unit": "pct",
+      "asof": "2024-12-31",
+      "tag": "T1-core",
+      "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001405495/d1e641eb-1fc1-48a3-9bef-3aa79513ffb4.html#NOTE_15_SEGMENT_INFORMATION_AND_MAJOR_CUSTOMERS"
+    },
+    {
+      "kpi": "rev_concentration_fy2024_apple_pct",
+      "value": 13,
+      "unit": "pct",
+      "asof": "2024-12-31",
+      "tag": "T1-core",
+      "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001405495/d1e641eb-1fc1-48a3-9bef-3aa79513ffb4.html#NOTE_15_SEGMENT_INFORMATION_AND_MAJOR_CUSTOMERS"
+    },
+    {
+      "kpi": "ar_concentration_fy2024_samsung_pct",
+      "value": 54,
+      "unit": "pct",
+      "asof": "2024-12-31",
+      "tag": "T1-core",
+      "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001405495/d1e641eb-1fc1-48a3-9bef-3aa79513ffb4.html#NOTE_15_SEGMENT_INFORMATION_AND_MAJOR_CUSTOMERS"
+    },
+    {
+      "kpi": "wa_basic_shares_q2_2025",
+      "value": 25807,
+      "unit": "shares_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm#i1b8162269a834246a482d7f884f32371_13"
+    },
+    {
+      "kpi": "wa_diluted_shares_q2_2025",
+      "value": 25956,
+      "unit": "shares_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm#i1b8162269a834246a482d7f884f32371_13"
+    },
+    {
+      "kpi": "guidance_FY25_revenue_low",
+      "value": 530,
+      "unit": "USD_m",
+      "asof": "2025-07-31",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000050/ex991q263025pressrelease.htm"
+    },
+    {
+      "kpi": "guidance_FY25_revenue_high",
+      "value": 570,
+      "unit": "USD_m",
+      "asof": "2025-07-31",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000050/ex991q263025pressrelease.htm"
+    },
+    {
+      "kpi": "guidance_FY25_revenue_mid_adj",
+      "value": 550,
+      "unit": "USD_m",
+      "asof": "2025-07-31",
+      "tag": "T1-adj",
+      "url": "calc:(530+570)/2"
+    },
+    {
+      "kpi": "samsung_runrate_recurring",
+      "value": 131000000,
+      "unit": "USD_per_year",
+      "asof": "2025-07-28",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000043/idcc-20250728.htm"
+    },
+    {
+      "kpi": "samsung_catchup_q2",
+      "value": 65500000,
+      "unit": "USD",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm#idcc15a77f32944b09e25d4872c676231_82",
+      "triage_reason": "T1-F（MD&A）優先。T1-Cの$119m（CFO）とスコープ差の可能性"
+    },
+    {
+      "kpi": "contract_liabilities_roll_check",
+      "value": "match",
+      "unit": "—",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm#i1b8162269a834246a482d7f884f32371_26"
+    },
+    {
+      "kpi": "capex",
+      "value": 3968,
+      "unit": "USD_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm#i1b8162269a834246a482d7f884f32371_17"
+    },
+    {
+      "kpi": "fcf_equals_ocf_minus_capex",
+      "value": "match",
+      "unit": "—",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm#i1b8162269a834246a482d7f884f32371_17"
+    },
+    {
+      "kpi": "issuer_purchases_total_cost_column",
+      "value": "absent",
+      "unit": "—",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm#i4313b5e4063f4b46b7a5a3a78044f776_91"
+    },
+    {
+      "kpi": "guidance_FY25_range_low_high",
+      "value": [530000000, 570000000],
+      "unit": "USD",
+      "asof": "FY25",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000050/ex991q263025pressrelease.htm"
+    },
+    {
+      "kpi": "defrev_recognition_policy",
+      "value": "verbatim≤40",
+      "unit": "—",
+      "asof": "2024-12-31",
+      "tag": "T1-core",
+      "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001405495/d1e641eb-1fc1-48a3-9bef-3aa79513ffb4.html#SUMMARY_OF_SIGNIFICANT_ACCOUNTING_POLICIES"
+    },
+    {
+      "kpi": "deferred_rev_current",
+      "value": 179835,
+      "unit": "USD_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm#i1b8162269a834246a482d7f884f32371_11"
+    },
+    {
+      "kpi": "deferred_rev_noncurrent",
+      "value": 112700,
+      "unit": "USD_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm#i1b8162269a834246a482d7f884f32371_11"
+    },
+    {
+      "kpi": "defrev_amort_mechanism",
+      "value": "Revenue recognized that was included in the deferred revenue balance at the beginning of the period",
+      "unit": "—",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm#i1b8162269a834246a482d7f884f32371_26"
+    },
+    {
+      "kpi": "contract_cancellation_refund_risk",
+      "value": "Deferred revenue primarily consists of non-refundable fees received from customers at the inception of a contract...",
+      "unit": "—",
+      "asof": "2024-12-31",
+      "tag": "T1-core",
+      "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001405495/d1e641eb-1fc1-48a3-9bef-3aa79513ffb4.html#SUMMARY_OF_SIGNIFICANT_ACCOUNTING_POLICIES"
+    },
+    {
+      "kpi": "samsung_term_dates",
+      "value": "...runs through December 31, 2030.",
+      "unit": "—",
+      "asof": "2025-07-28",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000043/idcc-20250728.htm"
+    },
+    {
+      "kpi": "samsung_runrate",
+      "value": 131000000,
+      "unit": "USD/yr",
+      "asof": "2025-07-28",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000043/idcc-20250728.htm"
+    },
+    {
+      "kpi": "revenue_disagg_fixed_fee_q2",
+      "value": 158110,
+      "unit": "USD_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm#i1b8162269a834246a482d7f884f32371_26"
+    },
+    {
+      "kpi": "revenue_disagg_royalties_q2",
+      "value": 4220,
+      "unit": "USD_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm#i1b8162269a834246a482d7f884f32371_26"
+    },
+    {
+      "kpi": "revenue_disagg_other_q2",
+      "value": 670,
+      "unit": "USD_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm#i1b8162269a834246a482d7f884f32371_26"
+    },
+    {
+      "kpi": "defrev_ntm_is_revenue",
+      "value": "reduce the deferred revenue balance by $178.3 million over the next twelve months",
+      "unit": "—",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm#idc4d56c4d7e8b4e789c3664d9ac421c43_82",
+      "note": "10-Q本文に明記：NTM $178.3mは売上認識で繰延を減額"
+    },
+    {
+      "kpi": "samsung_catchup_q2",
+      "value": 119000000,
+      "unit": "USD",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000043/idcc-20250728.htm"
+    },
+    {
+      "kpi": "samsung_recurring_q2",
+      "value": 33000000,
+      "unit": "USD",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000043/idcc-20250728.htm"
+    },
+    {
+      "kpi": "samsung_annual_recurring_131m",
+      "value": 131000000,
+      "unit": "USD_per_year",
+      "asof": "2025-07-28",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000043/idcc-20250728.htm"
+    },
+    {
+      "kpi": "ntm_deferred_revenue_amortization",
+      "value": 178300000,
+      "unit": "USD",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm#idc4d56c4d7e8b4e789c3664d9ac421c43_82"
+    },
+    {
+      "kpi": "fixed_fee_dominance_q2",
+      "value": 158110,
+      "unit": "USD_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm#i1b8162269a834246a482d7f884f32371_26"
+    },
+    {
+      "kpi": "royalty_minority_q2",
+      "value": 4220,
+      "unit": "USD_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm#i1b8162269a834246a482d7f884f32371_26"
+    },
+    {
+      "kpi": "strong_fcf_generation_q2",
+      "value": 141973,
+      "unit": "USD_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000050/ex991q263025pressrelease.htm#d218209d784z"
+    },
+    {
+      "kpi": "buyback_capacity_remaining",
+      "value": 275300000,
+      "unit": "USD",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm#idc4d56c4d7e8b4e789c3664d9ac421c43_82"
+    },
+    {
+      "kpi": "samsung_contract_term_2030",
+      "value": "December 31, 2030",
+      "unit": "—",
+      "asof": "2025-07-28",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000043/idcc-20250728.htm"
+    },
+    {
+      "kpi": "guidance_fy25_revenue_range",
+      "value": [530000000, 570000000],
+      "unit": "USD",
+      "asof": "FY25",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000050/ex991q263025pressrelease.htm"
+    },
+    {
+      "kpi": "samsung_annual_recurring_131m_confirmed",
+      "value": 131000000,
+      "unit": "USD_per_year",
+      "asof": "2025-07-28",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000043/idcc-20250728.htm"
+    },
+    {
+      "kpi": "samsung_term_dates",
+      "value": "through December 31, 2030",
+      "unit": "—",
+      "asof": "2025-07-28",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000043/idcc-20250728.htm",
+      "triage_reason": "Updated to 2030 based on latest 10-Q T1-F confirmation"
+    },
+    {
+      "kpi": "revenue_disagg_fixed_fee_q2",
+      "value": 158110,
+      "unit": "USD_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm#i1b8162269a834246a482d7f884f32371_26"
+    },
+    {
+      "kpi": "revenue_disagg_royalties_q2",
+      "value": 4220,
+      "unit": "USD_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm#i1b8162269a834246a482d7f884f32371_26"
+    },
+    {
+      "kpi": "revenue_disagg_other_q2",
+      "value": 670,
+      "unit": "USD_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm#i1b8162269a834246a482d7f884f32371_26"
+    },
+    {
+      "kpi": "defrev_ntm_is_revenue",
+      "value": "not_found",
+      "unit": "—",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm#idc4d56c4d7e8b4e789c3664d9ac421c43_82",
+      "triage_reason": "No single sentence links 'next twelve months' with a revenue recognition verb."
+    },
+    {
+      "kpi": "guidance_fy25_revenue_range_updated",
+      "value": [790000000, 850000000],
+      "unit": "USD",
+      "asof": "2025-07-31",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000050/ex991q263025pressrelease.htm"
+    },
+    {
+      "kpi": "samsung_term_dates_2030_confirmed",
+      "value": "through December 31, 2030",
+      "unit": "—",
+      "asof": "2025-07-28",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000043/idcc-20250728.htm"
+    },
+    {
+      "kpi": "contracted_revenue_total_dynamic_fixed_fee",
+      "value": 1922425000,
+      "unit": "USD",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm"
+    },
+    {
+      "kpi": "contracted_revenue_2026_dynamic_fixed_fee",
+      "value": 425298000,
+      "unit": "USD",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm"
+    },
+    {
+      "kpi": "defrev_ntm_mechanism_confirmed",
+      "value": "amortization recognized in the period",
+      "unit": "—",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm"
+    },
+    {
+      "kpi": "fixed_fee_97pct_q2_confirmed",
+      "value": 97,
+      "unit": "pct",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm",
+      "note": "収益の質（固定優位）：Q2の97%がfixed-feeと会社が明言"
+    },
+    {
+      "kpi": "fy26_bridge_contract_fixedfee",
+      "value": 425298,
+      "unit": "USD_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm"
+    },
+    {
+      "kpi": "deferred_rev_amort_next12m",
+      "value": 178300,
+      "unit": "USD_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm"
+    },
+    {
+      "kpi": "revenue_quality_fixedfee_q2",
+      "value": "97pct_fixed_fee",
+      "unit": "—",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm"
+    },
+    {
+      "kpi": "samsung_q2_recurring",
+      "value": 33000000,
+      "unit": "USD",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "source_label": "Q2 2025 Earnings Call – Q&A (CFO)",
+      "url": "https://seekingalpha.com/article/4807106-interdigital-inc-idcc-q2-2025-earnings-call-transcript"
+    },
+    {
+      "kpi": "samsung_q2_catchup_call",
+      "value": 119000000,
+      "unit": "USD",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "source_label": "Q2 2025 Earnings Call – Q&A (CFO)",
+      "url": "https://seekingalpha.com/article/4807106-interdigital-inc-idcc-q2-2025-earnings-call-transcript",
+      "triage_reason": "スコープ差の可能性（Samsung分/全社分）。既存T1-Fの$65.5m（MD&A）と併記管理"
+    },
+    {
+      "kpi": "licenses_expiring_end_2025_count",
+      "value": 7,
+      "unit": "count",
+      "asof": "2024-12-31",
+      "tag": "T1-core",
+      "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001405495/d1e641eb-1fc1-48a3-9bef-3aa79513ffb4.html",
+      "note": "Includes Samsung TV, Xiaomi; $91.8m (~22%) of 2024 recurring revenue tied to these expiries."
+    },
+    {
+      "kpi": "licenses_expired_2024_not_renewed",
+      "value": 5,
+      "unit": "count",
+      "asof": "2024-12-31",
+      "tag": "T1-core",
+      "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001405495/d1e641eb-1fc1-48a3-9bef-3aa79513ffb4.html",
+      "note": "$17.2m recurring revenue in 2024 from these agreements."
+    },
+    {
+      "kpi": "expiring_2025_recurring_revenue_impact_2024",
+      "value": 91800000,
+      "unit": "USD",
+      "asof": "2024-12-31",
+      "tag": "T1-core",
+      "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001405495/d1e641eb-1fc1-48a3-9bef-3aa79513ffb4.html"
+    },
+    {
+      "kpi": "contracted_revenue_2026_grok_claim",
+      "value": "not_found",
+      "unit": "USD",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm",
+      "triage_reason": "No AUST-compliant verbatim with table/section and direct URL confirming a 2026 total. Grok claims $322,495k but contradicts existing T1-F $425,298k."
+    },
+    {
+      "kpi": "licenses_expiring_end_2025_count_audited",
+      "value": 7,
+      "unit": "count",
+      "asof": "2024-12-31",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000119312525097193/d930574dars.pdf",
+      "note": "Includes Samsung TV and Xiaomi."
+    },
+    {
+      "kpi": "fy26_contracted_revenue",
+      "value": "not_found",
+      "unit": "USD",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm",
+      "triage_reason": "No AUST-compliant verbatim/table URL confirming a 2026 total."
+    },
+    {
+      "kpi": "samsung_q2_recurring_pending",
+      "value": "pending",
+      "unit": "USD",
+      "asof": "2025-06-30",
+      "tag": "T1-C",
+      "url": "TBD",
+      "triage_reason": "Awaiting transcript one-sentence quote with URL/timestamp."
+    },
+    {
+      "kpi": "fy26_contracted_revenue",
+      "value": 425298000,
+      "unit": "USD",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm",
+      "note": "10-Q本文の表に明記（「2026 425,298」）。先の$542,888kは誤り"
+    },
+    {
+      "kpi": "samsung_term_dates_2030_confirmed",
+      "value": "2023-01-01 to 2030-12-31; ~$131m recurring/yr; Q2 catch-up $119m + recurring $33m",
+      "unit": "—",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm",
+      "note": "10-Q本文の一次逐語で確定：契約2023/1/1〜2030/12/31、年$131mリカーリング、Q2は$119m catch-up＋$33m recurring"
+    },
+    {
+      "kpi": "contracted_cash_due_fixed_price_total",
+      "value": "nearly $2.0 billion",
+      "unit": "USD",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm"
+    },
+    {
+      "kpi": "fy26_rpo_q1",
+      "value": 362495,
+      "unit": "USD_th",
+      "asof": "2025-03-31",
+      "tag": "T1-core",
+      "url": "http://pdf.secdatabase.com/2509/0001405495-25-000022.pdf"
+    },
+    {
+      "kpi": "fy26_rpo_q2",
+      "value": 425298,
+      "unit": "USD_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "http://pdf.secdatabase.com/2538/0001405495-25-000051.pdf"
+    },
+    {
+      "kpi": "fy26_rpo_delta",
+      "value": 62803,
+      "unit": "USD_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "calc:425298-362495"
+    },
+    {
+      "kpi": "q1_fixed_fee_revenue",
+      "value": 239768,
+      "unit": "USD_th",
+      "asof": "2025-03-31",
+      "tag": "T1-core",
+      "url": "http://pdf.secdatabase.com/2509/0001405495-25-000022.pdf"
+    },
+    {
+      "kpi": "q1_sales_based_royalties",
+      "value": 1444,
+      "unit": "USD_th",
+      "asof": "2025-03-31",
+      "tag": "T1-core",
+      "url": "http://pdf.secdatabase.com/2509/0001405495-25-000022.pdf"
+    },
+    {
+      "kpi": "q1_other_revenue",
+      "value": 333,
+      "unit": "USD_th",
+      "asof": "2025-03-31",
+      "tag": "T1-core",
+      "url": "http://pdf.secdatabase.com/2509/0001405495-25-000022.pdf"
+    },
+    {
+      "kpi": "q1_fixed_ratio_pct",
+      "value": 99.26,
+      "unit": "pct",
+      "asof": "2025-03-31",
+      "tag": "T1-core",
+      "url": "calc:239768/(239768+1444+333)"
+    },
+    {
+      "kpi": "q2_fixed_fee_revenue",
+      "value": 300596,
+      "unit": "USD_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "http://pdf.secdatabase.com/2538/0001405495-25-000051.pdf"
+    },
+    {
+      "kpi": "q2_sales_based_royalties",
+      "value": 1447,
+      "unit": "USD_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "http://pdf.secdatabase.com/2538/0001405495-25-000051.pdf"
+    },
+    {
+      "kpi": "q2_other_revenue",
+      "value": 554,
+      "unit": "USD_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "http://pdf.secdatabase.com/2538/0001405495-25-000051.pdf"
+    },
+    {
+      "kpi": "q2_fixed_ratio_pct",
+      "value": 99.34,
+      "unit": "pct",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "calc:300596/(300596+1447+554)"
+    },
+    {
+      "kpi": "samsung_q2_revenue_breakdown",
+      "value": "The $152 million of revenue was comprised of $33 million of recurring revenue and $119 million of catch-up revenue",
+      "unit": "—",
+      "asof": "2025-07-31",
+      "tag": "T1-C",
+      "url": "https://www.fool.com/earnings/call-transcripts/2025/07/31/interdigital-idcc-q2-2025-earnings-call-transcri/"
+    },
+    {
+      "kpi": "rpo_q1_row",
+      "value": 362495,
+      "unit": "USD_th",
+      "asof": "2025-03-31",
+      "tag": "T1-core",
+      "url": "http://pdf.secdatabase.com/2509/0001405495-25-000022.pdf"
+    },
+    {
+      "kpi": "rpo_q1_heading",
+      "value": "Based on contracts signed and committed as of March 31, 2025, we expect to recognize the following revenue from dynamic fixed-fee royalty payments over the term of such contracts (in thousands):",
+      "unit": "—",
+      "asof": "2025-03-31",
+      "tag": "T1-core",
+      "url": "http://pdf.secdatabase.com/2509/0001405495-25-000022.pdf"
+    },
+    {
+      "kpi": "rpo_q1_footnote",
+      "value": "(a) This table includes estimated revenue related to our Samsung and Lenovo arbitrations.",
+      "unit": "—",
+      "asof": "2025-03-31",
+      "tag": "T1-core",
+      "url": "http://pdf.secdatabase.com/2509/0001405495-25-000022.pdf"
+    },
+    {
+      "kpi": "rpo_q2_row",
+      "value": 425298,
+      "unit": "USD_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "http://pdf.secdatabase.com/2538/0001405495-25-000051.pdf"
+    },
+    {
+      "kpi": "rpo_q2_heading",
+      "value": "Based on contracts signed and committed as of June 30, 2025, we expect to recognize the following revenue from dynamic fixed-fee royalty payments over the term of such contracts (in thousands):",
+      "unit": "—",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "http://pdf.secdatabase.com/2538/0001405495-25-000051.pdf"
+    },
+    {
+      "kpi": "rpo_q2_footnote",
+      "value": "(a) This table includes estimated revenue related to our Lenovo arbitration.",
+      "unit": "—",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "http://pdf.secdatabase.com/2538/0001405495-25-000051.pdf"
+    },
+    {
+      "kpi": "rev_fixed_q1",
+      "value": 239768,
+      "unit": "USD_th",
+      "asof": "2025-03-31",
+      "tag": "T1-core",
+      "url": "http://pdf.secdatabase.com/2509/0001405495-25-000022.pdf"
+    },
+    {
+      "kpi": "rev_royalty_q1",
+      "value": 1444,
+      "unit": "USD_th",
+      "asof": "2025-03-31",
+      "tag": "T1-core",
+      "url": "http://pdf.secdatabase.com/2509/0001405495-25-000022.pdf"
+    },
+    {
+      "kpi": "rev_other_q1",
+      "value": 333,
+      "unit": "USD_th",
+      "asof": "2025-03-31",
+      "tag": "T1-core",
+      "url": "http://pdf.secdatabase.com/2509/0001405495-25-000022.pdf"
+    },
+    {
+      "kpi": "rev_footnote_q1",
+      "value": "(a) Fixed-fee includes minimum royalty payments and excludes catch-up revenue.",
+      "unit": "—",
+      "asof": "2025-03-31",
+      "tag": "T1-core",
+      "url": "http://pdf.secdatabase.com/2509/0001405495-25-000022.pdf"
+    },
+    {
+      "kpi": "rev_fixed_q2",
+      "value": 300596,
+      "unit": "USD_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "http://pdf.secdatabase.com/2538/0001405495-25-000051.pdf"
+    },
+    {
+      "kpi": "rev_royalty_q2",
+      "value": 1447,
+      "unit": "USD_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "http://pdf.secdatabase.com/2538/0001405495-25-000051.pdf"
+    },
+    {
+      "kpi": "rev_other_q2",
+      "value": 554,
+      "unit": "USD_th",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "http://pdf.secdatabase.com/2538/0001405495-25-000051.pdf"
+    },
+    {
+      "kpi": "rev_footnote_q2",
+      "value": "(a) Fixed-fee includes minimum royalty payments and excludes catch-up revenue.",
+      "unit": "—",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "http://pdf.secdatabase.com/2538/0001405495-25-000051.pdf"
+    },
+    {
+      "kpi": "samsung_qtr_33m",
+      "value": 33000000,
+      "unit": "USD",
+      "asof": "2025-07-31",
+      "tag": "T1-C",
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-interdigital-q2-2025-beats-expectations-stock-rises-93CH-4164085"
+    },
+    {
+      "kpi": "renewal_map",
+      "value": 100000000,
+      "unit": "USD",
+      "asof": "2025-02-15",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1405495/000119312525097193/d930574dars.pdf"
+    },
+    {
+      "kpi": "rpo_fy26_q1_kUSD",
+      "value": 362495,
+      "unit": "USD_th",
+      "asof": "2025-09-15",
+      "tag": "T1-core",
+      "url": "calc:from_t1_facts"
+    },
+    {
+      "kpi": "rpo_fy26_q2_kUSD",
+      "value": 425298,
+      "unit": "USD_th",
+      "asof": "2025-09-15",
+      "tag": "T1-core",
+      "url": "calc:from_t1_facts"
+    },
+    {
+      "kpi": "rpo_fy26_delta_kUSD",
+      "value": 62803,
+      "unit": "USD_th",
+      "asof": "2025-09-15",
+      "tag": "T1-core",
+      "url": "calc:425298-362495"
+    },
+    {
+      "kpi": "fixed_ratio_q1_pct",
+      "value": 99.28,
+      "unit": "pct",
+      "asof": "2025-09-15",
+      "tag": "T1-core",
+      "url": "calc:239768/(239768+1444+333)"
+    },
+    {
+      "kpi": "fixed_ratio_q2_pct",
+      "value": 99.34,
+      "unit": "pct",
+      "asof": "2025-09-15",
+      "tag": "T1-core",
+      "url": "calc:300596/(300596+1447+554)"
+    },
+    {
+      "kpi": "fy26_rpo_q1_kUSD",
+      "value": 362495,
+      "unit": "kUSD",
+      "asof": "2025-03-31",
+      "tag": "T1-core",
+      "url": "http://pdf.secdatabase.com/2509/0001405495-25-000022.pdf"
+    },
+    {
+      "kpi": "fy26_rpo_q2_kUSD",
+      "value": 425298,
+      "unit": "kUSD",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "http://pdf.secdatabase.com/2538/0001405495-25-000051.pdf"
+    },
+    {
+      "kpi": "fy26_rpo_delta_kUSD",
+      "value": 62803,
+      "unit": "kUSD",
+      "asof": "2025-06-30",
+      "tag": "T1-adj",
+      "url": "calc:425298-362495"
+    },
+    {
+      "kpi": "fixed_ratio_q2_pct",
+      "value": 99.34,
+      "unit": "pct",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "http://pdf.secdatabase.com/2538/0001405495-25-000051.pdf"
+    },
+    {
+      "kpi": "fixed_ratio_q1_pct",
+      "value": 99.28,
+      "unit": "pct",
+      "asof": "2025-03-31",
+      "tag": "T1-core",
+      "url": "http://pdf.secdatabase.com/2509/0001405495-25-000022.pdf"
+    },
+    {
+      "kpi": "lenovo_note_q2",
+      "value": "found",
+      "unit": "",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "http://pdf.secdatabase.com/2538/0001405495-25-000051.pdf"
+    },
+    {
+      "kpi": "samsung_recurring_qtr_usd",
+      "value": 33000000,
+      "unit": "USD",
+      "asof": "2025-07-31",
+      "tag": "T1-C",
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-interdigital-q2-2025-beats-expectations-stock-rises-93CH-4164085"
+    }
+  ],
+  "contradiction_set": [
+    {
+      "topic": "Samsung_term",
+      "status": "resolved",
+      "winner_url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000043/idcc-20250728.htm",
+      "note": "2029 vs 2030主張の矛盾：2030/12/31までで確定（最新10-Q T1-Fで上書き解決）。"
+    },
+    {
+      "topic": "revenue_disaggregation_q2_3m",
+      "status": "resolved",
+      "winner_url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000051/idcc-20250630.htm#i1b8162269a834246a482d7f884f32371_26",
+      "note": "Q2売上区分（3M列）：Fixed 158,110/Royalties 4,220/Other 670（USD千）で確定（Note 3表）。"
+    },
+    {
+      "topic": "guidance_FY25_revenue_mid",
+      "status": "resolved",
+      "winner_url": "https://www.sec.gov/Archives/edgar/data/1405495/000140549525000050/ex991q263025pressrelease.htm",
+      "note": "EX-99.1で$530-570M範囲確定"
+    }
+  ],
+  "HYPOTHESES": [
+    {
+      "id": "H1_fy26_floor_reset",
+      "status": "pending",
+      "what_to_watch": ["Note2_FY26_row_delta_kUSD", "Samsung_include_sentence"],
+      "trigger": "FY26_row_qoq_delta_kUSD >= 100000",
+      "falsifier": "FY26_row_qoq_delta_kUSD < 50000 AND call_notes='deferred recognition later'",
+      "kpi_links": ["fy26_contracted_revenue", "samsung_inclusion_in_rpo"]
+    },
+    {
+      "id": "H2_fixed_dominance",
+      "status": "pending",
+      "what_to_watch": ["Note3_fixed_ratio_pct"],
+      "trigger": "fixed_ratio_pct >= 90 for 2 consecutive quarters",
+      "falsifier": "fixed_ratio_pct < 85 for 2 consecutive quarters",
+      "kpi_links": ["rev_fixed_q"]
+    },
+    {
+      "id": "H3_renewals_stepup",
+      "status": "pending",
+      "what_to_watch": ["each_renewal_line_items"],
+      "trigger": ">=2 renewals at flat_to_+10pct",
+      "falsifier": ">=2 key renewals down or lapse",
+      "kpi_links": ["renewal_map"]
+    },
+    {
+      "id": "H4_ev_over_floor_gap",
+      "status": "pending",
+      "what_to_watch": ["ev_usd","floor_range_kUSD","ntm_deferred_recognition_kUSD"],
+      "trigger": "ev_over_floor_low <= peer_p25",
+      "falsifier": "ev_over_floor_high >= peer_p75",
+      "kpi_links": ["ev_over_floor"]
+    },
+    {
+      "id": "H5_seasonality_shrinks",
+      "status": "pending",
+      "what_to_watch": ["call_quote_33m","guidance_mape"],
+      "trigger": "33m cadence repeated 2Q & MAPE↓",
+      "falsifier": "cadence missing 2Q or MAPE↑",
+      "kpi_links": ["samsung_qtr_33m"]
+    }
+  ],
+  "UNCERTAIN": [
+    {
+      "kpi": "samsung_inclusion_in_contracted_table",
+      "value": "not_found",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "triage_reason": "Contracted/Remaining table は Lenovo を含む旨のみ明示。Samsung を含む/含まないの逐語は無し。"
+    },
+    {
+      "kpi": "pricing_reset_clauses",
+      "value": "not_found",
+      "asof": "2025-12-31",
+      "tag": "T1-core",
+      "triage_reason": "10-K/10-Q/8-K/コールに pricing reset / escalator / MFN / minimum guarantee / floor を含む逐語が見当たらず。"
+    },
+    {
+      "kpi": "samsung_recurring_runrate",
+      "value": 33000000,
+      "unit": "USD_per_quarter",
+      "asof": "2025-06-30",
+      "tag": "T1-C",
+      "triage_reason": "決算コール逐語のみで確認。EX-99.1/10-Q/8-K には同文なし。"
+    },
+    {
+      "kpi": "brazil_court_injunction_disney",
+      "status": "T1-lead",
+      "url_index": "ir.interdigital.com",
+      "ttl": "3d",
+      "category": "Legal/Court"
+    },
+    {
+      "kpi": "q2_rev_samsung_hp_license",
+      "status": "T1-lead",
+      "url_index": "SEC EX-99.1",
+      "ttl": "45d",
+      "category": "IR/EX-99.1"
+    },
+    {
+      "kpi": "icc_samsung_royalties",
+      "status": "T1-lead",
+      "url_index": "SEC 8-K",
+      "ttl": "48d",
+      "category": "SEC 8-K"
+    },
+    {
+      "kpi": "hp_multi_year_pc_license",
+      "status": "T1-lead",
+      "url_index": "ir.interdigital.com",
+      "ttl": "160d",
+      "category": "IR/License"
+    },
+    {
+      "kpi": "q1_results_record_arr",
+      "status": "T1-lead",
+      "url_index": "ir.interdigital.com",
+      "ttl": "136d",
+      "category": "IR/Results"
+    },
+    {
+      "kpi": "sports_streaming_research",
+      "status": "T2",
+      "url_index": "ir.interdigital.com",
+      "ttl": "54d",
+      "category": "IR/Research"
+    },
+    {
+      "kpi": "guidance_fy26_revenue_mid",
+      "status": "not_found",
+      "url_index": "EX-99.1_2025-07-31#Outlook"
+    },
+    {
+      "kpi": "rpo_total",
+      "status": "not_found",
+      "url_index": "10-Q_2025-06-30#MD&A/Notes"
+    },
+    {
+      "kpi": "revenue_recognition_hp",
+      "status": "not_found",
+      "url_index": "10-Q_2025-06-30 / 10-K_2024 / 8-K_2025"
+    },
+    {
+      "kpi": "contracted_revenue_total",
+      "status": "not_found",
+      "url_index": "10-Q_2025-06-30#MD&A / 10-K_2024#Notes"
+    },
+    {
+      "kpi": "issuer_purchases_total_cost_usd",
+      "status": "not_found",
+      "url_index": "10-Q_2025-06-30#Item2"
+    },
+    {
+      "kpi": "guidance_FY25_revenue_mid",
+      "status": "contradiction",
+      "url_index": "EX-99.1_2025-07-31#Outlook"
+    },
+    {
+      "kpi": "defrev_amort_is_revenue",
+      "status": "not_found",
+      "url_index": "10-Q_2025-06-30#MD&A_Liquidity"
+    },
+    {
+      "kpi": "defrev_ntm_is_revenue",
+      "status": "not_found",
+      "url_index": "10-Q_2025-06-30#MD&A_Liquidity"
+    },
+    {
+      "kpi": "guidance_fy26_revenue_mid",
+      "status": "not_found",
+      "url_index": "EX-99.1_2025-07-31#Financial_Outlook",
+      "note": "FY26ガイダンス：not_found（EX-99.1はFY25まで）"
+    },
+    {
+      "kpi": "rpo_total",
+      "status": "not_found",
+      "url_index": "10-Q_2025-06-30#MD&A/Notes",
+      "note": "RPO総量／≤12M％（または完全同等指標）"
+    },
+    {
+      "kpi": "rpo_le12m_pct",
+      "status": "not_found",
+      "url_index": "10-Q_2025-06-30#MD&A/Notes",
+      "note": "RPO総量／≤12M％（または完全同等指標）"
+    },
+    {
+      "kpi": "contracted_cash_due_fixed_price_total",
+      "status": "not_found",
+      "url_index": "10-Q_2025-06-30#MD&A/Notes"
+    },
+    {
+      "kpi": "samsung_recurring_q2",
+      "status": "not_found",
+      "url_index": "10-Q_2025-06-30#MD&A_Revenues"
+    },
+    {
+      "kpi": "revenue_recognition_hp",
+      "status": "not_found",
+      "url_index": "10-Q_2025-06-30 / 8-K_2025-04~07",
+      "note": "HP ライセンスの区分・認識タイミング"
+    },
+    {
+      "kpi": "defrev_ntm_is_revenue",
+      "status": "resolved",
+      "url_index": "MD&A – Liquidity and Capital Resources",
+      "note": "10-Q本文に明記：NTM $178.3mは売上認識で繰延を減額（not_found→確定）"
+    },
+    {
+      "kpi": "dynamic_fixed_fee_definition",
+      "status": "not_found",
+      "url_index": "10-K_FY2024#Policies"
+    },
+    {
+      "kpi": "customer_concentration_q2",
+      "status": "not_found",
+      "url_index": "10-Q_2025-06-30#MD&A/Notes"
+    },
+    {
+      "kpi": "samsung_term_cadence_year_end",
+      "status": "contradiction",
+      "url_index": "8-K_2025-07-28",
+      "note": "2030年で確定（最新10-Q T1-Fで解決）"
+    },
+    {
+      "kpi": "revenue_disaggregation_q2",
+      "status": "contradiction",
+      "url_index": "10-Q_2025-06-30#Note3",
+      "note": "Geminiは3M行値(158,110/4,220/670)抽出、Perplexityはnot_found。要一次確認。"
+    },
+    {
+      "kpi": "samsung_inclusion_q2_contracted_table",
+      "status": "not_found",
+      "url_index": "10-Q_2025-06-30#Note2",
+      "note": "Q2脚注ではLenovoのみ言及、Samsung包含/除外の逐語はnot_found"
+    },
+    {
+      "kpi": "h1_trigger_test",
+      "status": "pending",
+      "url_index": "Next_10-Q_2025-09-30#Note2",
+      "note": "次10-QでFY26行+≥$100mかつSamsung脚注言及確認"
+    },
+    {
+      "kpi": "h2_trigger_test",
+      "status": "pending",
+      "url_index": "Next_10-Q_2025-09-30#Note3",
+      "note": "Fixed比率≥90%連続確認、失敗条件<85%"
+    },
+    {
+      "kpi": "samsung_inclusion_in_rpo",
+      "status": "not_found",
+      "url_index": "10-Q_2025-06-30#Note2",
+      "note": "RPO表にSamsung包含/除外の明示的記載なし"
+    },
+    {
+      "kpi": "ntm_deferred_recognition_kUSD",
+      "status": "not_found",
+      "url_index": "10-Q_2025-06-30#MD&A_Liquidity",
+      "note": "NTM繰延償却の具体的スケジュール未開示"
+    },
+    {
+      "kpi": "pricing_clauses_for_renewals",
+      "status": "not_found",
+      "url_index": "10-K_2024#Policies",
+      "note": "更新時の価格改定条項（MFN/floor等）の明示的記載なし"
+    },
+    {
+      "kpi": "samsung_inclusion_in_rpo",
+      "status": "not_found",
+      "url_index": "http://pdf.secdatabase.com/2538/0001405495-25-000051.pdf",
+      "note": "Note 2/3 にSamsungの include/exclude 逐語なし。次10-Qで再確認。"
+    },
+    {
+      "kpi": "H1_floor_reset_trigger",
+      "status": "Lead",
+      "url_index": "next_10Q",
+      "note": "FY26 RPO 行が +>=100,000 kUSD になれば仮説H1を支持。"
+    },
+    {
+      "kpi": "H2_fixed_fee_ge90_two_quarters",
+      "status": "Lead",
+      "url_index": "next_10Q_Note3",
+      "note": "固定比率 >=90% を次四半期も維持したらH2を支持。"
+    },
+    {
+      "kpi": "H3_renewal_items_stream",
+      "status": "Lead",
+      "url_index": "8-K_and_call",
+      "note": "更新/更改を1契約1行で登録（据置～小幅増の確認）。"
+    },
+    {
+      "kpi": "H5_guidance_cadence_33m",
+      "status": "Lead",
+      "url_index": "next_call",
+      "note": "コールで$33m/quarterの定点言及継続とMAPE縮小を確認。"
+    },
+    {
+      "kpi": "ntm_deferred_recognition_kUSD",
+      "status": "not_found",
+      "url_index": "10-Q_Note2_Note3_MD&A",
+      "note": "NTMで繰延収益が売上化する金額の逐語なし。"
+    },
+    {
+      "kpi": "V_mispricing_ev_over_floor",
+      "status": "Lead",
+      "url_index": "market_data",
+      "note": "V（補助）ミスプライシング：EVと実質フロアのギャップ。EV/floor 約14–19x（レンジ）。SamsungのRPO包含不明で解釈幅あり。A/B/Cには未流通。"
+    },
+    {
+      "kpi": "fy26_floor_add_samsung",
+      "status": "Lead",
+      "claim": "$131m/yr recurring (Samsung)",
+      "credence_pct": 75,
+      "url_index": "Q2_call_transcript",
+      "aust_gaps": ["unit_ok","asof_ok","section_missing","url_ok"],
+      "ttl_days": 30,
+      "note": "Samsung $33m/四半期 → credence_pct: 75（複数トランスクリプト一致だがSEC本文なし）"
+    }
+  ]
+}

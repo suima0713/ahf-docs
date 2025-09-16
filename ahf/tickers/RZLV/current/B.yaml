@@ -1,0 +1,18 @@
+horizon:
+  6M: {verdict: "保留", ΔIRRbp: "n/a"}
+  1Y: {verdict: "条件付きGo", ΔIRRbp: "TBD"}
+  3Y: {verdict: "条件付きGo", ΔIRRbp: "TBD"}
+  5Y: {verdict: "保留", ΔIRRbp: "n/a"}
+
+stance:
+  decision: "保留"           # Go/保留/No-Go
+  size: 0                    # Low/Med/High
+  reason: "Redline: LISTING_DEF_301"
+
+kpi_watch: [2項目]
+  - name: "ARR→売上の橋渡し"
+    current: "未開示"
+    target: "繰延収益ロールフォワード定量"
+  - name: "希薄化テーブル固定化"
+    current: "25.35Mワラント"
+    target: "最新basic shares確定"

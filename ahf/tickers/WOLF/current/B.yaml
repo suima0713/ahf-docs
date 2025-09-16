@@ -1,0 +1,18 @@
+horizon:
+  6M: {verdict: "はい", ΔIRRbp: 350}
+  1Y: {verdict: "はい", ΔIRRbp: 420}
+  3Y: {verdict: "△", ΔIRRbp: 120}
+  5Y: {verdict: "△", ΔIRRbp: 50}
+
+stance:
+  decision: "Go"           # Go/保留/No-Go
+  size: "Med"              # Low/Med/High
+  reason: "主語＝①②、③はQ3で検証"
+
+kpi_watch: [2項目]
+  - name: "Non-GAAP GM"
+    current: "TBD"
+    target: ">= 0%"
+  - name: "Effective Date 8-K"
+    current: "TBD"
+    target: "Confirmed"

@@ -1,0 +1,14 @@
+{
+  "as_of": "2025-09-16",
+  "evaluations": [
+    {
+      "id": "guidance_mape",
+      "status": "waiting_future_report",
+      "missing_inputs": [
+        "rev_actual_q3_25"
+      ],
+      "reason": "Q3 2025 10-Q not yet filed as of 2025-09-16",
+      "next_review": "2025-11-15"
+    }
+  ]
+}

@@ -1,9 +1,0 @@
-# C.yaml（C＝反証／3テスト固定）
-meta:
-  ticker: WOLF
-  asof: 2025-09-13
-
-tests:
-  time_off:            { result: "維持", note: "④無効化時も①②でGo維持" }
-  delay_plus_0_5Q:     { result: "後退", note: "t1/t2 +0.5Qで△に後退" }
-  alignment_sales_pnl: { result: "整合", note: "売上↔GM/CF/在庫が整合" }

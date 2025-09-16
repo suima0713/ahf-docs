@@ -1,0 +1,10 @@
+meta:
+  asof: "2025-09-14"
+core:
+  right_shoulder: "RPO $719.7M（≤12M: 61%）; 繰延→売上認識 $211.4M（FY25）; FY26ガイダンス mid $568.7M; Cloud NRR定義あり（IR逐語）; 繰延収益（当流動）$256.994M／（非流動）$2.002M; ARR $485.4M、Cloud NRR 120%; 8-K: 自社株買い$150M承認（存続・無期限）"
+  slope_quality: "RPO>売上、Cloud ARR +29% YoY／NRR=120%で質は良好。ただしARR↔GAAP売上の橋渡し開示なし。"
+  time_profile: "FY25 10-K & 2025-08-12 IR。"
+time_annotation:
+  delta_t_quarters: 0.7
+  window_quarters: 4
+  note: "FY25決算基準（2025-06-30）"

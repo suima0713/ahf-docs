@@ -1,0 +1,77 @@
+[
+  {
+    "description": "Test Input: Customer concentration with total revenue",
+    "input_quote": "Customers accounting for greater than 10% of total revenue were as follows: Customer A ... 35%",
+    "expected_output": {
+      "kpi": "revenue_concentration_total_q2_25_customer_a_pct",
+      "value": 35,
+      "unit": "percent",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/...",
+      "quote": "Customer A ... 35%",
+      "section": "Note 2",
+      "basis": "total",
+      "entity_type": "customer"
+    }
+  },
+  {
+    "description": "Test Input: No customer >10% with fees, net",
+    "input_quote": "No customer accounted for more than 10% of revenue from fees, net ...",
+    "expected_output": {
+      "kpi": "revenue_concentration_fees_net_q2_25_max_pct",
+      "value": null,
+      "unit": "percent",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/...",
+      "quote": "No customer accounted for more than 10% of revenue from fees, net",
+      "section": "Note 2",
+      "basis": "fees_net",
+      "entity_type": "customer",
+      "note": "none_above_10pct"
+    }
+  },
+  {
+    "description": "Test Input: 144A/Reg S offering",
+    "input_quote": "This report ... pursuant to Rule 144A and Regulation S.",
+    "expected_output": {
+      "kpi": "offering_type_q3_25",
+      "value": "144A/RegS_hint",
+      "unit": "text",
+      "asof": "2025-09-02",
+      "tag": "T1-adj",
+      "url": "https://www.sec.gov/...",
+      "quote": "This report ... pursuant to Rule 144A and Regulation S.",
+      "section": "EX-99.1",
+      "offering_type_hint": "144A/RegS_hint"
+    }
+  },
+  {
+    "description": "Test Input: ABS transaction size (should be not_expected_on_edgar_if_144a)",
+    "input_quote": "ABS-15G filed with transaction details (Rule 144A offering)",
+    "expected_output": {
+      "kpi": "abs_transaction_size_usd",
+      "status": "not_expected_on_edgar_if_144a",
+      "url_index": "ABS-15G EX-99.1 with 144A hint",
+      "ttl_days": 14,
+      "note": "144A/Reg S offering - details not expected on EDGAR"
+    }
+  },
+  {
+    "description": "Test Input: Bank partner vs customer distinction",
+    "input_quote": "Bank partner relationships accounted for 25% of platform and referral fees",
+    "expected_output": {
+      "kpi": "revenue_concentration_fees_net_q2_25_bank_partner_pct",
+      "value": 25,
+      "unit": "percent",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/...",
+      "quote": "Bank partner relationships accounted for 25% of platform and referral fees",
+      "section": "Note 2",
+      "basis": "fees_net",
+      "entity_type": "bank_partner"
+    }
+  }
+]

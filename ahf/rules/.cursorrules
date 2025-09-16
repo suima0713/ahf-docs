@@ -1,0 +1,20 @@
+# AHF Project Rules (AUST & Diff/Full)
+
+## Authoring
+- 逐語は **40語以内**、`raw_verbatim` に保存。as-of/Unit/Section/EDGAR直URLを必須化。
+- **T1-core は sec.gov の一次URLのみ**を許可。外部要約/IR/ニュース/格付サイトは禁止。
+- 144A/Reg S が示唆される案件は `status: "not_expected_on_edgar_if_144a"` で管理。
+
+## Data shape
+- 1レコード = KPI スナップショット（`kpi`,`asof`,`value` *or* `status` のどちらか）
+- 追加ディメンションは任意: `period`,`basis`,`customer`
+- メタ: `tag`, `source{url,section}`, `raw_verbatim`, `aliases[]`, `notes[]`
+
+## Output discipline
+- チャット: 差分（added/changed/removed）のみを要約
+- 付録: data/full.latest.json をフルで掲示
+- 「分母/期間」を必ず明記: `basis = "total_revenue"|"fees_net"`, `period = "YYYY-MM-DD_q[1-4]"`
+
+## Safety
+- AUST 違反の出力をしない（リントエラーを尊重）
+- 定量不在時は `status` を使い、推測・補完は禁止

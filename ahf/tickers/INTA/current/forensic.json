@@ -1,0 +1,56 @@
+{
+  "as_of": "2025-09-14",
+  "sources_t1": [
+    "https://www.sec.gov/Archives/edgar/data/1565687/000119312525178936/inta-ex99_1.htm",
+    "https://www.sec.gov/Archives/edgar/data/1565687/000119312525178968/d44790d8k.htm"
+  ],
+  "arr_actual": {
+    "value": 485400000,
+    "unit": "USD ARR",
+    "asof": "2025-06-30",
+    "definition_excerpt": "Cloud NRR = current Cloud ARR / prior period Cloud ARR (cohort).",
+    "t1": { "tag": "T1-P", "date": "2025-08-12", "url": "https://www.sec.gov/Archives/edgar/data/1565687/000119312525178936/inta-ex99_1.htm", "where": "IR release & metrics" }
+  },
+  "revenue_ttm": {
+    "value": 504120000,
+    "unit": "USD",
+    "t1": { "tag": "T1-P", "date": "2025-08-12", "url": "https://www.sec.gov/Archives/edgar/data/1565687/000119312525178936/inta-ex99_1.htm", "where": "Condensed Consolidated Statements of Operations" }
+  },
+  "revrec_policy": {
+    "excerpt": "SaaS revenues recognized ratably; license revenues at a point in time.",
+    "t1": { "tag": "T1-P", "date": "2025-08-12", "url": "https://www.sec.gov/Archives/edgar/data/1565687/000119312525178936/inta-ex99_1.htm", "where": "IR narrative / revenue presentation" }
+  },
+  "deferred_revenue": {
+    "current": { "value": 256994000, "unit": "USD", "t1": { "tag": "T1-P", "date": "2025-08-12", "url": "https://www.sec.gov/Archives/edgar/data/1565687/000119312525178936/inta-ex99_1.htm", "where": "Balance Sheets ($ in thousands)" } },
+    "noncurrent": { "value": 2002000, "unit": "USD", "t1": { "tag": "T1-P", "date": "2025-08-12", "url": "https://www.sec.gov/Archives/edgar/data/1565687/000119312525178936/inta-ex99_1.htm", "where": "Balance Sheets ($ in thousands)" } },
+    "rollforward_excerpt": "Revenue recognized during FY25 from opening contract liability was $211.4M.",
+    "t1": { "tag": "T1-adj", "date": "2025-06-30", "url": "https://www.sec.gov/Archives/edgar/data/1565687/000119312525184080/inta-20250630.htm", "where": "10-K Note 2 – Contract liabilities" }
+  },
+  "customer_concentration": [],
+  "latest_basic_shares_post_event": {
+    "shares": null,
+    "asof": null,
+    "t1": { "tag": "T1-F", "date": null, "url": null, "where": "Cover page (pending T0-U resolution)" }
+  },
+  "capital_actions_since_2025_01_01": [
+    { "type": "repurchase_authorized", "amount_usd": 150000000, "asof": "2025-08-12", "t1": { "tag": "T1-8K", "date": "2025-08-12", "url": "https://www.sec.gov/Archives/edgar/data/1565687/000119312525178968/d44790d8k.htm", "where": "8-K" } }
+  ],
+  "nasdaq_status": {
+    "deficiency_notice": { "flag": null, "rule": null, "notice_date": null, "cure_deadline": null, "excerpt": null, "t1": { "tag": "T1-adj", "date": "2025-09-14", "url": "https://investors.intapp.com/financials/sec-filings/default.aspx", "where": "8-K sweep (no Items 3.01/4.01/4.02)" } }
+  },
+  "auditor_change": { "flag": null, "disagreement_excerpt": null, "t1": { "tag": "T1-8K", "date": null, "url": null, "where": "Item 4.01 (pending sweep)" } },
+  "non_reliance": { "flag": null, "excerpt": null, "t1": { "tag": "T1-8K", "date": null, "url": null, "where": "Item 4.02 (pending sweep)" } },
+  "going_concern": { "flag": null, "excerpt": null, "t1": { "tag": "T1-F", "date": null, "url": null, "where": "Liquidity/Going concern (if applicable)" } },
+  "rpo": {
+    "total": 719700000,
+    "le12m_pct": 61,
+    "t1": {
+      "tag": "T1-adj",
+      "date": "2025-06-30",
+      "url": "https://www.sec.gov/Archives/edgar/data/1565687/000119312525184080/inta-20250630.htm",
+      "where": "10-K Note 2"
+    }
+  },
+  "contradictions": [],
+  "data_gaps": ["RPO note quote", "Contract liabilities opening→recognized quote", "Cover shares quote", "Concentrations note", "8-K negative items sweep"]
+}

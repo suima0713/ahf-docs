@@ -1,0 +1,105 @@
+{
+  "meta": {
+    "asof": "YYYY-MM-DD",
+    "ticker": "",
+    "version": "v0.3"
+  },
+  "time_conclusion_matrix": {
+    "6M": {
+      "verdict": "Hold（Buy on dips）",
+      "t1_basis": "キャッチアップ後、年$131mリカーリングは継続。Q2固定寄与>ロイヤルティ。FY26 mid/RPOは未開示。",
+      "s_q_v_hypothesis": "S高（標準必須特許）× Q中（固定優位・質は良）× V不明（ΔIRRは要試算）",
+      "flip_conditions": "FY26 midが強気、またはRPO≤12M％確定→Buyへ格上げ / 逆にNote3ロール鈍化→Hold-"
+    },
+    "1Y": {
+      "verdict": "Buy（Pilot 1/4）",
+      "t1_basis": "DeferredのNTM消化$178.3m見込み、固定比率の平準寄与。Samsung契約は期間安定。",
+      "s_q_v_hypothesis": "市場が"継続粘着性"をまだ完全織込まず→ΔIRR≥+700bp見込ならPilot可",
+      "flip_conditions": "RPO総量/≤12M％が弱い、またはFY26 mid弱気→Hold後退"
+    },
+    "3Y": {
+      "verdict": "Buy / Hold（状況依存）",
+      "t1_basis": "固定主体でCF安定のはずだが、RPO総量と顧客集中の四半期開示が薄い。",
+      "s_q_v_hypothesis": "需要粘着＋技術非代替が続けばリレーティング余地。",
+      "flip_conditions": "顧客集中>10%の悪化やロール鈍化の持続→Hold/Trim"
+    },
+    "5Y": {
+      "verdict": "Trim バイアス",
+      "t1_basis": "2029年末でSamsung契約満了（端境の再交渉リスクが見え始める）。",
+      "s_q_v_hypothesis": "期待と時間のラップでバリュ上振れ→利確戦略",
+      "flip_conditions": "中期で複数大型ライセンスの再更改T1が先行確定→Hold維持も可"
+    }
+  },
+  "irr_leverage_design": {
+    "structure_quality": {
+      "score": "",
+      "note": "標準必須×広TAM→上限を押し上げる力"
+    },
+    "slope_quality": {
+      "score": "",
+      "note": "固定＞ロイヤルティ＋Note3ロールの維持→ボラ低下×複利性"
+    },
+    "valuation": {
+      "score": "",
+      "note": "ΔIRRはFY26 midとRPO≤12M％で初めて定量閉じる→現状は仮説優位だが"未錠前""
+    }
+  },
+  "flip_t1_conditions": {
+    "6_12M": [
+      "FY26 guidance mid（EX-99.1/Outlook 逐語≤40）",
+      "RPO同等：NTM％ & 総量（MD&A/Note）",
+      "Note3ロール維持（opening→recognized→ending の一致継続）"
+    ],
+    "1_3Y": [
+      "顧客集中>10%の四半期開示（Note/MD&A）",
+      "大型カウンターパーティ更改の8-K（金額・認識）"
+    ],
+    "3_5Y": [
+      "2029満了を跨ぐ再更改or延伸の一次逐語"
+    ]
+  },
+  "decision_gates": {
+    "buy_threshold": "ΔIRR≥+300–500bp",
+    "pilot_threshold": "ΔIRR≥+700bp",
+    "priority_order": "①構造＞②傾き＞③時間＞④注釈"
+  },
+  "action_guidance": {
+    "pilot_buy": "",
+    "size": "",
+    "timing": "",
+    "rationale": ""
+  },
+  "t1_coverage_targets": {
+    "6M": "≥70%",
+    "1Y": "≥80%",
+    "3Y_plus": "≥90%",
+    "note": "件数ではなくKPIを閉じ切る割合"
+  },
+  "idcc_gaps": {
+    "coverage_numerator": "RPO同等の総量（NTM％はNTM償却178.3mで部分充足）",
+    "coverage_denominator": "FY26 mid（EX-99.1/Outlook）",
+    "note3_roll": "contract_liabilities_roll_check=match を維持（質②の担保）"
+  },
+  "immediate_actions": {
+    "rpo_total": {
+      "goal": "contracted_revenue_total or minimum_guarantees_total の単一数値（as-of/単位/節名/直URL）",
+      "fallback": "見つからなければ T1: not_found を逐語で確定（未開示という事実をT1化）"
+    },
+    "fy26_mid": {
+      "goal": "guidance_fy26_revenue_mid（USD、mid抽出）",
+      "fallback": "FY25のみの逐語をT1化し、FY26はnot_foundを確定（分母の空白を明示）"
+    },
+    "note3_roll_audit": {
+      "goal": "opening＋additions−recognized＝ending の式一致",
+      "frequency": "開示更新ごとに継続監査"
+    }
+  },
+  "fixed_guards": {
+    "overlay_separation": "S×Q×Vは別カード固定、本文への逆流禁止",
+    "time_annotation": "B内で一度だけ（例：〔Time〕窓=2Q、Δt=+0.5Q）",
+    "kpi_limit": "2本（例：①Coverage分子=RPO≤12M/総量 ②Note3ロールの一致）",
+    "redlines_auto": "4.02/4.01/3.01/Going Concernは自動でB結論に直結"
+  },
+  "risk_factors": [],
+  "catalysts": []
+}

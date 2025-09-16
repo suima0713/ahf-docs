@@ -1,13 +1,20 @@
 meta:
   asof: YYYY-MM-DD
 
+# A｜材料（T1逐語のみ、≤40語）
 core:
-  right_shoulder: []     # ①右肩上がり
-  slope_quality: []      # ②傾きの質（ROIC−WACC/ROIIC/FCF）
-  time_profile: []       # ③時間
+  right_shoulder: []     # ①右肩上がり（T1逐語のみ）
+  slope_quality: []      # ②傾きの質（T1逐語のみ）
+  time_profile: []       # ③時間（T1逐語のみ）
 
-time_annotation:         # ④カタリスト（一度だけ）
+# ④Time注釈（一度だけ、③の文中に記載）
+time_annotation:         
   delta_t_quarters: 
   delta_g_pct: 
   window_quarters: 
-  note: 
+  note:
+
+# 固定ガード
+# - T1逐語のみ使用（Lead/推論禁止）
+# - 構造①/傾き②/バリュはOverlayに分離
+# - Time注釈は一度のみ 

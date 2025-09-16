@@ -1,0 +1,272 @@
+# AHF (Analytic Homeostasis Framework) - カーソルルール v0.3.2
+# ガイドライン準拠・レッドライン運用対応・パイロット反映
+
+## 基本原則（最優先）
+
+### ChatGPT禁止事項
+- 頼まれていない提案や実装はしない（勝手な拡張禁止）
+- 最小MVPで進め、Chair指示でのみポリッシュ
+- 事実・式・根拠を簡潔に明示（T1のみ）
+- 冗長なコードや資料を勝手に増やさない
+- 文脈・ルールを自動保持
+- タスクは即時回答（将来実行の約束や所要時間の提示は禁止）
+
+## プロジェクト構造
+
+### ディレクトリ構成
+```
+/ahf/
+  _catalog/     # 銘柄カタログ・KPI監視
+  _templates/   # A/B/C.yamlテンプレート
+  _rules/       # レッドライン・運用ルール
+  _ingest/      # データ取り込み
+  _scripts/     # PowerShell/Pythonスクリプト
+  tickers/<TICKER>/
+    attachments/providers/{internal|polygon}/
+    snapshots/YYYY-MM-DD/{A.yaml,B.yaml,C.yaml,facts.md,forensic.json}
+    current/{A.yaml,B.yaml,C.yaml,facts.md,forensic.json,backlog.md,triage.json,impact_cards.json}
+```
+
+### ファイル命名規則
+- スナップショット: `YYYY-MM-DD`形式
+- プロバイダデータ: `prices_YYYY-MM-DD_YYYY-MM-DD.csv`
+- レッドライン: `redlines.yaml`
+- フォレンジック: `forensic.json`
+- バックログ: `backlog.md`
+- トリアージ: `triage.json`
+- インパクトカード: `impact_cards.json`
+
+## データ方針
+
+### プロバイダ優先順位
+1. **Primary**: Internal ETL（価格・イベント・ファンダのSSoT）
+2. **Fallback**: Polygon（価格の欠損補完・スプリット/配当・長期バックフィルのみ）
+
+### 環境変数
+- `AHF_DATASOURCE`: internal | polygon | auto（推奨：auto）
+- `AHF_INTERNAL_BASEURL`: 内部ETLのベースURL
+- `AHF_INTERNAL_TOKEN`: 内部ETLの認証トークン
+- `POLYGON_API_KEY`: Polygon APIキー（任意）
+
+### パリティ検証基準
+- 日次終値の絶対％差 ≤ 0.50%
+- 直近5営業日の累積差 ≤ 1.5%
+- CA日付一致（±1営業日）
+- 失格は昇格不可
+
+### キルスイッチ
+- 7日連続パリティNG または API失敗率>20% → Polygon停止
+- `AHF_DATASOURCE=internal`に強制切り替え
+
+## 新原則（パイロット反映）
+
+### 目的ロック
+- 収集プロンプト冒頭にMission/Success/Fallbackを必須化
+- Mission: このKPIをT1で確定しA/B/Cのどこに効かせるか
+- Success: AUST（as-of, unit, section/table, 逐語≤40語, 直URL）
+- Fallback: SEC→IRミラー/EX-99.*→Counterparty公式（同一事実はT1-adj）→blocked_source/not_found
+
+### AUST採用基準
+- As-of/Unit/Source（節・表ラベル）/逐語≤40語/直URLが揃ったものだけT1採用
+- 一次取得ラダー: SEC EDGAR → Company IR → Counterparty公式
+- 可用性≠事実: EDGAR障害はblocked_source、本文不在はnot_foundと区別
+
+### 新規ファイル（最小追加）
+- **backlog.md**: 非T1の一元プール（U/Leadのワンテーブル）
+- **triage.json**: CONFIRMED（T1）とUNCERTAIN（U）の最小台帳
+- **impact_cards.json**: KPI計算カード（inputs＋exprのみ）
+
+## レッドライン運用
+
+### アラートレベル
+- **STOP**: Item 4.02（非信頼）／Item 4.01（不一致付き監査人交代）
+- **HOLD**: Item 3.01（上場維持欠陥）／Going Concern
+- **FLAG**: ARRあり×橋渡し未開示／逆分割承認のみ／資本行為後basic shares不明
+
+### レッドライン適用フロー
+1. `forensic.json`を更新
+2. `python3 ahf/_scripts/ahf_apply_redlines.py ahf/tickers/<TICKER>/current/forensic.json`
+3. 出力の`B_yaml_patch`を`B.yaml`に反映
+4. `facts.md`に`facts_line`を1行追記
+5. `New-AHFSnapshot`でスナップショット作成
+
+### バナー出力
+- `[CRITICAL|WARNING|INFO]`を先頭に付ける
+- レッドライン適用時は必ずバナー表示
+
+## テンプレート仕様
+
+### A.yaml（材料）
+```yaml
+meta:
+  asof: YYYY-MM-DD
+core:
+  right_shoulder: []     # ①右肩上がり
+  slope_quality: []      # ②傾きの質（ROIC−WACC/ROIIC/FCF）
+  time_profile: []       # ③時間
+time_annotation:         # ④カタリスト（一度だけ）
+  delta_t_quarters: 
+  delta_g_pct: 
+  window_quarters: 
+  note: 
+```
+
+### B.yaml（結論&Horizon&KPI×2）
+```yaml
+horizon:
+  6M: {verdict: "", ΔIRRbp: }
+  1Y: {verdict: "", ΔIRRbp: }
+  3Y: {verdict: "", ΔIRRbp: }
+  5Y: {verdict: "", ΔIRRbp: }
+stance:
+  decision: ""           # Go/保留/No-Go
+  size: ""              # Low/Med/High
+  reason: ""
+kpi_watch: [2項目]
+  - name: ""
+    current: 
+    target: 
+  - name: ""
+    current: 
+    target: 
+```
+
+### C.yaml（反証）
+```yaml
+tests:
+  time_off: ""          # 〔Time〕無効化テスト
+  delay_plus_0_5Q: ""   # t1+0.5Qテスト
+  alignment_sales_pnl: "" # 売上↔GM/CF/在庫の整合
+```
+
+### facts.md（T1逐語）
+```
+[YYYY-MM-DD][T1-F|T1-P|T1-C][Core①|Core②|Core③|Time] "逐語" (impact: KPI) <src>
+```
+- 逐語は本文から／≤40語（見出し・目次不可）
+- タグ規約：T1-F/P/C｜Core①/②/③｜Time（④は一度だけ）
+
+### backlog.md（U/Leadのワンテーブル）
+```
+| id | class=U | KPI/主張 | 現在の根拠≤40語 | ソース | T1化に足りないもの | 次アクション | 関連Impact | unavailability_reason | grace_until |
+```
+- unavailability_reason例：EDGAR_down／rate_limited
+- grace_until：再試行期限（過ぎたら優先度繰上げ）
+
+### triage.json（最小スキーマ）
+```json
+{
+  "as_of": "YYYY-MM-DD",
+  "CONFIRMED": [ { "kpi": "...","value": ...,"unit":"...","asof":"...","tag":"T1-core|T1-adj","url":"..."} ],
+  "UNCERTAIN": [ { "kpi":"...","status":"blocked_source|not_found","url_index":"..."} ]
+}
+```
+
+### impact_cards.json（最小）
+```json
+{
+  "id": "coverage_ratio",
+  "inputs": ["RPO_total","RPO_le12m_pct","Guidance_FY26_total_revenue_mid"],
+  "expr": "(RPO_total*(RPO_le12m_pct/100))/Guidance_FY26_total_revenue_mid",
+  "gates": { "up": ">=0.90", "down": "<0.60" }
+}
+```
+- 評価はCONFIRMEDの入力が全て揃う時だけ実行。揃わなければスキップ（スタンス据置）
+
+## 運用ループ（MVP：3ステップ＋レッドライン適用）
+
+### A｜広く集める
+- 一次ラダー順に取得→T1はfacts.md、非T1はbacklog.mdに1行だけ（散乱禁止）
+- A.yaml（①/②/③）へ写経
+- ④は`time_annotation`に一度だけ
+
+### B｜まとめる
+- Horizon（6M/1Y/3Y/5Y）
+- Go/保留/No-Go
+- KPI×2（質＋実行）
+
+### C｜反証
+- 〔Time〕無効
+- t1+0.5Q
+- 売上↔GM/CF/在庫の整合
+
+### D｜レッドライン適用
+- `forensic.json`を更新
+- `ahf_apply_redlines.py`実行
+- 出力の`B_yaml_patch`を反映
+- `facts.md`に1行追記
+
+## ガードレール
+
+### 禁止事項
+- 外付け係数禁止（④は③の注釈で一回だけ）
+- 出力は常に1ページ（差分1行＋Horizon＋KPI×2）
+- 承認≠実施（逆分割は比率＋発効日でのみ実施扱い）
+- T1本文の逐語を使用（≤40語／見出し不可）
+- ARRはIR発表のみの場合、IFRS/US GAAPへの橋渡しが無ければFLAG
+- 自動通知は既定で行わない（Chair指示があった時のみ設定）
+- EDGAR障害≠事実不在：blocked_sourceとnot_foundを必ず区別
+
+### 投資判定の入口
+- 入る基準：①②が○ かつ ΔIRR ≥ +300–500bp（逆DCF比）
+- Δt依存のみは回避
+- サイズはσで調整（見立ては変えない）
+
+## スクリプト使用例
+
+### 初期化
+```powershell
+pwsh .\ahf\_scripts\New-AHFProject.ps1
+$env:AHF_DATASOURCE="auto"
+$env:AHF_INTERNAL_BASEURL="<url>"
+$env:AHF_INTERNAL_TOKEN="<token>"
+pwsh .\ahf\_scripts\Add-AHFTicker.ps1 -Ticker WOLF
+```
+
+### レッドライン適用
+```bash
+python3 ahf/_scripts/ahf_apply_redlines.py ahf/tickers/RZLV/current/forensic.json
+```
+
+### パリティ検証
+```powershell
+pwsh .\ahf\_scripts\Test-AHFParity.ps1 -Ticker WOLF -From "2024-01-01" -To "2025-09-13"
+```
+
+## コーディング規約
+
+### Python
+- 標準ライブラリのみ使用（YAML依存なし）
+- エラーハンドリング必須
+- ログ出力は日本語
+- 関数名は`apply_redlines`形式
+
+### PowerShell
+- パラメータ検証必須
+- エラーメッセージは日本語
+- 関数名は`Get-AHFPrices`形式
+- 環境変数チェック必須
+
+### ファイル操作
+- UTF-8エンコーディング
+- パス区切りは`/`使用
+- 相対パス優先
+
+## 品質管理
+
+### 3分ルール
+- 3分経過で代替案提案またはClaudeに相談
+- 実用的な「動けばOK」ソリューション重視
+- 進捗報告フォーマット：`3分経過：...`
+
+### テスト要件
+- レッドライン適用テスト必須
+- パリティ検証テスト必須
+- テンプレート整合性チェック必須
+
+## 注意事項
+
+- 全ての説明は日本語で行う
+- カーソルルールは常時遵守
+- 変更時は必ずこのファイルを更新
+- 新しいルール追加時はChair承認必須

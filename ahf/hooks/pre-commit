@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+ROOT="$(git rev-parse --show-toplevel)"
+PY="$ROOT/scripts/validate.py"
+
+# 対象：data/full.latest.json が存在する場合に検証
+if [ -f "$ROOT/data/full.latest.json" ]; then
+  python3 "$PY" "$ROOT/data/full.latest.json"
+fi

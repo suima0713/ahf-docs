@@ -1,0 +1,704 @@
+{
+  "as_of": "2025-09-14",
+  "credence_data": {
+    "fy26_arr_growth_upside": {
+      "claim": "ARR growth acceleration to 15-20%",
+      "credence_pct": 60,
+      "status": "Lead",
+      "url_index": "earnings_call_q4",
+      "aust_gaps": [
+        "unit_ok",
+        "asof_ok",
+        "section_missing",
+        "url_ok"
+      ],
+      "ttl_days": 45,
+      "note": "ARR成長加速の可能性 → credence_pct: 60（コール言及だが具体的数値なし）"
+    }
+  },
+  "shadow_values": {
+    "Deferred_current": {
+      "t1_value": 256994000,
+      "t1_unit": "USD",
+      "t1_asof": "2025-06-30",
+      "t1_tag": "T1-core",
+      "shadow_range": null,
+      "credence_contributions": []
+    },
+    "Deferred_noncurrent": {
+      "t1_value": 2002000,
+      "t1_unit": "USD",
+      "t1_asof": "2025-06-30",
+      "t1_tag": "T1-core",
+      "shadow_range": null,
+      "credence_contributions": []
+    },
+    "Revenue_mix_SaaS": {
+      "t1_value": 331948000,
+      "t1_unit": "USD",
+      "t1_asof": "FY25",
+      "t1_tag": "T1-adj",
+      "shadow_range": {
+        "low": 331948000,
+        "high": 331948021.0,
+        "credence_contribution": 21.0
+      },
+      "credence_contributions": [
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        },
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        }
+      ]
+    },
+    "Revenue_mix_License": {
+      "t1_value": 120024000,
+      "t1_unit": "USD",
+      "t1_asof": "FY25",
+      "t1_tag": "T1-adj",
+      "shadow_range": {
+        "low": 120024000,
+        "high": 120024021.0,
+        "credence_contribution": 21.0
+      },
+      "credence_contributions": [
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        },
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        }
+      ]
+    },
+    "Revenue_mix_ProfessionalServices": {
+      "t1_value": 52148000,
+      "t1_unit": "USD",
+      "t1_asof": "FY25",
+      "t1_tag": "T1-adj",
+      "shadow_range": {
+        "low": 52148000,
+        "high": 52148021.0,
+        "credence_contribution": 21.0
+      },
+      "credence_contributions": [
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        },
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        }
+      ]
+    },
+    "Guidance_FY26_total_revenue_mid": {
+      "t1_value": 568700000,
+      "t1_unit": "USD",
+      "t1_asof": "FY26",
+      "t1_tag": "T1-core",
+      "shadow_range": {
+        "low": 568700000,
+        "high": 568700021.0,
+        "credence_contribution": 21.0
+      },
+      "credence_contributions": [
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        },
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        }
+      ]
+    },
+    "ARR_total": {
+      "t1_value": 485400000,
+      "t1_unit": "USD ARR",
+      "t1_asof": "2025-06-30",
+      "t1_tag": "T1-core",
+      "shadow_range": {
+        "low": 485400000,
+        "high": 485400010.5,
+        "credence_contribution": 10.5
+      },
+      "credence_contributions": [
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        }
+      ]
+    },
+    "ARR_cloud": {
+      "t1_value": 383100000,
+      "t1_unit": "USD ARR",
+      "t1_asof": "2025-06-30",
+      "t1_tag": "T1-core",
+      "shadow_range": {
+        "low": 383100000,
+        "high": 383100010.5,
+        "credence_contribution": 10.5
+      },
+      "credence_contributions": [
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        }
+      ]
+    },
+    "Cloud_NRR_value": {
+      "t1_value": 120,
+      "t1_unit": "%",
+      "t1_asof": "2025-06-30",
+      "t1_tag": "T1-core",
+      "shadow_range": null,
+      "credence_contributions": []
+    },
+    "Buyback_authorization": {
+      "t1_value": 150000000,
+      "t1_unit": "USD",
+      "t1_asof": "2025-08-12",
+      "t1_tag": "T1-adj",
+      "shadow_range": null,
+      "credence_contributions": []
+    },
+    "RPO_total": {
+      "t1_value": 719700000,
+      "t1_unit": "USD",
+      "t1_asof": "2025-06-30",
+      "t1_tag": "T1-core",
+      "shadow_range": null,
+      "credence_contributions": []
+    },
+    "RPO_le12m_pct": {
+      "t1_value": 61,
+      "t1_unit": "%",
+      "t1_asof": "2025-06-30",
+      "t1_tag": "T1-core",
+      "shadow_range": null,
+      "credence_contributions": []
+    },
+    "Guidance_FY26_total_revenue_low": {
+      "t1_value": 566700000,
+      "t1_unit": "USD",
+      "t1_asof": "FY26",
+      "t1_tag": "T1-core",
+      "shadow_range": {
+        "low": 566700000,
+        "high": 566700021.0,
+        "credence_contribution": 21.0
+      },
+      "credence_contributions": [
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        },
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        }
+      ]
+    },
+    "Guidance_FY26_total_revenue_high": {
+      "t1_value": 570700000,
+      "t1_unit": "USD",
+      "t1_asof": "FY26",
+      "t1_tag": "T1-core",
+      "shadow_range": {
+        "low": 570700000,
+        "high": 570700021.0,
+        "credence_contribution": 21.0
+      },
+      "credence_contributions": [
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        },
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        }
+      ]
+    },
+    "Guidance_FY26_nonGAAP_diluted_eps_low": {
+      "t1_value": 1.09,
+      "t1_unit": "USD/share",
+      "t1_asof": "FY26",
+      "t1_tag": "T1-core",
+      "shadow_range": {
+        "low": 1.09,
+        "high": 22.09,
+        "credence_contribution": 21.0
+      },
+      "credence_contributions": [
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        },
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        }
+      ]
+    },
+    "Guidance_FY26_nonGAAP_diluted_eps_high": {
+      "t1_value": 1.13,
+      "t1_unit": "USD/share",
+      "t1_asof": "FY26",
+      "t1_tag": "T1-core",
+      "shadow_range": {
+        "low": 1.13,
+        "high": 22.13,
+        "credence_contribution": 21.0
+      },
+      "credence_contributions": [
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        },
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        }
+      ]
+    },
+    "Guidance_FY26_nonGAAP_diluted_eps_mid": {
+      "t1_value": 1.11,
+      "t1_unit": "USD/share",
+      "t1_asof": "FY26",
+      "t1_tag": "T1-core",
+      "shadow_range": {
+        "low": 1.11,
+        "high": 22.11,
+        "credence_contribution": 21.0
+      },
+      "credence_contributions": [
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        },
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        }
+      ]
+    },
+    "Guidance_FY26_nonGAAP_op_low": {
+      "t1_value": 96000000,
+      "t1_unit": "USD",
+      "t1_asof": "FY26",
+      "t1_tag": "T1-core",
+      "shadow_range": {
+        "low": 96000000,
+        "high": 96000021.0,
+        "credence_contribution": 21.0
+      },
+      "credence_contributions": [
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        },
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        }
+      ]
+    },
+    "Guidance_FY26_nonGAAP_op_high": {
+      "t1_value": 100000000,
+      "t1_unit": "USD",
+      "t1_asof": "FY26",
+      "t1_tag": "T1-core",
+      "shadow_range": {
+        "low": 100000000,
+        "high": 100000021.0,
+        "credence_contribution": 21.0
+      },
+      "credence_contributions": [
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        },
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        }
+      ]
+    },
+    "Guidance_FY26_nonGAAP_op_mid": {
+      "t1_value": 98000000,
+      "t1_unit": "USD",
+      "t1_asof": "FY26",
+      "t1_tag": "T1-core",
+      "shadow_range": {
+        "low": 98000000,
+        "high": 98000021.0,
+        "credence_contribution": 21.0
+      },
+      "credence_contributions": [
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        },
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        }
+      ]
+    },
+    "OCF_FY25": {
+      "t1_value": 123500000,
+      "t1_unit": "USD",
+      "t1_asof": "FY25",
+      "t1_tag": "T1-core",
+      "shadow_range": null,
+      "credence_contributions": []
+    },
+    "FCF_FY25": {
+      "t1_value": 121900000,
+      "t1_unit": "USD",
+      "t1_asof": "FY25",
+      "t1_tag": "T1-core",
+      "shadow_range": null,
+      "credence_contributions": []
+    },
+    "Revenue_SaaS_FY25": {
+      "t1_value": 331948000,
+      "t1_unit": "USD",
+      "t1_asof": "FY25",
+      "t1_tag": "T1-core",
+      "shadow_range": {
+        "low": 331948000,
+        "high": 331948021.0,
+        "credence_contribution": 21.0
+      },
+      "credence_contributions": [
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        },
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        }
+      ]
+    },
+    "Revenue_License_FY25": {
+      "t1_value": 120024000,
+      "t1_unit": "USD",
+      "t1_asof": "FY25",
+      "t1_tag": "T1-core",
+      "shadow_range": {
+        "low": 120024000,
+        "high": 120024021.0,
+        "credence_contribution": 21.0
+      },
+      "credence_contributions": [
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        },
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        }
+      ]
+    },
+    "Revenue_PS_FY25": {
+      "t1_value": 52148000,
+      "t1_unit": "USD",
+      "t1_asof": "FY25",
+      "t1_tag": "T1-core",
+      "shadow_range": {
+        "low": 52148000,
+        "high": 52148021.0,
+        "credence_contribution": 21.0
+      },
+      "credence_contributions": [
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        },
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        }
+      ]
+    },
+    "Guidance_FY26_nonGAAP_op_margin_low": {
+      "t1_value": 16.821,
+      "t1_unit": "%",
+      "t1_asof": "FY26",
+      "t1_tag": "derived",
+      "shadow_range": {
+        "low": 16.821,
+        "high": 37.821,
+        "credence_contribution": 21.0
+      },
+      "credence_contributions": [
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        },
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        }
+      ]
+    },
+    "Guidance_FY26_nonGAAP_op_margin_mid": {
+      "t1_value": 17.232,
+      "t1_unit": "%",
+      "t1_asof": "FY26",
+      "t1_tag": "derived",
+      "shadow_range": {
+        "low": 17.232,
+        "high": 38.232,
+        "credence_contribution": 21.0
+      },
+      "credence_contributions": [
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        },
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        }
+      ]
+    },
+    "Guidance_FY26_nonGAAP_op_margin_high": {
+      "t1_value": 17.646,
+      "t1_unit": "%",
+      "t1_asof": "FY26",
+      "t1_tag": "derived",
+      "shadow_range": {
+        "low": 17.646,
+        "high": 38.646,
+        "credence_contribution": 21.0
+      },
+      "credence_contributions": [
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        },
+        {
+          "kpi": "fy26_arr_growth_upside",
+          "claim": "ARR growth acceleration to 15-20%",
+          "credence_pct": 60,
+          "weighted_value": 10.5
+        }
+      ]
+    },
+    "Buyback_authorization_amount_usd": {
+      "t1_value": 150000000,
+      "t1_unit": "USD",
+      "t1_asof": "2025-08-12",
+      "t1_tag": "T1-core",
+      "shadow_range": null,
+      "credence_contributions": []
+    },
+    "Buyback_no_expiration": {
+      "t1_value": true,
+      "t1_unit": "flag",
+      "t1_asof": "2025-08-12",
+      "t1_tag": "T1-core",
+      "shadow_range": null,
+      "credence_contributions": []
+    },
+    "Buyback_board_approval_date": {
+      "t1_value": "2025-08-07",
+      "t1_unit": "date",
+      "t1_asof": "2025-08-12",
+      "t1_tag": "T1-core",
+      "shadow_range": null,
+      "credence_contributions": []
+    }
+  },
+  "updated_impact_cards": [
+    {
+      "id": "coverage_ratio",
+      "kpi": "RPO≤12M ÷ FY26ガイダンス",
+      "why": "来期売上の\"予約率\"。見通し（B）に直結。",
+      "inputs": [
+        "RPO_total",
+        "RPO_le12m_pct",
+        "Guidance_FY26_total_revenue_mid"
+      ],
+      "expr": "(RPO_total * (RPO_le12m_pct/100)) / Guidance_FY26_total_revenue_mid",
+      "baseline_mode": "calc",
+      "gates": {
+        "up": ">=0.90",
+        "down": "<0.60"
+      },
+      "effect_up": {
+        "stance_shift": "+1ノッチ（検討へ）",
+        "delta_irr_bp": [
+          100,
+          150
+        ]
+      },
+      "effect_down": {
+        "stance_shift": "-1ノッチ（回避）",
+        "delta_irr_bp": [
+          -300,
+          -200
+        ]
+      },
+      "source_keys": [
+        "RPO_total",
+        "RPO_le12m_pct",
+        "Guidance_FY26_total_revenue_mid"
+      ],
+      "tier_hint": "T1-core",
+      "last_updated": "2025-09-14",
+      "shadow_expr": "(RPO_total * (RPO_le12m_pct/100)) / Guidance_FY26_total_revenue_mid + shadow_contributions",
+      "shadow_inputs": [
+        "Guidance_FY26_total_revenue_mid"
+      ],
+      "shadow_note": "T1+U重み付け計算対応"
+    },
+    {
+      "id": "contract_liabilities_roll",
+      "kpi": "期首契約負債→当期認識",
+      "why": "ARR↔GAAPの\"見える化\"。整合の信頼度（A/C）に効く。",
+      "inputs": [
+        "Contract_liabilities_opening_to_recognized"
+      ],
+      "expr": "Contract_liabilities_opening_to_recognized",
+      "baseline_mode": "calc",
+      "gates": {
+        "up": "開示継続 & 同等以上",
+        "down": "開示途絶 or 急減"
+      },
+      "effect_up": {
+        "stance_shift": "0〜+0.5ノッチ",
+        "delta_irr_bp": [
+          50,
+          100
+        ]
+      },
+      "effect_down": {
+        "stance_shift": "0〜-0.5ノッチ",
+        "delta_irr_bp": [
+          -150,
+          -100
+        ]
+      },
+      "tier_hint": "T1-core",
+      "last_updated": "2025-09-14"
+    },
+    {
+      "id": "cloud_nrr",
+      "kpi": "Cloud NRR",
+      "why": "既存深耕の強さ。右肩＆傾き（A）を規定。",
+      "inputs": [
+        "Cloud_NRR_value"
+      ],
+      "expr": "Cloud_NRR_value",
+      "baseline_mode": "calc",
+      "gates": {
+        "up": ">=120",
+        "down": "<115"
+      },
+      "effect_up": {
+        "stance_shift": "0〜+0.5ノッチ",
+        "delta_irr_bp": [
+          25,
+          75
+        ]
+      },
+      "effect_down": {
+        "stance_shift": "0〜-0.5ノッチ",
+        "delta_irr_bp": [
+          -100,
+          -75
+        ]
+      },
+      "source_keys": [
+        "Cloud_NRR_value"
+      ],
+      "tier_hint": "T1-core",
+      "last_updated": "2025-09-14"
+    }
+  ]
+}

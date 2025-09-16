@@ -1,0 +1,114 @@
+# AHF v0.4.0 — Edge最小構成／T1は現状維持
+
+## ChatOps制約（最優先）
+- 非同期禁止・即時回答／重い課題は部分完了で返す
+- AUST厳守のT1のみを「確証」として扱う（従来どおり）
+- 危険は明確拒否＋代替案、不要な往復は最小
+
+## 目的（再定義）
+- **Core＝T1**：下限の安全性を確保（従来どおり）
+- **Edge＝先行仮説**：「確からしさ(P)」付きで並列表示し、意思決定に寄与させる
+
+## レイヤー設計（T1は不変更）
+
+### Core(T1)：既存ルール・様式・AUSTそのまま
+- facts.md：EDGAR逐語のみ（≤40語 / as-of / Unit / Section / 直URL）
+- triage.CONFIRMED：T1のみ（定量JSON）
+
+### Edge(P)：非T1の先行情報
+- 出自の透明化＋確からしさ P と TTL を必須付与
+- 許容ソース：格付機関レポート、相手先IR・規制公開、主要通信社・一次ドキュメント写し
+
+## Edge取り込み基準（シンプル）
+- **採用**：P ≥ 70 かつ contradiction=false
+- **保留（バックログのみ）**：50 ≤ P < 70
+- **破棄**：P < 50 または contradiction=true
+- **1軸あたり Edge掲出は最大2件**
+
+## 表示と評価への影響（最小）
+
+### AHFマトリクス
+- Core行の直下に Edge 行を追加
+- 例：〔Edge: P=74, TTL=7d, Source=KBRA | 要旨≤25字〕
+
+### 星評価
+- Core基準に対し Edgeで ±1★ のみ調整可
+- P≥70で+1★、リスク系は−1★も可（相殺あり、上限5★）
+
+### 確信度(%)
+- Edge採用時に +5pp（強気）/−5pp（弱気） を一度だけ付与
+- 50–95%にクリップ
+
+### 市場織込み度
+- 変更なし（任意）
+
+## 記録（ファイル最小追加なし）
+
+### 既存の箱を流用
+- **facts.md**：T1のみ（従来どおり）
+- **backlog.md**：Edgeもここに記載（class=EDGE/LEAD を使用）
+- **triage.json**：
+  - CONFIRMED：T1のみ（従来どおり）
+  - UNCERTAIN：Edge/Leadを格納（最小拡張）
+
+### triage.json UNCERTAIN拡張例
+```json
+{
+  "kpi": "...",
+  "class": "EDGE",
+  "p": 74,
+  "status": "Lead",
+  "url_index": "...",
+  "ttl_days": 7,
+  "contradiction": false
+}
+```
+
+### A/B/C.yaml
+- 本文はCore中心、各軸の末尾に 〔Edge: …〕 を1行追記
+
+## ルール補足（誤検知抑制の要点のみ）
+
+### 144A/Reg S示唆
+- 一次で確認できる場合：EDGARに公募様式が無いのは構造上合理
+- → status: "expected_absent_on_edgar_if_144a" を使い not_foundにしない
+
+### 障害と不在の区別
+- blocked_source（障害）と not_found（本文不在）を区別（従来どおり）
+
+## オペレーション（MVP）
+
+### E0-UL取込
+- 広く収集 → backlog.md／triage.json(UNCERTAIN) に class: EDGE/LEAD で入れる（P付与）
+
+### T1確証
+- 従来どおり facts.md／triage.json(CONFIRMED)
+
+### ページ生成
+- A/B/CはCoreを主、各軸末尾に 〔Edge: P/TTL/要旨〕 を最大2件
+
+## カーソル実装ヒント（最小）
+
+### 収集プロンプト冒頭固定文
+```
+Mission: [具体的なKPI探索目標]
+Success: [AUST準拠のT1確定 + Edge先行情報のP採点]
+Fallback: [T1不在時の代替探索方針]
+```
+
+### Edge判定ワンライナー
+```
+IF P≥70 AND contradiction=false THEN surface_in_matrix(±1★, ±5pp, annotate Edge); ELSE backlog_only
+```
+
+### P採点の簡易ガイド
+- 出自(40%)×一致性/整合(40%)×鮮度(20%)
+
+## 許容ソース（例）
+- 格付機関：KBRA/S&P/Moody's/Fitch/DBRS
+- 相手先IR：Company IR/Investor Relations/Earnings Call
+- 規制公開：SEC/FDIC/OCC/Federal Reserve/CFPB
+- 主要通信社：Reuters/Bloomberg/WSJ/FT
+- 一次ドキュメント：Official Document/Filing/Press Release
+
+これで、T1は手を付けずに、先行エッジを軽量・明示・定量影響つきで載せられます。

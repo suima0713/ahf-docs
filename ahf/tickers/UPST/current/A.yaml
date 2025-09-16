@@ -1,0 +1,26 @@
+meta:
+  asof: 2025-09-16
+core:
+  right_shoulder: 
+    - "Q3 2024 guidance $280M (T1確定)"
+    - "Warehouse capacity $475M personal/$100M small dollar/$50M auto (T1確定)"
+    - "0% convertible bond $690M issued (T1確定)"
+    - "Warehouse maturity extensions: Auto Trust 2→2026-08-08, Loan Trust→2028-06-15 (T1確定)"
+  slope_quality: 
+    - "Fee revenue concentration 58% in single segment (T1確定)"
+    - "Capital expenditures $0.115M for Q3 (T1確定)"
+    - "Maximum potential loss $660.2M disclosed (T1確定)"
+    - "Loan Trust margin reduced from 2.8% to 2.4% (T1確定)"
+    - "Small Dollar Loan Trust covenant waiver obtained 2025-07-14 (T1確定)"
+    - "Loans at FV inventory buildup: FY24 $806.3M → Q2'25 $1,019.5M (+26.4%) (T1確定)"
+    - "Q1→Q2 loans increase $67.8M matches CF cash out, confirming inventory rotation delay (T1確定)"
+  time_profile: 
+    - "2024 Q3: Revenue guidance and funding activities"
+    - "2025 H1: Operating cash flow negative $133.6M with inventory buildup"
+    - "2025 Q2: Warehouse maturity extensions and margin adjustments"
+    - "2025 Q2: Loans at FV inventory buildup +26.4% YoY, rotation delay confirmed"
+time_annotation:         # ④カタリスト（一度だけ）
+  delta_t_quarters: 6
+  delta_g_pct: 10
+  window_quarters: 4
+  note: "Forward-flow and warehouse covenant quantitative terms resolution"

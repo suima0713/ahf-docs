@@ -1,0 +1,59 @@
+[
+  {
+    "kpi": "revenue_concentration_total_q2_25_customer_a_pct",
+    "value": 35,
+    "unit": "percent",
+    "asof": "2025-06-30",
+    "tag": "T1-core",
+    "url": "https://www.sec.gov/Archives/edgar/data/1234567/000123456725000001/upst-10q_20250630.htm",
+    "quote": "Customer A accounted for 35% of total revenue",
+    "section": "Note 2",
+    "basis": "total",
+    "entity_type": "customer"
+  },
+  {
+    "kpi": "revenue_concentration_fees_net_q2_25_max_pct",
+    "value": null,
+    "unit": "percent",
+    "asof": "2025-06-30",
+    "tag": "T1-core",
+    "url": "https://www.sec.gov/Archives/edgar/data/1234567/000123456725000001/upst-10q_20250630.htm",
+    "quote": "No customer accounted for more than 10% of revenue from fees, net",
+    "section": "Note 2",
+    "basis": "fees_net",
+    "entity_type": "customer",
+    "note": "none_above_10pct"
+  },
+  {
+    "kpi": "offering_type_q3_25",
+    "value": "144A/RegS_hint",
+    "unit": "text",
+    "asof": "2025-09-02",
+    "tag": "T1-adj",
+    "url": "https://www.sec.gov/Archives/edgar/data/1234567/000123456725000001/upst-abs15g_20250902.htm",
+    "quote": "This report is filed pursuant to Rule 144A and Regulation S",
+    "section": "EX-99.1",
+    "offering_type_hint": "144A/RegS_hint"
+  },
+  {
+    "kpi": "abs_transaction_size_usd",
+    "status": "not_expected_on_edgar_if_144a",
+    "url_index": "ABS-15G EX-99.1 with 144A hint",
+    "ttl_days": 14,
+    "note": "144A/Reg S offering - details not expected on EDGAR"
+  },
+  {
+    "kpi": "abs_class_a_size_usd",
+    "status": "not_expected_on_edgar_if_144a",
+    "url_index": "ABS-15G EX-99.1 with 144A hint",
+    "ttl_days": 14,
+    "note": "144A/Reg S offering - details not expected on EDGAR"
+  },
+  {
+    "kpi": "abs_closing_date",
+    "status": "not_expected_on_edgar_if_144a",
+    "url_index": "ABS-15G EX-99.1 with 144A hint",
+    "ttl_days": 14,
+    "note": "144A/Reg S offering - details not expected on EDGAR"
+  }
+]

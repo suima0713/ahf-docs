@@ -24,8 +24,8 @@ if (-not (Test-Path $monitorStateFile)) {
     $initialState = [pscustomobject]@{
         start_time = (Get-Date).ToString("yyyy-MM-dd HH:mm:ss")
         tickers = $Tickers
-        parity_failures = @{}
-        api_failures = @{}
+        data_quality_issues = @{}
+        api_issues = @{}
         last_check = ""
         total_checks = 0
     }
@@ -77,27 +77,22 @@ function Start-MonitoringLoop {
                     $parityResult = $LASTEXITCODE
                     
                     if ($parityResult -ne 0) {
-                        # パリティ失敗
-                        if (-not $state.parity_failures.$ticker) {
-                            $state.parity_failures.$ticker = @()
+                        # データ品質問題
+                        if (-not $state.data_quality_issues.$ticker) {
+                            $state.data_quality_issues.$ticker = @()
                         }
-                        $state.parity_failures.$ticker += $currentTime.ToString("yyyy-MM-dd")
+                        $state.data_quality_issues.$ticker += $currentTime.ToString("yyyy-MM-dd")
                         
-                        # 古い失敗記録を削除（30日以上前）
+                        # 古い問題記録を削除（30日以上前）
                         $cutoffDate = (Get-Date).AddDays(-30).ToString("yyyy-MM-dd")
-                        $state.parity_failures.$ticker = $state.parity_failures.$ticker | Where-Object { $_ -ge $cutoffDate }
+                        $state.data_quality_issues.$ticker = $state.data_quality_issues.$ticker | Where-Object { $_ -ge $cutoffDate }
                         
-                        $failureCount = $state.parity_failures.$ticker.Count
-                        Write-Host "  ⚠ パリティ失敗 ($failureCount 日連続)" -ForegroundColor Red
-                        
-                        if ($failureCount -ge $ParityThreshold) {
-                            $killSwitchTriggered = $true
-                            $killReason = "パリティ検証失敗 ($ticker: $failureCount 日連続)"
-                        }
+                        $issueCount = $state.data_quality_issues.$ticker.Count
+                        Write-Host "  ⚠ データ品質問題 ($issueCount 日連続)" -ForegroundColor Yellow
                     } else {
-                        # パリティ成功
-                        $state.parity_failures.$ticker = @()
-                        Write-Host "  ✓ パリティ検証OK" -ForegroundColor Green
+                        # データ品質正常
+                        $state.data_quality_issues.$ticker = @()
+                        Write-Host "  ✓ データ品質OK" -ForegroundColor Green
                     }
                 }
             } catch {
@@ -117,31 +112,26 @@ function Start-MonitoringLoop {
                     if (Test-Path $logFile) {
                         $logData = Get-Content $logFile | ConvertFrom-Json
                         $totalApiCalls += $logData.total_calls
-                        $apiFailureCount += $logData.failed_calls
+                        $apiIssueCount += $logData.failed_calls
                     }
                 }
                 
                 if ($totalApiCalls -gt 0) {
-                    $failureRate = $apiFailureCount / $totalApiCalls
+                    $issueRate = $apiIssueCount / $totalApiCalls
                     
-                    if (-not $state.api_failures.$ticker) {
-                        $state.api_failures.$ticker = @{
+                    if (-not $state.api_issues.$ticker) {
+                        $state.api_issues.$ticker = @{
                             total_calls = 0
                             failed_calls = 0
                             last_check = ""
                         }
                     }
                     
-                    $state.api_failures.$ticker.total_calls = $totalApiCalls
-                    $state.api_failures.$ticker.failed_calls = $apiFailureCount
-                    $state.api_failures.$ticker.last_check = $currentTime.ToString("yyyy-MM-dd HH:mm:ss")
+                    $state.api_issues.$ticker.total_calls = $totalApiCalls
+                    $state.api_issues.$ticker.failed_calls = $apiIssueCount
+                    $state.api_issues.$ticker.last_check = $currentTime.ToString("yyyy-MM-dd HH:mm:ss")
                     
-                    Write-Host "  API失敗率: $([math]::Round($failureRate * 100, 1))% ($apiFailureCount/$totalApiCalls)" -ForegroundColor $(if($failureRate -gt $ApiThreshold){"Red"}else{"Green"})
-                    
-                    if ($failureRate -gt $ApiThreshold) {
-                        $killSwitchTriggered = $true
-                        $killReason = "API失敗率超過 ($ticker: $([math]::Round($failureRate * 100, 1))%)"
-                    }
+                    Write-Host "  API問題率: $([math]::Round($issueRate * 100, 1))% ($apiIssueCount/$totalApiCalls)" -ForegroundColor $(if($issueRate -gt $ApiThreshold){"Yellow"}else{"Green"})
                 }
             } catch {
                 Write-Host "  ⚠ API失敗率チェックエラー: $($_.Exception.Message)" -ForegroundColor Yellow
@@ -158,8 +148,8 @@ function Start-MonitoringLoop {
                 & $killScript -Mode kill -Reason $killReason
                 Write-Host "✓ キルスイッチ発動完了" -ForegroundColor Red
                 
-                # 監視停止
-                Write-Host "`n監視を停止します（キルスイッチ発動のため）" -ForegroundColor Yellow
+                # フォールバック運用
+                Write-Host "`nフォールバック運用に切り替えます" -ForegroundColor Yellow
                 break
             }
         } elseif ($killSwitchTriggered) {

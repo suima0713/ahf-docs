@@ -1,0 +1,548 @@
+{
+  "as_of": "2025-09-16",
+  "CONFIRMED": [
+    {
+      "kpi": "guidance_q3_2024",
+      "value": 280,
+      "unit": "USD_millions",
+      "asof": "2024-09-30",
+      "tag": "T1-core",
+      "url": "https://sec.gov/edgar/..."
+    },
+    {
+      "kpi": "guidance_q3_revenue_mid_usd",
+      "value": 280,
+      "unit": "USD_millions",
+      "asof": "2024-09-30",
+      "tag": "T1-adj",
+      "url": "https://sec.gov/edgar/..."
+    },
+    {
+      "kpi": "convertible_bond",
+      "value": 690,
+      "unit": "USD_millions",
+      "asof": "2024-09-30",
+      "tag": "T1-core",
+      "url": "https://sec.gov/edgar/..."
+    },
+    {
+      "kpi": "warehouse_facility",
+      "value": 475,
+      "unit": "USD_millions",
+      "asof": "2024-09-30",
+      "tag": "T1-core",
+      "url": "https://sec.gov/edgar/..."
+    },
+    {
+      "kpi": "operating_cash_flow_h1_2025",
+      "value": -133.6,
+      "unit": "USD_millions",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://sec.gov/edgar/..."
+    },
+    {
+      "kpi": "capex_q3_2024",
+      "value": 0.115,
+      "unit": "USD_millions",
+      "asof": "2024-09-30",
+      "tag": "T1-core",
+      "url": "https://sec.gov/edgar/..."
+    },
+    {
+      "kpi": "max_loss",
+      "value": 660.2,
+      "unit": "USD_millions",
+      "asof": "2024-09-30",
+      "tag": "T1-core",
+      "url": "https://sec.gov/edgar/..."
+    },
+    {
+      "kpi": "revenue_concentration_feesnet_fy24_pct",
+      "value": 58,
+      "unit": "percent",
+      "asof": "2024-09-30",
+      "tag": "T1-core",
+      "denominator": "revenue_from_fees_net",
+      "url": "https://sec.gov/edgar/..."
+    },
+    {
+      "kpi": "warehouse_maturity_personal_date",
+      "value": "2028-06-15",
+      "unit": "date",
+      "asof": "2025-06-27",
+      "tag": "T1-core",
+      "url": "https://sec.gov/edgar/..."
+    },
+    {
+      "kpi": "warehouse_maturity_auto2_date",
+      "value": "2026-08-08",
+      "unit": "date",
+      "asof": "2025-06-27",
+      "tag": "T1-core",
+      "url": "https://sec.gov/edgar/..."
+    },
+    {
+      "kpi": "warehouse_margin_personal_pct",
+      "value": 2.4,
+      "unit": "percent",
+      "asof": "2025-06-27",
+      "tag": "T1-core",
+      "url": "https://sec.gov/edgar/..."
+    },
+    {
+      "kpi": "warehouse_covenant_waiver_date",
+      "value": "2025-07-14",
+      "unit": "date",
+      "asof": "2025-07-14",
+      "tag": "T1-core",
+      "url": "https://sec.gov/edgar/..."
+    },
+    {
+      "kpi": "loans_fv_fy24",
+      "value": 806.3,
+      "unit": "USD_millions",
+      "asof": "2024-12-31",
+      "tag": "T1-core",
+      "url": "https://sec.gov/edgar/.../Note 3"
+    },
+    {
+      "kpi": "loans_fv_q1_25",
+      "value": 951.7,
+      "unit": "USD_millions",
+      "asof": "2025-03-31",
+      "tag": "T1-core",
+      "url": "https://sec.gov/edgar/.../Note 3"
+    },
+    {
+      "kpi": "loans_fv_q2_25",
+      "value": 1019.5,
+      "unit": "USD_millions",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://sec.gov/edgar/.../Note 3"
+    },
+    {
+      "kpi": "loans_fv_q1_to_q2_increase",
+      "value": 67.8,
+      "unit": "USD_millions",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://sec.gov/edgar/.../CF表"
+    },
+    {
+      "kpi": "revenue_concentration_total_q2_25_customer_a_pct",
+      "value": 35,
+      "unit": "percent",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "denominator": "total_revenue",
+      "url": "https://www.sec.gov/Archives/edgar/data/1647639/000164763925000092/upst-20250630.htm"
+    },
+    {
+      "kpi": "revenue_concentration_total_q2_25_customer_b_pct",
+      "value": 22,
+      "unit": "percent",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "denominator": "total_revenue",
+      "url": "https://www.sec.gov/Archives/edgar/data/1647639/000164763925000092/upst-20250630.htm"
+    },
+    {
+      "kpi": "revenue_concentration_total_q2_25_customer_c_pct",
+      "value": 10,
+      "unit": "percent",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "denominator": "total_revenue",
+      "url": "https://www.sec.gov/Archives/edgar/data/1647639/000164763925000092/upst-20250630.htm"
+    },
+    {
+      "kpi": "revenue_concentration_feesnet_q2_25_max_pct",
+      "value": 0,
+      "unit": "percent",
+      "asof": "2025-06-30",
+      "note": "no_customer_exceeds_10pct",
+      "tag": "T1-core",
+      "denominator": "revenue_from_fees_net",
+      "url": "https://www.sec.gov/Archives/edgar/data/1647639/000164763925000092/upst-20250630.htm"
+    },
+    {
+      "kpi": "revenue_concentration_total_q2_25_top3_sum_pct",
+      "value": 67,
+      "unit": "percent",
+      "asof": "2025-06-30",
+      "note": "T2-derived: 35+22+10",
+      "tag": "T2-derived",
+      "denominator": "total_revenue",
+      "url": "https://www.sec.gov/Archives/edgar/data/1647639/000164763925000092/upst-20250630.htm"
+    },
+    {
+      "kpi": "revenue_concentration_total_q2_25_hhi_min",
+      "value": 0.1809,
+      "unit": "ratio",
+      "asof": "2025-06-30",
+      "note": "T2-derived: 0.35²+0.22²+0.10²=1,809bps",
+      "tag": "T2-derived",
+      "denominator": "total_revenue",
+      "url": "https://www.sec.gov/Archives/edgar/data/1647639/000164763925000092/upst-20250630.htm"
+    }
+  ],
+  "UNCERTAIN": [
+    {
+      "kpi": "forward_flow_covenants",
+      "status": "Lead",
+      "claim": "Forward-flow covenant quantitative terms",
+      "credence_pct": 50,
+      "aust_gaps": [
+        "asof_ok",
+        "unit_ok",
+        "section_missing",
+        "url_ok"
+      ],
+      "ttl_days": 30,
+      "url_index": "",
+      "contradiction": false
+    },
+    {
+      "kpi": "warehouse_covenants",
+      "status": "Lead",
+      "claim": "Warehouse facility covenant quantitative terms",
+      "credence_pct": 50,
+      "aust_gaps": [
+        "asof_ok",
+        "unit_ok",
+        "section_missing",
+        "url_ok"
+      ],
+      "ttl_days": 30,
+      "url_index": "",
+      "contradiction": false
+    },
+    {
+      "kpi": "funding_capacity",
+      "status": "Lead",
+      "claim": "Funding capacity and liquidity analysis",
+      "credence_pct": 60,
+      "aust_gaps": [
+        "asof_ok",
+        "unit_ok",
+        "section_missing",
+        "url_ok"
+      ],
+      "ttl_days": 30,
+      "url_index": "",
+      "contradiction": false
+    },
+    {
+      "kpi": "warehouse_advance_rate_pct",
+      "status": "redacted",
+      "claim": "Warehouse advance rate percentage",
+      "credence_pct": 0,
+      "aust_gaps": [
+        "asof_ok",
+        "unit_ok",
+        "section_redacted",
+        "url_ok"
+      ],
+      "ttl_days": 30,
+      "url_index": "",
+      "contradiction": false
+    },
+    {
+      "kpi": "warehouse_spread_personal_bps_over_sofr",
+      "status": "not_found",
+      "claim": "Personal warehouse spread over SOFR in basis points",
+      "credence_pct": 0,
+      "aust_gaps": [
+        "asof_ok",
+        "unit_ok",
+        "section_missing",
+        "url_ok"
+      ],
+      "ttl_days": 30,
+      "url_index": "",
+      "contradiction": false
+    },
+    {
+      "kpi": "forward_flow_counterparty_name",
+      "status": "official_source_unconfirmed",
+      "claim": "Forward-flow agreement counterparty name (Fortress $1.2B)",
+      "credence_pct": 0,
+      "aust_gaps": [
+        "asof_ok",
+        "unit_ok",
+        "section_missing",
+        "url_ok"
+      ],
+      "ttl_days": 30,
+      "url_index": "EDGAR 2025 filings: 8-K / EX-10.xx (Forward-flow)",
+      "contradiction": false
+    },
+    {
+      "kpi": "forward_flow_commitment_usd",
+      "status": "official_source_unconfirmed",
+      "claim": "Forward-flow commitment amount in USD (Fortress $1.2B)",
+      "credence_pct": 0,
+      "aust_gaps": [
+        "asof_ok",
+        "unit_ok",
+        "section_missing",
+        "url_ok"
+      ],
+      "ttl_days": 30,
+      "url_index": "EDGAR 2025 filings: 8-K / EX-10.xx (Forward-flow)",
+      "contradiction": false
+    },
+    {
+      "kpi": "forward_flow_term_end_date",
+      "status": "official_source_unconfirmed",
+      "claim": "Forward-flow agreement term end date (Fortress $1.2B)",
+      "credence_pct": 0,
+      "aust_gaps": [
+        "asof_ok",
+        "unit_ok",
+        "section_missing",
+        "url_ok"
+      ],
+      "ttl_days": 30,
+      "url_index": "EDGAR 2025 filings: 8-K / EX-10.xx (Forward-flow)",
+      "contradiction": false
+    },
+    {
+      "kpi": "rev_actual_q3_25",
+      "status": "future_period_not_reported",
+      "claim": "Q3 2025 actual revenue",
+      "credence_pct": 0,
+      "aust_gaps": [
+        "asof_ok",
+        "unit_ok",
+        "section_missing",
+        "url_ok"
+      ],
+      "ttl_days": 60,
+      "url_index": "Q3 2025 10-Q (Not yet filed as of 2025-09-16)",
+      "contradiction": false
+    },
+    {
+      "kpi": "cfo_q3_25_usd",
+      "status": "future_period_not_reported",
+      "claim": "Q3 2025 cash flow from operations in USD",
+      "credence_pct": 0,
+      "aust_gaps": [
+        "asof_ok",
+        "unit_ok",
+        "section_missing",
+        "url_ok"
+      ],
+      "ttl_days": 60,
+      "url_index": "Q3 2025 10-Q (Not yet filed as of 2025-09-16)",
+      "contradiction": false
+    },
+    {
+      "kpi": "capex_q3_25_usd",
+      "status": "future_period_not_reported",
+      "claim": "Q3 2025 capital expenditures in USD",
+      "credence_pct": 0,
+      "aust_gaps": [
+        "asof_ok",
+        "unit_ok",
+        "section_missing",
+        "url_ok"
+      ],
+      "ttl_days": 60,
+      "url_index": "Q3 2025 10-Q (Not yet filed as of 2025-09-16)",
+      "contradiction": false
+    },
+    {
+      "kpi": "ar_concentration_top_customer_pct",
+      "status": "not_found",
+      "claim": "Accounts receivable concentration top customer percentage",
+      "credence_pct": 0,
+      "aust_gaps": [
+        "asof_ok",
+        "unit_ok",
+        "section_missing",
+        "url_ok"
+      ],
+      "ttl_days": 7,
+      "url_index": "EDGAR 2025 filings: 10-Q / Note 2 (Revenue concentration)",
+      "contradiction": false
+    },
+    {
+      "kpi": "abs_2025_3_total_amount_usd",
+      "status": "not_expected_on_edgar_if_144a",
+      "claim": "ABS 2025-3 total amount in USD (144A/Reg S)",
+      "credence_pct": 0,
+      "aust_gaps": [
+        "asof_ok",
+        "unit_ok",
+        "section_144a_private",
+        "url_ok"
+      ],
+      "ttl_days": 60,
+      "url_index": "Private 144A offering documents (Not on EDGAR)",
+      "contradiction": false
+    },
+    {
+      "kpi": "abs_2025_3_class_structure",
+      "status": "not_expected_on_edgar_if_144a",
+      "claim": "ABS 2025-3 class structure details (144A/Reg S)",
+      "credence_pct": 0,
+      "aust_gaps": [
+        "asof_ok",
+        "unit_ok",
+        "section_144a_private",
+        "url_ok"
+      ],
+      "ttl_days": 60,
+      "url_index": "Private 144A offering documents (Not on EDGAR)",
+      "contradiction": false
+    },
+    {
+      "kpi": "abs_2025_3_closing_date",
+      "status": "not_expected_on_edgar_if_144a",
+      "claim": "ABS 2025-3 closing date (144A/Reg S)",
+      "credence_pct": 0,
+      "aust_gaps": [
+        "asof_ok",
+        "unit_ok",
+        "section_144a_private",
+        "url_ok"
+      ],
+      "ttl_days": 60,
+      "url_index": "Private 144A offering documents (Not on EDGAR)",
+      "contradiction": false
+    }
+  ],
+  "HYPOTHESES": [
+    {
+      "id": "H1_forward_flow_covenants",
+      "status": "pending",
+      "what_to_watch": ["forward_flow_covenants", "covenant_compliance"],
+      "trigger": "covenant_compliance >= 95",
+      "falsifier": "covenant_compliance < 90",
+      "kpi_links": ["forward_flow_covenants"]
+    },
+    {
+      "id": "H2_warehouse_covenants",
+      "status": "pending",
+      "what_to_watch": ["warehouse_covenants", "warehouse_utilization"],
+      "trigger": "warehouse_utilization <= 80",
+      "falsifier": "warehouse_utilization >= 95",
+      "kpi_links": ["warehouse_covenants"]
+    },
+    {
+      "id": "H3_funding_capacity",
+      "status": "pending",
+      "what_to_watch": ["funding_capacity", "liquidity_ratio"],
+      "trigger": "liquidity_ratio >= 2.0",
+      "falsifier": "liquidity_ratio < 1.5",
+      "kpi_links": ["funding_capacity"]
+    },
+    {
+      "id": "H4_guidance_accuracy",
+      "status": "pending",
+      "what_to_watch": ["guidance_q3_2024", "actual_q3_2024", "guidance_mape_pct"],
+      "trigger": "guidance_mape_pct <= 5",
+      "falsifier": "guidance_mape_pct >= 10",
+      "kpi_links": ["guidance_q3_2024", "actual_q3_2024"]
+    },
+    {
+      "id": "H5_cash_flow_recovery",
+      "status": "pending",
+      "what_to_watch": ["operating_cash_flow_h1_2025", "cash_flow_trend"],
+      "trigger": "cash_flow_trend > 0",
+      "falsifier": "cash_flow_trend < -20",
+      "kpi_links": ["operating_cash_flow_h1_2025"]
+    },
+    {
+      "id": "H6_convertible_bond_impact",
+      "status": "pending",
+      "what_to_watch": ["convertible_bond", "dilution_impact"],
+      "trigger": "dilution_impact <= 5",
+      "falsifier": "dilution_impact >= 15",
+      "kpi_links": ["convertible_bond"]
+    },
+    {
+      "id": "H7_warehouse_efficiency",
+      "status": "pending",
+      "what_to_watch": ["warehouse_facility", "facility_utilization"],
+      "trigger": "facility_utilization >= 70",
+      "falsifier": "facility_utilization < 50",
+      "kpi_links": ["warehouse_facility"]
+    },
+    {
+      "id": "H8_capex_efficiency",
+      "status": "pending",
+      "what_to_watch": ["capex_q3_2024", "capex_intensity_pct"],
+      "trigger": "capex_intensity_pct <= 5",
+      "falsifier": "capex_intensity_pct >= 10",
+      "kpi_links": ["capex_q3_2024"]
+    },
+    {
+      "id": "H9_risk_management",
+      "status": "pending",
+      "what_to_watch": ["max_loss", "actual_losses"],
+      "trigger": "actual_losses <= max_loss * 0.5",
+      "falsifier": "actual_losses >= max_loss * 0.8",
+      "kpi_links": ["max_loss"]
+    },
+    {
+      "id": "H10_revenue_concentration",
+      "status": "pending",
+      "what_to_watch": ["fee_revenue_concentration", "diversification_ratio"],
+      "trigger": "diversification_ratio >= 0.6",
+      "falsifier": "diversification_ratio < 0.4",
+      "kpi_links": ["fee_revenue_concentration"]
+    },
+    {
+      "id": "H11_ev_over_gp_floor",
+      "status": "pending",
+      "what_to_watch": ["ev_over_gp_floor", "valuation_ratio"],
+      "trigger": "valuation_ratio <= 1.5",
+      "falsifier": "valuation_ratio >= 2.0",
+      "kpi_links": ["ev_over_gp_floor"]
+    },
+    {
+      "id": "H12_conversion_health",
+      "status": "pending",
+      "what_to_watch": ["conversion_health", "conversion_rate"],
+      "trigger": "conversion_rate >= 70",
+      "falsifier": "conversion_rate < 50",
+      "kpi_links": ["conversion_health"]
+    },
+    {
+      "id": "H13_q3_revenue_concentration_total",
+      "status": "pending",
+      "what_to_watch": ["revenue_concentration_total_q3_25_customer_a_pct", "revenue_concentration_total_q3_25_customer_b_pct", "revenue_concentration_total_q3_25_customer_c_pct"],
+      "trigger": "Note 2 total revenue concentration table appears in Q3 10-Q",
+      "falsifier": "No concentration table in Q3 10-Q Note 2",
+      "kpi_links": ["revenue_concentration_total_q2_25_customer_a_pct", "revenue_concentration_total_q2_25_customer_b_pct", "revenue_concentration_total_q2_25_customer_c_pct"]
+    },
+    {
+      "id": "H14_q3_feesnet_concentration_emergence",
+      "status": "pending",
+      "what_to_watch": ["revenue_concentration_feesnet_q3_25_max_pct"],
+      "trigger": "Customer >10% of fees, net appears in Q3 (H1 high concentration theory validation)",
+      "falsifier": "No customer >10% of fees, net in Q3 (H1 theory falsified)",
+      "kpi_links": ["revenue_concentration_feesnet_q2_25_max_pct", "revenue_concentration_feesnet_fy24_pct"]
+    },
+    {
+      "id": "H15_q3_credit_kpi_continuity",
+      "status": "pending",
+      "what_to_watch": ["realized_losses_q3_25", "fv_fluctuation_q3_25", "nonaccrual_loans_q3_25"],
+      "trigger": "Credit KPIs continue disclosure in Note 4",
+      "falsifier": "Credit KPIs discontinued in Note 4",
+      "kpi_links": ["loans_fv_q2_25"]
+    },
+    {
+      "id": "H16_q3_rcf_disclosure_emergence",
+      "status": "pending",
+      "what_to_watch": ["rcf_capacity_usd", "rcf_outstanding_usd", "rcf_unused_fees_usd"],
+      "trigger": "RCF capacity/outstanding/unused fees first disclosed in Note 8",
+      "falsifier": "No RCF disclosure in Note 8",
+      "kpi_links": ["warehouse_facility", "warehouse_covenant_waiver_date"]
+    }
+  ]
+}

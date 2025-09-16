@@ -1,0 +1,38 @@
+[
+  {
+    "id": "ev_over_gp_floor",
+    "inputs": ["enterprise_value", "gross_profit_floor"],
+    "expr": "enterprise_value / gross_profit_floor",
+    "gates": { "up": "<=1.5", "down": ">=2.0" }
+  },
+  {
+    "id": "conversion_health",
+    "inputs": ["conversion_rate", "target_conversion_rate"],
+    "expr": "100 * conversion_rate / target_conversion_rate",
+    "gates": { "up": ">=70", "down": "<50" }
+  },
+  {
+    "id": "funding_capacity_cover",
+    "inputs": ["funding_capacity", "required_funding"],
+    "expr": "funding_capacity / required_funding",
+    "gates": { "up": ">=2.0", "down": "<1.5" }
+  },
+  {
+    "id": "guidance_mape",
+    "inputs": ["guidance_q3_2024", "actual_q3_2024"],
+    "expr": "100*abs(actual_q3_2024 - guidance_q3_2024)/guidance_q3_2024",
+    "gates": { "up": "<=5", "down": ">=10" }
+  },
+  {
+    "id": "fcf_conversion",
+    "inputs": ["operating_cash_flow_h1_2025", "revenue_ttm"],
+    "expr": "100*abs(operating_cash_flow_h1_2025)/revenue_ttm",
+    "gates": { "up": ">=70", "down": "<50" }
+  },
+  {
+    "id": "capex_intensity",
+    "inputs": ["capex_q3_2024", "revenue_ttm"],
+    "expr": "100*capex_q3_2024/revenue_ttm",
+    "gates": { "up": "<=5", "down": ">8" }
+  }
+]
