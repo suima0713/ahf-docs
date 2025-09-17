@@ -73,6 +73,28 @@
       "anchor": "Item 8, Note 15: Quarterly Results (Unaudited)",
       "value_bool": false,
       "notes": "Q3 revenue < Q4; flag set to False."
+    },
+    {
+      "id": "elec_h2_rev_fy2025_q3q4",
+      "kpi": "Elec_H2_Rev",
+      "class": "T1",
+      "as_of": "2025-06-29",
+      "source": "Form 10-K FY2025",
+      "anchor": "Item 8, Note 15: Quarterly Results (Unaudited) — Quarterly Revenue by Segment — Power (Q3, Q4)",
+      "value": 245.7,
+      "units": "USDm",
+      "notes": "Power_Q3=120.3, Q4=125.4（合計245.7）"
+    },
+    {
+      "id": "ugi_h2_rev_fy2025_q3q4",
+      "kpi": "UGI_H2_Rev",
+      "class": "T1",
+      "as_of": "2025-06-29",
+      "source": "Form 10-K FY2025",
+      "anchor": "Item 8, Note 15: Quarterly Results (Unaudited) — Quarterly Revenue by Segment — Materials (Q3, Q4)",
+      "value": 205.4,
+      "units": "USDm",
+      "notes": "Materials_Q3=102.5, Q4=102.9（合計205.4）"
     }
   ],
   "UNCERTAIN": [
