@@ -16,7 +16,7 @@
 
 blocked_source：なし
 
-not_found：**H2_at_caps入力（Elec_H2_Rev / UGI_H2_Rev / cap_elec / cap_ugi）**の章節アンカー（T1未特定）
+not_found：**GuidLow/GuidHigh（通期）** - Verdict判定レンジが欠落
 
 参考（T1ソース）
 
