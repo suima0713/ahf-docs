@@ -117,6 +117,17 @@
       "contradiction": false,
       "footnote": "8-K/10-Qで未稼働費の継続",
       "url_index": "ER_Q4FY25_Ex99-1"
+    },
+    {
+      "id": "interest_savings_post_exit_60pct",
+      "kpi": "interest_cash_saving",
+      "class": "EDGE",
+      "p": 80,
+      "status": "Lead",
+      "ttl_days": 90,
+      "contradiction": false,
+      "footnote": "8-K Ex.99.1=60%削減 × 10-K利息$315.2M",
+      "notes": "削減幅≈$189.1M/年。Core★は既に+1で追加調整なし。"
     }
   ]
 }

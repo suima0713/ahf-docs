@@ -2,15 +2,11 @@
 
 | id | class=U | KPI/主張 | 現在の根拠≤40語 | ソース | T1化に足りないもの | 次アクション | 関連Impact | unavailability_reason | grace_until |
 
-### 2025-09-17 追加（class=EDGE）
+### 2025-09-17 更新（class=EDGE）
 
-- chips_cash_in_timing ｜ class=EDGE ｜ P=72 ｜ TTL=90d ｜ contradiction=false  
-  要旨：**CHIPS PMT資金化は条件連動・進捗依存**  
-  出自脚注：**PMT=非拘束（DoC/NIST）**
-
-- underutilization_longer_drag ｜ class=EDGE ｜ P=75 ｜ TTL=60d ｜ contradiction=false  
-  要旨：**未稼働/立上げコスト長期化でGM回復遅延**  
-  出自脚注：**Ex.99.1で未稼働費増勢**
+- interest_savings_post_exit_60pct ｜ class=EDGE ｜ P=80 ｜ TTL=90d ｜ contradiction=false  
+  要旨：**利払い▲約$190M/年（目標60%）**  
+  出自脚注：**8-K Ex.99.1 + 10-K利息$315.2M**
 
 実行ログ（保存後、冒頭に記録推奨）
 
