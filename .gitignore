@@ -67,3 +67,12 @@ Thumbs.db
 # 一時ファイル
 *.tmp
 *.temp
+
+# 整理後の除外ファイル
+quanta_submissions.json
+*.bak
+*.backup
+
+# データプロバイダー関連
+ahf/tickers/*/attachments/providers/*/prices_*.csv
+ahf/tickers/*/attachments/providers/*/events_*.csv
