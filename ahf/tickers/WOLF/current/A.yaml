@@ -10,7 +10,7 @@ core:
       verbatim: "Q3 revenue guidance raised to $2.1B-$2.3B from $1.9B-$2.1B"
       impact_kpi: ["Revenue"]
       note: "Strong demand in core segments"
-    - "〔Edge: P=80, TTL=90, Source=8-K/IR(Exit目標)＋10-K(利息)｜利払い▲約$190M/年（目標60%）〕"
+    - "〔Edge: P=80, TTL=90, Source=8-K/IR(Exit目標)＋10-K(現金利息)｜利払い（現金）▲約$78M/年（60%）〕"
   
   slope_quality:    # ② 傾きの質（ROIC−WACC/FCF/ROIIC）
     - date: 2025-08-01

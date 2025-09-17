@@ -5,8 +5,8 @@
 ### 2025-09-17 更新（class=EDGE）
 
 - interest_savings_post_exit_60pct ｜ class=EDGE ｜ P=80 ｜ TTL=90d ｜ contradiction=false  
-  要旨：**利払い▲約$190M/年（目標60%）**  
-  出自脚注：**8-K Ex.99.1 + 10-K利息$315.2M**
+  要旨：**利払い（現金）▲約$78M/年（60%）**  
+  出自脚注：**8-K Ex.99.1 + 10-K現金利息$130.3M**
 
 実行ログ（保存後、冒頭に記録推奨）
 
