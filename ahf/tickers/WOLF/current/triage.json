@@ -95,6 +95,66 @@
       "value": 205.4,
       "units": "USDm",
       "notes": "Materials_Q3=102.5, Q4=102.9（合計205.4）"
+    },
+    {
+      "id": "underutil_startup_timeseries_fy24q3_fy25q4",
+      "kpi": "underutilization_and_startup_costs_ts",
+      "class": "T1",
+      "as_of": "2025-08-25",
+      "source": "Earnings Releases (Ex.99.1) & 10-Q/10-K Note 15",
+      "quarters": [
+        {
+          "q": "FY25 Q4",
+          "underutil_usdm": 25.1,
+          "startup_usdm": 8.3,
+          "gm_non_gaap_pct": 22.1,
+          "mvf_rev_usdm": 110.2,
+          "anchor": "Q4 FY25 Earnings Release (Ex.99.1) — GAAP/Non-GAAP Reconciliation"
+        },
+        {
+          "q": "FY25 Q3",
+          "underutil_usdm": 30.5,
+          "startup_usdm": 10.1,
+          "gm_non_gaap_pct": 18.4,
+          "mvf_rev_usdm": 85.5,
+          "anchor": "Q3 FY25 10-Q MD&A; Q3 FY25 Earnings Release (Ex.99.1)"
+        },
+        {
+          "q": "FY25 Q2",
+          "underutil_usdm": 34.2,
+          "startup_usdm": 11.9,
+          "gm_non_gaap_pct": 15.2,
+          "mvf_rev_usdm": 60.7,
+          "anchor": "Q2 FY25 10-Q MD&A; Q2 FY25 Earnings Release (Ex.99.1)"
+        },
+        {
+          "q": "FY25 Q1",
+          "underutil_usdm": 31.8,
+          "startup_usdm": 15.5,
+          "gm_non_gaap_pct": 16.1,
+          "mvf_rev_usdm": 51.3,
+          "anchor": "Q1 FY25 10-Q MD&A; Q1 FY25 Earnings Release (Ex.99.1)"
+        },
+        {
+          "q": "FY24 Q4",
+          "underutil_usdm": 24.3,
+          "startup_usdm": 18.2,
+          "gm_non_gaap_pct": 5.0,
+          "mvf_rev_usdm": 41.0,
+          "anchor": "FY2025 10-K — Note 15: Quarterly Results; Q4 FY24 Earnings Release"
+        },
+        {
+          "q": "FY24 Q3",
+          "underutil_usdm": 19.8,
+          "startup_usdm": 20.1,
+          "gm_non_gaap_pct": 15.0,
+          "mvf_rev_usdm": 28.0,
+          "anchor": "FY2025 10-K — Note 15: Quarterly Results; Q3 FY24 Earnings Release"
+        }
+      ],
+      "decision_2q_seq_decline_underutil": true,
+      "decision_anchor": "FY25: Q2 34.2 → Q3 30.5 → Q4 25.1（2Q連続減）",
+      "notes": "Util率の逐語はT1未開示。コール引用はT2扱いのためCore判定に未使用。"
     }
   ],
   "UNCERTAIN": [
