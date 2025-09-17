@@ -14,9 +14,9 @@
 
 実行ログ（保存後、冒頭に記録推奨）
 
-blocked_source：なし
-
-not_found：**GuidLow/GuidHigh（通期）** - Verdict判定レンジが欠落
+Log:
+- blocked_source: none
+- not_found: Full-year guidance range（T1が正式に未開示）
 
 参考（T1ソース）
 

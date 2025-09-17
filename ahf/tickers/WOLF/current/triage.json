@@ -53,6 +53,26 @@
       "gm_non_gaap_pct": -1,
       "underutilization_q4_usdm": 23.6,
       "underutilization_fy_usdm": 105.2
+    },
+    {
+      "id": "fy2026_guidance_range_status",
+      "kpi": "full_year_guidance_range",
+      "class": "T1",
+      "as_of": "2025-08-21",
+      "source": "Form 8-K",
+      "anchor": "Ex.99.1 Business Outlook",
+      "status": "not_provided",
+      "notes": "Company disclosed Q1 FY26 only ($240–$260M); no full-year range."
+    },
+    {
+      "id": "seasonality_flag_update_fy2025",
+      "kpi": "season_q3geq_q4_flag",
+      "class": "T1",
+      "as_of": "2025-06-29",
+      "source": "Form 10-K",
+      "anchor": "Item 8, Note 15: Quarterly Results (Unaudited)",
+      "value_bool": false,
+      "notes": "Q3 revenue < Q4; flag set to False."
     }
   ],
   "UNCERTAIN": [

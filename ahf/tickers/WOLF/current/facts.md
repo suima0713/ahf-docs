@@ -19,3 +19,7 @@
 
 
 出典（T1）：8-K（再生計画承認・株式消却/新株付与等）、IR PR（負債約70%削減/Exit見込み）、IR PR（48D現金還付$192.1M/累計$865M/来期還付見込み）、NIST/DoC（CHIPS PMT=非拘束の予備的条件合意、最大$750Mの提案）、Q4 FY2025 決算リリースPDF（売上$197.0M、GM、未稼働コスト）。
+
+### 2025-08-21 T1 addendum（Guidance/Seasonality）
+- **FY2026 Guidance**：通期ガイダンスは開示されず、**Q1 FY2026 のみ**提示（$240–$260M）。〔T1：Form 8-K (2025-08-21) Ex.99.1 "Business Outlook"〕
+- **Seasonality flag**：FY2025四半期データ（10-K Note 15 "Quarterly Results"）で **Q3 < Q4** を確認。`season_q3geq_q4=False` に更新。

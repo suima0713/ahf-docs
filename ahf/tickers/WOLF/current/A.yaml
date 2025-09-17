@@ -36,32 +36,14 @@ time_annotation:    # ④ 〔Time〕＝"注釈"を一度だけ
 
 # 2025-09-17 分析結果追記
 analysis_results:
-  h2_at_caps_ex_dsi: "$48.6M"
-  full_year_total_dsi50: "$500.3M"
-  verdict: "n/a（通期Guid未開示）"
-  binding_factors: "MVF立上げ×過少操業×CHIPS/48D資金化"
-  
-  sensitivity_table:
-    cap_delta:
-      base: "0.111/0.104"
-      minus_25bp: "0.1085/0.1015" 
-      minus_50bp: "0.106/0.099"
-    dsi_scenarios:
-      dsi_45:
-        base: 495.3
-        minus_25bp: 494.2
-        minus_50bp: 493.1
-      dsi_50:
-        base: 500.3
-        minus_25bp: 499.2
-        minus_50bp: 498.1
-      dsi_55:
-        base: 505.3
-        minus_25bp: 504.2
-        minus_50bp: 503.1
-  
-  calculation_details:
-    h2_caps_formula: "245.7×0.111 + 205.4×0.104 = $48.6M"
-    full_year_formula: "H1_ADJ 401.7 + 48.6 + 50 = $500.3M"
-    seasonality_update: "False（T1：FY25 Q3 215.3 < Q4 235.8）"
-    cap_sensitivity: "−50bpでも約▲2.3と軽微（H1寄与が卓越）"
+  summary: |
+    H2_at_caps(ex-DSI): $48.6M
+    Full-year total (DSI=50): $500.3M → Verdict: n/a（通期Guid未開示）
+    Binding: MVF立上げ×過少操業×CHIPS/48D資金化
+
+    Sensitivity (cap base/−25/−50bp × DSI 45/50/55):
+    | capΔ  | 45   | 50   | 55   |
+    |-------|------|------|------|
+    | base  | 495.3| 500.3| 505.3|
+    | −25bp | 494.2| 499.2| 504.2|
+    | −50bp | 493.1| 498.1| 503.1|
