@@ -1,0 +1,26 @@
+[
+  {
+    "id": "backlog_realization_ratio",
+    "inputs": ["backlog_total", "realization_12m"],
+    "expr": "100*realization_12m/backlog_total",
+    "gates": { "up": ">=50", "down": "<40" }
+  },
+  {
+    "id": "rpo_coverage_ratio",
+    "inputs": ["rpo_total", "guidance_fy26_mid"],
+    "expr": "rpo_total/guidance_fy26_mid",
+    "gates": { "up": ">=0.8", "down": "<0.6" }
+  },
+  {
+    "id": "dso_improvement",
+    "inputs": ["dso_current", "dso_prior_year"],
+    "expr": "dso_prior_year - dso_current",
+    "gates": { "up": ">0", "down": "<-5" }
+  },
+  {
+    "id": "ocf_ytd_vs_prior",
+    "inputs": ["ocf_ytd", "ocf_ytd_prior"],
+    "expr": "100*(ocf_ytd - ocf_ytd_prior)/ocf_ytd_prior",
+    "gates": { "up": ">0", "down": "<-10" }
+  }
+]

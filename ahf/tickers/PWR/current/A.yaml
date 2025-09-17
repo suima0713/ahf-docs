@@ -1,0 +1,38 @@
+meta:
+  ticker: PWR
+  asof: 2025-09-17
+
+# A｜材料（T1逐語のみ、≤40語）
+core:
+  right_shoulder:     # ①右肩上がり（T1逐語のみ）
+    - date: 2025-06-30
+      tag: T1-F
+      verbatim: "Backlog $35.8B, RPO $19.2B, 12M realization $20.0B"
+      impact_kpi: ["Backlog", "RPO"]
+      note: "Record backlog levels provide strong growth foundation"
+  
+  slope_quality:      # ②傾きの質（T1逐語のみ）
+    - date: 2025-06-30
+      tag: T1-F
+      verbatim: "12M realization/Backlog ratio ≈ 56% (20.0/35.8)"
+      impact_kpi: ["Growth angle"]
+      note: "Steep conversion angle indicates strong execution"
+  
+  time_profile:       # ③時間（T1逐語のみ）
+    - date: 2025-06-30
+      tag: T1-F
+      verbatim: "OCF YTD $538.9M, DSO 62 days vs 68 prior year"
+      impact_kpi: ["Cash conversion"]
+      note: "Improved collection efficiency, but YTD OCF below prior year"
+
+# ④Time注釈（一度だけ、③の文中に記載）
+time_annotation:         
+  delta_t_quarters: 0
+  delta_g_pct: 0
+  window_quarters: 2
+  note: "Large transmission projects moving to execution phase"
+
+# 固定ガード
+# - T1逐語のみ使用（Lead/推論禁止）
+# - 構造①/傾き②/バリュはOverlayに分離
+# - Time注釈は一度のみ 

@@ -1,0 +1,11 @@
+id,as_of,unit,excerpt40,EDGAR_URL,alt_url,source_class,hash,usage_tags,ttl_days
+FY25_Guid_Rev,2025-07-31,USD,"revenues to range between $27.4B and $27.9B","https://investors.quantaservices.com/sec-filings/all-sec-filings/content/0001193125-25-169944/d28227dex991.htm","",T1-C,,
+FY25_Guid_AdjEBITDA,2025-07-31,USD,"adjusted EBITDA to range between $2.76B and $2.89B","https://investors.quantaservices.com/sec-filings/all-sec-filings/content/0001193125-25-169944/d28227dex991.htm","",T1-C,,
+H1_AdjEBITDA,2025-06-30,USD_thousands,"Adjusted EBITDA... Six Months Ended... $1,172,648","https://investors.quantaservices.com/sec-filings/all-sec-filings/content/0001193125-25-169944/d28227dex991.htm","",T1-C,,
+DSI_H2,2025-07-31,USD,"DSI H2 contrib $425–$475M EBITDA $45–$55M","https://www.sec.gov/Archives/edgar/data/1050915/0001193125-25-169944/d28227dex992.htm","",T1-C,,
+SegCap_Elec,2024-09-30,pct,"Electric OPM cap 11.1% (Q3'24)","https://www.sec.gov/Archives/edgar/data/1050915/000162828025005851/pwr-20241231.htm","",T1-A,,
+SegCap_UGI,2024-09-30,pct,"UGI OPM cap 10.4% (Q3'24)","https://www.sec.gov/Archives/edgar/data/1050915/000162828025005851/pwr-20241231.htm","",T1-A,,
+Split_H2_Elec,2024-12-31,pct,"H2 Elec share ~67.5%","https://www.sec.gov/Archives/edgar/data/1050915/000162828025005851/pwr-20241231.htm","",T1-A,,
+Split_H2_UGI,2024-12-31,pct,"H2 UGI share ~32.5%","https://www.sec.gov/Archives/edgar/data/1050915/000162828025005851/pwr-20241231.htm","",T1-A,,
+Q3Q4_Share,2024-12-31,pct,"Q3:Q4 = 52% : 48%（季節性）","https://www.sec.gov/Archives/edgar/data/1050915/000162828025005851/pwr-20241231.htm","",T1-A,,
+NOT_FOUND_seg_margin_numeric,2025-07-31,code,"segment_margin_numeric_guidance=not_found","", "",T1-C,,
