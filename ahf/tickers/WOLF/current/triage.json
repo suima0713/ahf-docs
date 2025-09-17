@@ -119,15 +119,19 @@
       "url_index": "ER_Q4FY25_Ex99-1"
     },
     {
-      "id": "interest_savings_post_exit_60pct",
+      "id": "interest_cash_saving_post_exit_60pct",
       "kpi": "interest_cash_saving",
       "class": "EDGE",
-      "p": 80,
+      "p": 85,
       "status": "Lead",
       "ttl_days": 90,
       "contradiction": false,
-      "footnote": "8-K Ex.99.1=60%削減 × 10-K現金利息$130.3M",
-      "notes": "現金ベース削減幅≈$78.2M/年（残≈$52.1M/年）。Core★は既に+1で追加調整なし。"
+      "footnote": "10-K CF『Cash paid for interest』$130.3M × 60%減",
+      "units": "USDm/yr",
+      "baseline_cash_interest": 130.3,
+      "expected_cash_saving": 78.2,
+      "expected_cash_interest_post_exit": 52.1,
+      "notes": "RSA/Planに基づく"annual total cash interest payments"60%削減。P/Lベースと区別。"
     }
   ]
 }
