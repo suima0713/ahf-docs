@@ -192,6 +192,17 @@
       "expected_cash_saving": 78.2,
       "expected_cash_interest_post_exit": 52.1,
       "notes": "RSA/Planに基づく"annual total cash interest payments"60%削減。P/Lベースと区別。"
+    },
+    {
+      "id": "mvf_util_35pct_turning_point",
+      "kpi": "mvf_utilization_35pct_threshold",
+      "class": "EDGE",
+      "p": 60,
+      "status": "Lead",
+      "ttl_days": 180,
+      "contradiction": false,
+      "footnote": "T2:30%発言のみ/35%未確認",
+      "notes": "Util 20%→25%目標→30%到達計画の逐語は確認。35%超の明示は現時点data_gap。到達がT1/T2で確認できた時点でマージン★+1の判定材料へ昇格。"
     }
   ]
 }
