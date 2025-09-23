@@ -1,0 +1,180 @@
+# RKLB Edge選抜分析（v4.0ルール適用）
+
+## 全Edge候補（考慮無制限）
+
+### 右肩上がり軸候補
+candidates_right_shoulder:
+  - name: "VICTUS HAZE統合"
+    p: 78
+    impact: "政府案件継続性"
+    novelty: 0.8
+    ttl_days: 21
+    contradiction: false
+    score: 0.5*78 + 0.3*0.8 + 0.2*0.8 = 39.0 + 0.24 + 0.16 = 39.4
+    display: true
+    footnote: "迅速応答運用前進/継続性示唆"
+  
+  - name: "HASTE（極超音速試験）"
+    p: 76
+    impact: "防衛反復需要"
+    novelty: 0.7
+    ttl_days: 30
+    contradiction: false
+    score: 0.5*76 + 0.3*0.7 + 0.2*0.7 = 38.0 + 0.21 + 0.14 = 38.35
+    display: true
+    footnote: "防衛用途反復需要/稼働率向上"
+  
+  - name: "Neutron launch prep"
+    p: 80
+    impact: "12Mカタリスト"
+    novelty: 0.3
+    ttl_days: 90
+    contradiction: false
+    score: 0.5*80 + 0.3*0.3 + 0.2*0.3 = 40.0 + 0.09 + 0.06 = 40.15
+    display: false
+    footnote: "既存Edge/重複回避"
+  
+  - name: "Institutional buying"
+    p: 75
+    impact: "需給改善"
+    novelty: 0.4
+    ttl_days: 30
+    contradiction: false
+    score: 0.5*75 + 0.3*0.4 + 0.2*0.4 = 37.5 + 0.12 + 0.08 = 37.7
+    display: false
+    footnote: "P値低/既存Edge重複"
+
+### 勾配軸候補
+candidates_slope:
+  - name: "REGAL（AFRL支援/Neutron）"
+    p: 82
+    impact: "Neutron効率学習"
+    novelty: 0.9
+    ttl_days: 30
+    contradiction: false
+    score: 0.5*82 + 0.3*0.9 + 0.2*0.9 = 41.0 + 0.27 + 0.18 = 41.45
+    display: true
+    footnote: "二段/フェアリング開発効率"
+  
+  - name: "HASTE（極超音速試験）"
+    p: 76
+    impact: "稼働率・学習曲線"
+    novelty: 0.7
+    ttl_days: 30
+    contradiction: false
+    score: 0.5*76 + 0.3*0.7 + 0.2*0.7 = 38.0 + 0.21 + 0.14 = 38.35
+    display: true
+    footnote: "稼働率・学習曲線後押し"
+  
+  - name: "Space Systems OT認識"
+    p: 85
+    impact: "収益認識改善"
+    novelty: 0.2
+    ttl_days: 90
+    contradiction: false
+    score: 0.5*85 + 0.3*0.2 + 0.2*0.2 = 42.5 + 0.06 + 0.04 = 42.6
+    display: false
+    footnote: "既存Core要素/重複回避"
+
+### 時間軸プロファイル軸候補
+candidates_time_profile:
+  - name: "REGAL（マイルストン型）"
+    p: 82
+    impact: "OT認識寄与"
+    novelty: 0.9
+    ttl_days: 30
+    contradiction: false
+    score: 0.5*82 + 0.3*0.9 + 0.2*0.9 = 41.0 + 0.27 + 0.18 = 41.45
+    display: true
+    footnote: "OT認識寄与の土台"
+  
+  - name: "VICTUS HAZE統合"
+    p: 78
+    impact: "政府プログラム継続性"
+    novelty: 0.8
+    ttl_days: 21
+    contradiction: false
+    score: 0.5*78 + 0.3*0.8 + 0.2*0.8 = 39.0 + 0.24 + 0.16 = 39.4
+    display: true
+    footnote: "政府プログラム継続性"
+  
+  - name: "Backlog 12M可視性"
+    p: 90
+    impact: "収益可視性"
+    novelty: 0.1
+    ttl_days: 90
+    contradiction: false
+    score: 0.5*90 + 0.3*0.1 + 0.2*0.1 = 45.0 + 0.03 + 0.02 = 45.05
+    display: false
+    footnote: "既存Core要素/重複回避"
+
+### 認知ギャップ軸候補
+candidates_cognitive_gap:
+  - name: "REGAL"
+    p: 82
+    impact: "OT/効率インパクト"
+    novelty: 0.9
+    ttl_days: 30
+    contradiction: false
+    score: 0.5*82 + 0.3*0.9 + 0.2*0.9 = 41.0 + 0.27 + 0.18 = 41.45
+    display: true
+    footnote: "OT/効率インパクト未十分評価"
+  
+  - name: "VICTUS HAZE"
+    p: 78
+    impact: "迅速応答実証価値"
+    novelty: 0.8
+    ttl_days: 21
+    contradiction: false
+    score: 0.5*78 + 0.3*0.8 + 0.2*0.8 = 39.0 + 0.24 + 0.16 = 39.4
+    display: true
+    footnote: "迅速応答実証価値遅れ浸透"
+  
+  - name: "HASTE防衛反復"
+    p: 76
+    impact: "防衛市場評価"
+    novelty: 0.7
+    ttl_days: 30
+    contradiction: false
+    score: 0.5*76 + 0.3*0.7 + 0.2*0.7 = 38.0 + 0.21 + 0.14 = 38.35
+    display: false
+    footnote: "P値低/既存Edge重複"
+
+## 選抜結果（各軸上位2件）
+
+### 右肩上がり軸
+selected_right_shoulder:
+  - "VICTUS HAZE統合" (Score: 39.4)
+  - "HASTE（極超音速試験）" (Score: 38.35)
+
+### 勾配軸
+selected_slope:
+  - "REGAL（AFRL支援/Neutron）" (Score: 41.45)
+  - "HASTE（極超音速試験）" (Score: 38.35)
+
+### 時間軸プロファイル軸
+selected_time_profile:
+  - "REGAL（マイルストン型）" (Score: 41.45)
+  - "VICTUS HAZE統合" (Score: 39.4)
+
+### 認知ギャップ軸
+selected_cognitive_gap:
+  - "REGAL" (Score: 41.45)
+  - "VICTUS HAZE" (Score: 39.4)
+
+## 非掲出候補（backlog保持）
+
+non_displayed_candidates:
+  - "Neutron launch prep" (既存Edge/重複回避)
+  - "Institutional buying" (P値低/既存Edge重複)
+  - "Space Systems OT認識" (既存Core要素/重複回避)
+  - "Backlog 12M可視性" (既存Core要素/重複回避)
+  - "HASTE防衛反復" (P値低/既存Edge重複)
+
+## 監査性確保
+
+audit_trail:
+  - 全候補をbacklog/UNCERTAINに保持
+  - 選抜理由を脚注（≤35字）で明示
+  - 入替条件を明確化
+  - スコア計算過程を記録

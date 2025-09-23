@@ -1,0 +1,98 @@
+{
+  "ticker": "PDFS",
+  "cik": "0001120914",
+  "period": "Q2 2025",
+  "ex99_1_url": "https://www.sec.gov/Archives/edgar/data/1120914/000143774925025457/ex_825594.htm",
+  "q10_url": "https://www.sec.gov/Archives/edgar/data/1120914/000143774925025464/pdfs20250630_10q.htm",
+  "mix_mapping_note": "SW=Analytics/Rev, OPS=Integrated Yield Ramp and other non-subscription",
+  "rev_q_$": 51728000,
+  "ng_gm_q_pct": 76.0,
+  "gm_is_gaap": false,
+  "adj_ebitda_q_$": null,
+  "adj_ebitda_kpi_used": "GAAP_OI_plus_D&A",
+  "sw_q": 0.9434,
+  "ops_q": 0.0566,
+  "sw_qm1": 0.8889,
+  "ops_qm1": 0.1111,
+  "alpha3": {
+    "gm_pred_pp": 80.9,
+    "gm_drift_pp": -4.9,
+    "residual_gp_$": 2534672,
+    "pass": false,
+    "explain_tag": "PASS_EXPLAINED",
+    "explain_note": "MD&A attributes higher costs (subcontractor, hardware, cloud) offsetting favorable mix"
+  },
+  "alpha5": {
+    "op_ex_actual_$": 35725000,
+    "grid_params": {
+      "rev": [51210720, 51728000, 52245280],
+      "gm_pp": [75.5, 76, 76.5],
+      "ebitda": [5000000, 5000000]
+    },
+    "grid_median_op_ex_$": 34313280,
+    "improvement_flag": false
+  },
+  "decision": "NO-GO",
+  "reasons": [
+    "α3 drift −4.9pp > 0.2pp",
+    "α5 median−actual = −$1.41M (not ≤ −$3M)",
+    "WATCH→GO criteria not met (Item 1A no material changes, but CL↓ QoQ and CA↑ QoQ)"
+  ],
+  "auto_checks": {
+    "alpha4_gate_pass": null,
+    "alpha5_math_pass": true,
+    "messages": []
+  },
+  "anchors": [
+    {
+      "quote": "GAAP gross margin…71% and non-GAAP…76%",
+      "source": "EX-99.1, 8-K",
+      "type": "ex99.1"
+    },
+    {
+      "quote": "Analytics revenue…$48.8M",
+      "source": "EX-99.1, 8-K",
+      "type": "ex99.1"
+    },
+    {
+      "quote": "Total revenues…$51.7M",
+      "source": "EX-99.1, 8-K",
+      "type": "ex99.1"
+    },
+    {
+      "quote": "Gross margin was flat at 71%… offset by increases in costs of revenues",
+      "source": "10-Q MD&A",
+      "type": "q10_mda"
+    },
+    {
+      "quote": "Research and development $14,913 … Selling, general, and administrative $19,744 … Amortization…$1,068",
+      "source": "10-Q",
+      "type": "q10"
+    },
+    {
+      "quote": "Income from operations $1,117",
+      "source": "10-Q",
+      "type": "q10"
+    },
+    {
+      "quote": "Deferred revenues—current portion $23,363",
+      "source": "Q2 10-Q",
+      "type": "q10"
+    },
+    {
+      "quote": "Deferred revenues—current portion $27,131",
+      "source": "Q1 10-Q",
+      "type": "q10"
+    },
+    {
+      "quote": "Contract assets（current）$7,930",
+      "source": "Q2 10-Q 明細",
+      "type": "q10"
+    },
+    {
+      "quote": "no material changes",
+      "source": "Item 1A",
+      "type": "q10_item1a"
+    }
+  ]
+}

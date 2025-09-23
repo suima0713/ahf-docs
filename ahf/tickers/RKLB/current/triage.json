@@ -1,0 +1,54 @@
+{
+  "as_of": "2025-09-23",
+  "CONFIRMED": [
+    {
+      "kpi": "Q2_2025_Revenue",
+      "value": 144.0,
+      "unit": "million USD",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819994/000162828025038900/rklb-08072025ex991.htm#:~:text=Record%20Quarterly%20Revenue%20of%20%24144m%2C%20Representing%2036%25%20Year-on-Year%20Growth"
+    },
+    {
+      "kpi": "Q3_2025_Revenue_Guidance",
+      "value": 150.0,
+      "unit": "million USD",
+      "asof": "2025-09-23",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819994/000162828025038900/rklb-08072025ex991.htm#:~:text=For%20the%20third%20quarter%20of%202025%2C%20Rocket%20Lab%20expects%3A%20%E2%80%A2Revenue%20between%20%24145%20million%20and%20%24155%20million."
+    },
+    {
+      "kpi": "Q2_2025_Backlog",
+      "value": 995.4,
+      "unit": "million USD",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819994/000162828025038936/rklb-20250630.htm#:~:text=Remaining%20backlog%20totaled%20%24995%2C410%20as%20of%20June%2030%2C%202025%2C%20of%20which%20approximately%2058%25%20is%20expected%20to%20be%20recognized%20within%2012%20months"
+    },
+    {
+      "kpi": "Q2_2025_Cash_Balance",
+      "value": 749.3,
+      "unit": "million USD",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819994/000162828025038936/rklb-20250630.htm#:~:text=Total%20cash%20and%20cash%20equivalents%20and%20marketable%20securities%20%24749%2C299"
+    }
+  ],
+  "UNCERTAIN": [
+    {
+      "kpi": "EV_S_Fwd",
+      "status": "blocked_source",
+      "url_index": "MARKET_DATA_ABSENT"
+    },
+    {
+      "kpi": "FY_Guidance",
+      "status": "not_found",
+      "url_index": "GUIDE_FY_ABSENT"
+    },
+    {
+      "kpi": "CapEx_Guidance",
+      "status": "not_found",
+      "url_index": "CAPEX_GUIDE_ABSENT"
+    }
+  ]
+}

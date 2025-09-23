@@ -1,0 +1,87 @@
+{
+  "purpose": "投資判断に直結する固定3軸で評価する",
+  "mvp": "①②③の名称と順序を毎回固定／T1で確証／定型テーブル＋1行要約で即時出力",
+  "evaluation_date": "2024-12-15",
+  "ticker": "WOLF",
+  "axes": [
+    {
+      "axis_name": "①長期EV確度",
+      "score": 4,
+      "confidence": 80,
+      "market_embedded": true,
+      "alpha_opacity": 0.3,
+      "direction_up_pct": 70.0,
+      "direction_down_pct": 30.0,
+      "t1_facts_count": 3,
+      "edge_facts_count": 1,
+      "representative_kpi": "guidance_fy26_mid",
+      "t1_evidence": "FY26 revenue guidance midpoint $2.5B",
+      "current_snapshot": "2500USD_millions"
+    },
+    {
+      "axis_name": "②長期EV勾配",
+      "score": 3,
+      "confidence": 75,
+      "market_embedded": true,
+      "alpha_opacity": 0.4,
+      "direction_up_pct": 65.0,
+      "direction_down_pct": 35.0,
+      "t1_facts_count": 2,
+      "edge_facts_count": 0,
+      "representative_kpi": "backlog_growth",
+      "t1_evidence": "Backlog grew 15% quarter-over-quarter",
+      "current_snapshot": "15%"
+    },
+    {
+      "axis_name": "③バリュエーション＋認知ギャップ",
+      "score": 2,
+      "confidence": 70,
+      "market_embedded": true,
+      "alpha_opacity": 0.2,
+      "direction_up_pct": 60.0,
+      "direction_down_pct": 40.0,
+      "t1_facts_count": 2,
+      "edge_facts_count": 1,
+      "representative_kpi": "ev_sales_fwd",
+      "t1_evidence": "EV/Sales forward multiple 12.5x",
+      "current_snapshot": "12.5x"
+    }
+  ],
+  "decision": {
+    "decision_type": "WATCH",
+    "size_pct": 0.5,
+    "di_score": 0.45,
+    "reason": "DI=0.45, LEC=4/5, NES=3/5, VRG=2/5"
+  },
+  "valuation_overlay": {
+    "status": "Amber",
+    "ev_sales_fwd": 12.5,
+    "rule_of_40": 35.0,
+    "di_multiplier": 0.90,
+    "hysteresis": {
+      "evsales_delta": 0.5,
+      "ro40_delta": 2.0,
+      "upgrade_factor": 1.2
+    }
+  },
+  "direction_prob_up_pct": 65.0,
+  "direction_prob_down_pct": 35.0,
+  "gate_color": "Amber",
+  "anchor_backup": null,
+  "data_gap": null,
+  "gap_reason": null,
+  "auto_checks": {
+    "alpha4_gate_pass": true,
+    "alpha5_math_pass": true,
+    "anchor_lint_pass": true,
+    "messages": []
+  },
+  "dual_anchor_status": "CONFIRMED",
+  "rss_score": 3.0,
+  "alpha3_score": 75.0,
+  "alpha5_score": 0.3,
+  "interrupts": [],
+  "find_path": null,
+  "turbo_applied": true,
+  "core_priority": true
+}

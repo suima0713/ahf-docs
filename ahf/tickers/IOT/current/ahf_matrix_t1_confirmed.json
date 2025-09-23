@@ -1,0 +1,54 @@
+{
+  "as_of": "2025-09-19",
+  "matrix": [
+    {
+      "ticker": "IOT",
+      "rows": [
+        {
+          "axis": "①右肩",
+          "snapshot": "売上$391,480k・YoY+30%/ARR $1.640B",
+          "stars": 3,
+          "confidence_pct": 60,
+          "priced_in_pct": 55,
+          "alpha_opacity_pct": 40,
+          "direction_prob_up_pct": 55,
+          "direction_prob_down_pct": 45,
+          "gate_color": "Green"
+        },
+        {
+          "axis": "②勾配",
+          "snapshot": "非GAAP粗利率78%、OpEx≈$240,595k",
+          "stars": 3,
+          "confidence_pct": 60,
+          "priced_in_pct": 50,
+          "alpha_opacity_pct": 45,
+          "direction_prob_up_pct": 52,
+          "direction_prob_down_pct": 48,
+          "gate_color": "Green"
+        },
+        {
+          "axis": "③時間軸",
+          "snapshot": "RPO 12M=$1,401,800k→coverage10.7m（Gate<11）",
+          "stars": 2,
+          "confidence_pct": 60,
+          "priced_in_pct": 60,
+          "alpha_opacity_pct": 35,
+          "direction_prob_up_pct": 48,
+          "direction_prob_down_pct": 52,
+          "gate_color": "Amber"
+        },
+        {
+          "axis": "④認知ギャップ",
+          "snapshot": "CL q/q +4.9%（+5%TW未達）",
+          "stars": 2,
+          "confidence_pct": 60,
+          "priced_in_pct": 40,
+          "alpha_opacity_pct": 50,
+          "direction_prob_up_pct": 50,
+          "direction_prob_down_pct": 50,
+          "gate_color": "Amber"
+        }
+      ]
+    }
+  ]
+}

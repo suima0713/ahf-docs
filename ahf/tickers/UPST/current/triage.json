@@ -186,6 +186,54 @@
       "tag": "T2-derived",
       "denominator": "total_revenue",
       "url": "https://www.sec.gov/Archives/edgar/data/1647639/000164763925000092/upst-20250630.htm"
+    },
+    {
+      "kpi": "cfo_ebitda_gap_q3_25",
+      "value": -183.737,
+      "unit": "USD_millions",
+      "asof": "2025-09-30",
+      "tag": "T1-core",
+      "url": "https://sec.gov/edgar/.../CF表"
+    },
+    {
+      "kpi": "working_capital_cash_impact_q3_25",
+      "value": -242.657,
+      "unit": "USD_millions",
+      "asof": "2025-09-30",
+      "tag": "T1-core",
+      "url": "https://sec.gov/edgar/.../CF表"
+    },
+    {
+      "kpi": "contract_liabilities_decrease_q3_25",
+      "value": -171.331,
+      "unit": "USD_millions",
+      "asof": "2025-09-30",
+      "tag": "T1-core",
+      "url": "https://sec.gov/edgar/.../CF表"
+    },
+    {
+      "kpi": "unbilled_receivables_increase_q3_25",
+      "value": 76.185,
+      "unit": "USD_millions",
+      "asof": "2025-09-30",
+      "tag": "T1-core",
+      "url": "https://sec.gov/edgar/.../CF表"
+    },
+    {
+      "kpi": "inventory_decrease_q3_25",
+      "value": 3.470,
+      "unit": "USD_millions",
+      "asof": "2025-09-30",
+      "tag": "T1-core",
+      "url": "https://sec.gov/edgar/.../CF表"
+    },
+    {
+      "kpi": "billed_ar_decrease_q3_25",
+      "value": 1.389,
+      "unit": "USD_millions",
+      "asof": "2025-09-30",
+      "tag": "T1-core",
+      "url": "https://sec.gov/edgar/.../CF表"
     }
   ],
   "UNCERTAIN": [

@@ -1,0 +1,9 @@
+tests:
+  time_off: "〔Time〕プラットフォーム依存リスクテスト：Apple 61.6%/Google 23.9%の手数料変更・規約変更への感応度"
+  delay_plus_0_5Q: "t1+0.5Qテスト：AIコスト最適化・広告ビジネス堅調がQ3でも継続するか（α3のExplained Residual再現性）"
+  alignment_sales_pnl: "売上↔GM/CF/在庫の整合：サブスク成長（+37% YoY）がGM改善（+130bps）に繋がるか、α5改善余地（-$3.59M）の実現性"
+  platform_mix_consistency: "〔Platform〕Q2三ヶ月でStripe除外理由の整合性：閾値変更vs表記方針差の検証"
+  ai_cost_timing: "〔AI〕QoQ改善vs YoY悪化の整合性：AIコスト実績値の変動要因特定"
+  advertising_gm_impact: "〔Ads〕広告収入$20.6M（8.2%）のGM押上げ効果：CoRに乗らない構造の持続性"
+  segment_disclosure: "〔Segment〕単一セグメント構造での粗利内訳非開示：Mixの帰属分析限界"
+

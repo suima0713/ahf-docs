@@ -1,0 +1,54 @@
+{
+  "as_of": "2025-09-23",
+  "CONFIRMED": [
+    {
+      "kpi": "Q1_2026_Revenue",
+      "value": 223.1,
+      "unit": "million USD",
+      "asof": "2026-03-31",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000180779425000018/credoq12026ex-991.htm#:~:text=Revenue%20of%20%24223.1%20million%2C%20grew%20by%20274%25%20year%20over%20year%20and%2031%25%20quarter%20over%20quarter"
+    },
+    {
+      "kpi": "Q2_2026_Revenue_Guidance",
+      "value": 235.0,
+      "unit": "million USD",
+      "asof": "2025-09-23",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000180779425000018/credoq12026ex-991.htm#:~:text=Revenue%20is%20expected%20to%20be%20between%20%24230.0%20million%20and%20%24240.0%20million"
+    },
+    {
+      "kpi": "Q1_2026_Non_GAAP_Gross_Margin",
+      "value": 67.6,
+      "unit": "percent",
+      "asof": "2026-03-31",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000180779425000018/credoq12026ex-991.htm#:~:text=non%2DGAAP%20gross%20margin%20of%2067.6%25"
+    },
+    {
+      "kpi": "Q1_2026_Cash_Balance",
+      "value": 479.6,
+      "unit": "million USD",
+      "asof": "2026-03-31",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000180779425000018/credoq12026ex-991.htm#:~:text=Ending%20cash%20and%20short%2Dterm%20investment%20balance%20of%20%24479.6%20million"
+    }
+  ],
+  "UNCERTAIN": [
+    {
+      "kpi": "EV_S_Fwd",
+      "status": "blocked_source",
+      "url_index": "MARKET_DATA_ABSENT"
+    },
+    {
+      "kpi": "Backlog_Orders",
+      "status": "not_found",
+      "url_index": "ORDERS_ABSENT"
+    },
+    {
+      "kpi": "CapEx_Guidance",
+      "status": "not_found",
+      "url_index": "CAPEX_GUIDE_ABSENT"
+    }
+  ]
+}

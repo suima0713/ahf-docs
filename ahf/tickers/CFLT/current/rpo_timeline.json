@@ -1,0 +1,63 @@
+{
+  "ticker": "CFLT",
+  "rpo_timeline": {
+    "periods": [
+      {
+        "date": "2024-06-30",
+        "rpo_total_$k": 887800,
+        "rpo_12m_pct": 64.0,
+        "rpo_12m_$k": 568192,
+        "q_rev_$k": 234986,
+        "coverage_months_vs_q": 7.3,
+        "gate": {"threshold_months": 11.0, "pass": false, "gate_color": "Red"},
+        "quotes": [
+          {
+            "field": "total",
+            "verbatim_≤25w": "As of June 30, 2024, the Company's RPO was $887.8 million",
+            "anchor": "https://www.sec.gov/Archives/edgar/data/1699838/000095017024088632/cflt-20240630.htm#:~:text=As%20of%20June%2030%2C%202024%2C%20the%20Company%E2%80%99s%20RPO%20was%20%24887.8%20million",
+            "anchor_backup": {"pageno": 0, "quote": "As of June 30, 2024, the Company's RPO was $887.8 million", "hash": "d8858f"}
+          },
+          {
+            "field": "12m",
+            "verbatim_≤25w": "approximately 64% of which is expected to be recognized as revenue over the next 12 months",
+            "anchor": "https://www.sec.gov/Archives/edgar/data/1699838/000095017024088632/cflt-20240630.htm#:~:text=approximately%2064%25%20of%20which%20is%20expected%20to%20be%20recognized%20as%20revenue%20over%20the%20next%2012%20months",
+            "anchor_backup": {"pageno": 0, "quote": "approximately 64% of which is expected to be recognized as revenue over the next 12 months", "hash": "60c6ca"}
+          }
+        ],
+        "find_path": "note"
+      },
+      {
+        "date": "2023-12-31",
+        "rpo_total_$k": 919900,
+        "rpo_12m_pct": 64.0,
+        "rpo_12m_$k": 588736,
+        "q_rev_$k": "data_gap",
+        "coverage_months_vs_q": "data_gap",
+        "gate": {"threshold_months": 11.0, "pass": false, "gate_color": "Red"},
+        "quotes": [
+          {
+            "field": "total",
+            "verbatim_≤25w": "As of December 31, 2023, the Company's RPO was $919.9 million",
+            "anchor": "https://www.sec.gov/Archives/edgar/data/1699838/000095017024018036/cflt-20231231.htm#:~:text=As%20of%20December%2031%2C%202023%2C%20the%20Company%E2%80%99s%20RPO%20was%20%24919.9%20million",
+            "anchor_backup": {"pageno": 0, "quote": "As of December 31, 2023, the Company's RPO was $919.9 million", "hash": "dacc32"}
+          },
+          {
+            "field": "12m",
+            "verbatim_≤25w": "approximately 64% of which is expected to be recognized as revenue over the next 12 months",
+            "anchor": "https://www.sec.gov/Archives/edgar/data/1699838/000095017024018036/cflt-20231231.htm#:~:text=approximately%2064%25%20of%20which%20is%20expected%20to%20be%20recognized%20as%20revenue%20over%20the%20next%2012%20months",
+            "anchor_backup": {"pageno": 0, "quote": "approximately 64% of which is expected to be recognized as revenue over the next 12 months", "hash": "60c6ca"}
+          }
+        ],
+        "find_path": "note",
+        "gap_reason": {"field": "coverage_months_vs_q", "status": "data_gap", "reason": "DIFF_PERIOD", "ttl_days": 30}
+      }
+    ]
+  },
+  "auto_checks": {
+    "alpha4_gate_pass": false,
+    "messages": [
+      "Q2'24: 12M RPO 64% × $887.8M → $568.2M; ÷ Q2 Rev $235.0M × 3 ≈ 7.3ヶ月（Gate 11.0未達）",
+      "Q4'23: 12M RPO 64%は確認済みだが同期の四半期売上が未結合"
+    ]
+  }
+}

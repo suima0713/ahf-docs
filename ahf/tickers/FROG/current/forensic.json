@@ -1,0 +1,226 @@
+{
+  "as_of": "2025-09-22",
+  "redline_status": "CLEAR",
+  "alerts": [],
+  "flags": [],
+  "holds": [],
+  "stops": [],
+  "analysis": {
+    "long_term_ev_confidence": {
+      "score": 4,
+      "confidence": 80,
+      "market_awareness": 65,
+      "alpha_opacity": 55,
+      "upside_downside": [62, 38]
+    },
+    "long_term_ev_slope": {
+      "score": 5,
+      "confidence": 78,
+      "market_awareness": 60,
+      "alpha_opacity": 50,
+      "upside_downside": [65, 35]
+    },
+    "valuation_overlay": {
+      "status": "Red",
+      "ev_sales_fwd": 8.68,
+      "rule_of_40": 2.6,
+      "confidence": 68,
+      "market_awareness": 75,
+      "alpha_opacity": 58,
+      "upside_downside": [55, 45],
+      "market_cap": 5.03,
+      "cash_equivalents": 0.612,
+      "enterprise_value": 4.42,
+      "ntm_revenue_guidance": 0.5085,
+      "cash_t1_confirmed": 611.7,
+      "debt_status": "CONFIRMED_ZERO",
+      "borrowings": 0,
+      "lease_liabilities": {
+        "current": 7.479,
+        "noncurrent": 6.360
+      }
+    }
+  },
+  "scenarios": {
+    "base": {
+      "revenue_ntm": 508.5,
+      "revenue_24m": 575.0,
+      "opm_gaap": -18.0,
+      "rule_of_40": 0.0,
+      "s1_s2": [4, 5],
+      "di_multiplier": 0.55
+    },
+    "high": {
+      "revenue_ntm": 530.0,
+      "revenue_24m": 620.0,
+      "opm_gaap": -10.0,
+      "rule_of_40": 14.0,
+      "s1_s2": [5, 5],
+      "di_multiplier": 0.55
+    },
+    "low": {
+      "revenue_ntm": 495.0,
+      "revenue_24m": 540.0,
+      "opm_gaap": -22.0,
+      "rule_of_40": -6.5,
+      "s1_s2": [3, 4],
+      "di_multiplier": 0.54
+    }
+  },
+  "triggers": {
+    "downgrade": [
+      "12M RPO<60%へ低下",
+      "OCFマイナス化", 
+      "$1M+顧客減少",
+      "ガイド下方"
+    ],
+    "upgrade": [
+      "GAAP黒字化の継続",
+      "通期ガイドの再上方",
+      "Ro40≥40到達"
+    ]
+  },
+  "data_gap": {
+    "status": "resolved_partial",
+    "resolved": [
+      {
+        "item": "DSO/請求→入金ラグ",
+        "status": "resolved",
+        "method": "T1→ETL計算",
+        "result": "DSO 63日（H1平均AR法）"
+      },
+      {
+        "item": "希薄化y/y対比",
+        "status": "resolved", 
+        "method": "T1→ETL計算",
+        "result": "希薄化+5.79%y/y"
+      },
+      {
+        "item": "CapEx実績/強度",
+        "status": "resolved",
+        "method": "T1→ETL計算", 
+        "result": "CapEx強度0.51%"
+      }
+    ],
+    "remaining": [
+      {
+        "item": "CapExガイダンス",
+        "reason": "n/a（定量なし）",
+        "ttl": "next_quarter"
+      },
+      {
+        "item": "将来償却スケジュール（25R/26/27/28）",
+        "reason": "未取得（10-Q注記の表）",
+        "ttl": "14d"
+      }
+    ],
+    "edge_ttl_7d": [
+      {
+        "item": "Marketplace寄与%（新規/売上）",
+        "reason": "T1未開示",
+        "ttl": "7d"
+      },
+      {
+        "item": "ガイダンス上方の条件文",
+        "reason": "T1未開示",
+        "ttl": "7d"
+      },
+      {
+        "item": "SBC\"normalize\"の目標%/時期",
+        "reason": "T1未開示",
+        "ttl": "7d"
+      }
+    ],
+    "dual_anchor_status": "CONFIRMED",
+    "alpha5_math_guard": "resolved"
+  },
+  "auto_checks": {
+    "anchor_lint_pass": true,
+    "alpha4_gate_pass": true,
+    "alpha5_math_pass": true,
+    "gaap_bridge_validation": true,
+    "ro40_threshold_tracking": true
+  },
+  "triage_status": {
+    "CONFIRMED_T1": [
+      "A1(数値)", "A2(OPM)", "A3(額/スケジュール訂正)", "A4(現金)", 
+      "B5(因果)", "B6(Cloud値)", "C9",
+      "NDR/大口/FCF/ガイド"
+    ],
+    "EDGE_TTL_7d": [
+      "A1（正常化文言）", "A2（'26黒字目標）", "B5（フラット化）", 
+      "B6(15%)", "B7", "B8", "C10", "C11", "D12"
+    ]
+  },
+  "calculation_logs": {
+    "alpha5_validation": {
+      "GP_calculated": 105.703,
+      "Adj_EBITDA": 20.3,
+      "residual": 0.90,
+      "GM_deviation": 0.0,
+      "pass": true
+    },
+    "gaap_bridge": {
+      "GAAP_OPM": -20.4,
+      "SBC_pct": 29.9,
+      "Amort_pct": 4.5,
+      "Acq_pct": 1.3,
+      "Non_GAAP_OPM": 15.3,
+      "amort_schedule": "2028年まで継続",
+      "improvement_pace": "緩やかに修正",
+      "ro40_timeline": "保守性Up（改善カーブ緩やか）",
+      "amortization_runoff": {
+        "2025": 22896,
+        "2026": 20248,
+        "2027": 15321,
+        "2028": 5361,
+        "total_improvement_pts": 3.45,
+        "source": "10-K FY24 Note 6"
+      }
+    },
+    "ro40_tracking": {
+      "current_ro40": 2.6,
+      "ro40_35_requires_gaap_opm": 12.0,
+      "ro40_40_requires_gaap_opm": 17.0,
+      "q3_checkpoints": {
+        "sbc_revenue_ratio_target": "<27%",
+        "amort_revenue_ratio_target": "<=4%",
+        "gaap_opm_improvement_target": ">-15%"
+      }
+    },
+    "alpha4_coverage": {
+      "rpo_12m": 319.4,
+      "quarterly_revenue": 127.2,
+      "coverage_months": 7.53
+    },
+    "mix_analysis": {
+      "cloud_percentage": 45.0,
+      "enterprise_plus_percentage": 55.0
+    },
+    "rss_score": {
+      "q_q_revenue": 3.9,
+      "period": "Q1→Q2"
+    },
+    "alpha_scores": {
+      "alpha3_score": 2,
+      "alpha5_score": 2
+    },
+    "tri3": {
+      "T": 2,
+      "R": 1,
+      "V": "Red",
+      "star": 3,
+      "bonus_applied": true
+    },
+    "valuation_overlay": {
+      "status": "Red",
+      "ev_sales_fwd": 8.68,
+      "rule_of_40": 0,
+      "hysteresis": {
+        "evsales_delta": 0.5,
+        "ro40_delta": 2.0,
+        "upgrade_factor": 1.2
+      }
+    }
+  }
+}

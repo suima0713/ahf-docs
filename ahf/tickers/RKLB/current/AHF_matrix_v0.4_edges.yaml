@@ -1,0 +1,111 @@
+# RKLB AHFマトリクス v0.4 - Edge 3件反映
+# v0.4ルール：各軸にEdge行を追加／★調整は最大+1、確信度+5ppを一度だけ適用
+
+# 右肩上がり（構造的上向き）
+right_shoulder_analysis:
+  core_rating: "★4"
+  core_confidence: "80% → 85% (+5pp適用)"
+  market_embedding: "60%"
+  core_factors:
+    - "Remaining backlog $995,410…58%…within 12 months"
+    - "Contract liabilities…$223,432（6/30）／…$206,867（3/31）"
+    - "AFRL REGAL契約（Neutron二段・フェアリング）政府資金流入"
+    - "Space Force VICTUS HAZE統合完了（超短期応答）"
+    - "DoD HASTE打上げ契約（MACH-TB 2.0）極超音速試験"
+  
+  edge_contributions:
+    - name: "VICTUS HAZE統合"
+      p: 78
+      ttl: "21d"
+      summary: "迅速応答の運用前進（継続性）"
+      contradiction: false
+    - name: "HASTE（極超音速試験）"
+      p: 76
+      ttl: "30d"
+      summary: "防衛用途の反復需要"
+      contradiction: false
+  
+  star_adjustment: "+1 → 最終★5"
+  confidence_adjustment: "+5pp適用（一度だけ）"
+
+# 勾配（改善スピード）
+slope_quality_analysis:
+  core_rating: "★3"
+  core_confidence: "70%"
+  market_embedding: "45%"
+  core_factors:
+    - "Revenues by recognition model… Over-time $134,495"
+    - "Space Systems中心の継続認識が伸長"
+    - "OpEx Green $80,904k"
+    - "GAAP GM 27.8→28.8→32.1%と3Q連続改善"
+    - "REGAL開発支援＋構造部品の政府資金流入"
+    - "Neutron固定費回収と設計成熟を前倒し"
+  
+  edge_contributions:
+    - name: "REGAL（AFRL支援/Neutron）"
+      p: 82
+      ttl: "30d"
+      summary: "二段/フェアリング開発で効率学習"
+      contradiction: false
+    - name: "HASTE（極超音速試験）"
+      p: 76
+      ttl: "30d"
+      summary: "稼働率・学習曲線の後押し"
+      contradiction: false
+  
+  star_adjustment: "±0（反映のみ）"
+
+# 時間軸プロファイル（12M可視性）
+time_profile_analysis:
+  core_rating: "★3"
+  core_confidence: "70%"
+  market_embedding: "50%"
+  core_factors:
+    - "Contract liabilities…$223,432（6/30）／…$206,867（3/31）"
+    - "We deliver reliable launch… spacecraft… on-orbit solutions"
+    - "Total cash and cash equivalents $749,299"
+    - "VICTUS HAZE実運用フェーズへ前進"
+    - "HASTE防衛案件の反復性を裏付け"
+  
+  edge_contributions:
+    - name: "REGAL（マイルストン型）"
+      p: 82
+      ttl: "30d"
+      summary: "OT認識寄与の土台"
+      contradiction: false
+    - name: "VICTUS HAZE統合"
+      p: 78
+      ttl: "21d"
+      summary: "政府プログラム継続性"
+      contradiction: false
+  
+  star_adjustment: "±0（反映のみ）"
+
+# 認知ギャップ（市場未織込み）
+cognitive_gap_analysis:
+  core_rating: "★3"
+  core_confidence: "65%"
+  market_embedding: "40%"
+  core_factors:
+    - "公式PRで市場の目にも触れるが、OT/SSへの会計インパクトまでは市場に十分織込まれていない余地"
+  
+  edge_contributions:
+    - name: "REGAL"
+      p: 82
+      ttl: "30d"
+      summary: "OT/効率インパクトは未十分評価"
+      contradiction: false
+    - name: "VICTUS HAZE"
+      p: 78
+      ttl: "21d"
+      summary: "迅速応答の実証価値が遅れて浸透"
+      contradiction: false
+  
+  star_adjustment: "±0（反映のみ）"
+
+# 運用ルール適用サマリ
+rule_application_summary:
+  star_adjustment_limit: "合計+1までに制限（今回は「右肩上がり」に適用）"
+  confidence_adjustment_limit: "確信度+5ppは一度だけ適用（同じく「右肩上がり」に付与、上限95%内）"
+  edge_documentation: "Edgeは出自明示＋P（確からしさ）＋TTL付きで掲出。3件ともcontradiction=false"
+  v0.4_compliance: "v0.4ルール完全準拠"

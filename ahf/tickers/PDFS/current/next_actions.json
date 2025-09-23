@@ -1,0 +1,59 @@
+{
+  "ticker": "PDFS",
+  "period": "Q2 2025",
+  "analysis_date": "2025-09-21",
+  "next_actions": {
+    "alpha3_gm_explanation": {
+      "objective": "Q2 10-Q本文でGM悪化の一次説明を特定（α3＝Explained昇格可否）",
+      "exploration_target": "MD&Aの Gross margin / Cost of revenue 段落（Form 10-Q 本文）",
+      "purpose": "非GAAP売上原価が Q/Q +$1.70M（10.94→12.63）に増えた"中身"（ホスティング・サポート・ライセンス等）の一次テキストを確保",
+      "current_status": "data_gap（triage=UNCERTAIN, TTL=7d）",
+      "reason": "10-Qインデックス到達済みだが本文ビューアがブロック",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1120914/000143774925025464/0001437749-25-025464-index.htm",
+      "backup_evidence": {
+        "non_gaap_gm": "76%",
+        "cost_of_revenue_adjustment": "GAAP→non-GAAP調整の行",
+        "source": "https://www.sec.gov/Archives/edgar/data/1120914/000143774925025457/ex_825595.htm"
+      }
+    },
+    "contract_balances_analysis": {
+      "objective": "Contract balancesの突合（WATCH救済の可否：CL↑ / CA↓）",
+      "exploration_target": "10-Q Note 2 \"Revenue from contracts with customers – Schedule of Contract Balances\"（XBRLの該当テーブル）",
+      "purpose": "CL（当期繰延収益）と CA（契約資産）のQoQ方向を確定",
+      "current_status": "CL（current）は Q/Q 27.131 → 23.363（$M）で↓を確認済。CAは本文未取得で不明→ data_gap（TTL=7d）",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1120914/000143774925025464/0001437749-25-025464-index.htm",
+      "judgment_criteria": "Item1A=No change かつ CL↑ / CA↓ が揃えば WATCH→GO候補"
+    },
+    "alpha5_ebitda_precision": {
+      "objective": "α5の厳密化（Adj. EBITDAをT1で確定）",
+      "exploration_target": "10-Q Note 3 \"Amortization of identifiable intangibles / D&A\" と Ex.99.1/99.2 の Non-GAAPリコン（会社方針どおりSBC除外）",
+      "purpose": "Adj. EBITDA（$）を逐語で確定し、OpExグリッド18通りを再走",
+      "current_status": "Non-GAAP OI＋D&Aの下限推定で代用（中央値OpEx≈$27.6M vs GAAP実績$35.7M → −$8.1Mで「改善の素地あり」点灯）",
+      "sensitivity_analysis": "EBITDAを±$3Mずらしても差は−$11.1M〜−$5.1Mで閾値（−$3〜−$5M）を維持→α5の結論は堅い",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1120914/000143774925025457/ex_825595.htm"
+    },
+    "item1a_risk_factors": {
+      "objective": "Item 1A（Risk Factors）更新の有無を一次で確定",
+      "exploration_target": "10-Q本文の Item 1A",
+      "purpose": "\"No material changes\" の逐語有無→WATCH救済の片翼",
+      "current_status": "data_gap（TTL=7d）（本文未取得）",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1120914/000143774925025464/0001437749-25-025464-index.htm"
+    }
+  },
+  "current_status": {
+    "alpha3": "Fail（Unexplained）→ 「原価増で数表整合」まで進展（一次\"理由文\"は未確保）",
+    "alpha5": "改善の素地あり（感度テストでも維持）",
+    "watch_rescue": "CLは↓／CA不明／Item1A不明 → 未成立",
+    "conclusion": "現時点 NO-GO据え置き（整合テキストが取れ次第\"Explained PASS\"へ昇格の余地）"
+  },
+  "go_conditions": {
+    "go_switch_conditions": [
+      "Q2 10-Q本文で GM悪化の一次要因の明文化（例：クラウド費／サポート増 等）→ α3=PASS（Explained）",
+      "α5「改善の素地あり」維持（確度高）"
+    ],
+    "watch_switch_conditions": [
+      "Item1A=No change かつ CL↑ / CA↓（Q2はCL↓のため、次Q反転 or CA↓の確認が必要）"
+    ]
+  },
+  "operational_principle": "Stage-2判定は\"モデル×T1の整合性\"。未整合は突き合わせ、未解消はUNCERTAIN（TTL付）で降格保存—削除しない。"
+}

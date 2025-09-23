@@ -1,0 +1,58 @@
+meta:
+  asof: 2025-09-19
+
+# A｜材料（T1逐語のみ、≤40語）
+core:
+  right_shoulder: 
+    - "RPO backlog $22.4B supports long-term revenue visibility"
+    - "Systems revenue $559.1M (94.4% mix) with 18.1% gross margin"
+    - "46 Systems in Deployment during Q3 with $12.2M revenue per deployment"
+    - "RPO 12-month coverage 12.5 months with $2.46B recognized in next 12 months"
+    - "GreenBox contract $11.5B unsatisfied performance obligations"
+    - "RPO 13-60 month bucket 63.6 months coverage with 56% of total RPO"
+    - "Customer A AR concentration dropped from 66.9% to 38.5% (Q2→Q3)"
+    - "Customer A revenue $496.2M per quarter (83.8% of Q3 revenue)"
+    - "12M RPO consumption 24% per quarter with 4.1 quarters coverage at Q4 mid run-rate"
+    - "GreenBox represents 51.3% of total RPO ($11.5B of $22.4B)"
+    - "APD 400 units potential RPO addition $5.0B future option value"
+  slope_quality: 
+    - "Gross margin pressure from project delays and cost overruns"
+    - "Software MS segment 78.4% gross margin vs Systems 18.1%"
+    - "Mix sensitivity: +1pt to Software MS = +0.60pp blended GM"
+    - "Customer A concentration 83.8% of Q3 revenue creates dependency risk"
+    - "SBC represents 24.7% of GAAP R&D and 28.3% of GAAP SG&A"
+    - "Adjusted EBITDA leverage 35.7% of adjusted gross profit"
+    - "GreenBox deferred revenue increased 85.7% QoQ to $139.1M"
+    - "Software+2pt mix scenario: GM+1.2pp, Adj GP/EBITDA+$7.2M uplift"
+    - "Stage-2 normalization (SBC+D&A) adds 3.3pp to gross margin"
+    - "Ops Services margin 0.2% with $593K revenue per operational system"
+    - "Systems GM 18.1% vs Software GM 78.4% vs Ops GM 0.2%"
+    - "Service run-rate $132M annual with 19.5% margin (SW+Ops combined)"
+  time_profile: 
+    - "Contract liabilities increased while AR decreased indicating cash advance"
+    - "Opening contract liabilities $567.9M recognized YTD (34.9% of revenue)"
+    - "Cash $777.6M covers 9.5 quarters of adjusted OpEx"
+    - "Net contract liability position $550.5M positive cash flow signal"
+    - "Purchase commitments $871.8M with $793.5M due within 1 year"
+    - "CFO below EBITDA due to working capital headwinds (CL↓$171M, Unbilled↑$76M)"
+    - "Contract liabilities decreased 15.7% QoQ while unbilled AR increased"
+    - "Unbilled AR represents 12.9% of total assets indicating acceptance timing risk"
+    - "Partial CCC (DIO+DSO) 77.8 days with inventory $3.0M per deployment"
+    - "GreenBox execution vs deferral: 4.5% revenue share, 23.5% deferred of company revenue"
+    - "WIP intensity 63.4% of revenue (inventory+unbilled), AR+WIP=86.4% timing sensitivity"
+    - "GreenBox represents 21.7% of unbilled AR and 15.1% of contract liabilities"
+    - "Vendor commitments $871.8M vs cash $777.6M (112.1% coverage), LT1Y $793.5M vs Q3 rev 1.34x"
+    - "CFO 9M $336.3M (SBC-adjusted $216.7M) shows improved cash generation"
+    - "Share dilution 6.6% YoY (109.2M vs 102.4M weighted average shares)"
+
+# ④Time注釈（一度だけ、③の文中に記載）
+time_annotation:         
+  delta_t_quarters: 8
+  delta_g_pct: 26
+  window_quarters: 12
+  note: "RPO-driven growth with margin efficiency challenges"
+
+# 固定ガード
+# - T1逐語のみ使用（Lead/推論禁止）
+# - 構造①/傾き②/バリュはOverlayに分離
+# - Time注釈は一度のみ 

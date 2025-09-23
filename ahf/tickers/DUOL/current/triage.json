@@ -1,0 +1,631 @@
+{
+  "as_of": "2025-01-15",
+  "CONFIRMED": [
+    {
+      "kpi": "Revenue Q2",
+      "value": 252.265,
+      "unit": "M USD",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "Gross Margin Q2",
+      "value": 72.4,
+      "unit": "%",
+      "asof": "2025-Q2", 
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "Subscription Mix Q2",
+      "value": 83.51,
+      "unit": "%",
+      "asof": "2025-Q2",
+      "tag": "T1-core", 
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "Operating Expenses Q2",
+      "value": 149.218,
+      "unit": "M USD",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "Deferred Revenue Q2",
+      "value": 431.177,
+      "unit": "M USD",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "3つのチェック",
+      "value": "PASS",
+      "unit": "status",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "T1 Analysis"
+    },
+    {
+      "kpi": "サブスクMix/広告テンポ",
+      "value": "confirmed",
+      "unit": "status",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "T1 Analysis"
+    },
+    {
+      "kpi": "会計ポリシー",
+      "value": "CoR",
+      "unit": "policy",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "広告コスト計上",
+      "value": "S&M",
+      "unit": "policy",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "プラットフォーム依存",
+      "value": "Q1=3社/Q2=2社",
+      "unit": "status",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "決済経路",
+      "value": "service_providers",
+      "unit": "policy",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "リスク要因",
+      "value": "no_material_changes",
+      "unit": "status",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "GM一次説明",
+      "value": "AI_cost_optimization_ads_strength",
+      "unit": "explanation",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "8-K SHL"
+    },
+    {
+      "kpi": "GM YoY要因",
+      "value": "AI_cost_increase_max_expansion",
+      "unit": "explanation",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "α3再突合",
+      "value": "SW_82.77_to_83.51_pp",
+      "unit": "percentage",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "α5即時判定",
+      "value": "OpEx_gap_44.4M",
+      "unit": "M USD",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "プラットフォーム依存",
+      "value": "Apple_60.6_Google_23.3",
+      "unit": "percentage",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "App手数料会計",
+      "value": "CoR",
+      "unit": "policy",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "10-K"
+    },
+    {
+      "kpi": "広告コスト扱い",
+      "value": "S&M",
+      "unit": "policy",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "契約負債満期性",
+      "value": "current_liability_12m",
+      "unit": "policy",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "リスク要因更新",
+      "value": "no_material_changes",
+      "unit": "status",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q1/Q2 10-Q"
+    },
+    {
+      "kpi": "α3再突合詳細",
+      "value": "SW_82.79_to_83.51_pp",
+      "unit": "percentage",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q1/Q2 10-Q"
+    },
+    {
+      "kpi": "α3結果",
+      "value": "pp_threshold_FAIL_residual_PASS",
+      "unit": "status",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Calculated"
+    },
+    {
+      "kpi": "α5即時判定詳細",
+      "value": "OpEx_gap_3.59M",
+      "unit": "M USD",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "α5結果",
+      "value": "improvement_potential_PASS",
+      "unit": "status",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Calculated"
+    },
+    {
+      "kpi": "プラットフォーム依存詳細",
+      "value": "Apple_61.6_Google_23.9",
+      "unit": "percentage",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "H1プラットフォーム",
+      "value": "Apple_59.1_Google_26.3_Stripe_10.4",
+      "unit": "percentage",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "CoR政策詳細",
+      "value": "third_party_payment_processors_CoR",
+      "unit": "policy",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "10-K"
+    },
+    {
+      "kpi": "広告コスト政策詳細",
+      "value": "S&M_included",
+      "unit": "policy",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "DR変化詳細",
+      "value": "415.023k_to_431.177k",
+      "unit": "k USD",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q1/Q2 10-Q"
+    },
+    {
+      "kpi": "DR成長",
+      "value": "QoQ_plus_16.15M",
+      "unit": "M USD",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q1/Q2 10-Q"
+    },
+    {
+      "kpi": "GM QoQ説明",
+      "value": "130_bps_AI_cost_ads_strength",
+      "unit": "explanation",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "8-K SHL"
+    },
+    {
+      "kpi": "Q2プラットフォーム処理",
+      "value": "Apple_61.6_Google_23.9_processed",
+      "unit": "percentage",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "広告コスト分類",
+      "value": "S&M_included",
+      "unit": "policy",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "決済処理CoR",
+      "value": "third_party_payment_processors_CoR",
+      "unit": "policy",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "10-K"
+    },
+    {
+      "kpi": "Q2 DR残高",
+      "value": "431177",
+      "unit": "k USD",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "α3結果詳細",
+      "value": "0.736pp_drift_mechanical_NG_small_residual",
+      "unit": "status",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Calculated"
+    },
+    {
+      "kpi": "α5結果詳細",
+      "value": "3.59M_improvement_clear",
+      "unit": "status",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Calculated"
+    },
+    {
+      "kpi": "T1検証",
+      "value": "CoR_Stripe_DR_all_verified",
+      "unit": "status",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "T1 Analysis"
+    },
+    {
+      "kpi": "GM上振れ分析",
+      "value": "mix_alone_insufficient_AI_cost_ads_contribution",
+      "unit": "analysis",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "T1 Analysis"
+    },
+    {
+      "kpi": "SW比率変化",
+      "value": "82.77_to_83.51_pp",
+      "unit": "percentage",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q1/Q2 10-Q"
+    },
+    {
+      "kpi": "Q1収益Mix",
+      "value": "Subscription_190987_Total_230743",
+      "unit": "M USD",
+      "asof": "2025-Q1",
+      "tag": "T1-core",
+      "url": "Q1 10-Q"
+    },
+    {
+      "kpi": "Q2収益Mix",
+      "value": "Subscription_210678_Total_252265",
+      "unit": "M USD",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "Q1 GM",
+      "value": "71.1",
+      "unit": "%",
+      "asof": "2025-Q1",
+      "tag": "T1-core",
+      "url": "Q1 10-Q"
+    },
+    {
+      "kpi": "Q2 GM",
+      "value": "72.4",
+      "unit": "%",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "α3計算",
+      "value": "predicted_0.58pp_drift_0.72pp_residual_1.82M",
+      "unit": "calculation",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Calculated"
+    },
+    {
+      "kpi": "Q2収益GM",
+      "value": "252.3M_72.4pct",
+      "unit": "M USD",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "Q2 EBITDA",
+      "value": "78.7",
+      "unit": "M USD",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "α5入力",
+      "value": "lattice_103.95M_vs_actual_107.542M",
+      "unit": "M USD",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Calculated"
+    },
+    {
+      "kpi": "OpEx実績",
+      "value": "107542",
+      "unit": "k USD",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "α5結果詳細",
+      "value": "3.59M_gap_improvement_potential",
+      "unit": "M USD",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Calculated"
+    },
+    {
+      "kpi": "Q1 DR",
+      "value": "415023",
+      "unit": "k USD",
+      "asof": "2025-Q1",
+      "tag": "T1-core",
+      "url": "Q1 10-Q"
+    },
+    {
+      "kpi": "Q2 DR",
+      "value": "431177",
+      "unit": "k USD",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "DR分類",
+      "value": "current_liability",
+      "unit": "classification",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "Q2プラットフォーム処理",
+      "value": "Apple_61.6_Google_23.9_processed",
+      "unit": "percentage",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "H1プラットフォーム処理",
+      "value": "Stripe_10.4_six_months",
+      "unit": "percentage",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "Q2 AR集中度",
+      "value": "71.0_and_15.5_percent",
+      "unit": "percentage",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "Q1 AR集中度",
+      "value": "67.7_and_16.2_percent",
+      "unit": "percentage",
+      "asof": "2025-Q1",
+      "tag": "T1-core",
+      "url": "Q1 10-Q"
+    },
+    {
+      "kpi": "α3要約",
+      "value": "pp_threshold_FAIL_small_residual",
+      "unit": "status",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Calculated"
+    },
+    {
+      "kpi": "α5要約",
+      "value": "PASS_3.59M_improvement_signal_strong",
+      "unit": "status",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Calculated"
+    },
+    {
+      "kpi": "T1検証要約",
+      "value": "DR_platform_AR_all_T1_fixed",
+      "unit": "status",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "T1 Analysis"
+    },
+    {
+      "kpi": "Q1 Platform Mix",
+      "value": "Apple_61.3_Google_23.3_Stripe_11.0",
+      "unit": "percentage",
+      "asof": "2025-Q1",
+      "tag": "T1-core",
+      "url": "Q1 10-Q"
+    },
+    {
+      "kpi": "Q2 Platform Mix",
+      "value": "Apple_61.6_Google_23.9",
+      "unit": "percentage",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "H1 Platform Mix",
+      "value": "Apple_61.3_Google_23.6_Stripe_10.4",
+      "unit": "percentage",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "Segment Structure",
+      "value": "single_operating_segment",
+      "unit": "structure",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "AI Cost QoQ",
+      "value": "lower_than_expected_130bps",
+      "unit": "explanation",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "8-K SHL"
+    },
+    {
+      "kpi": "AI Cost YoY",
+      "value": "increased_generative_AI_costs",
+      "unit": "explanation",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "DR Maturity",
+      "value": "current_liability_12_months",
+      "unit": "policy",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "Ad Revenue Growth",
+      "value": "increased_advertising_revenue_DAUs",
+      "unit": "explanation",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "Q2 Ad Revenue",
+      "value": "20603",
+      "unit": "k USD",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    },
+    {
+      "kpi": "Ad Cost Policy",
+      "value": "Sales_and_marketing",
+      "unit": "policy",
+      "asof": "2025-Q2",
+      "tag": "T1-core",
+      "url": "Q2 10-Q"
+    }
+  ],
+  "UNCERTAIN": [
+    {
+      "kpi": "CA QoQ Change",
+      "status": "not_found", 
+      "url_index": "Q2 10-Q Balance Sheet"
+    },
+    {
+      "kpi": "RPO 12M Coverage",
+      "status": "not_found",
+      "url_index": "Q2 10-Q Note3"
+    },
+    {
+      "kpi": "Forward Guidance",
+      "status": "not_found",
+      "url_index": "Q2 Ex.99.1"
+    },
+    {
+      "kpi": "Q3 MD&Aマイナー",
+      "status": "not_found",
+      "url_index": "Q3 10-Q未提出"
+    },
+    {
+      "kpi": "AIコストQoQ動き",
+      "status": "not_found",
+      "url_index": "Q2 10-Q YoY表現のみ"
+    },
+    {
+      "kpi": "広告季節性",
+      "status": "not_found",
+      "url_index": "Q2 10-Q内で明示なし"
+    },
+    {
+      "kpi": "ミックス分解",
+      "status": "not_found",
+      "url_index": "単一セグメントで粗利内訳未開示"
+    },
+    {
+      "kpi": "Web直課金",
+      "status": "not_found",
+      "url_index": "Q2 10-Q内で明文化なし"
+    },
+    {
+      "kpi": "Ads直接コスト",
+      "status": "not_found",
+      "url_index": "ad network fee等の個別科目記述なし"
+    },
+    {
+      "kpi": "Ads→GM感応",
+      "status": "not_found",
+      "url_index": "単一セグメントで粗利内訳未開示"
+    },
+    {
+      "kpi": "Q2 Stripe Exclusion Reason",
+      "status": "not_found",
+      "url_index": "Q2 10-Q内で3ヶ月表記でStripe除外理由不明"
+    }
+  ]
+}
+

@@ -1,0 +1,60 @@
+{
+  "ticker": "PDFS",
+  "period": "Q2 2025",
+  "analysis_date": "2025-09-21",
+  "data_gaps": [
+    {
+      "field": "Q2 10-Q 本文（MD&A/Item1A/契約資産Note）",
+      "status": "UNCERTAIN",
+      "reason": "SECドキュメント本文の取得エラー",
+      "ttl_days": 7,
+      "impact": "Item1A確認、CA Q2確認、完全D&A分解"
+    },
+    {
+      "field": "Q2 Contract Assets",
+      "status": "UNCERTAIN", 
+      "reason": "Q2 10-Q本文アクセス障害",
+      "ttl_days": 7,
+      "impact": "WATCH→GO判定"
+    },
+    {
+      "field": "Q2 Item 1A",
+      "status": "UNCERTAIN",
+      "reason": "Q2 10-Q本文取得エラー",
+      "ttl_days": 7,
+      "impact": "WATCH→GO判定"
+    }
+  ],
+  "alternative_sources": {
+    "dual_anchor_status": "PENDING_SEC",
+    "ex99_2_status": "取得済",
+    "note": "同一8-KのIR補助資料Ex.99.2は取得済"
+  },
+  "additional_anchors": [
+    {
+      "quote": "Cost of Revenue - Non-GAAP $12,631 … $10,935",
+      "source": "SEC",
+      "impact": "Cost Increase Confirmation"
+    },
+    {
+      "quote": "GAAP gross margin… 71%… non-GAAP… 76%",
+      "source": "SEC", 
+      "impact": "GM Decline Confirmation"
+    },
+    {
+      "quote": "Deferred revenues ‒ current portion $23,363",
+      "source": "SEC",
+      "impact": "CL Q2 Confirmation"
+    },
+    {
+      "quote": "Deferred revenues were… Current $27,131",
+      "source": "SEC",
+      "impact": "CL Q1 Confirmation"
+    },
+    {
+      "quote": "no material changes from the risk factors…",
+      "source": "SEC",
+      "impact": "Item1A Q1 Confirmation"
+    }
+  ]
+}

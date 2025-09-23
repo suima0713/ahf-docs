@@ -1,0 +1,20 @@
+meta:
+  asof: 2025-09-19
+
+# A｜材料（T1逐語のみ、≤40語）
+core:
+  right_shoulder: ["Revenue $50,313"]     # ①右肩上がり（T1逐語のみ）
+  slope_quality: ["α5 OpEx Green $13,525k", "Adjusted EBITDA $(25,368)", "Revenue $50,313; Cost of revenue (ex dep) $56,047"]      # ②傾きの質（T1逐語のみ）
+  time_profile: ["Backlog $256,909 as of June 30, 2025", "Backlog decreased by $71.4 million", "12M recognition ratio not explicitly disclosed"]       # ③時間（T1逐語のみ）
+
+# ④Time注釈（一度だけ、③の文中に記載）
+time_annotation:         
+  delta_t_quarters: 
+  delta_g_pct: 
+  window_quarters: 
+  note:
+
+# 固定ガード
+# - T1逐語のみ使用（Lead/推論禁止）
+# - 構造①/傾き②/バリュはOverlayに分離
+# - Time注釈は一度のみ 

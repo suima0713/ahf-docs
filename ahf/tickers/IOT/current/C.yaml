@@ -1,0 +1,20 @@
+# C｜反証（固定3テスト）
+tests:
+  time_off: "IoTプラットフォーム需要の長期性検証（T1データ確定）"          # 〔Time〕無効化テスト
+  delay_plus_0_5Q: "決算ガイダンス vs 実績の乖離分析（T1データ確定）"   # t1+0.5Qテスト
+  alignment_sales_pnl: "ARR↔売上↔CF↔顧客数の整合性（T1データ確定）" # 売上↔GM/CF/在庫の整合
+
+# TW計算ログ（T1確定版）
+tw_observations:
+  CL_qoq: "4.9%"
+  coverage_months: "10.7"
+  hit: false
+  side: "none"
+  reason: "CL<+5% かつ coverage<11"
+  up_rule: "CL_qoq ≥ +5% or Bookings_qoq ≥ +10% AND coverage_months ≥ 11"
+  down_rule: "CL_qoq ≤ 0%（連続） AND DoU/Unbilled高止まり or 顧客集中>90%"
+
+# 固定ガード
+# - 反証対象の設定のみ（構造①/傾き②はOverlayに分離）
+# - テスト条件に反映（逆行時にΔIRR記載）
+# - 固定3テストのみ（横論点禁止）

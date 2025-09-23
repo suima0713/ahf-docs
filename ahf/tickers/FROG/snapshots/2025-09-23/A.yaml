@@ -1,0 +1,24 @@
+meta:
+  asof: 2025-09-22
+core:
+  right_shoulder: 
+    - "RPO $476.7M (67% recognized within 12 months)"
+    - "NDR 118% with $1M+ ARR customers = 61"
+    - "OCF $36.1M / FCF $35.5M (Q2)"
+    - "A/R $83.0M / Deferred revenue $281.9M"
+  slope_quality:
+    - "Cloud revenue 45% (+700bps y/y)"
+    - "Enterprise+ 55% of revenue"
+    - "Q2 Non-GAAP OI 15.2% ($19.4M)"
+    - "Q3 revenue guidance $127-129M, OI $16.5-18.5M"
+    - "Gross margin 76.3% (Non-GAAP 83.1%)"
+  time_profile:
+    - "Q2'25 results (June 30, 2025)"
+    - "Q3'25 guidance midpoint $128M"
+    - "FY25 guidance midpoint $508.5M"
+time_annotation:
+  delta_t_quarters: 2
+  delta_g_pct: 18.7
+  window_quarters: 4
+  note: "SaaS shift driving hosting cost increase, GM pressure from Cloud mix improvement"
+

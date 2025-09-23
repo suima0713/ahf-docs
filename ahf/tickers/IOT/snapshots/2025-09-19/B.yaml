@@ -1,0 +1,40 @@
+# B｜総合判断（Horizon＋ΔIRR＋KPI×2）
+horizon:
+  6M: {verdict: "Go", ΔIRRbp: 350}
+  1Y: {verdict: "Go", ΔIRRbp: 400}
+  3Y: {verdict: "Go", ΔIRRbp: 450}
+  5Y: {verdict: "Go", ΔIRRbp: 500}
+
+stance:
+  decision: "Go"           # Go/保留/No-Go
+  size: "Med"              # Low/Med/High
+  reason: "T1データ取得完了、ARR成長35%・粗利改善・FCF黒字化でΔIRR≥+300bp達成"
+
+# 判断ゲート: ①＞②＞③＞④、ΔIRR≥+300–500bp
+decision_gates:
+  structure_quality: "IoTプラットフォーム事業、SaaS型ARRモデル、売上成長31%・ARR成長35%"  # ①右肩上がり（要旨1行）
+  slope_quality: "粗利改善77%・Non-GAAP営業利益14%・FCF黒字化"      # ②傾きの質（要旨1行）
+  time_profile: "Q1 2026決算サイクル、継続的成長軌道"       # ③時間（Horizon表）
+  time_annotation: "Q1 2026 revenue growth of 31% YoY demonstrates sustained growth trajectory"    # ④カタリスト（一度だけ、③文中）
+  irr_threshold: "ΔIRR≥+350bp達成"      # ΔIRR≥+300–500bp
+
+# Holdでも舵を切る（Decision Overlay参照）
+hold_override_gate: "S高×Q中以上×ΔIRR≥+700bp → Pilot Buy（1/4）"
+
+# KPI×2固定（質×実行）
+kpi_watch: [2項目]
+  - name: "arr_growth_rate"
+    current: 35.0
+    target: "≥30% YoY"
+  - name: "gross_margin_improvement"
+    current: 77.0
+    target: "≥75%"
+
+# 差分管理（必須）
+diff_summary: "T1データ取得完了、売上成長31%・ARR成長35%・粗利改善77%・FCF黒字化でGo判定"         # 何が・どれだけ・いつ
+
+# T1カバレッジ目標
+t1_coverage_targets:
+  6M: "≥70%"
+  1Y: "≥80%"
+  3Y_plus: "≥90%"

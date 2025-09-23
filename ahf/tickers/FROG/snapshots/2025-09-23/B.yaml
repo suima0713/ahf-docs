@@ -1,0 +1,25 @@
+horizon:
+  6M: 
+    verdict: "GO"
+    ΔIRRbp: 300
+  1Y: 
+    verdict: "GO" 
+    ΔIRRbp: 400
+  3Y: 
+    verdict: "GO"
+    ΔIRRbp: 500
+  5Y: 
+    verdict: "GO"
+    ΔIRRbp: 600
+stance:
+  decision: "GO"
+  size: "Low"
+  reason: "基礎は強い。買うならVの赤を意識したサイズ管理で。Cloud/Ent+・OIレバレッジでコア強いが、GAAPベースのRo40不足でVがブレーキ"
+kpi_watch:
+  - name: "Rule of 40 (GAAP)"
+    current: -1.0
+    target: 40.0
+  - name: "EV/Sales (Forward)"
+    current: 8.7
+    target: 10.0
+

@@ -1,0 +1,60 @@
+# B.yaml 監視テンプレート（二重アンカー対応）
+
+horizon:
+  6M: {verdict: "", ΔIRRbp: }
+  1Y: {verdict: "", ΔIRRbp: }
+  3Y: {verdict: "", ΔIRRbp: }
+  5Y: {verdict: "", ΔIRRbp: }
+
+stance:
+  decision: ""           # Go/保留/No-Go
+  size: ""              # Low/Med/High
+  reason: ""
+
+kpi_watch: [2項目]
+  - name: ""
+    current: 
+    target: 
+
+kpi_monitors:
+  - key: rpo_12m_pct
+    unit: "%"
+    value: "auto"
+    calculation:
+      formula: "extract_12m_pct(RPO_note)"
+      source: "10-Q/10-K RPO note"
+    anchors:
+      primary: "<SEC #fragment>"
+      secondary: "<IR #fragment>"
+      dual_anchor_status: "REQUIRED"
+    auto_checks:
+      - rule: "anchor_lint_pass == true"
+      - rule: "dual_anchor_status in ['CONFIRMED','PENDING_SEC']"
+  
+  - key: unbilled_share_pct
+    unit: "%"
+    value: "auto"
+    calculation:
+      formula: "unbilled_total / (unbilled_total + billed_total) * 100"
+      source: "10-Q/10-K financial statements"
+    anchors:
+      primary: "<SEC #fragment>"
+      secondary: "<IR #fragment>"
+      dual_anchor_status: "REQUIRED"
+    auto_checks:
+      - rule: "anchor_lint_pass == true"
+      - rule: "dual_anchor_status in ['CONFIRMED','PENDING_SEC']"
+
+  - key: deferred_revenue_ratio
+    unit: "ratio"
+    value: "auto"
+    calculation:
+      formula: "deferred_revenue / total_revenue"
+      source: "10-Q/10-K balance sheet"
+    anchors:
+      primary: "<SEC #fragment>"
+      secondary: "<IR #fragment>"
+      dual_anchor_status: "REQUIRED"
+    auto_checks:
+      - rule: "anchor_lint_pass == true"
+      - rule: "dual_anchor_status in ['CONFIRMED','PENDING_SEC']"

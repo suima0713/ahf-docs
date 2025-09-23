@@ -1,0 +1,26 @@
+{
+  "ticker": "CFLT",
+  "inputs": {
+    "rev_range_$k": [282285],
+    "ng_gm_pct": [78.3],
+    "adj_ebitda_$k": ["data_gap"],
+    "nongaap_oi_plus_da_$k": [25182]
+  },
+  "kpi_priority": ["nongaap_oi_plus_da", "adj_ebitda_ex99", "gaap_oi_plus_da"],
+  "all_combinations": [
+    {"rev_$k": 282285, "ng_gm_pct": 78.3, "kpi_$k": 25182, "opex_$k": 195847}
+  ],
+  "summary": {"min_$k": 195847, "median_$k": 195847, "max_$k": 195847},
+  "bands": {"green_≤": "TBD", "amber_≤": "TBD"},
+  "auto_checks": {
+    "alpha5_math_pass": true,
+    "messages": [
+      "Rev×NG-GM−(Non-GAAP OI + D&A) ≈ 195,847 ≒ 非GAAP Opex実額(203,147)±整合",
+      "根拠: Non-GAAP OI $17,838 / D&A $7,344 / NG-GM 78.3%"
+    ]
+  },
+  "anchors": {
+    "ng_gm_oi": "https://www.sec.gov/Archives/edgar/data/1699838/000169983825000004/cflt-20250630xexx991.htm#:~:text=Non-GAAP%20operating%20income%20(loss)%20%2417%2C838",
+    "da_cashflow": "https://www.sec.gov/Archives/edgar/data/1699838/000169983825000004/cflt-20250630xexx991.htm#:~:text=Depreciation%20and%20amortization%207%2C344"
+  }
+}

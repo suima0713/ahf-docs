@@ -1,0 +1,64 @@
+{
+  "version": "v0.6.3",
+  "ticker": "SYM",
+  "as_of": "2024-12-19",
+  "alpha4": {
+    "pass_months": 11.0,
+    "amber_floor_months": 9.0,
+    "use_backlog_proxy_when_rpo_absent": true,
+    "coverage_proxy_formula": "(Backlog / Q_rev_ma2) * 3"
+  },
+  "alpha5": {
+    "tolerance_$k": 8000,
+    "kpi_priority": ["adj_ebitda_ex99", "nongaap_oi_plus_da", "gaap_oi_plus_da"],
+    "op_ex_formula": "OpEx = Rev * NG_GM - KPI"
+  },
+  "star_evaluation": {
+    "min_stars": 1,
+    "max_stars": 5,
+    "core_adjustment_range": 1,
+    "edge_adjustment": 1,
+    "confidence_clip": [50, 95]
+  },
+  "direction_probability": {
+    "up_pct": 60,
+    "down_pct": 40,
+    "total_must_equal": 100
+  },
+  "gate_colors": {
+    "green": "≥ 9.0",
+    "amber": "[6.0, 9.0)",
+    "red": "< 6.0"
+  },
+  "dual_anchor_status": {
+    "confirmed": "CONFIRMED",
+    "pending_sec": "PENDING_SEC",
+    "single": "SINGLE"
+  },
+  "anchor_policy": {
+    "require_text_fragment": true,
+    "require_anchor_backup": true,
+    "domain_whitelist": ["sec.gov", "investors.*"],
+    "verbatim_max_words": 25
+  },
+  "gap_policy": {
+    "ttl_days": {
+      "rpo_12m_pct": 30,
+      "adjusted_ebitda": 30
+    },
+    "find_path_enum": ["xbrl", "note", "md&a", "fallback_text", "manual"],
+    "gap_reasons": ["NOT_DISCLOSED", "DIFF_PERIOD", "TAG_ABSENT", "PHRASE_NOT_FOUND", "ANCHOR_INVALID"]
+  },
+  "operational_thresholds": {
+    "anchor_coverage_rate": 98.0,
+    "math_check_rate": 100.0,
+    "cik_mismatch_rate": 0.0,
+    "rejection_rate": 5.0,
+    "tw_conflict_rate": 0.0,
+    "anchor_lint_pass_rate": 98.0,
+    "pending_sec_conversion_rate": 90.0,
+    "placeholder_detection_rate": 0.0,
+    "alpha_calculation_stop_rate": 0.0
+  }
+}
+

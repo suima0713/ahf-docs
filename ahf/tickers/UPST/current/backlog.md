@@ -13,6 +13,8 @@
 | LP5 | Lead | 手数料収益58%集中 | セグメント情報 | <URL> | セグメント表 | セグメント分析 | fee_revenue_concentration | 2024-12-31 |
 | LP7 | Lead | 資金調達能力 | 流動性分析 | <URL> | 流動性表 | 流動性分析 | funding_capacity | 2024-12-31 |
 | L8 | Lead | Forward-flow $1.2B（Fortress） | IR/BusinessWireで言及（SEC一次未確認） | <URL> | EDGAR 8-K/EX-10.x原本 | EDGARで8-K/EX-10.x探索 | forward_flow_commitment | 2025-09-23 |
+| L9 | Lead | Q3 CFO弱さ＝タイミング要因 | 運転資本分析完了 | <URL> | 次Q反転条件 | CL_qoq≥+5%かつUnbilled_qoq≤0% | cfo_timing_recovery | 2025-12-31 |
+| L10 | Lead | TWライト据え置き条件 | 運転資本分析完了 | <URL> | CL_qoq≤0、Unbilled増はON | 次Qモニタリング | working_capital_trend | 2025-12-31 |
 
 ## 運用ルール
 - class=Lead：新規発見の事実候補

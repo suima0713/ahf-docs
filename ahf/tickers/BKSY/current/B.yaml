@@ -1,0 +1,40 @@
+# B｜総合判断（Horizon＋ΔIRR＋KPI×2）
+horizon:
+  6M: {verdict: "", ΔIRRbp: }
+  1Y: {verdict: "", ΔIRRbp: }
+  3Y: {verdict: "", ΔIRRbp: }
+  5Y: {verdict: "", ΔIRRbp: }
+
+stance:
+  decision: "保留"           # Go/保留/No-Go
+  size: ""              # Low/Med/High
+  reason: "α4 data_gap継続（RPO 12M配分不明）、α5=Green（OpEx $18,769k）"
+
+# 判断ゲート: ①＞②＞③＞④、ΔIRR≥+300–500bp
+decision_gates:
+  structure_quality: "売上$22,199k、バックログ$356,300k確認済"  # ①右肩上がり（要旨1行）
+  slope_quality: "NG-GM 71.9%、OpEx $18,769k（Green）"      # ②傾きの質（要旨1行）
+  time_profile: "Backlog $356M、6M=45.7M。12M不明でcoverage算定不可"       # ③時間（Horizon表）
+  time_annotation: ""    # ④カタリスト（一度だけ、③文中）
+  irr_threshold: "α4 Gate Fail（coverage_months=data_gap）、α5=Green"      # ΔIRR≥+300–500bp
+
+# Holdでも舵を切る（Decision Overlay参照）
+hold_override_gate: "S高×Q中以上×ΔIRR≥+700bp → Pilot Buy（1/4）"
+
+# KPI×2固定（質×実行）
+kpi_watch: [2項目]
+  - name: "coverage_ratio"
+    current: "data_gap（RPO 12M配分不明）"
+    target: "RPO≤12M / FY26 mid"
+  - name: "contract_liabilities_roll"
+    current: "CL急増（$37,044k）"
+    target: "match"
+
+# 差分管理（必須）
+diff_summary: ""         # 何が・どれだけ・いつ
+
+# T1カバレッジ目標
+t1_coverage_targets:
+  6M: "≥70%"
+  1Y: "≥80%"
+  3Y_plus: "≥90%" 

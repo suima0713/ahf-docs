@@ -1,0 +1,101 @@
+# B｜総合判断（Horizon＋ΔIRR＋KPI×2）- v0.7.3
+meta:
+  asof: YYYY-MM-DD
+  version: "0.7.3"
+  purpose: "投資判断に直結する固定3軸で評価する"
+
+# Horizon評価
+horizon:
+  6M: 
+    verdict: ""           # 判定
+    ΔIRRbp: 0            # ΔIRR（bp）
+  1Y: 
+    verdict: ""
+    ΔIRRbp: 0
+  3Y: 
+    verdict: ""
+    ΔIRRbp: 0
+  5Y: 
+    verdict: ""
+    ΔIRRbp: 0
+
+# 意思決定
+stance:
+  decision: ""           # Go/保留/No-Go
+  size: ""              # Low/Med/High
+  reason: ""             # 判定理由
+  di_score: 0.0         # Decision Index
+  size_pct: 0.0         # 位置サイズ（%）
+
+# 固定3軸評価結果
+axes_evaluation:
+  lec:
+    score: 0            # ★1-5
+    confidence: 0       # 確信度 45-95%
+    market_embedded: true
+    alpha_opacity: 0.0
+    direction_up_pct: 0.0
+    direction_down_pct: 0.0
+    representative_kpi: ""
+    t1_evidence: ""
+    current_snapshot: ""
+  nes:
+    score: 0
+    confidence: 0
+    market_embedded: true
+    alpha_opacity: 0.0
+    direction_up_pct: 0.0
+    direction_down_pct: 0.0
+    representative_kpi: ""
+    t1_evidence: ""
+    current_snapshot: ""
+  vrg:
+    score: 0
+    confidence: 0
+    market_embedded: true
+    alpha_opacity: 0.0
+    direction_up_pct: 0.0
+    direction_down_pct: 0.0
+    representative_kpi: ""
+    t1_evidence: ""
+    current_snapshot: ""
+
+# バリュエーションオーバーレイ
+valuation_overlay:
+  status: ""            # Green/Amber/Red
+  ev_sales_fwd: 0.0     # EV/S(Fwd)
+  rule_of_40: 0.0       # Rule of 40
+  di_multiplier: 1.0    # DI倍率
+  hysteresis:
+    evsales_delta: 0.5
+    ro40_delta: 2.0
+    upgrade_factor: 1.2
+
+# 判断ゲート
+decision_gates:
+  structure_quality: ""  # ①右肩上がり（要旨1行）
+  slope_quality: ""      # ②傾きの質（要旨1行）
+  time_profile: ""       # ③時間（Horizon表）
+  time_annotation: ""    # ④カタリスト（一度だけ、③文中）
+  irr_threshold: ""      # ΔIRR≥+300–500bp
+
+# Holdでも舵を切る（Decision Overlay参照）
+hold_override_gate: "S高×Q中以上×ΔIRR≥+700bp → Pilot Buy（1/4）"
+
+# KPI×2固定（質×実行）
+kpi_watch: 
+  - name: "coverage_ratio"
+    current: 0.0
+    target: "≥0.90"
+  - name: "contract_liabilities_roll"
+    current: 0.0
+    target: "match"
+
+# 差分管理（必須）
+diff_summary: ""         # 何が・どれだけ・いつ
+
+# T1カバレッジ目標
+t1_coverage_targets:
+  6M: "≥70%"
+  1Y: "≥80%"
+  3Y_plus: "≥90%"

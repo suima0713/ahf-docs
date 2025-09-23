@@ -1,0 +1,20 @@
+[
+  {
+    "id": "alpha5_opex_calculation",
+    "inputs": ["rev_range_$k", "ng_gm_pct", "nongaap_oi_$k", "da_$k"],
+    "expr": "rev_range_$k - (rev_range_$k * ng_gm_pct / 100) - (nongaap_oi_$k + da_$k)",
+    "gates": { "up": ">=200000", "down": "<150000" }
+  },
+  {
+    "id": "alpha3_segment_analysis",
+    "inputs": ["segment_count", "segment_disclosure"],
+    "expr": "segment_count == 1 ? 'data_gap' : 'available'",
+    "gates": { "up": "available", "down": "data_gap" }
+  },
+  {
+    "id": "rpo_coverage_ratio",
+    "inputs": ["rpo_12m_$k", "total_revenue_$k"],
+    "expr": "(rpo_12m_$k / total_revenue_$k) * 12",
+    "gates": { "up": ">=11", "down": "<10" }
+  }
+]

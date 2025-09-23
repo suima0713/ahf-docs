@@ -1,0 +1,31 @@
+# V-Overlay 2.0 Configuration
+# EV/SalesとRule-of-40の合成評価 + ヒステリシス制御
+
+# EV/Sales閾値設定
+evsales:
+  green_max: 10.0      # Green上限（V_score < 0.25になる境界）
+  red_min: 14.0        # Red下限（V_score ≥ 0.6になる境界）
+  weight: 0.7          # 合成時の重み（EV/Sales重視）
+
+# Rule-of-40閾値設定  
+rule_of_40:
+  green_min: 40.0      # Green下限（Ro40 ≥ 40でscore_Ro40 = 0）
+  red_max: 35.0        # Red上限（Ro40 ≤ 35でscore_Ro40 = 1）
+
+# ヒステリシス制御（フリップ防止）
+hysteresis:
+  evsales_delta: 0.5   # EV/Sales±0.5xの余裕帯
+  ro40_delta: 2.0      # Ro40±2ppの余裕帯
+  upgrade_factor: 1.2  # アップグレード方向は厳しめ（過度な行き来防止）
+  
+# V区分の閾値
+v_thresholds:
+  green_max: 0.25      # V_score < 0.25 → Green
+  amber_max: 0.6       # 0.25 ≤ V_score < 0.6 → Amber, V_score ≥ 0.6 → Red
+
+# 星への反映ルール
+star_impact:
+  green: 0             # Green：±0
+  amber: -1            # Amber：★−1  
+  red: -1              # Red：★−1 & ★上限=3
+  red_max_stars: 3     # Red時の星上限

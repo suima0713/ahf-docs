@@ -1,0 +1,13 @@
+{
+  "metric_id": "q2_gross_profit",
+  "value_$k": 46388,
+  "pct": null,
+  "pp": null,
+  "unit": "$k|pct|pp",
+  "verbatim_≤25w": "Gross profit 46,388",
+  "context_note": "From Condensed Consolidated Statements of Operations",
+  "anchor": "https://www.sec.gov/.../rklb-20250630.htm#statements",
+  "confidence": "T1",
+  "as_of": "2025-06-30",
+  "rounding": {"$k": 0, "pct_dp": 1, "pp_dp": 2}
+}

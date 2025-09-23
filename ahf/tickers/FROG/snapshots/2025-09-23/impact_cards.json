@@ -1,0 +1,29 @@
+{
+  "coverage_ratio": {
+    "id": "coverage_ratio",
+    "inputs": ["RPO_total", "RPO_le12m_pct", "Guidance_FY25_total_revenue_mid"],
+    "expr": "(RPO_total*(RPO_le12m_pct/100))/Guidance_FY25_total_revenue_mid",
+    "gates": {
+      "up": ">=0.90",
+      "down": "<0.60"
+    }
+  },
+  "gaap_margin_improvement": {
+    "id": "gaap_margin_improvement", 
+    "inputs": ["GAAP_OPM_Q2_2025", "GAAP_OPM_target"],
+    "expr": "GAAP_OPM_Q2_2025 - GAAP_OPM_target",
+    "gates": {
+      "up": "<=-10.0",
+      "down": ">-5.0"
+    }
+  },
+  "rpo_growth_rate": {
+    "id": "rpo_growth_rate",
+    "inputs": ["RPO_Q2_2025", "RPO_Q1_2025"],
+    "expr": "((RPO_Q2_2025 - RPO_Q1_2025) / RPO_Q1_2025) * 100",
+    "gates": {
+      "up": ">=15.0",
+      "down": "<5.0"
+    }
+  }
+}

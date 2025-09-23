@@ -5,14 +5,32 @@ meta:
 core:
   right_shoulder: []     # ①右肩上がり（T1逐語のみ）
   slope_quality: []      # ②傾きの質（T1逐語のみ）
-  time_profile: []       # ③時間（T1逐語のみ）
+  time_profile: []       # ③時間軸（Timeline：近端〜12Mの可視性）
+  cognition_gap: []      # ④認知ギャップ（Cognition：市場との乖離）
 
-# ④Time注釈（一度だけ、③の文中に記載）
-time_annotation:         
-  delta_t_quarters: 
-  delta_g_pct: 
-  window_quarters: 
-  note:
+# Fast-Screen判定
+fast_screen_mode: false  # Fast-Screen mode判定フラグ
+
+# 時間軸評価指標
+timeline_metrics:
+  coverage_months:       # (RPO_12M / Q_rev) × 3
+  rpo_12m_millions:      # RPO 12M金額
+  guidance_clarity:      # 明確|依存|撤回
+  recognition_timeline:  # 四半期軸での認識予定
+  timeline_star:         # ★1-5（coverage基準）|n/a（Fast-Screen未確証）
+  coverage_calculable:   # true|false（強トリガー判定）
+  strong_trigger_met:    # true|false（強トリガー成立）
+
+# 認知ギャップ評価指標（二段トリガー）
+cognition_metrics:
+  market_expectation_gap: # 上振れ|下振れ|拮抗|未評価（T1不足）
+  trigger_a_quantity:    # A：量の裏付け（12M coverage≥9m|CL_qoq≥10%|契約定量）
+  trigger_b_timing:      # B：時間明瞭化（ガイダンス段差上げ|認識時点特定）
+  trigger_ab_combined:   # A×B同時成立フラグ
+  negative_triggers:     # ネガT1（ガイダンス撤回|統制NG等）
+  cognition_star:        # ★1-5（デフォルト3、A×B成立+1、ネガT1-1）|n/a（Fast-Screen未確証）
+  ab_trigger_met:        # true|false（A×B成立判定）
+  market_assessment:     # 「未評価（T1不足）」|「評価済み」
 
 # 固定ガード
 # - T1逐語のみ使用（Lead/推論禁止）

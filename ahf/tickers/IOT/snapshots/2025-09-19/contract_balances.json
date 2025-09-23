@@ -1,0 +1,65 @@
+{
+  "ticker": "IOT",
+  "contract_balances": {
+    "t0": {
+      "date": "2024-08-02",
+      "assets_$k": "data_gap",
+      "liabilities_$k": "data_gap",
+      "anchor": "data_gap"
+    },
+    "t1": {
+      "date": "2024-11-02",
+      "assets_$k": "data_gap",
+      "liabilities_$k": "data_gap",
+      "anchor": "data_gap"
+    },
+    "delta_pct": {
+      "assets": "data_gap",
+      "liabilities": "data_gap"
+    },
+    "cf_leading_signal": "data_gap",
+    "rationale": "data_gap"
+  },
+  "rpo_visibility": {
+    "rpo_total_$k": "data_gap",
+    "rpo_12m_pct": "data_gap",
+    "coverage_months": {
+      "vs_q_annualized": "data_gap"
+    },
+    "quotes": [
+      {
+        "field": "total",
+        "verbatim_≤25w": "data_gap",
+        "anchor": "data_gap"
+      },
+      {
+        "field": "12m",
+        "verbatim_≤25w": "data_gap",
+        "anchor": "data_gap"
+      }
+    ],
+    "gate": {
+      "threshold_months": 11.0,
+      "pass": false,
+      "gate_color": "Red"
+    },
+    "find_path": "data_gap",
+    "gap_reason": {
+      "field": "rpo_12m_pct",
+      "status": "data_gap",
+      "reason": "NOT_DISCLOSED",
+      "ttl_days": 30
+    }
+  },
+  "backlog_proxy_when_rpo_absent": {
+    "backlog_$k": "data_gap",
+    "q_rev_ma2_$k": "data_gap",
+    "coverage_proxy_months": "data_gap",
+    "pass_rules": "Red < 6",
+    "aux_conditions": "data_gap",
+    "auto_checks": {
+      "alpha4_gate_pass": false,
+      "messages": ["RPO data not disclosed", "Backlog proxy not available"]
+    }
+  }
+}

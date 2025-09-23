@@ -1,0 +1,33 @@
+horizon:
+  6M: 
+    verdict: "保留"
+    ΔIRRbp: 0
+  1Y: 
+    verdict: "保留" 
+    ΔIRRbp: 0
+  3Y: 
+    verdict: "No-Go"
+    ΔIRRbp: -200
+  5Y: 
+    verdict: "No-Go"
+    ΔIRRbp: -300
+
+# 方向確率（機械ゲート反映）
+direction_probability:
+  right_shoulder: "上向45% / 下向55%"  # 長期成長仮説不変、短期GMズレは構造仮説を崩さず
+  slope_quality: "上向35% / 下向65%"  # α3不合格で最も弱化
+  time_profile: "上向40% / 下向60%"  # CL↓/CA↑で近端見通しやや悪化
+  cognition_gap: "上向45% / 下向55%"  # α5改善余地もα3NGで総合弱め
+
+stance:
+  decision: "No-Go"
+  size: "Low"
+  reason: "Stage-2判定はモデル×T1の整合性。α3 GM drift -0.456pp未整合、WATCH昇格条件不成立"
+
+kpi_watch: 
+  - name: "Adjusted GM Drift"
+    current: -0.456pp
+    target: "≥0pp vs model"
+  - name: "OpEx Efficiency Gap"
+    current: -$153.3M
+    target: "≤-$3-5M vs lattice"

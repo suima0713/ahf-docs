@@ -1,0 +1,117 @@
+{
+  "as_of": "2025-09-19",
+  "CONFIRMED": [
+    {
+      "kpi": "FY25_revenue",
+      "value": 59000,
+      "unit": "USD_thousands",
+      "asof": "2025-07-08",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1040470/000165495425007859/aehrex991.htm#:~:text=Net%20revenue%20was%20%2459.0%20million"
+    },
+    {
+      "kpi": "Q4_FY25_revenue",
+      "value": 14100,
+      "unit": "USD_thousands",
+      "asof": "2025-07-08",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1040470/000165495425007859/aehrex991.htm#:~:text=Net%20revenue%20was%20%2414.1%20million"
+    },
+    {
+      "kpi": "Q3_FY25_GAAP_GM",
+      "value": 39.2,
+      "unit": "percent",
+      "asof": "2025-04-10",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1040470/000165495425004120/aehr_10q.htm#:~:text=Gross%20margin%20decreased%20to%2039.2%25"
+    },
+    {
+      "kpi": "FY25_backlog",
+      "value": 15200,
+      "unit": "USD_thousands",
+      "asof": "2025-07-08",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1040470/000165495425007859/aehrex991.htm#:~:text=Backlog%20as%20of%20May%2030%2C%202025%20was%20%2415.2%20million"
+    },
+    {
+      "kpi": "FY25_NonGAAP_GP",
+      "value": 25975,
+      "unit": "USD_thousands",
+      "asof": "2025-07-08",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1040470/000165495425007859/aehrex991.htm#:~:text=Non-GAAP%20gross%20profit"
+    },
+    {
+      "kpi": "FY25_NonGAAP_OpInc",
+      "value": 2810,
+      "unit": "USD_thousands",
+      "asof": "2025-07-08",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1040470/000165495425007859/aehrex991.htm#:~:text=Non-GAAP%20income%20(loss)%20from%20operations"
+    },
+    {
+      "kpi": "FY25_NonGAAP_OpEx",
+      "value": 23165,
+      "unit": "USD_thousands",
+      "asof": "2025-07-08",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1040470/000165495425007859/aehrex991.htm#:~:text=Non-GAAP%20operating%20expenses%0A%0A%24%2023%2C165"
+    },
+    {
+      "kpi": "FY25_NonGAAP_GM_pct",
+      "value": 44.0,
+      "unit": "percent",
+      "asof": "2025-07-08",
+      "tag": "T1-calculated",
+      "url": "https://www.sec.gov/Archives/edgar/data/1040470/000165495425007859/aehrex991.htm#:~:text=Non-GAAP%20gross%20profit"
+    },
+    {
+      "kpi": "backlog_coverage_months",
+      "value": 3.2,
+      "unit": "months",
+      "asof": "2025-07-08",
+      "tag": "T1-calculated",
+      "url": "https://www.sec.gov/Archives/edgar/data/1040470/000165495425007859/aehrex991.htm#:~:text=Backlog%20as%20of%20May%2030%2C%202025%20was%20%2415.2%20million"
+    }
+  ],
+  "UNCERTAIN": [
+    {
+      "kpi": "RPO_total_$k",
+      "status": "data_gap",
+      "claim": "RPO非重要と明記",
+      "credence_pct": 0,
+      "aust_gaps": ["value_missing"],
+      "ttl_days": 30,
+      "url_index": "SEC 10-Q",
+      "contradiction": false
+    },
+    {
+      "kpi": "Adj_EBITDA_$k",
+      "status": "data_gap",
+      "claim": "Ex.99.1に記載なし",
+      "credence_pct": 0,
+      "aust_gaps": ["value_missing"],
+      "ttl_days": 30,
+      "url_index": "SEC 8-K",
+      "contradiction": false
+    }
+  ],
+  "HYPOTHESES": [
+    {
+      "id": "H6_guidance_adherence",
+      "status": "pending",
+      "what_to_watch": ["guidance_fy26_mid", "actual_rev_fy26_ytd", "guidance_mape_pct"],
+      "trigger": "guidance_mape_pct <= 5",
+      "falsifier": "guidance_mape_pct >= 10",
+      "kpi_links": ["guidance_fy26_mid", "rev_actual"]
+    },
+    {
+      "id": "H7_cash_conversion_and_allocation",
+      "status": "pending",
+      "what_to_watch": ["fcf_ttm", "fixed_fee_rev_ttm", "capex_ttm", "buybacks_ttm"],
+      "trigger": "fcf_conversion_pct >= 70 AND capex_intensity_pct <= 5",
+      "falsifier": "fcf_conversion_pct < 50 OR capex_intensity_pct > 8",
+      "kpi_links": ["fcf_q", "capex_q", "rev_fixed_q"]
+    }
+  ]
+}

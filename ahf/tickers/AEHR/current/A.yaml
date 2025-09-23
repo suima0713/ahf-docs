@@ -1,0 +1,33 @@
+meta:
+  asof: 2025-09-19
+
+# A｜材料（T1逐語のみ、≤40語）
+core:
+  right_shoulder: 
+    - "Net revenue was $59.0 million for fiscal year 2025."
+    - "Net revenue was $14.1 million, compared to $16.6 million."
+    - "custom designed… lifetime of two to seven years… multiple sets… could be purchased"
+    - "photonic… integrated optical devices used in artificial intelligence"
+    - "AI processor… need for burn-in becoming increasingly important"
+  slope_quality: 
+    - "Gross margin decreased to 39.2% for the quarter ended February 28, 2025."
+    - "Non-GAAP gross profit $ 25,975."
+    - "Non-GAAP income (loss) from operations $ 2,810."
+    - "Non-GAAP operating expenses $ 23,165."
+    - "remove the need for a dedicated wafer prober per wafer"
+  time_profile: 
+    - "Backlog as of May 30, 2025 was $15.2 million."
+    - "Contract liabilities as of February 28, 2025 and May 31, 2024 were $0.9 million and $1.4 million."
+    - "can test and burn-in up to 18 wafers at a time."
+
+# ④Time注釈（一度だけ、③の文中に記載）
+time_annotation:         
+  delta_t_quarters: 3
+  delta_g_pct: -10.9
+  window_quarters: 4
+  note: "FY25 revenue decline -10.9% y/y; CL fell 35.7% QoQ indicating near-term cash flow pressure."
+
+# 固定ガード
+# - T1逐語のみ使用（Lead/推論禁止）
+# - 構造①/傾き②/バリュはOverlayに分離
+# - Time注釈は一度のみ 

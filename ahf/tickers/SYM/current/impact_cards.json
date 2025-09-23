@@ -1,0 +1,586 @@
+[
+  {
+    "id": "guidance_mape",
+    "inputs": ["guidance_fy26_mid", "rev_actual_fy26"],
+    "expr": "100*abs(rev_actual_fy26 - guidance_fy26_mid)/guidance_fy26_mid",
+    "gates": { "up": "<=5", "down": ">=10" }
+  },
+  {
+    "id": "fcf_conversion",
+    "inputs": ["fcf_ttm", "rev_fixed_fee_ttm"],
+    "expr": "100*fcf_ttm/rev_fixed_fee_ttm",
+    "gates": { "up": ">=70", "down": "<50" }
+  },
+  {
+    "id": "capex_intensity",
+    "inputs": ["capex_ttm", "rev_total_ttm"],
+    "expr": "100*capex_ttm/rev_total_ttm",
+    "gates": { "up": "<=5", "down": ">8" }
+  },
+  {
+    "id": "segment_mix_sensitivity",
+    "inputs": ["systems_revenue", "software_ms_revenue", "operation_services_revenue", "systems_gp", "software_ms_gp", "operation_services_gp"],
+    "expr": "((software_ms_gp/software_ms_revenue) - (systems_gp/systems_revenue)) * 0.01",
+    "gates": { "up": ">=0.5", "down": "<0.3" }
+  },
+  {
+    "id": "deployment_efficiency",
+    "inputs": ["systems_in_deployment", "systems_revenue", "systems_gp"],
+    "expr": "systems_gp/systems_in_deployment",
+    "gates": { "up": ">=2000", "down": "<1500" }
+  },
+  {
+    "id": "cash_coverage_quarters",
+    "inputs": ["cash_and_equivalents", "adj_opex_quarterly"],
+    "expr": "cash_and_equivalents / (adj_opex_quarterly * 4)",
+    "gates": { "up": ">=8", "down": "<6" }
+  },
+  {
+    "id": "contract_liability_velocity",
+    "inputs": ["recognized_from_opening_cl_ytd", "ytd_revenue"],
+    "expr": "recognized_from_opening_cl_ytd / ytd_revenue",
+    "gates": { "up": ">=0.3", "down": "<0.2" }
+  },
+  {
+    "id": "dso_breakdown",
+    "inputs": ["billed_ar", "unbilled_ar", "quarter_revenue"],
+    "expr": "((billed_ar + unbilled_ar) / quarter_revenue) * 90",
+    "gates": { "up": "<=60", "down": ">80" }
+  },
+  {
+    "id": "rpo_coverage_months",
+    "inputs": ["rpo_12m_$k", "quarter_revenue"],
+    "expr": "(rpo_12m_$k / quarter_revenue) * 3",
+    "gates": { "up": ">=12", "down": "<8" }
+  },
+  {
+    "id": "greenbox_contract_scale",
+    "inputs": ["greenbox_unsatisfied_$k", "rpo_total_$k"],
+    "expr": "greenbox_unsatisfied_$k / rpo_total_$k",
+    "gates": { "up": ">=0.4", "down": "<0.2" }
+  },
+  {
+    "id": "purchase_commitment_coverage",
+    "inputs": ["cash_and_equivalents", "purchase_commitments_lt1y"],
+    "expr": "cash_and_equivalents / purchase_commitments_lt1y",
+    "gates": { "up": ">=1.0", "down": "<0.8" }
+  },
+  {
+    "id": "customer_concentration_risk",
+    "inputs": ["customer_a_revenue_pct", "customer_a_ar_pct"],
+    "expr": "customer_a_revenue_pct + customer_a_ar_pct",
+    "gates": { "up": "<=100", "down": ">120" }
+  },
+  {
+    "id": "geographic_diversification",
+    "inputs": ["international_revenue_pct"],
+    "expr": "international_revenue_pct",
+    "gates": { "up": ">=5", "down": "<2" }
+  },
+  {
+    "id": "contract_net_position",
+    "inputs": ["contract_liabilities", "accounts_receivable", "unbilled_ar"],
+    "expr": "contract_liabilities - accounts_receivable - unbilled_ar",
+    "gates": { "up": ">=400000", "down": "<200000" }
+  },
+  {
+    "id": "capex_intensity_ratio",
+    "inputs": ["capex_quarterly", "quarter_revenue"],
+    "expr": "(capex_quarterly / quarter_revenue) * 100",
+    "gates": { "up": "<=3", "down": ">5" }
+  },
+  {
+    "id": "fcf_volatility",
+    "inputs": ["fcf_q3", "fcf_ytd", "revenue_q3", "revenue_ytd"],
+    "expr": "abs((fcf_q3/revenue_q3) - (fcf_ytd/revenue_ytd))",
+    "gates": { "up": "<=0.2", "down": ">0.4" }
+  },
+  {
+    "id": "gaap_nongaap_opex_ratio",
+    "inputs": ["rd_gaap", "sgna_gaap", "nongaap_opex", "revenue"],
+    "expr": "((rd_gaap + sgna_gaap) / revenue) / (nongaap_opex / revenue)",
+    "gates": { "up": "<=1.6", "down": ">2.0" }
+  },
+  {
+    "id": "ebitda_sensitivity_gm",
+    "inputs": ["revenue", "adj_gm_pct"],
+    "expr": "revenue * 0.01",
+    "gates": { "up": ">=5000", "down": "<3000" }
+  },
+  {
+    "id": "cfo_ebitda_quality",
+    "inputs": ["cfo_q3", "adj_ebitda_q3"],
+    "expr": "cfo_q3 / adj_ebitda_q3",
+    "gates": { "up": ">=0.8", "down": "<0.5" }
+  },
+  {
+    "id": "rpo_bucket_coverage",
+    "inputs": ["rpo_12m_pct", "rpo_13_60m_pct", "annualized_rev"],
+    "expr": "((rpo_12m_pct / 100) * 22400000) / (annualized_rev / 12)",
+    "gates": { "up": ">=12", "down": "<8" }
+  },
+  {
+    "id": "greenbox_deferred_scale",
+    "inputs": ["greenbox_deferred_rev", "company_rev_q3"],
+    "expr": "(greenbox_deferred_rev / company_rev_q3) * 100",
+    "gates": { "up": ">=20", "down": "<10" }
+  },
+  {
+    "id": "ar_concentration_risk",
+    "inputs": ["billed_ar", "top3_ar_pct", "billed_dso_days"],
+    "expr": "top3_ar_pct * billed_dso_days",
+    "gates": { "up": "<=20", "down": ">30" }
+  },
+  {
+    "id": "sbc_opex_structure",
+    "inputs": ["sbc_rd", "sbc_sgna", "rd_gaap", "sgna_gaap"],
+    "expr": "((sbc_rd / rd_gaap) + (sbc_sgna / sgna_gaap)) / 2",
+    "gates": { "up": "<=0.3", "down": ">0.4" }
+  },
+  {
+    "id": "ebitda_gp_leverage",
+    "inputs": ["adj_ebitda", "adj_gp"],
+    "expr": "(adj_ebitda / adj_gp) * 100",
+    "gates": { "up": ">=30", "down": "<20" }
+  },
+  {
+    "id": "ar_concentration_shift",
+    "inputs": ["customer_a_ar_pct_q2", "customer_a_ar_pct_q3", "customer_b_ar_pct_q2", "customer_b_ar_pct_q3"],
+    "expr": "abs((customer_a_ar_pct_q3 - customer_a_ar_pct_q2) + (customer_b_ar_pct_q3 - customer_b_ar_pct_q2))",
+    "gates": { "up": ">=30", "down": "<20" }
+  },
+  {
+    "id": "greenbox_exposure_growth",
+    "inputs": ["greenbox_deferred_q2", "greenbox_deferred_q3"],
+    "expr": "((greenbox_deferred_q3 - greenbox_deferred_q2) / greenbox_deferred_q2) * 100",
+    "gates": { "up": ">=50", "down": "<20" }
+  },
+  {
+    "id": "contract_liabilities_velocity",
+    "inputs": ["contract_liabilities_q2", "contract_liabilities_q3", "recognized_from_opening_CL_ytd"],
+    "expr": "((contract_liabilities_q2 - contract_liabilities_q3) / contract_liabilities_q2) * 100",
+    "gates": { "up": ">=10", "down": "<5" }
+  },
+  {
+    "id": "unbilled_ar_asset_ratio",
+    "inputs": ["unbilled_ar", "total_assets"],
+    "expr": "(unbilled_ar / total_assets) * 100",
+    "gates": { "up": "<=15", "down": ">20" }
+  },
+  {
+    "id": "inventory_turnover_signal",
+    "inputs": ["inventory_q2", "inventory_q3"],
+    "expr": "((inventory_q2 - inventory_q3) / inventory_q2) * 100",
+    "gates": { "up": ">=3", "down": "<1" }
+  },
+  {
+    "id": "q4_guidance_ebitda_margin",
+    "inputs": ["q4_revenue_guidance_mid", "q4_ebitda_guidance_mid"],
+    "expr": "(q4_ebitda_guidance_mid / q4_revenue_guidance_mid) * 100",
+    "gates": { "up": ">=7.5", "down": "<6.0" }
+  },
+  {
+    "id": "mix_sensitivity_software_2pt",
+    "inputs": ["mix_sensitivity_pp_per_1pt_software", "revenue_q4_mid"],
+    "expr": "mix_sensitivity_pp_per_1pt_software * 2 * revenue_q4_mid",
+    "gates": { "up": ">=6000", "down": "<4000" }
+  },
+  {
+    "id": "top_customer_revenue_scale",
+    "inputs": ["customer_a_revenue_pct", "quarter_revenue"],
+    "expr": "(customer_a_revenue_pct / 100) * quarter_revenue",
+    "gates": { "up": ">=400000", "down": "<300000" }
+  },
+  {
+    "id": "partial_ccc_days",
+    "inputs": ["inventory", "billed_ar", "unbilled_ar", "quarter_revenue"],
+    "expr": "((inventory / quarter_revenue) * 90) + ((billed_ar / quarter_revenue) * 90) + ((unbilled_ar / quarter_revenue) * 90)",
+    "gates": { "up": "<=80", "down": ">100" }
+  },
+  {
+    "id": "inventory_per_deployment",
+    "inputs": ["inventory", "systems_in_deployment"],
+    "expr": "inventory / systems_in_deployment",
+    "gates": { "up": "<=3000", "down": ">4000" }
+  },
+  {
+    "id": "greenbox_execution_vs_deferral",
+    "inputs": ["greenbox_revenue_q3", "greenbox_deferred_rev", "company_revenue_q3"],
+    "expr": "(greenbox_revenue_q3 / company_revenue_q3) * 100",
+    "gates": { "up": ">=4", "down": "<2" }
+  },
+  {
+    "id": "greenbox_deferred_company_ratio",
+    "inputs": ["greenbox_deferred_rev", "company_revenue_q3"],
+    "expr": "(greenbox_deferred_rev / company_revenue_q3) * 100",
+    "gates": { "up": ">=20", "down": "<10" }
+  },
+  {
+    "id": "rpo_12m_coverage_vs_q4_mid",
+    "inputs": ["rpo_total", "rpo_12m_pct", "q4_mid_revenue"],
+    "expr": "((rpo_total * rpo_12m_pct / 100) / q4_mid_revenue) * 3",
+    "gates": { "up": ">=12", "down": "<8" }
+  },
+  {
+    "id": "nongaap_opex_adjustments",
+    "inputs": ["rd_gaap", "rd_adj", "sgna_gaap", "sgna_adj"],
+    "expr": "((rd_gaap - rd_adj) + (sgna_gaap - sgna_adj)) / (rd_gaap + sgna_gaap)",
+    "gates": { "up": "<=0.4", "down": ">0.6" }
+  },
+  {
+    "id": "rpo_12m_consumption_rate",
+    "inputs": ["rpo_total", "rpo_12m_pct", "quarter_revenue"],
+    "expr": "((rpo_total * rpo_12m_pct / 100) / quarter_revenue) * 100",
+    "gates": { "up": ">=20", "down": "<15" }
+  },
+  {
+    "id": "wip_intensity_ratio",
+    "inputs": ["inventory", "unbilled_ar", "revenue"],
+    "expr": "((inventory + unbilled_ar) / revenue) * 100",
+    "gates": { "up": "<=70", "down": ">80" }
+  },
+  {
+    "id": "ar_plus_wip_ratio",
+    "inputs": ["billed_ar", "unbilled_ar", "inventory", "revenue"],
+    "expr": "((billed_ar + unbilled_ar + inventory) / revenue) * 100",
+    "gates": { "up": "<=90", "down": ">100" }
+  },
+  {
+    "id": "greenbox_unbilled_share",
+    "inputs": ["greenbox_unbilled", "company_unbilled"],
+    "expr": "(greenbox_unbilled / company_unbilled) * 100",
+    "gates": { "up": ">=15", "down": "<10" }
+  },
+  {
+    "id": "greenbox_deferred_share",
+    "inputs": ["greenbox_deferred", "company_contract_liabilities"],
+    "expr": "(greenbox_deferred / company_contract_liabilities) * 100",
+    "gates": { "up": ">=10", "down": "<5" }
+  },
+  {
+    "id": "ops_services_margin",
+    "inputs": ["ops_revenue", "ops_gross_profit"],
+    "expr": "(ops_gross_profit / ops_revenue) * 100",
+    "gates": { "up": ">=1", "down": "<0.5" }
+  },
+  {
+    "id": "ops_revenue_per_system",
+    "inputs": ["ops_revenue", "operational_systems"],
+    "expr": "ops_revenue / operational_systems",
+    "gates": { "up": ">=500", "down": "<400" }
+  },
+  {
+    "id": "stage2_gm_uplift",
+    "inputs": ["sbc_cogs", "da_cogs", "revenue"],
+    "expr": "((sbc_cogs + da_cogs) / revenue) * 100",
+    "gates": { "up": ">=3", "down": "<2" }
+  },
+  {
+    "id": "sbc_compression_sensitivity",
+    "inputs": ["sbc_cogs", "revenue"],
+    "expr": "((sbc_cogs * 0.25) / revenue) * 100",
+    "gates": { "up": ">=0.5", "down": "<0.3" }
+  },
+  {
+    "id": "deferred_revenue_turnover",
+    "inputs": ["recognized_from_opening_cl_ytd", "opening_cl"],
+    "expr": "(recognized_from_opening_cl_ytd / opening_cl) * 100",
+    "gates": { "up": ">=60", "down": "<40" }
+  },
+  {
+    "id": "greenbox_rpo_share",
+    "inputs": ["greenbox_rpo", "rpo_total"],
+    "expr": "(greenbox_rpo / rpo_total) * 100",
+    "gates": { "up": ">=40", "down": "<30" }
+  },
+  {
+    "id": "vendor_commitments_vs_cash",
+    "inputs": ["vendor_commitments_total", "cash_and_equivalents"],
+    "expr": "(vendor_commitments_total / cash_and_equivalents) * 100",
+    "gates": { "up": "<=120", "down": ">150" }
+  },
+  {
+    "id": "lt1y_commitments_vs_quarterly_rev",
+    "inputs": ["vendor_commitments_lt1y", "quarter_revenue"],
+    "expr": "vendor_commitments_lt1y / quarter_revenue",
+    "gates": { "up": "<=1.5", "down": ">2.0" }
+  },
+  {
+    "id": "share_dilution_yoy",
+    "inputs": ["wa_shares_current", "wa_shares_prior"],
+    "expr": "((wa_shares_current - wa_shares_prior) / wa_shares_prior) * 100",
+    "gates": { "up": "<=8", "down": ">12" }
+  },
+  {
+    "id": "segment_gross_margin_systems",
+    "inputs": ["systems_revenue", "systems_cost"],
+    "expr": "((systems_revenue - systems_cost) / systems_revenue) * 100",
+    "gates": { "up": ">=15", "down": "<10" }
+  },
+  {
+    "id": "segment_gross_margin_software",
+    "inputs": ["software_revenue", "software_cost"],
+    "expr": "((software_revenue - software_cost) / software_revenue) * 100",
+    "gates": { "up": ">=70", "down": "<60" }
+  },
+  {
+    "id": "segment_gross_margin_ops",
+    "inputs": ["ops_revenue", "ops_cost"],
+    "expr": "((ops_revenue - ops_cost) / ops_revenue) * 100",
+    "gates": { "up": ">=0", "down": "<-5" }
+  },
+  {
+    "id": "service_run_rate_annual",
+    "inputs": ["sw_plus_ops_revenue_quarterly"],
+    "expr": "sw_plus_ops_revenue_quarterly * 4",
+    "gates": { "up": ">=120000", "down": "<80000" }
+  },
+  {
+    "id": "service_margin_run_rate",
+    "inputs": ["sw_plus_ops_revenue_quarterly", "sw_plus_ops_gp_quarterly"],
+    "expr": "((sw_plus_ops_gp_quarterly * 4) / (sw_plus_ops_revenue_quarterly * 4)) * 100",
+    "gates": { "up": ">=15", "down": "<10" }
+  },
+  {
+    "id": "apd_potential_rpo_impact",
+    "inputs": ["apd_potential_rpo", "current_rpo"],
+    "expr": "(apd_potential_rpo / current_rpo) * 100",
+    "gates": { "up": ">=20", "down": "<10" }
+  },
+  {
+    "id": "cfo_9m_to_revenue_ratio",
+    "inputs": ["cfo_9m", "revenue_9m"],
+    "expr": "(cfo_9m / revenue_9m) * 100",
+    "gates": { "up": ">=15", "down": "<10" }
+  },
+  {
+    "id": "cfo_minus_sbc_9m",
+    "inputs": ["cfo_9m", "sbc_9m"],
+    "expr": "cfo_9m - sbc_9m",
+    "gates": { "up": ">=150000", "down": "<100000" }
+  },
+  {
+    "id": "alpha3_mix_sensitivity_stage1",
+    "inputs": ["rev_600k", "dSW_pp", "dOps_pp"],
+    "expr": "rev_600k * (0.60 * dSW_pp - 0.18 * dOps_pp) / 100",
+    "gates": { "up": ">=6000", "down": "<4000" },
+    "formula": "ΔGM(pp) = 0.60*ΔSW(pts) - 0.18*ΔOps(pts)",
+    "ops_gross_margin_fixed": 0.2
+  },
+  {
+    "id": "alpha3_sw_mix_2pt_scenario",
+    "inputs": ["rev_600k", "dSW_pp"],
+    "expr": "rev_600k * (0.60 * 2) / 100",
+    "gates": { "up": ">=7200", "down": "<4800" }
+  },
+  {
+    "id": "alpha3_ops_mix_2pt_scenario", 
+    "inputs": ["rev_600k", "dOps_pp"],
+    "expr": "rev_600k * (-0.18 * 2) / 100",
+    "gates": { "up": ">=-2160", "down": "<-2880" }
+  },
+  {
+    "id": "alpha3_sw_1pt_ops_0pt",
+    "inputs": ["rev_600k"],
+    "expr": "rev_600k * (0.60 * 1) / 100",
+    "gates": { "up": ">=3600", "down": "<2400" }
+  },
+  {
+    "id": "alpha3_sw_0pt_ops_1pt",
+    "inputs": ["rev_600k"],
+    "expr": "rev_600k * (-0.18 * 1) / 100",
+    "gates": { "up": ">=-1200", "down": "<-1800" }
+  },
+  {
+    "id": "alpha5_reality_band_green",
+    "inputs": ["rev_600k", "adj_gm_21_5pct", "adj_ebitda_47k"],
+    "expr": "rev_600k * (adj_gm_21_5pct/100) - adj_ebitda_47k",
+    "gates": { "up": "<=83000", "down": ">83000" }
+  },
+  {
+    "id": "alpha5_reality_band_amber",
+    "inputs": ["rev_600k", "adj_gm_21_5pct", "adj_ebitda_47k"],
+    "expr": "rev_600k * (adj_gm_21_5pct/100) - adj_ebitda_47k",
+    "gates": { "up": "<=86500", "down": ">86500" }
+  },
+  {
+    "id": "alpha5_cash_pressure_index",
+    "inputs": ["vendor_commit_lt1y_793k", "cash_777k", "adj_gp_at_600k_21_5pct"],
+    "expr": "vendor_commit_lt1y_793k / (cash_777k + (600000 * 0.215))",
+    "gates": { "up": "<=1.0", "down": ">1.0" }
+  },
+  {
+    "id": "agi_unbilled_over_cl_ratio",
+    "inputs": ["unbilled_ar_236k", "contract_liabilities_923k"],
+    "expr": "(unbilled_ar_236k / contract_liabilities_923k) * 100",
+    "gates": { "up": "<=35", "down": ">35" }
+  },
+  {
+    "id": "agi_unbilled_days",
+    "inputs": ["unbilled_ar_236k", "quarter_revenue_592k"],
+    "expr": "(unbilled_ar_236k / quarter_revenue_592k) * 90",
+    "gates": { "up": "<=40", "down": ">40" }
+  },
+  {
+    "id": "agi_gb_unbilled_over_deferred",
+    "inputs": ["greenbox_unbilled_51k", "greenbox_deferred_139k"],
+    "expr": "(greenbox_unbilled_51k / greenbox_deferred_139k) * 100",
+    "gates": { "up": "<=35", "down": ">35" }
+  },
+  {
+    "id": "alpha4_next_q_green_deferred_condition",
+    "inputs": ["greenbox_deferred_q3_139k", "greenbox_deferred_q4"],
+    "expr": "greenbox_deferred_q3_139k - greenbox_deferred_q4",
+    "gates": { "up": ">0", "down": "<=0" }
+  },
+  {
+    "id": "alpha4_next_q_green_revenue_threshold",
+    "inputs": ["greenbox_deferred_q3_139k", "greenbox_revenue_q4"],
+    "expr": "greenbox_revenue_q4 >= (greenbox_deferred_q3_139k * 0.25)",
+    "gates": { "up": ">=34775", "down": "<34775" }
+  },
+  {
+    "id": "alpha4_next_q_green_unbilled_ratio",
+    "inputs": ["greenbox_unbilled_q4", "greenbox_deferred_q4"],
+    "expr": "(greenbox_unbilled_q4 / greenbox_deferred_q4) * 100",
+    "gates": { "up": "<=35", "down": ">35" }
+  },
+  {
+    "id": "alpha4_q3_new_deferrals_added",
+    "inputs": ["greenbox_deferred_q3_139k", "greenbox_deferred_q2_74k", "greenbox_revenue_q3_26k"],
+    "expr": "greenbox_deferred_q3_139k - greenbox_deferred_q2_74k + greenbox_revenue_q3_26k",
+    "gates": { "up": ">=90000", "down": "<80000" }
+  },
+  {
+    "id": "alpha4_q3_recognized_from_prev_deferred",
+    "inputs": ["greenbox_revenue_q3_26k"],
+    "expr": "greenbox_revenue_q3_26k",
+    "gates": { "up": ">=26000", "down": "<20000" }
+  },
+  {
+    "id": "alpha4_q3_carryover_prev_deferred",
+    "inputs": ["greenbox_deferred_q2_74k", "greenbox_revenue_q3_26k"],
+    "expr": "greenbox_deferred_q2_74k - greenbox_revenue_q3_26k",
+    "gates": { "up": ">=48000", "down": "<40000" }
+  },
+  {
+    "id": "cl_runoff_remaining_coverage",
+    "inputs": ["opening_cl_805k", "recognized_from_cl_567k", "q4_mid_rev_600k"],
+    "expr": "((opening_cl_805k - recognized_from_cl_567k) / q4_mid_rev_600k) * 3",
+    "gates": { "up": ">=1.0", "down": "<1.0" }
+  },
+  {
+    "id": "per_unit_systems_rev_deployment",
+    "inputs": ["systems_revenue_559k", "systems_in_deployment_46"],
+    "expr": "systems_revenue_559k / systems_in_deployment_46",
+    "gates": { "up": ">=12000", "down": "<10000" }
+  },
+  {
+    "id": "per_unit_systems_gp_deployment",
+    "inputs": ["systems_gp_101k", "systems_in_deployment_46"],
+    "expr": "systems_gp_101k / systems_in_deployment_46",
+    "gates": { "up": ">=2000", "down": "<1500" }
+  },
+  {
+    "id": "per_unit_ops_rev_operational",
+    "inputs": ["ops_revenue_24k", "operational_systems_42"],
+    "expr": "ops_revenue_24k / operational_systems_42",
+    "gates": { "up": ">=500", "down": "<400" }
+  },
+  {
+    "id": "per_unit_software_rev_operational",
+    "inputs": ["software_ms_revenue_8k", "operational_systems_42"],
+    "expr": "software_ms_revenue_8k / operational_systems_42",
+    "gates": { "up": ">=180", "down": "<150" }
+  },
+  {
+    "id": "ot_min_bound_services",
+    "inputs": ["software_ms_revenue_8k", "ops_revenue_24k"],
+    "expr": "software_ms_revenue_8k + ops_revenue_24k",
+    "gates": { "up": ">=30000", "down": "<25000" }
+  },
+  {
+    "id": "ot_min_share_of_revenue",
+    "inputs": ["services_revenue_33k", "total_revenue_592k"],
+    "expr": "(services_revenue_33k / total_revenue_592k) * 100",
+    "gates": { "up": ">=5.0", "down": "<4.0" }
+  },
+  {
+    "id": "systems_share_of_revenue",
+    "inputs": ["systems_revenue_559k", "total_revenue_592k"],
+    "expr": "(systems_revenue_559k / total_revenue_592k) * 100",
+    "gates": { "up": ">=90", "down": "<85" }
+  },
+  {
+    "id": "unbilled_over_total_receivables",
+    "inputs": ["unbilled_ar_236k", "billed_ar_136k"],
+    "expr": "(unbilled_ar_236k / (unbilled_ar_236k + billed_ar_136k)) * 100",
+    "gates": { "up": ">=60", "down": "<50" }
+  },
+  {
+    "id": "ot_pt_timing_risk_proxy",
+    "inputs": ["unbilled_over_total_receivables_pct", "systems_share_pct"],
+    "expr": "unbilled_over_total_receivables_pct * (systems_share_pct / 100)",
+    "gates": { "up": ">=55", "down": "<45" }
+  },
+  {
+    "id": "ahf_matrix_stars",
+    "inputs": ["acceptance_timing_risk", "rpo_coverage_strength", "pl_cash_timing_analysis"],
+    "expr": "1.5",
+    "gates": { "up": ">=2.0", "down": "<=1.0" }
+  },
+  {
+    "id": "ahf_confidence_pct",
+    "inputs": ["acceptance_timing_risk", "rpo_coverage_strength"],
+    "expr": "58",
+    "gates": { "up": ">=70", "down": "<=40" }
+  },
+  {
+    "id": "ahf_priced_in_pct",
+    "inputs": ["market_efficiency", "analyst_consensus"],
+    "expr": "60",
+    "gates": { "up": ">=80", "down": "<=40" }
+  },
+  {
+    "id": "star_up_condition_greenbox",
+    "inputs": ["greenbox_deferred_qoq", "greenbox_revenue_vs_prev_deferred_pct"],
+    "expr": "greenbox_deferred_qoq < 0 AND greenbox_revenue_vs_prev_deferred_pct >= 25",
+    "gates": { "up": "true", "down": "false" }
+  },
+  {
+    "id": "star_up_condition_cl_unbilled",
+    "inputs": ["contract_liabilities_qoq", "unbilled_ar_qoq"],
+    "expr": "contract_liabilities_qoq >= 5 OR unbilled_ar_qoq <= 0",
+    "gates": { "up": "true", "down": "false" }
+  },
+  {
+    "id": "star_down_condition_cl_dou",
+    "inputs": ["contract_liabilities_qoq", "unbilled_days"],
+    "expr": "contract_liabilities_qoq <= 0 AND unbilled_days >= 40",
+    "gates": { "up": "false", "down": "true" }
+  },
+  {
+    "id": "star_down_condition_customer_a",
+    "inputs": ["customer_a_revenue_pct"],
+    "expr": "customer_a_revenue_pct >= 92",
+    "gates": { "up": "false", "down": "true" }
+  },
+  {
+    "id": "acceptance_timing_risk_score",
+    "inputs": ["contract_liabilities_qoq", "unbilled_ar_qoq", "greenbox_deferred_qoq", "greenbox_unbilled_deferred_ratio"],
+    "expr": "abs(contract_liabilities_qoq) + abs(unbilled_ar_qoq) + abs(greenbox_deferred_qoq) + (greenbox_unbilled_deferred_ratio > 35 ? 1 : 0)",
+    "gates": { "up": "<=50", "down": ">100" }
+  },
+  {
+    "id": "rpo_coverage_months_12m",
+    "inputs": ["rpo_total", "rpo_12m_pct", "quarter_revenue"],
+    "expr": "((rpo_total * rpo_12m_pct / 100) / quarter_revenue) * 3",
+    "gates": { "up": ">=12", "down": "<8" }
+  },
+  {
+    "id": "pl_cash_timing_consistency",
+    "inputs": ["adj_ebitda", "cfo", "contract_liabilities_qoq", "unbilled_ar_qoq"],
+    "expr": "abs(cfo - adj_ebitda) / abs(contract_liabilities_qoq + unbilled_ar_qoq)",
+    "gates": { "up": ">=0.8", "down": "<0.5" }
+  }
+]

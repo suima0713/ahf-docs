@@ -1,0 +1,297 @@
+{
+  "as_of": "2025-09-21",
+  "CONFIRMED": [
+    {
+      "kpi": "Total Revenue Q2 2025",
+      "value": 51.728,
+      "unit": "USD_M",
+      "asof": "2025-09-21",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1120914/000143774925025457/ex_825594.htm"
+    },
+    {
+      "kpi": "Analytics Revenue Q2 2025",
+      "value": 48.822,
+      "unit": "USD_M",
+      "asof": "2025-09-21",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1120914/000143774925025457/ex_825594.htm"
+    },
+    {
+      "kpi": "Non-GAAP Gross Margin Q2 2025",
+      "value": 76.0,
+      "unit": "percent",
+      "asof": "2025-09-21",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1120914/000143774925025457/ex_825594.htm"
+    },
+    {
+      "kpi": "SW Ratio (Analytics/Revenue) Q2 2025",
+      "value": 94.38,
+      "unit": "percent",
+      "asof": "2025-09-21",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1120914/000143774925025457/ex_825594.htm"
+    },
+    {
+      "kpi": "Alpha3 GM Drift",
+      "value": -5.28,
+      "unit": "percentage_points",
+      "asof": "2025-09-21",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1120914/000143774925025457/ex_825594.htm"
+    },
+    {
+      "kpi": "Alpha5 OpEx Improvement Potential",
+      "value": -8.128,
+      "unit": "USD_M",
+      "asof": "2025-09-21",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1120914/000143774925025457/ex_825594.htm"
+    },
+    {
+      "kpi": "GAAP COGS Increase QoQ",
+      "value": 1.931,
+      "unit": "USD_M",
+      "asof": "2025-09-21",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1120914/000143774925025457/ex_825594.htm"
+    },
+    {
+      "kpi": "Non-GAAP COGS Increase QoQ",
+      "value": 1.696,
+      "unit": "USD_M",
+      "asof": "2025-09-21",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1120914/000143774925025457/ex_825594.htm"
+    },
+    {
+      "kpi": "COGS Adjustments Increase QoQ",
+      "value": 0.235,
+      "unit": "USD_M",
+      "asof": "2025-09-21",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1120914/000143774925025457/ex_825594.htm"
+    },
+    {
+      "kpi": "CL Decline QoQ",
+      "value": -3.768,
+      "unit": "USD_M",
+      "asof": "2025-09-21",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1120914/000143774925025457/ex_825594.htm"
+    },
+    {
+      "kpi": "CL Decline Percentage QoQ",
+      "value": -13.9,
+      "unit": "percent",
+      "asof": "2025-09-21",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1120914/000143774925025457/ex_825594.htm"
+    },
+    {
+      "kpi": "Non-GAAP COGS Q2",
+      "value": 12.631,
+      "unit": "USD_M",
+      "asof": "2025-09-21",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1120914/000143774925025457/ex_825594.htm"
+    },
+    {
+      "kpi": "Non-GAAP COGS Q1",
+      "value": 10.935,
+      "unit": "USD_M",
+      "asof": "2025-09-21",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1120914/000143774925025457/ex_825594.htm"
+    },
+    {
+      "kpi": "Contract Assets Q2 Total",
+      "value": 8.167,
+      "unit": "USD_M",
+      "asof": "2025-09-21",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1120914/000143774925025457/pdfs20250630_10q.htm"
+    },
+    {
+      "kpi": "Contract Assets Q1 Total",
+      "value": 6.928,
+      "unit": "USD_M",
+      "asof": "2025-09-21",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1120914/000143774925025457/pdfs20250630_10q.htm"
+    },
+    {
+      "kpi": "CA Increase QoQ",
+      "value": 1.239,
+      "unit": "USD_M",
+      "asof": "2025-09-21",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1120914/000143774925025457/pdfs20250630_10q.htm"
+    },
+    {
+      "kpi": "CA Increase Percentage QoQ",
+      "value": 17.9,
+      "unit": "percent",
+      "asof": "2025-09-21",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1120914/000143774925025457/pdfs20250630_10q.htm"
+    },
+    {
+      "kpi": "SW Ratio Q2 2025",
+      "value": 94.4,
+      "unit": "percent",
+      "asof": "2025-09-21",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1120914/000143774925025457/ex_825594.htm"
+    },
+    {
+      "kpi": "SW Ratio Q1 2025",
+      "value": 88.9,
+      "unit": "percent",
+      "asof": "2025-09-21",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1120914/000143774925025457/ex_825594.htm"
+    },
+    {
+      "kpi": "SW Ratio Delta QoQ",
+      "value": 5.5,
+      "unit": "percentage_points",
+      "asof": "2025-09-21",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1120914/000143774925025457/ex_825594.htm"
+    },
+    {
+      "kpi": "Predicted GM Q2",
+      "value": 81.28,
+      "unit": "percent",
+      "asof": "2025-09-21",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1120914/000143774925025457/ex_825594.htm"
+    },
+    {
+      "kpi": "GM Drift QoQ",
+      "value": -5.28,
+      "unit": "percentage_points",
+      "asof": "2025-09-21",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1120914/000143774925025457/ex_825594.htm"
+    },
+    {
+      "kpi": "Residual Gross Profit",
+      "value": 2.73,
+      "unit": "USD_M",
+      "asof": "2025-09-21",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1120914/000143774925025457/ex_825594.htm"
+    },
+    {
+      "kpi": "GAAP Adjustments Increase",
+      "value": 0.24,
+      "unit": "USD_M",
+      "asof": "2025-09-21",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1120914/000143774925025457/ex_825594.htm"
+    }
+  ],
+  "UNCERTAIN": [
+    {
+      "kpi": "Adj EBITDA (full D&A)",
+      "status": "blocked_source",
+      "url_index": "partial_da_only",
+      "note": "現時点は部分D&Aで保守推定。完全D&AのT1確認が必要",
+      "ttl_days": 7
+    },
+    {
+      "kpi": "10-Q Item 1A (No change?)",
+      "status": "not_found",
+      "url_index": "q10_extraction_pending",
+      "note": "10-QのItem 1Aリスク要因の変更確認が必要",
+      "ttl_days": 7
+    },
+    {
+      "kpi": "Contract Liabilities QoQ",
+      "status": "not_found",
+      "url_index": "q10_balance_sheet_pending",
+      "note": "Contract Liabilitiesの四半期変化確認が必要",
+      "ttl_days": 7
+    },
+    {
+      "kpi": "Contract Assets QoQ",
+      "status": "blocked_source",
+      "url_index": "q2_10q_text_blocked",
+      "note": "Q2'25のCA数値は10-Q本文取得がツールで弾かれ未確認（PENDING_SEC）",
+      "ttl_days": 7
+    },
+    {
+      "kpi": "GM Decline Explanation",
+      "status": "not_found",
+      "url_index": "ex99_text_analysis_pending",
+      "note": "Q2のGM低下要因の一次テキスト説明が未確認（数表中心）",
+      "ttl_days": 7
+    },
+    {
+      "kpi": "Cost Structure Changes",
+      "status": "not_found",
+      "url_index": "management_discussion_pending",
+      "note": "非GAAP売上原価+$1.70M増加の具体要因説明が必要",
+      "ttl_days": 7
+    },
+    {
+      "kpi": "Q2 10-Q GM Explanation",
+      "status": "blocked_source",
+      "url_index": "q2_10q_text_blocked",
+      "note": "Q2 10-Q本文でGM悪化の一次説明を特定（α3＝Explained昇格可否）",
+      "ttl_days": 7
+    },
+    {
+      "kpi": "Contract Assets Q2",
+      "status": "not_found",
+      "url_index": "q2_contract_balances_pending",
+      "note": "CA（契約資産）のQ2値を確定（WATCH救済の可否）",
+      "ttl_days": 7
+    },
+    {
+      "kpi": "Q2 Item 1A Risk Factors",
+      "status": "blocked_source",
+      "url_index": "q2_item1a_blocked",
+      "note": "Item 1A（Risk Factors）更新の有無を一次で確定",
+      "ttl_days": 7
+    },
+    {
+      "kpi": "Cost Increase Temporality",
+      "status": "not_found",
+      "url_index": "cost_temporality_assessment",
+      "note": "下請・クラウド・設備IT・ハードの増加が一時的か構造的かの判定",
+      "ttl_days": 7
+    },
+    {
+      "kpi": "Acquisition Cost Impact",
+      "status": "not_found",
+      "url_index": "acquisition_cost_impact",
+      "note": "SecureWise買収の統合コストがCOGSに与える影響の定量化",
+      "ttl_days": 7
+    },
+    {
+      "kpi": "Hardware Ratio Change",
+      "status": "not_found",
+      "url_index": "hardware_ratio_assessment",
+      "note": "ハード提供比率の上振れが構造的か一時的かの判定",
+      "ttl_days": 7
+    },
+    {
+      "kpi": "Cloud Usage Spike Impact",
+      "status": "not_found",
+      "url_index": "cloud_usage_normalization",
+      "note": "クラウド使用量の一時的スパイクが原価に与える影響",
+      "ttl_days": 7
+    },
+    {
+      "kpi": "Capex Depreciation Impact",
+      "status": "not_found",
+      "url_index": "capex_depreciation_impact",
+      "note": "設備・IT投資の減価償却が原価に与える影響の定量化",
+      "ttl_days": 7
+    }
+  ]
+}

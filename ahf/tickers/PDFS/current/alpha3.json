@@ -1,0 +1,75 @@
+{
+  "ticker": "PDFS",
+  "period": "Q2 2025",
+  "analysis_date": "2025-09-21",
+  "alpha3_analysis": {
+    "mix_calculation": {
+      "sw_q2": 0.9438,
+      "sw_q1": 0.8889,
+      "delta_sw_pp": 5.49,
+      "delta_ops_pp": -5.49,
+      "mix_shift_magnitude": "significant"
+    },
+    "gm_prediction": {
+      "base_gm_q1": 77.0,
+      "predicted_delta_gm_pp": 4.28,
+      "predicted_gm_q2": 81.28,
+      "actual_gm_q2": 76.0,
+      "gm_drift_pp": -5.28,
+      "residual_gp_usd": 2.73
+    },
+    "cost_decomposition": {
+      "gaap_cogs_q2": 14.886,
+      "gaap_cogs_q1": 12.955,
+      "gaap_cogs_delta": 1.931,
+      "non_gaap_cogs_q2": 12.631,
+      "non_gaap_cogs_q1": 10.935,
+      "non_gaap_cogs_delta": 1.696,
+      "sbc_cogs_q2": 1.257,
+      "sbc_cogs_q1": 1.342,
+      "sbc_cogs_delta": -0.085,
+      "acquired_tech_amort_q2": 0.998,
+      "acquired_tech_amort_q1": 0.678,
+      "acquired_tech_amort_delta": 0.320
+    },
+    "model_validation": {
+      "threshold_pp": 0.2,
+      "drift_exceeds_threshold": true,
+      "residual_gp_threshold_usd": 8.0,
+      "residual_gp_within_threshold": true,
+      "pp_criterion_fail": true
+    },
+    "decision": "FAIL",
+    "status": "Explained_PASS",
+    "reasons": [
+      "GM drift -5.28pp exceeds threshold 0.2pp",
+      "Mix shift +5.49pp should have driven GM higher, but cost increases offset benefits",
+      "Non-GAAP COGS increased $1.696M despite mix benefits"
+    ],
+    "final_assessment": {
+      "data_consistency": "confirmed",
+      "mix_improvement": "SW↑ confirmed (+5.49pp)",
+      "gm_deterioration": "confirmed (-1.0pp)",
+      "cost_increase": "confirmed (+$1.696M)",
+      "cause_identification": "T1定量特定済み",
+      "t1_explanation_status": "Non-GAAP COGS increased $1.696M (10.935→12.631) - T1定量確認済み",
+      "attribution_explanation": "primarily due to increases in subcontractor costs, facilities and IT-related costs including depreciation and amortization expense",
+      "integration_status": "数表の恒等式突合は完了",
+      "equation_verification": "+$1.696（その他） − $0.085（SBC） + $0.320（Amort） = +$1.931（GAAP CoR増）。一致",
+      "q2_10q_text_confirmation": "Costs of revenues増加の主因はsubcontractor、施設・IT（減価償却含む）、ハード、クラウド、人件費",
+      "upgrade_status": "Explained_PASS - Q2 10-Q本文で原因カテゴリを明文で取得完了"
+    },
+    "upgrade_conditions": {
+      "explained_pass_requirements": [
+        "T1 text explanation of non-mix factors (cost/price/classification)",
+        "Same quarter T1 disclosure of GM decline drivers",
+        "Management discussion of cost structure changes"
+      ],
+      "current_status": "Unexplained - No T1 text explanation found"
+    },
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1120914/000143774925025457/ex_825594.htm",
+      "https://www.sec.gov/Archives/edgar/data/1120914/000143774925025457/ex_825595.htm"
+    ]
+  }
+}

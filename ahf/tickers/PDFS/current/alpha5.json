@@ -1,0 +1,69 @@
+{
+  "ticker": "PDFS",
+  "period": "Q2 2025",
+  "analysis_date": "2025-09-21",
+  "alpha5_analysis": {
+    "opex_analysis": {
+      "gaap_opex_actual": 35.725,
+      "grid_median_opex": 27.597,
+      "improvement_potential": -8.128,
+      "improvement_flag": true,
+      "improvement_magnitude": "significant"
+    },
+    "ebitda_calculation": {
+      "non_gaap_gross_profit": 39.097,
+      "non_gaap_rd": 12.662,
+      "non_gaap_sga": 16.782,
+      "non_gaap_oi": 9.653,
+      "partial_da": 2.066,
+      "adj_ebitda_proxy": 11.719,
+      "adj_ebitda_proxy_note": "Non-GAAP OI(=39.097−(12.662+16.782)=9.653) + 部分D&A(取得無形償却1.068+取得技術償却0.998)"
+    },
+    "grid_parameters": {
+      "revenue_range": [51.211, 51.728, 52.245],
+      "gm_range": [75.5, 76.0, 76.5],
+      "ebitda_range": [11.133, 12.305],
+      "grid_median_opex": 27.597
+    },
+    "improvement_analysis": {
+      "opex_efficiency_gap": 8.128,
+      "efficiency_improvement_potential": "high",
+      "cost_optimization_opportunities": [
+        "R&D efficiency improvements",
+        "SG&A optimization",
+        "Operational leverage"
+      ]
+    },
+    "t1_ebitda_calculation": {
+      "operating_income": 1.117,
+      "p_e_depreciation": 0.8,
+      "intangible_amortization": 2.066,
+      "total_ebitda": 3.983,
+      "calculation_method": "GAAP OI + D&A (代替OK)"
+    },
+    "grid_analysis": {
+      "revenue": 51.728,
+      "gross_margin": 71.0,
+      "ebitda_floor": 5.0,
+      "grid_median_opex": 31.73,
+      "actual_opex": 35.725,
+      "improvement_gap": -4.0,
+      "threshold_met": true
+    },
+    "decision": "PASS",
+    "reasons": [
+      "OpEx gap of $8.13M indicates significant improvement potential",
+      "Grid median suggests operational efficiency opportunities",
+      "Revenue growth outpacing cost optimization"
+    ],
+    "watch_conditions": [
+      "10-Q Item 1A = No change",
+      "Contract Liabilities ↑ / Contract Assets ↓",
+      "Full D&A reconciliation"
+    ],
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1120914/000143774925025457/ex_825594.htm",
+      "https://www.sec.gov/Archives/edgar/data/1120914/000143774925025457/ex_825595.htm"
+    ]
+  }
+}

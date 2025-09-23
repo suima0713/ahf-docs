@@ -1,0 +1,103 @@
+{
+  "coverage_ratio": {
+    "id": "coverage_ratio",
+    "inputs": ["RPO_total", "RPO_le12m_pct", "Guidance_FY25_total_revenue_mid"],
+    "expr": "(RPO_total*(RPO_le12m_pct/100))/Guidance_FY25_total_revenue_mid",
+    "gates": {
+      "up": ">=0.90",
+      "down": "<0.60"
+    }
+  },
+  "alpha5_math_validation": {
+    "id": "alpha5_math_validation",
+    "inputs": ["Revenue_Q2", "Non_GAAP_GM", "Non_GAAP_OI", "Depreciation"],
+    "expr": "((Revenue_Q2 * Non_GAAP_GM) - (Non_GAAP_OI + Depreciation)) <= 8.0",
+    "gates": {
+      "up": "<=8.0",
+      "down": ">8.0"
+    },
+    "calculation_results": {
+      "GP_calculated": 105.703,
+      "Adj_EBITDA": 20.3,
+      "OpEx_estimated": 85.40,
+      "OpEx_actual": 86.30,
+      "residual": 0.90,
+      "GM_deviation": 0.0,
+      "alpha5_math_pass": true
+    }
+  },
+  "gaap_bridge_analysis": {
+    "id": "gaap_bridge_analysis",
+    "inputs": ["GAAP_OI", "SBC", "Amortization", "Acquisition_costs"],
+    "expr": "GAAP_OI + SBC + Amortization + Acquisition_costs",
+    "gates": {
+      "up": ">=19.0",
+      "down": "<19.0"
+    },
+    "bridge_components": {
+      "GAAP_OPM": -20.4,
+      "SBC_pct": 29.9,
+      "Amort_pct": 4.5,
+      "Acq_pct": 1.3,
+      "Non_GAAP_OPM": 15.3
+    }
+  },
+  "ro40_threshold_tracking": {
+    "id": "ro40_threshold_tracking",
+    "inputs": ["Revenue_growth_yoy", "GAAP_OPM_current"],
+    "expr": "Revenue_growth_yoy + GAAP_OPM_current",
+    "gates": {
+      "up": ">=35.0",
+      "down": "<35.0"
+    },
+    "thresholds": {
+      "ro40_35_requires_gaap_opm": 12.0,
+      "ro40_40_requires_gaap_opm": 17.0,
+      "current_ro40": 2.6
+    }
+  },
+  "q3_checkpoints": {
+    "id": "q3_checkpoints",
+    "inputs": ["SBC_revenue_ratio", "Amort_revenue_ratio", "GAAP_OPM_Q3"],
+    "expr": "SBC_revenue_ratio < 27.0 && Amort_revenue_ratio <= 4.0 && GAAP_OPM_Q3 > -15.0",
+    "gates": {
+      "up": "true",
+      "down": "false"
+    },
+    "targets": {
+      "SBC_ratio_target": "<27%",
+      "Amort_ratio_target": "<=4%", 
+      "GAAP_OPM_target": ">-15%"
+    }
+  },
+  "price_mode_valuation": {
+    "id": "price_mode_valuation",
+    "inputs": ["Market_Cap", "Cash_Equivalents", "NTM_Revenue_Guidance"],
+    "expr": "(Market_Cap - Cash_Equivalents) / NTM_Revenue_Guidance",
+    "gates": {
+      "up": "<=10.0",
+      "down": ">10.0"
+    },
+    "current_values": {
+      "market_cap": 5.03,
+      "cash_equivalents": 0.612,
+      "enterprise_value": 4.42,
+      "ntm_revenue_guidance": 0.5085,
+      "ev_sales_fwd": 8.68
+    }
+  },
+  "alpha4_visibility": {
+    "id": "alpha4_visibility",
+    "inputs": ["RPO_12M", "Quarterly_Revenue"],
+    "expr": "(RPO_12M / Quarterly_Revenue) * 3",
+    "gates": {
+      "up": ">=6.0",
+      "down": "<6.0"
+    },
+    "current_values": {
+      "rpo_12m": 319.4,
+      "quarterly_revenue": 127.2,
+      "coverage_months": 7.53
+    }
+  }
+}

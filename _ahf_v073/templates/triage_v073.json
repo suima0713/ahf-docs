@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "as_of": "YYYY-MM-DD",
+    "version": "0.7.3",
+    "purpose": "投資判断に直結する固定3軸で評価する"
+  },
+  "CONFIRMED": [
+    {
+      "kpi": "例: guidance_fy26_mid",
+      "value": 0,
+      "unit": "例: USD_millions",
+      "asof": "YYYY-MM-DD",
+      "tag": "T1-core",
+      "url": "https://example.com/sec-filing",
+      "axis": "LEC",
+      "verbatim": "逐語≤25語",
+      "anchor": "#:~:text=逐語"
+    }
+  ],
+  "UNCERTAIN": [
+    {
+      "kpi": "例: market_sentiment_positive",
+      "status": "blocked_source|not_found",
+      "claim": "短文≤25語の主張",
+      "credence_pct": 70,
+      "aust_gaps": ["asof_ok", "unit_ok", "section_missing", "url_ok"],
+      "ttl_days": 30,
+      "url_index": "ソースのインデックス",
+      "contradiction": false,
+      "axis": "LEC|NES|VRG",
+      "dual_anchor_status": "PENDING_SEC|CONFIRMED|SINGLE"
+    }
+  ],
+  "EDGE_FACTS": [
+    {
+      "kpi": "例: analyst_upgrade",
+      "value": 0,
+      "unit": "",
+      "asof": "YYYY-MM-DD",
+      "tag": "EDGE",
+      "url": "https://example.com/ir",
+      "verbatim": "逐語≤25語",
+      "anchor": "anchor_backup{...}",
+      "credence_pct": 70,
+      "ttl_days": 14,
+      "contradiction": false,
+      "dual_anchor_status": "PENDING_SEC",
+      "source_type": "IR|PR|SEC",
+      "axis": "LEC|NES|VRG"
+    }
+  ],
+  "HYPOTHESES": [
+    {
+      "id": "H6_guidance_adherence",
+      "status": "pending",
+      "what_to_watch": ["guidance_fy26_mid", "actual_rev_fy26_ytd", "guidance_mape_pct"],
+      "trigger": "guidance_mape_pct <= 5",
+      "falsifier": "guidance_mape_pct >= 10",
+      "kpi_links": ["guidance_fy26_mid", "rev_actual"],
+      "axis": "LEC"
+    },
+    {
+      "id": "H7_cash_conversion_and_allocation",
+      "status": "pending",
+      "what_to_watch": ["fcf_ttm", "fixed_fee_rev_ttm", "capex_ttm", "buybacks_ttm"],
+      "trigger": "fcf_conversion_pct >= 70 AND capex_intensity_pct <= 5",
+      "falsifier": "fcf_conversion_pct < 50 OR capex_intensity_pct > 8",
+      "kpi_links": ["fcf_q", "capex_q", "rev_fixed_q"],
+      "axis": "LEC"
+    }
+  ],
+  "TURBO_SCREEN": {
+    "enabled": true,
+    "min_credence": 60,
+    "max_ttl_days": 14,
+    "max_star_adjustment": 2,
+    "max_confidence_boost": 10,
+    "math_guard_relaxed": true
+  },
+  "ANCHOR_LINT": {
+    "max_verbatim_length": 25,
+    "sec_anchor_required": true,
+    "anchor_backup_allowed": true,
+    "dual_anchor_support": true
+  }
+}

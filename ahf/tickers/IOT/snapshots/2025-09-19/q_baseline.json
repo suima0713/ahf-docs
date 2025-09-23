@@ -1,0 +1,43 @@
+{
+  "ticker": "IOT",
+  "q_baseline": {
+    "gaap_revenue_$k": 322000,
+    "gaap_gross_profit_$k": "data_gap",
+    "nongaap_gross_profit_$k": "data_gap",
+    "quotes": [
+      {
+        "field": "gaap_rev",
+        "verbatim_≤25w": "Total revenue was $322.0 million",
+        "anchor": "https://www.sec.gov/Archives/edgar/data/1642896/000164289624000073/samsaraepr-q32025.htm#fragment"
+      },
+      {
+        "field": "nongaap_gp_src",
+        "verbatim_≤25w": "data_gap",
+        "anchor": "data_gap"
+      }
+    ]
+  },
+  "cogs_adjustments": [
+    {
+      "item": "SBC",
+      "amount_$k": "data_gap",
+      "anchor": "data_gap"
+    },
+    {
+      "item": "D&A",
+      "amount_$k": "data_gap",
+      "anchor": "data_gap"
+    },
+    {
+      "item": "ERC",
+      "amount_$k": "data_gap",
+      "anchor": "data_gap"
+    }
+  ],
+  "math_checks": {
+    "gp_bridge": {
+      "pass": false,
+      "delta_$k": "data_gap"
+    }
+  }
+}

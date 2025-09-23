@@ -32,6 +32,18 @@
 
 [2025-06-30][T1-F][Core②] "No customer exceeded 10% of revenue from fees, net in Q2 2025." (impact: revenue_concentration_feesnet_q2_25) <https://www.sec.gov/Archives/edgar/data/1647639/000164763925000092/upst-20250630.htm>
 
+[2025-09-30][T1-F][Core②] "CFO minus Adj. EBITDA equals negative $183,737 thousand." (impact: cfo_ebitda_gap_q3_25) <https://sec.gov/edgar/.../CF表>
+
+[2025-09-30][T1-F][Core②] "Working capital cash impact negative $242,657 thousand." (impact: working_capital_cash_impact_q3_25) <https://sec.gov/edgar/.../CF表>
+
+[2025-09-30][T1-F][Core②] "Contract liabilities decrease $171,331 thousand (69.2% of drag)." (impact: contract_liabilities_decrease_q3_25) <https://sec.gov/edgar/.../CF表>
+
+[2025-09-30][T1-F][Core②] "Unbilled receivables increase $76,185 thousand (30.8% of drag)." (impact: unbilled_receivables_increase_q3_25) <https://sec.gov/edgar/.../CF表>
+
+[2025-09-30][T1-F][Core②] "Inventory decrease $3,470 thousand positive cash impact." (impact: inventory_decrease_q3_25) <https://sec.gov/edgar/.../CF表>
+
+[2025-09-30][T1-F][Core②] "Billed AR decrease $1,389 thousand positive cash impact." (impact: billed_ar_decrease_q3_25) <https://sec.gov/edgar/.../CF表>
+
 ## 例
 
 ### ガイダンス発表（逐語≤40語）

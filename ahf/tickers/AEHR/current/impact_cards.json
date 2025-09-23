@@ -1,0 +1,38 @@
+[
+  {
+    "id": "guidance_mape",
+    "inputs": ["guidance_fy26_mid", "rev_actual_fy26"],
+    "expr": "100*abs(rev_actual_fy26 - guidance_fy26_mid)/guidance_fy26_mid",
+    "gates": { "up": "<=5", "down": ">=10" }
+  },
+  {
+    "id": "fcf_conversion",
+    "inputs": ["fcf_ttm", "rev_fixed_fee_ttm"],
+    "expr": "100*fcf_ttm/rev_fixed_fee_ttm",
+    "gates": { "up": ">=70", "down": "<50" }
+  },
+  {
+    "id": "capex_intensity",
+    "inputs": ["capex_ttm", "rev_total_ttm"],
+    "expr": "100*capex_ttm/rev_total_ttm",
+    "gates": { "up": "<=5", "down": ">8" }
+  },
+  {
+    "id": "backlog_coverage_months",
+    "inputs": ["backlog_total", "quarterly_revenue"],
+    "expr": "(backlog_total / quarterly_revenue) * 3",
+    "gates": { "up": ">=11", "down": "<6" }
+  },
+  {
+    "id": "contract_liabilities_growth",
+    "inputs": ["cl_current", "cl_previous"],
+    "expr": "100 * (cl_current - cl_previous) / cl_previous",
+    "gates": { "up": ">=5", "down": "<-10" }
+  },
+  {
+    "id": "consumables_mix_ratio",
+    "inputs": ["rev_consumables", "rev_total"],
+    "expr": "100 * rev_consumables / rev_total",
+    "gates": { "up": ">=30", "down": "<20" }
+  }
+]

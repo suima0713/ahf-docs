@@ -1,0 +1,102 @@
+[
+  {
+    "id": "alpha5_opex_calculation",
+    "inputs": ["rev_range_$k", "ng_gm_pct", "nongaap_oi_$k", "da_$k"],
+    "expr": "rev_range_$k - (rev_range_$k * ng_gm_pct / 100) - (nongaap_oi_$k + da_$k)",
+    "gates": { "up": ">=258600", "down": "<=246600" },
+    "bands": { "green_≤": 246600, "amber_≤": 258600 },
+    "current_value": 240595,
+    "summary": { "min_$k": 240595, "median_$k": 240595, "max_$k": 240595 },
+    "alpha5_math_pass": true
+  },
+  {
+    "id": "alpha3_segment_analysis",
+    "inputs": ["segment_count", "segment_disclosure"],
+    "expr": "segment_count == 1 ? 'data_gap' : 'available'",
+    "gates": { "up": "available", "down": "data_gap" },
+    "current_status": "data_gap",
+    "reason": "Single operating segment - segment analysis not available"
+  },
+  {
+    "id": "rpo_coverage_ratio",
+    "inputs": ["rpo_12m_$k", "total_revenue_$k"],
+    "expr": "(rpo_12m_$k / total_revenue_$k) * 12",
+    "gates": { "up": ">=11", "down": "<10" },
+    "current_value": 10.7,
+    "alpha4_gate_pass": false
+  },
+  {
+    "id": "valuation_ev_sales_ratio",
+    "inputs": ["ev_$k", "ttm_revenue_$k"],
+    "expr": "ev_$k / ttm_revenue_$k",
+    "gates": { "up": "<=15.0", "down": ">15.6" },
+    "current_value": 15.6,
+    "peer_range": "8.5-15.0x",
+    "status": "upper_bound",
+    "alpha_availability": "limited"
+  },
+  {
+    "id": "growth_expectation_gap",
+    "inputs": ["market_cagr_pct", "t1_yoy_pct"],
+    "expr": "market_cagr_pct - t1_yoy_pct",
+    "gates": { "up": "<=5", "down": ">8" },
+    "current_value": 8.0,
+    "market_cagr": 37.9,
+    "t1_yoy": 30.0,
+    "status": "expectation_premium"
+  },
+  {
+    "id": "opex_efficiency_alignment",
+    "inputs": ["opex_rev_base_pct", "alpha5_actual_pct"],
+    "expr": "abs(opex_rev_base_pct - alpha5_actual_pct)",
+    "gates": { "up": "<=0.5", "down": ">1.0" },
+    "current_value": 0.1,
+    "opex_rev_base": 61.4,
+    "alpha5_actual": 61.5,
+    "status": "aligned",
+    "alpha5_match": true
+  },
+  {
+    "id": "tw_hit_cl_condition",
+    "inputs": ["cl_qoq_pct"],
+    "expr": "cl_qoq_pct >= 5.0",
+    "gates": { "up": ">=5.0", "down": "<5.0" },
+    "current_value": 4.9,
+    "threshold": 5.0,
+    "status": "not_hit",
+    "gap": -0.1,
+    "next_check": "2025-10-02"
+  },
+  {
+    "id": "tw_hit_bookings_condition",
+    "inputs": ["bookings_qoq_pct"],
+    "expr": "bookings_qoq_pct >= 10.0",
+    "gates": { "up": ">=10.0", "down": "<10.0" },
+    "current_value": null,
+    "threshold": 10.0,
+    "status": "not_disclosed",
+    "next_check": "2025-10-27"
+  },
+  {
+    "id": "tw_hit_coverage_condition",
+    "inputs": ["coverage_months"],
+    "expr": "coverage_months >= 11.0",
+    "gates": { "up": ">=11.0", "down": "<11.0" },
+    "current_value": 10.7,
+    "threshold": 11.0,
+    "status": "not_hit",
+    "gap": -0.3,
+    "next_check": "2025-10-29"
+  },
+  {
+    "id": "catalyst_event_impact",
+    "inputs": ["event_count", "up_events", "neutral_events"],
+    "expr": "up_events / event_count",
+    "gates": { "up": ">=0.6", "down": "<0.4" },
+    "current_value": 0.8,
+    "event_count": 5,
+    "up_events": 4,
+    "neutral_events": 1,
+    "status": "positive_catalyst_bias"
+  }
+]

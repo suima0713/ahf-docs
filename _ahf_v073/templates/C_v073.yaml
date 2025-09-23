@@ -1,0 +1,28 @@
+# C｜反証（固定3テスト）- v0.7.3
+meta:
+  asof: YYYY-MM-DD
+  version: "0.7.3"
+  purpose: "投資判断に直結する固定3軸で評価する"
+
+# 固定3テスト
+tests:
+  time_off: ""          # 〔Time〕無効化テスト
+  delay_plus_0_5Q: ""   # t1+0.5Qテスト
+  alignment_sales_pnl: "" # 売上↔GM/CF/在庫の整合
+
+# 反証結果
+test_results:
+  time_off_result: ""    # 時間軸無効化の結果
+  delay_test_result: ""  # 遅延テストの結果
+  alignment_result: ""   # 整合性テストの結果
+
+# 反証時の対応
+countermeasures:
+  time_off_action: ""   # 時間軸無効化時の対応
+  delay_action: ""       # 遅延時の対応
+  alignment_action: ""   # 整合性問題時の対応
+
+# 固定ガード
+# - 反証対象の設定のみ（構造①/傾き②はOverlayに分離）
+# - テスト条件に反映（逆行時にΔIRR記載）
+# - 固定3テストのみ（横論点禁止）

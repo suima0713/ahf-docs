@@ -1,0 +1,107 @@
+{
+  "as_of": "2025-09-23",
+  "CONFIRMED": [
+    {
+      "kpi": "Q2_2025_Revenue",
+      "value": 127.2,
+      "unit": "million USD",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1800667/000095017025105041/frog-ex99_1.htm#:~:text=Revenue%20for%20the%20second%20quarter%20of%202025%20was%20%24127.2%20million%2C%20up%2023%25%20year-over-year."
+    },
+    {
+      "kpi": "FY25_Revenue_Guidance",
+      "value": 508.5,
+      "unit": "million USD",
+      "asof": "2025-09-23",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1800667/000095017025105041/frog-ex99_1.htm#:~:text=Revenue%20between%20%24507.0%20million%20to%20%24510.0%20million"
+    },
+    {
+      "kpi": "Q2_2025_GAAP_OPM",
+      "value": -20.4,
+      "unit": "percent",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1800667/000095017025105041/frog-ex99_1.htm#:~:text=GAAP%20Operating%20Margin%20was%20(20.4%25)"
+    },
+    {
+      "kpi": "Q2_2025_RPO",
+      "value": 476.7,
+      "unit": "million USD",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1800667/000095017025105041/frog-ex99_1.htm#:~:text=Remaining%20performance%20obligations%20were%20%24476.7%20million%20as%20of%20June%2030%2C%202025."
+    }
+  ],
+  "CONFIRMED": [
+    {
+      "kpi": "Q2_2025_Revenue",
+      "value": 127.2,
+      "unit": "million USD",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1800667/000095017025105041/frog-ex99_1.htm#:~:text=Revenue%20for%20the%20second%20quarter%20of%202025%20was%20%24127.2%20million%2C%20up%2023%25%20year-over-year."
+    },
+    {
+      "kpi": "FY25_Revenue_Guidance",
+      "value": 508.5,
+      "unit": "million USD",
+      "asof": "2025-09-23",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1800667/000095017025105041/frog-ex99_1.htm#:~:text=Revenue%20between%20%24507.0%20million%20to%20%24510.0%20million"
+    },
+    {
+      "kpi": "Q2_2025_GAAP_OPM",
+      "value": -20.4,
+      "unit": "percent",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1800667/000095017025105041/frog-ex99_1.htm#:~:text=GAAP%20Operating%20Margin%20was%20(20.4%25)"
+    },
+    {
+      "kpi": "Q2_2025_RPO",
+      "value": 476.7,
+      "unit": "million USD",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1800667/000095017025105041/frog-ex99_1.htm#:~:text=Remaining%20performance%20obligations%20were%20%24476.7%20million%20as%20of%20June%2030%2C%202025."
+    },
+    {
+      "kpi": "DSO_H1_2025",
+      "value": 63,
+      "unit": "days",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "SEC 10-Q Balance Sheet + SoO"
+    },
+    {
+      "kpi": "Dilution_YoY_2025",
+      "value": 5.79,
+      "unit": "percent",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "SEC 10-Q Weighted-average shares"
+    },
+    {
+      "kpi": "CapEx_Intensity_H1_2025",
+      "value": 0.51,
+      "unit": "percent",
+      "asof": "2025-06-30",
+      "tag": "T1-core",
+      "url": "SEC 10-Q Cash Flows"
+    }
+  ],
+  "UNCERTAIN": [
+    {
+      "kpi": "EV_S_Fwd",
+      "status": "blocked_source",
+      "url_index": "MARKET_DATA_ABSENT"
+    },
+    {
+      "kpi": "Capex_Guidance",
+      "status": "not_found",
+      "url_index": "FY25_Guidance_Disclosure"
+    }
+  ]
+}

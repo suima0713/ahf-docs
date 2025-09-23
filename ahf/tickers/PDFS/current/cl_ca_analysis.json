@@ -1,0 +1,46 @@
+{
+  "ticker": "PDFS",
+  "period": "Q2 2025",
+  "analysis_date": "2025-09-21",
+  "cl_analysis": {
+    "q1_2025": {
+      "deferred_revenues_current": 27.131,
+      "source": "Q1 10-Q",
+      "quote": "Deferred revenues — current… $27,131"
+    },
+    "q2_2025": {
+      "deferred_revenues_current": 23.363,
+      "source": "Q2 8-K Ex.99.1",
+      "quote": "Deferred revenues ‒ current portion $23,363"
+    },
+    "qoq_change": {
+      "absolute_change": -3.768,
+      "percentage_change": -13.9,
+      "direction": "decline"
+    }
+  },
+  "ca_analysis": {
+    "q1_2025": {
+      "total_contract_assets": 6.928,
+      "source": "Q1 10-Q",
+      "quote": "Total contract assets $6,928",
+      "status": "confirmed"
+    },
+    "q2_2025": {
+      "total_contract_assets": 8.167,
+      "source": "Q2 10-Q",
+      "quote": "Total contract assets $8,167",
+      "status": "confirmed"
+    },
+    "qoq_change": {
+      "absolute_change": 1.239,
+      "percentage_change": 17.9,
+      "direction": "increase"
+    }
+  },
+  "watch_go_conditions": {
+    "cl_trend": "decline",
+    "ca_trend": "increase",
+    "assessment": "CL↓（-13.9%）かつCA↑（+17.9%）→ 補助条件「CL↑ かつ CA↓」未成立。WATCH→GO条件未成立"
+  }
+}

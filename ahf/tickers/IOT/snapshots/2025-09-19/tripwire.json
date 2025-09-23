@@ -1,0 +1,44 @@
+{
+  "ticker": "IOT",
+  "as_of": "2025-09-19",
+  "tripwire_rules": {
+    "up_triggers": [
+      {
+        "condition": "CL_qoq ≥ +5% OR Bookings_qoq ≥ +10%",
+        "status": "data_gap",
+        "reason": "Contract liabilities data not disclosed"
+      },
+      {
+        "condition": "coverage_months ≥ 11 (RPO) OR coverage_proxy ≥ 9 (Backlog)",
+        "status": "data_gap",
+        "reason": "RPO/Backlog data not disclosed"
+      }
+    ],
+    "down_triggers": [
+      {
+        "condition": "CL_qoq ≤ 0% (consecutive) AND DoU/Unbilled high",
+        "status": "data_gap",
+        "reason": "Contract liabilities data not disclosed"
+      },
+      {
+        "condition": "Customer concentration > 90%",
+        "status": "data_gap",
+        "reason": "Customer concentration data not disclosed"
+      }
+    ],
+    "enhanced_operations": {
+      "consecutive_quarters": "2Q連続AND（CL_qoq & coverage_proxy_qoq +2ヶ月）",
+      "noise_filter": "<$250k or <5%",
+      "cooldown": "1Q"
+    }
+  },
+  "current_status": {
+    "up_tripwire": false,
+    "down_tripwire": false,
+    "data_availability": "limited"
+  },
+  "auto_checks": {
+    "tripwire_pass": false,
+    "messages": ["Insufficient data for tripwire analysis", "RPO/Contract data not disclosed"]
+  }
+}

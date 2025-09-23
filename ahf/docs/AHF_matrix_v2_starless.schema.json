@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AHF Matrix v2 (Stars=integer, No 0.5)",
+  "type": "object",
+  "required": ["as_of", "cik_locked", "matrix"],
+  "properties": {
+    "as_of": { "type": "string", "format": "date" },
+    "cik_locked": { "type": "string", "pattern": "^[0-9]{7,}$" },
+    "matrix": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["ticker", "rows"],
+        "properties": {
+          "ticker": { "type": "string" },
+          "rows": {
+            "type": "array",
+            "minItems": 4,
+            "maxItems": 4,
+            "items": {
+              "type": "object",
+              "required": [
+                "axis",
+                "kpi_anchor",
+                "snapshot",
+                "stars",
+                "confidence_pct",
+                "priced_in_pct",
+                "alpha_opacity_pct",
+                "direction_prob_up_pct",
+                "direction_prob_down_pct"
+              ],
+              "properties": {
+                "axis": {
+                  "type": "string",
+                  "enum": ["①右肩", "②勾配", "③時間軸", "④認知ギャップ"]
+                },
+                "kpi_anchor": {
+                  "type": "string",
+                  "pattern": "^https://(www\\.)?(sec\\.gov|ir\\.aehr\\.com)/.*#.*"
+                },
+                "snapshot": { "type": "string", "maxLength": 160 },
+                "stars": { "type": "integer", "minimum": 1, "maximum": 5 },
+                "confidence_pct": { "type": "integer", "minimum": 0, "maximum": 100 },
+                "priced_in_pct": { "type": "integer", "minimum": 0, "maximum": 100 },
+                "alpha_opacity_pct": { "type": "integer", "minimum": 0, "maximum": 100 },
+                "direction_prob_up_pct": { "type": "integer", "minimum": 0, "maximum": 100 },
+                "direction_prob_down_pct": { "type": "integer", "minimum": 0, "maximum": 100 },
+                "gate_color": { "type": "string", "enum": ["Green", "Amber", "Red"], "nullable": true }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

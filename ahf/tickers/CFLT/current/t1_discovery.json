@@ -1,0 +1,10 @@
+{
+  "docs": [
+    {"ticker":"CFLT","type":"10-Q","filing_date":"2025-08-06","anchor":"https://www.sec.gov/Archives/edgar/data/1699838/000169983825000006/cflt-20250630.htm#:~:text=RPO%20was%20%241%2C162.3%20million%2C%20approximately%2059%25","note":"RPO合計/12M・Deferred・Unbilled・D&A"},
+    {"ticker":"CFLT","type":"8-K Ex.99.1","filing_date":"2025-08-06","anchor":"https://www.sec.gov/Archives/edgar/data/1699838/000169983825000004/cflt-20250630xexx991.htm#:~:text=Non%2DGAAP%20total%20gross%20margin%2078.3","note":"Non-GAAP GM 78.3%／NG OI $17.8／Revenue $282.3"},
+    {"ticker":"CFLT","type":"IR Release","filing_date":"2025-08-06","anchor":"https://investors.confluent.io/news-releases/news-release-details/confluent-announces-second-quarter-2025-financial-results/#:~:text=Confluent%20Cloud%20revenue%20of%20%24151%20million%2C%20up%2028%25","note":"Cloud $151m（+28% YoY）／Flink約3倍"}
+  ],
+  "cik_locked":"1699838",
+  "as_of":"2025-09-20",
+  "status":"ok"
+}

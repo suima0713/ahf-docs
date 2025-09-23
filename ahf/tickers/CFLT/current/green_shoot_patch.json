@@ -1,0 +1,14 @@
+{
+  "backlog_patch": [
+    {"class":"LEAD","id":"LEAD-RPO12M-DELTA","claim":"RPO 12M比の四半期Δ（pp）をT1で抽出","source_type":"T1","ttl_days":45},
+    {"class":"LEAD","id":"LEAD-CL-CURRENT-RATIO","claim":"Deferred current比率（近12Mの厚み）抽出","source_type":"T1","ttl_days":45},
+    {"class":"EDGE","id":"EDGE-UNBILLED-RATIO","claim":"Unbilled/売上の推移（キャッシュ化遅延の警戒）","source_type":"T1","ttl_days":45},
+    {"class":"EDGE","id":"EDGE-NEW-T1-KPI","claim":"Cloud GM/Flink ARR/billings等の**新規T1**初出検知","source_type":"T1","ttl_days":60}
+  ],
+  "triage_patch": [
+    {"id":"LEAD-RPO12M-DELTA","status":"UNCERTAIN"},
+    {"id":"LEAD-CL-CURRENT-RATIO","status":"UNCERTAIN"},
+    {"id":"EDGE-UNBILLED-RATIO","status":"UNCERTAIN"},
+    {"id":"EDGE-NEW-T1-KPI","status":"UNCERTAIN"}
+  ]
+}

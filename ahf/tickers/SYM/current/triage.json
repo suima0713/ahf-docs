@@ -1,0 +1,261 @@
+{
+  "as_of": "2025-09-19",
+  "CONFIRMED": [
+    {
+      "kpi": "greenbox_deferred_rev_q3",
+      "value": 139100,
+      "unit": "USD_thousands",
+      "asof": "2025-06-28",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1837240/000183724025000263/sym-20250628.htm#GreenBox"
+    },
+    {
+      "kpi": "greenbox_unbilled_q3",
+      "value": 51300,
+      "unit": "USD_thousands",
+      "asof": "2025-06-28",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1837240/000183724025000263/sym-20250628.htm#GreenBox"
+    },
+    {
+      "kpi": "greenbox_revenue_recognized_q3",
+      "value": 26414,
+      "unit": "USD_thousands",
+      "asof": "2025-06-28",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1837240/000183724025000263/sym-20250628.htm#GreenBox"
+    },
+    {
+      "kpi": "greenbox_deferred_qoq_delta",
+      "value": 64200,
+      "unit": "USD_thousands",
+      "asof": "2025-06-28",
+      "tag": "T1-adj",
+      "url": "calculated_from_10Q"
+    },
+    {
+      "kpi": "ahf_matrix_stars",
+      "value": 1.5,
+      "unit": "stars",
+      "asof": "2025-09-19",
+      "tag": "T1-core",
+      "url": "calculated_from_analysis"
+    },
+    {
+      "kpi": "ahf_confidence_pct",
+      "value": 58,
+      "unit": "percent",
+      "asof": "2025-09-19",
+      "tag": "T1-core",
+      "url": "calculated_from_analysis"
+    },
+    {
+      "kpi": "ahf_priced_in_pct",
+      "value": 60,
+      "unit": "percent",
+      "asof": "2025-09-19",
+      "tag": "T1-core",
+      "url": "calculated_from_analysis"
+    },
+    {
+      "kpi": "acceptance_timing_risk",
+      "value": "amber",
+      "unit": "status",
+      "asof": "2025-09-19",
+      "tag": "T1-core",
+      "url": "calculated_from_analysis"
+    },
+    {
+      "kpi": "rpo_coverage_strength",
+      "value": 12.3,
+      "unit": "months",
+      "asof": "2025-09-19",
+      "tag": "T1-core",
+      "url": "calculated_from_analysis"
+    },
+    {
+      "kpi": "pl_cash_timing_analysis",
+      "value": "consistent",
+      "unit": "status",
+      "asof": "2025-09-19",
+      "tag": "T1-core",
+      "url": "calculated_from_analysis"
+    }
+  ],
+  "UNCERTAIN": [
+    {
+      "kpi": "greenbox_q2_unbilled",
+      "status": "data_gap",
+      "claim": "Q2 FY25 GreenBox未請求データ不在",
+      "credence_pct": 0,
+      "aust_gaps": ["asof_ok", "unit_ok", "section_missing", "url_ok"],
+      "ttl_days": 30,
+      "url_index": "Q2_10Q_GreenBox_section",
+      "contradiction": false
+    },
+    {
+      "kpi": "greenbox_q2_revenue_recognized",
+      "status": "data_gap",
+      "claim": "Q2 FY25 GreenBox収益認識データ不在",
+      "credence_pct": 0,
+      "aust_gaps": ["asof_ok", "unit_ok", "section_missing", "url_ok"],
+      "ttl_days": 30,
+      "url_index": "Q2_10Q_GreenBox_section",
+      "contradiction": false
+    }
+  ],
+  "HYPOTHESES": [
+    {
+      "id": "H6_guidance_adherence",
+      "status": "pending",
+      "what_to_watch": ["guidance_fy26_mid", "actual_rev_fy26_ytd", "guidance_mape_pct"],
+      "trigger": "guidance_mape_pct <= 5",
+      "falsifier": "guidance_mape_pct >= 10",
+      "kpi_links": ["guidance_fy26_mid", "rev_actual"]
+    },
+    {
+      "id": "H7_cash_conversion_and_allocation",
+      "status": "pending",
+      "what_to_watch": ["fcf_ttm", "fixed_fee_rev_ttm", "capex_ttm", "buybacks_ttm"],
+      "trigger": "fcf_conversion_pct >= 70 AND capex_intensity_pct <= 5",
+      "falsifier": "fcf_conversion_pct < 50 OR capex_intensity_pct > 8",
+      "kpi_links": ["fcf_q", "capex_q", "rev_fixed_q"]
+    },
+    {
+      "id": "H8_greenbox_amber_watch",
+      "status": "amber",
+      "what_to_watch": ["greenbox_deferred_qoq_delta", "greenbox_unbilled_to_deferred_ratio"],
+      "trigger": "deferred_qoq_delta > 0 AND unbilled_to_deferred_pct > 35",
+      "falsifier": "deferred_qoq_delta < 0 AND greenbox_revenue_recognized > 0",
+      "kpi_links": ["greenbox_deferred_rev_q3", "greenbox_unbilled_q3"],
+      "reason": "繰延↑＋未請求比率高め＝受入タイミング重い"
+    },
+    {
+      "id": "H9_greenbox_green_watch",
+      "status": "pending",
+      "what_to_watch": ["greenbox_deferred_qoq_delta", "greenbox_rev_over_prev_deferred_pct"],
+      "trigger": "deferred_qoq_delta < 0 AND rev_over_prev_deferred_pct >= 25",
+      "falsifier": "deferred_qoq_delta >= 0 OR rev_over_prev_deferred_pct < 25",
+      "kpi_links": ["greenbox_deferred_rev_q3", "greenbox_revenue_recognized_q3"],
+      "reason": "繰延↓＋収益認識率25%以上＝受入進捗良好"
+    },
+    {
+      "id": "H10_greenbox_red_watch",
+      "status": "pending",
+      "what_to_watch": ["greenbox_deferred_qoq_pct", "greenbox_rev_over_prev_deferred_pct"],
+      "trigger": "deferred_qoq_pct > 25 AND rev_over_prev_deferred_pct < 15",
+      "falsifier": "deferred_qoq_pct <= 25 OR rev_over_prev_deferred_pct >= 15",
+      "kpi_links": ["greenbox_deferred_rev_q3", "greenbox_revenue_recognized_q3"],
+      "reason": "繰延急増25%超＋収益認識率15%未満＝受入停滞リスク"
+    },
+    {
+      "id": "H11_agi_amber_watch",
+      "status": "amber",
+      "what_to_watch": ["unbilled_over_cl_ratio", "gb_unbilled_over_deferred_pct"],
+      "trigger": "gb_unbilled_over_deferred_pct > 35",
+      "falsifier": "gb_unbilled_over_deferred_pct <= 35 AND unbilled_over_cl_ratio <= 35",
+      "kpi_links": ["greenbox_unbilled_q3", "greenbox_deferred_rev_q3", "unbilled_ar_q3", "contract_liabilities_q3"],
+      "reason": "GBの未請求/繰延=36.9%で閾値超え、受入時間軸リスク軽減方向"
+    },
+    {
+      "id": "H12_cl_runoff_coverage",
+      "status": "pending",
+      "what_to_watch": ["remaining_opening_cl_coverage", "q4_mid_revenue"],
+      "trigger": "remaining_coverage_months >= 1.0",
+      "falsifier": "remaining_coverage_months < 1.0",
+      "kpi_links": ["opening_cl_fy25", "recognized_from_opening_cl_ytd", "q4_revenue_guidance"],
+      "reason": "残存1.2ヶ月、可視性短期分定量化完了"
+    },
+    {
+      "id": "H13_per_unit_economics_leverage",
+      "status": "pending",
+      "what_to_watch": ["systems_rev_per_deployment", "systems_gp_per_deployment", "ops_rev_per_operational"],
+      "trigger": "systems_rev_per_deployment >= 12000 AND systems_gp_per_deployment >= 2000",
+      "falsifier": "systems_rev_per_deployment < 10000 OR systems_gp_per_deployment < 1500",
+      "kpi_links": ["systems_revenue_q3", "systems_gp_q3", "systems_in_deployment", "ops_revenue_q3", "operational_systems"],
+      "reason": "$/台KPI、α3/α5の実務レバー（Mix・スループット・OpEx効率）に直結"
+    },
+    {
+      "id": "H14_ot_pt_data_gap",
+      "status": "data_gap",
+      "what_to_watch": ["ot_pt_quantitative_disclosure", "unbilled_over_total_receivables_pct"],
+      "trigger": "ot_pt_quantitative_disclosure available",
+      "falsifier": "ot_pt_quantitative_disclosure remains missing",
+      "kpi_links": ["services_revenue_ot_bound", "systems_revenue_ot_pt_mix", "unbilled_ar_q3", "billed_ar_q3"],
+      "reason": "Q3 10-QにOT/PT数量表の記載なし（方針のみ）、代理指標で監視"
+    },
+    {
+      "id": "H15_ot_min_bound_services",
+      "status": "confirmed",
+      "what_to_watch": ["services_revenue_ot_bound", "ot_min_share_of_revenue"],
+      "trigger": "services_revenue_ot_bound >= 30000 AND ot_min_share_of_revenue >= 5.0",
+      "falsifier": "services_revenue_ot_bound < 25000 OR ot_min_share_of_revenue < 4.0",
+      "kpi_links": ["software_ms_revenue_q3", "ops_revenue_q3", "total_revenue_q3"],
+      "reason": "Services（SMS+Ops）はT1でOver-time明記→下限=SMS+Ops $33,013k（5.6%）"
+    },
+    {
+      "id": "H16_systems_ot_dominance",
+      "status": "confirmed",
+      "what_to_watch": ["systems_share_of_revenue", "systems_ot_pt_policy"],
+      "trigger": "systems_share_of_revenue >= 90 AND systems_ot_pt_policy = predominantly_ot",
+      "falsifier": "systems_share_of_revenue < 85 OR systems_ot_pt_policy changes",
+      "kpi_links": ["systems_revenue_q3", "total_revenue_q3"],
+      "reason": "Systemsは主としてOver-time、ただし受入確信不可はPT認識"
+    },
+    {
+      "id": "H17_ot_pt_timing_risk_proxy",
+      "status": "monitoring",
+      "what_to_watch": ["unbilled_over_total_receivables_pct", "ot_pt_timing_risk_proxy"],
+      "trigger": "unbilled_over_total_receivables_pct >= 60 AND ot_pt_timing_risk_proxy >= 55",
+      "falsifier": "unbilled_over_total_receivables_pct < 50 AND ot_pt_timing_risk_proxy < 45",
+      "kpi_links": ["unbilled_ar_q3", "billed_ar_q3", "systems_revenue_q3"],
+      "reason": "受入時点のPT認識分も前受→受入で減少し得るため厳密なOT比ではない"
+    },
+    {
+      "id": "H18_greenbox_green_condition",
+      "status": "pending",
+      "what_to_watch": ["greenbox_deferred_qoq_delta", "greenbox_rev_over_prev_deferred_pct"],
+      "trigger": "deferred_qoq_delta < 0 AND rev_over_prev_deferred_pct >= 25",
+      "falsifier": "deferred_qoq_delta >= 0 OR rev_over_prev_deferred_pct < 25",
+      "kpi_links": ["greenbox_deferred_rev_q3", "greenbox_revenue_recognized_q3"],
+      "reason": "次Qの繰延↓ かつ 当期GreenBox収益 ≥ 前期繰延の25%をgreen条件に設定"
+    },
+    {
+      "id": "H19_cfo_reversal_watch",
+      "status": "monitoring",
+      "what_to_watch": ["contract_liabilities_qoq", "unbilled_ar_qoq", "billed_ar_qoq"],
+      "trigger": "contract_liabilities_qoq >= 0 AND unbilled_ar_qoq < 0 AND billed_ar_qoq > 0",
+      "falsifier": "contract_liabilities_qoq < 0 OR unbilled_ar_qoq >= 0",
+      "kpi_links": ["contract_liabilities_q3", "unbilled_ar_q3", "billed_ar_q3", "cfo_q3"],
+      "reason": "逆回転（CL横ばい〜増、Unbilled減→Billed/現金化）が起これば、CFOは揺り戻す余地"
+    },
+    {
+      "id": "H20_alpha3_gm_sensitivity_risk",
+      "status": "monitoring",
+      "what_to_watch": ["mix_sensitivity_sw_ops", "ot_pt_timing_risk_proxy"],
+      "trigger": "mix_sensitivity_sw_ops < 0.3 OR ot_pt_timing_risk_proxy > 65",
+      "falsifier": "mix_sensitivity_sw_ops >= 0.5 AND ot_pt_timing_risk_proxy <= 55",
+      "kpi_links": ["systems_revenue_q3", "software_ms_revenue_q3", "ops_revenue_q3", "unbilled_ar_q3"],
+      "reason": "Mixや受入の小さなズレでGMが振れやすい。OT/PT実測がないため、レンジ感度で運用"
+    },
+    {
+      "id": "H21_alpha4_next_q_green_conditions",
+      "status": "pending",
+      "what_to_watch": ["greenbox_deferred_q4", "greenbox_revenue_q4", "greenbox_unbilled_q4"],
+      "trigger": "greenbox_deferred_q4 < greenbox_deferred_q3 AND greenbox_revenue_q4 >= 34775",
+      "falsifier": "greenbox_deferred_q4 >= greenbox_deferred_q3 OR greenbox_revenue_q4 < 34775",
+      "kpi_links": ["greenbox_deferred_rev_q3", "greenbox_revenue_recognized_q3", "greenbox_unbilled_q3"],
+      "reason": "次Q Green条件: 繰延↓ かつ GB収益≥$34,775k（25%×$139,100k）"
+    },
+    {
+      "id": "H22_alpha4_rollforward_monitoring",
+      "status": "monitoring",
+      "what_to_watch": ["new_deferrals_q3", "recognized_from_prev_deferred_q3", "carryover_prev_deferred_q3"],
+      "trigger": "new_deferrals_q3 >= 90000 AND recognized_from_prev_deferred_q3 >= 26000",
+      "falsifier": "new_deferrals_q3 < 80000 OR recognized_from_prev_deferred_q3 < 20000",
+      "kpi_links": ["greenbox_deferred_rev_q3", "greenbox_revenue_recognized_q3", "greenbox_deferred_rev_q2"],
+      "reason": "Q3ロールフォワード: 新規繰延$90.6M、認識$26.4M、繰越$48.5M"
+    }
+  ]
+}
+

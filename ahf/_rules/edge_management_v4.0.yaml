@@ -1,0 +1,111 @@
+# Edge管理ルール v4.0
+# 考慮は無制限・掲出は最大2件の設計
+
+## 基本原則
+
+### 収集・評価
+- **Edge候補は制限なし**（backlog/UNCERTAIN に全件保持）
+- 探索の幅を削らず、情報エッジを削らない
+
+### 掲出（マトリクス表示）
+- **各軸最大2件のみ**
+- 目的：
+  - ①S/N向上
+  - ②★±1の影響管理
+  - ③認知負荷の最小化
+
+### 入替ルール
+- P<70
+- TTL切れ
+- 矛盾検出
+- より高P×高Impact×低相関の新規が来たら入替
+
+### 監査性
+- 非掲出の候補は backlog に残す
+- 選抜理由を脚注（≤35字）で明示
+
+## 選抜のタイブレーク（簡易スコア）
+
+```
+Score = 0.5*P + 0.3*Impact(想定GM/受注/CF寄与) + 0.2*Novelty(既掲出との独立性) – OverlapPenalty – TTLPenalty
+```
+
+- 各軸で上位2件を表示
+- 相関が高い場合は束ねて1行（「Edge: REGAL/HASTE(要旨…)」）で掲出も可
+
+## triage.json構造例
+
+```json
+[
+  {
+    "kpi": "rapid_response",
+    "class": "EDGE",
+    "p": 82,
+    "impact": "mix/OT",
+    "ttl_days": 21,
+    "contradiction": false,
+    "display": true,
+    "footnote": "AFRL契約/一次報道一致"
+  },
+  {
+    "kpi": "hypersonic_test",
+    "class": "EDGE",
+    "p": 76,
+    "impact": "利用率",
+    "ttl_days": 30,
+    "contradiction": false,
+    "display": true,
+    "footnote": "試験継続/繰返性示唆"
+  },
+  {
+    "kpi": "leo_constellation",
+    "class": "EDGE",
+    "p": 71,
+    "impact": "受注",
+    "ttl_days": 14,
+    "contradiction": false,
+    "display": false,
+    "footnote": "通信社速報/未確定"
+  },
+  {
+    "kpi": "supply_cost_norm",
+    "class": "EDGE",
+    "p": 68,
+    "impact": "原価",
+    "ttl_days": 10,
+    "contradiction": false,
+    "display": false,
+    "footnote": "同業比較のみ"
+  },
+  {
+    "kpi": "capex_grant",
+    "class": "EDGE",
+    "p": 74,
+    "impact": "資本効率",
+    "ttl_days": 25,
+    "contradiction": true,
+    "display": false,
+    "footnote": "相反記事あり"
+  }
+]
+```
+
+## ルール文（v0.4.0追記）
+
+**Edge（P）**: 候補の収集・評価は無制限。ただしマトリクス掲出は各軸最大2件（高P・高Impact・低相関を優先）。掲出しない候補は backlog に保持し、入替時に差し替え。
+
+## 運用フロー
+
+1. **候補収集**: 全Edge候補をbacklog/UNCERTAINに保持
+2. **スコア計算**: Score = 0.5*P + 0.3*Impact + 0.2*Novelty – OverlapPenalty – TTLPenalty
+3. **選抜**: 各軸で上位2件を選択
+4. **掲出**: マトリクスに表示（display=true）
+5. **監査**: 非掲出候補はbacklogに保持、選抜理由を脚注で明示
+6. **入替**: 条件満たす新規候補で差し替え
+
+## メリット
+
+- **探索の幅を削らない**: 候補は全件保持
+- **表示を絞る**: 各軸最大2件でS/N向上
+- **運用シンプル**: 明確な選抜基準
+- **監査性確保**: 非掲出理由を明示

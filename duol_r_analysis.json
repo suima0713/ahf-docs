@@ -1,0 +1,23 @@
+{
+  "R": 1,
+  "socialization_data": {
+    "item1a_changes": [],
+    "item1a_no_changes": [
+      "[2025-01-15][T1-F][Core③] \"No material changes from risk factors disclosed in Item 1A\" (impact: Risk Stability) <Q2 10-Q>",
+      "[2025-01-15][T1-F][Core③] \"There have been no material changes from the risk factors\" (impact: Risk Stability) <Q2 10-Q>",
+      "[2025-01-15][T1-F][Core③] \"There have been no material changes from the risk factors\" (impact: Risk Stability) <Q2 10-Q>",
+      "[2025-01-15][T1-F][Core③] \"There have been no material changes from the risk factors\" (impact: Risk Stability) <Q2 10-Q>",
+      "[2025-01-15][T1-F][Core③] \"There have been no material changes from the risk factors previously disclosed… in the 10-K\" (impact: Risk Stability) <Q1/Q2 10-Q>"
+    ],
+    "single_segment_mentions": [
+      "[2025-01-15][T1-F][Core②] \"The Company operates as a single operating segment\" (impact: Segment Structure) <Q2 10-Q>",
+      "[2025-01-15][T1-F][Core②] \"Ads→GMの感応算定不可=not_found (単一セグメントで粗利内訳未開示)\" (impact: Revenue Mix) <Q2 10-Q>",
+      "[2025-01-15][T1-F][Core②] \"The Company operates as a single operating segment\" (impact: Segment Structure) <Q2 10-Q>"
+    ],
+    "granularity_issues": [
+      "[2025-01-15][T1-F][Core②] \"Ads→GMの感応算定不可=not_found (単一セグメントで粗利内訳未開示)\" (impact: Revenue Mix) <Q2 10-Q>",
+      "[2025-01-15][T1-F][Core②] \"Research and development $73.7m ... Sales and marketing $29.6m ... General and administrative $46.0m\" (impact: OpEx Breakdown) <Q2 10-Q>"
+    ],
+    "sufficient_disclosures": []
+  }
+}

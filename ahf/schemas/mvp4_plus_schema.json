@@ -1,0 +1,165 @@
+{
+  "version": "v0.7.2",
+  "description": "AHF MVP-4+ Schema Extension",
+  "schema": {
+    "triage": {
+      "type": "object",
+      "properties": {
+        "as_of": {"type": "string", "format": "date"},
+        "CONFIRMED": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "kpi": {"type": "string"},
+              "value": {"type": "number"},
+              "unit": {"type": "string"},
+              "asof": {"type": "string", "format": "date"},
+              "tag": {"type": "string", "enum": ["T1-core", "T1-adj"]},
+              "url": {"type": "string"},
+              "anchor_backup": {
+                "type": "object",
+                "properties": {
+                  "pageno": {"type": "integer"},
+                  "quote": {"type": "string"},
+                  "hash": {"type": "string"}
+                }
+              },
+              "find_path": {"type": "string"},
+              "gap_reason": {"type": "string"},
+              "dual_anchor_status": {"type": "string", "enum": ["CONFIRMED", "PENDING_SEC", "SINGLE"]}
+            },
+            "required": ["kpi", "value", "unit", "asof", "tag", "url"]
+          }
+        },
+        "UNCERTAIN": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "kpi": {"type": "string"},
+              "status": {"type": "string", "enum": ["blocked_source", "not_found"]},
+              "url_index": {"type": "string"},
+              "ttl": {"type": "integer"},
+              "contradiction": {"type": "boolean"},
+              "class": {"type": "string", "enum": ["EDGE", "LEAD"]}
+            }
+          }
+        }
+      },
+      "required": ["as_of", "CONFIRMED", "UNCERTAIN"]
+    },
+    "evaluation": {
+      "type": "object",
+      "properties": {
+        "as_of": {"type": "string", "format": "date"},
+        "stars": {
+          "type": "object",
+          "properties": {
+            "star_1": {"type": "integer", "minimum": 1, "maximum": 5},
+            "star_2": {"type": "integer", "minimum": 1, "maximum": 5},
+            "star_3": {"type": "integer", "minimum": 1, "maximum": 5}
+          }
+        },
+        "rss_score": {"type": "integer"},
+        "alpha3_score": {"type": "integer", "minimum": 0, "maximum": 2},
+        "alpha5_score": {"type": "integer", "minimum": 0, "maximum": 2},
+        "direction_prob_up_pct": {"type": "number", "minimum": 0, "maximum": 100},
+        "direction_prob_down_pct": {"type": "number", "minimum": 0, "maximum": 100},
+        "gate_color": {"type": "string", "enum": ["Green", "Amber", "Red"]},
+        "auto_checks": {
+          "type": "object",
+          "properties": {
+            "alpha4_gate_pass": {"type": "boolean"},
+            "alpha5_math_pass": {"type": "boolean"},
+            "anchor_lint_pass": {"type": "boolean"},
+            "messages": {"type": "array", "items": {"type": "string"}}
+          }
+        },
+        "tri3": {
+          "type": "object",
+          "properties": {
+            "T": {"type": "integer", "minimum": 0, "maximum": 2},
+            "R": {"type": "integer", "minimum": 0, "maximum": 2},
+            "V": {"type": "string", "enum": ["Green", "Amber", "Red"]},
+            "star": {"type": "integer", "minimum": 1, "maximum": 5},
+            "bonus_applied": {"type": "boolean"}
+          }
+        },
+        "valuation_overlay": {
+          "type": "object",
+          "properties": {
+            "status": {"type": "string", "enum": ["Green", "Amber", "Red"]},
+            "ev_sales_fwd": {"type": "number"},
+            "rule_of_40": {"type": "number"},
+            "hysteresis": {
+              "type": "object",
+              "properties": {
+                "evsales_delta": {"type": "number"},
+                "ro40_delta": {"type": "number"},
+                "upgrade_factor": {"type": "number"}
+              }
+            }
+          }
+        },
+        "interrupts": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["A3_UNEXPLAINED", "BALANCE_WEAK", "ITEM1A_CHANGE", "ANCHOR_FAIL"]
+          }
+        }
+      },
+      "required": ["as_of", "stars", "rss_score", "alpha3_score", "alpha5_score"]
+    },
+    "facts": {
+      "type": "object",
+      "properties": {
+        "as_of": {"type": "string", "format": "date"},
+        "entries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "date": {"type": "string", "format": "date"},
+              "tag": {"type": "string", "enum": ["T1-F", "T1-P", "T1-C"]},
+              "core": {"type": "string", "enum": ["Core①", "Core②", "Core③", "Time"]},
+              "verbatim": {"type": "string", "maxLength": 25},
+              "impact": {"type": "string"},
+              "src": {"type": "string"},
+              "anchor": {"type": "string"}
+            },
+            "required": ["date", "tag", "core", "verbatim", "src"]
+          }
+        }
+      },
+      "required": ["as_of", "entries"]
+    },
+    "backlog": {
+      "type": "object",
+      "properties": {
+        "as_of": {"type": "string", "format": "date"},
+        "entries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {"type": "string"},
+              "class": {"type": "string", "enum": ["U", "EDGE", "LEAD"]},
+              "kpi_claim": {"type": "string"},
+              "current_evidence": {"type": "string", "maxLength": 40},
+              "source": {"type": "string"},
+              "missing_for_t1": {"type": "string"},
+              "next_action": {"type": "string"},
+              "related_impact": {"type": "string"},
+              "unavailability_reason": {"type": "string"},
+              "grace_until": {"type": "string", "format": "date"}
+            },
+            "required": ["id", "class", "kpi_claim", "current_evidence", "source"]
+          }
+        }
+      },
+      "required": ["as_of", "entries"]
+    }
+  }
+}

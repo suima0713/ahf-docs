@@ -1,0 +1,149 @@
+{
+  "ticker": "SYM",
+  "as_of": "2024-12-19",
+  "revenue_$k": 600000,
+  "ng_gm_pct": 75.5,
+  "adj_ebitda_$k": 45000,
+  "opex_q3_25": 405000,
+  "rpo_12m_months_vs_q4_mid": 12.5,
+  "rpo_12m_$k": 200000,
+  "quarterly_revenue_$k": 150000,
+  "delta_sw_pp": 2.5,
+  "delta_ops_pp": -1.0,
+  "delta_gm_pp": 1.5,
+  "confidence_pct": 75,
+  "direction_prob_up_pct": 60,
+  "direction_prob_down_pct": 40,
+  "coverage_months": 12.5,
+  "coverage_trend": [11.0, 11.5, 12.0, 12.5],
+  "large_contracts": [
+    {
+      "value_$k": 150000,
+      "verbatim": "New enterprise contract worth $150M",
+      "anchor": "https://sec.gov/edgar/data/1234567/000123456724000001/0001234567-24-000001-index.htm#:~:text=New%20enterprise%20contract",
+      "strength": "high"
+    }
+  ],
+  "guidance_upgrade": {
+    "upgraded": true,
+    "description": "Revenue guidance raised by 15%",
+    "verbatim": "Revenue guidance increased from $580M to $600M",
+    "anchor": "https://investors.sym.com/earnings#:~:text=Revenue%20guidance%20increased",
+    "magnitude": 15
+  },
+  "segment_restructure": {
+    "restructured": true,
+    "description": "High-margin segment expansion",
+    "verbatim": "Expanded high-margin cloud segment",
+    "anchor": "https://sec.gov/edgar/data/1234567/000123456724000001/0001234567-24-000001-index.htm#:~:text=Expanded%20high-margin",
+    "margin_improvement": 8
+  },
+  "revenue_recognition_issues": [],
+  "disclosure_control_issues": [],
+  "loss_controls": {
+    "controls_active": true,
+    "controls_count": 3
+  },
+  "cik_sources": {
+    "edgar": "0001234567",
+    "ir": "0001234567"
+  },
+  "total_submissions": 10,
+  "rejected_submissions": 1,
+  "tripwire_updates": [
+    {
+      "timestamp": "2024-12-19T10:00:00Z",
+      "field": "alpha4_gate",
+      "value": 12.5
+    }
+  ],
+  "anchor_lint_results": [
+    {
+      "pass": true,
+      "anchor": "https://sec.gov/edgar/data/1234567/000123456724000001/0001234567-24-000001-index.htm#:~:text=Total%20revenues",
+      "verbatim": "Total revenues increased 15% year-over-year"
+    },
+    {
+      "pass": true,
+      "anchor": "https://investors.sym.com/earnings",
+      "verbatim": "Non-GAAP gross margin of 75.5%"
+    }
+  ],
+  "pending_sec_items": [
+    {
+      "created_date": "2024-12-12T10:00:00Z",
+      "converted_date": "2024-12-15T14:30:00Z"
+    },
+    {
+      "created_date": "2024-12-10T09:00:00Z",
+      "converted_date": "2024-12-16T11:00:00Z"
+    }
+  ],
+  "alpha_calculations": [
+    {
+      "type": "alpha4",
+      "stopped": false
+    },
+    {
+      "type": "alpha5",
+      "stopped": false
+    }
+  ],
+  "edges": [
+    {
+      "kpi": "Revenue Growth",
+      "value": 15.2,
+      "unit": "%",
+      "asof": "2024-12-19",
+      "confidence": 85,
+      "direction": "bullish",
+      "source": "https://investors.sym.com/earnings",
+      "ttl_days": 30,
+      "contradiction": false,
+      "footnote": "Strong Q3 performance",
+      "axis": "①右肩"
+    },
+    {
+      "kpi": "Margin Expansion",
+      "value": 1.5,
+      "unit": "pp",
+      "asof": "2024-12-19",
+      "confidence": 75,
+      "direction": "bullish",
+      "source": "https://sec.gov/edgar/data/1234567",
+      "ttl_days": 30,
+      "contradiction": false,
+      "footnote": "Operational efficiency gains",
+      "axis": "②勾配"
+    }
+  ],
+  "guidance_rev": {
+    "low": 580000,
+    "mid": 600000,
+    "high": 620000
+  },
+  "guidance_gm": {
+    "low": 74.0,
+    "mid": 75.5,
+    "high": 77.0
+  },
+  "guidance_ebitda": {
+    "low": 42000,
+    "high": 48000
+  },
+  "revenue_yoy_pct": 15.2,
+  "gm_yoy_pct": 2.5,
+  "guidance_improvement": true,
+  "ot_pt_mix_pp": 1.2,
+  "segment_mix_pp": 0.8,
+  "residual_cost_pp": -0.5,
+  "q2_opex_$k": 405000,
+  "guidance_gm_pct": 75.5,
+  "item1a_nochange": true,
+  "contract_direction": "CA↓/CL↑",
+  "gm_bridge_clarity": true,
+  "market_noise_risk": false
+}
+
+
+

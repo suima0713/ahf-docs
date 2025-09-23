@@ -1,0 +1,20 @@
+{
+  "ticker": "IOT",
+  "alpha3": {
+    "stage1": {
+      "ot_pp": "data_gap",
+      "seg_pp": "data_gap",
+      "sum_pp": "data_gap"
+    },
+    "stage2": {
+      "residual_pp": "data_gap",
+      "residual_gp_$k": "data_gap"
+    },
+    "reconciliation": {
+      "gaap_gm_q_prev_pct": "data_gap",
+      "target_pct": "data_gap",
+      "computed_pct": "data_gap",
+      "match": false
+    }
+  }
+}

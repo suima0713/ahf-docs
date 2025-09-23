@@ -1,8 +1,18 @@
 #!/usr/bin/env python3
 """
-AHF Redlines Apply Script
+AHF Redlines Apply Script - T1最優先×内部ETL完結版
 標準ライブラリのみで動作（YAML依存なし）
 最小セット：STOP/HOLD/FLAG
+
+T1最優先原則：
+- T1確定: sec.gov（10-K/10-Q/8-K）≧ investors.jfrog.com（IR PR/資料）
+- T2候補: 他AI/記事/トランスクリプト（EDGE、TTL=7日、意思決定には使わない）
+- 95%は内部ETLで完結、他AIは"場所のヒント＋照合"の5%
+
+逐語とアンカー（AnchorLint）：
+- 逐語は25語以内＋#:~:text=必須
+- PDFは anchor_backup{pageno,quote,hash} を併記
+- 取れない＝「T1未開示」で確定（"未取得"と混同しない）
 
 Usage:
     python3 ahf/_scripts/ahf_apply_redlines.py ahf/tickers/<TICKER>/current/forensic.json

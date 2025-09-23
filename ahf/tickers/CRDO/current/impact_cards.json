@@ -1,0 +1,29 @@
+{
+  "revenue_growth_rate": {
+    "id": "revenue_growth_rate",
+    "inputs": ["Q1_2026_Revenue", "Q2_2026_Revenue_Guidance"],
+    "expr": "((Q2_2026_Revenue_Guidance - Q1_2026_Revenue) / Q1_2026_Revenue) * 100",
+    "gates": {
+      "up": ">=25.0",
+      "down": "<10.0"
+    }
+  },
+  "gross_margin_stability": {
+    "id": "gross_margin_stability",
+    "inputs": ["Q1_2026_Non_GAAP_Gross_Margin"],
+    "expr": "Q1_2026_Non_GAAP_Gross_Margin",
+    "gates": {
+      "up": ">=65.0",
+      "down": "<60.0"
+    }
+  },
+  "cash_position": {
+    "id": "cash_position",
+    "inputs": ["Q1_2026_Cash_Balance", "Q1_2026_Revenue"],
+    "expr": "Q1_2026_Cash_Balance / Q1_2026_Revenue",
+    "gates": {
+      "up": ">=2.0",
+      "down": "<1.0"
+    }
+  }
+}

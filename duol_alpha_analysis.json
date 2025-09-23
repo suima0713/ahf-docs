@@ -1,0 +1,19 @@
+{
+  "alpha3_pass": false,
+  "alpha5_pass": true,
+  "alpha3_result": {
+    "pp_value": 0.72,
+    "pp_pass": false,
+    "pp_threshold": 0.2,
+    "residual_value": 1.82,
+    "residual_pass": true,
+    "residual_threshold": 8.0,
+    "alpha3_pass": false
+  },
+  "alpha5_result": {
+    "gap_value": -3.59,
+    "gap_pass": true,
+    "gap_threshold": -3.0,
+    "alpha5_pass": true
+  }
+}
