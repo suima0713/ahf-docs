@@ -3,8 +3,12 @@ theme: { name: material }
 docs_dir: docs
 nav:
   - Overview: index.md
+  - AHF v0.8.2-S: supplements/ahf_v082_simple.md
   - Supplements:
     - Evidence Ladder: supplements/evidence_ladder/README.md
     - Price Mode: supplements/price_mode/README.md
     - Stage-3: supplements/stage3/README.md
     - Turbo Screen: supplements/turbo_screen/README.md
+    - Quick Refs:
+      - Price-Mode Quick Ref: supplements/quick_refs/price-mode.md
+      - Axis-4 Relative: supplements/quick_refs/axis4-relative.md

@@ -625,7 +625,51 @@
       "kpi": "Q2 Stripe Exclusion Reason",
       "status": "not_found",
       "url_index": "Q2 10-Q内で3ヶ月表記でStripe除外理由不明"
+    },
+    {
+      "kpi": "ATM_new_sales",
+      "status": "absent_on_T1",
+      "ttl_days": 14,
+      "find_path": "Next 10-Q / 8-K: Equity Issuances / ATM activity",
+      "note": "新ATM($150m)の売却実績の逐語なし（確認待ち）",
+      "anchors": [
+        {
+          "quote": "may issue and sell ... up to $150 million",
+          "url": "https://www.sec.gov/Archives/edgar/data/1158114/000110465925084009/tm2523795d2_8k.htm#:~:text=may%20issue%20and%20sell%20shares%20of%20the%20Company%27s%20common%20stock%20...%20having%20an%20aggregate%20offering%20price%20of%20up%20to%20%24150%20million."
+        }
+      ]
     }
-  ]
+  ],
+  "overlays": {
+    "forward_valuation_overlay_axis4": {
+      "evs_actual_today": { 
+        "value": 4.92, 
+        "date": "2025-01-15", 
+        "source": "Yahoo Finance" 
+      },
+      "evs_fair_12m": {
+        "band": "8×",
+        "inputs": {
+          "g_fwd": "+27% (T1: 独立二次×2のコンセンサスで一致)",
+          "opm_fwd": "<0% (T1: 非GAAP赤字レンジ、OPM≥0のT1未出)"
+        }
+      },
+      "fd_pct": 0.385,
+      "star": 5,
+      "confidence": 0.80,
+      "evidence_tag": "T1"
+    }
+  },
+  "decision": {
+    "axis_stars": {
+      "lec": 3
+    },
+    "confidence": {
+      "lec": 0.80
+    },
+    "di": 0.882,
+    "stance": "GO",
+    "size_reco_pct": 1.06
+  }
 }
 

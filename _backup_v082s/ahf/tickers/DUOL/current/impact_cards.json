@@ -60,6 +60,16 @@
         "down": "<0.80"
       },
       "description": "主要プラットフォーム依存度（Apple+Google合計）"
+    },
+    {
+      "id": "credit_facility_strength",
+      "inputs": ["US_revolver_amount", "China_facility_amount", "CZB_terminated"],
+      "expr": "US_revolver_amount > 0 AND China_facility_amount > 0 AND CZB_terminated = true",
+      "gates": {
+        "up": "true",
+        "down": "false"
+      },
+      "description": "資金調達構造の強化（USリボ新設・中国再編・旧契約終了）"
     }
   ]
 }

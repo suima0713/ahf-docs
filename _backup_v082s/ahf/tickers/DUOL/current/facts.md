@@ -321,3 +321,13 @@
 [2025-01-15][T1-F][Core②] "Advertising $20,603" (impact: Q2 Ad Revenue) <Q2 10-Q>
 
 [2025-01-15][T1-F][Core②] "Advertising costs included within Sales and marketing" (impact: Ad Cost Policy) <Q2 10-Q>
+
+[2025-01-15][T1-F][Core①] "The Credit Facility provides… a three-year, $35 million revolving line of credit." (impact: US Credit Facility) <8-K>
+
+[2025-01-15][T1-F][Core①] "entered into… 82,000,000 RMB credit facility／terminated… CZB Credit Line" (impact: China Credit Restructure) <8-K>
+
+## Equity / ATM（新設と実行状況）
+- 新ATM設定："may issue and sell … up to $150 million"
+  https://www.sec.gov/Archives/edgar/data/1158114/000110465925084009/tm2523795d2_8k.htm#:~:text=may%20issue%20and%20sell%20shares%20of%20the%20Company%27s%20common%20stock%20...%20having%20an%20aggregate%20offering%20price%20of%20up%20to%20%24150%20million.
+- 実行状況：**absent_on_T1**（売却実績の逐語なし）／TTL=2025-10-10 JST
+  find_path: 次10-Q/8-K「Equity Issuances / ATM activity」
