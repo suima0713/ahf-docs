@@ -1,0 +1,123 @@
+# AHF v0.8.1-r2 材料テンプレート
+# 固定4軸（①長期EV確度、②長期EV勾配、③現バリュエーション、④将来EVバリュ）対応
+
+meta:
+  asof: YYYY-MM-DD
+  ticker: ""
+  version: "v0.8.1-r2"
+  purpose: "投資判断に直結する固定4軸で評価"
+  mvp: "①②③④の名称と順序を絶対固定／T1 or T1*で確証（不足はn/a）／定型テーブル＋1行要約を即出力"
+
+# ①長期EV確度（LEC）
+lec:
+  inputs:
+    g_fwd: 0.0          # 前方成長率
+    delta_opm_fwd: 0.0   # 前方OPM変化
+    dilution: 0.0        # 希薄化
+    capex_intensity: 0.0 # CapEx強度
+  calculation:
+    formula: "LEC ≈ g_fwd + ΔOPM_fwd − Dilution − Capex_intensity"
+    score: 0.0
+    star_score: 0
+  evidence:
+    level: "T1"          # T1 | T1* | T2
+    sources: []
+    confidence: 0.0
+  direction:
+    prob_up_pct: 0.0
+    prob_down_pct: 0.0
+
+# ②長期EV勾配（NES）
+nes:
+  inputs:
+    next_q_qoq_pct: 0.0      # 次Q q/q%
+    guidance_revision_pct: 0.0 # ガイド改定%
+    backlog_growth_pct: 0.0   # 受注/Backlog増勢%
+    margin_term: 0.0          # Margin_term
+    health_term: 0.0         # Health_term
+  calculation:
+    formula: "NES = 0.5·(次Q q/q%) + 0.3·(ガイド改定%) + 0.2·(受注/Backlog増勢%) + Margin_term + Health_term"
+    score: 0.0
+    star_score: 0
+  evidence:
+    level: "T1"          # T1 | T1* | T2
+    sources: []
+    confidence: 0.0
+  direction:
+    prob_up_pct: 0.0
+    prob_down_pct: 0.0
+
+# ③現バリュエーション（機械）
+current_valuation:
+  inputs:
+    evs_actual_ttm: 0.0
+    evs_peer_median_ttm: 0.0
+    date: ""
+    source: ""
+    peer_set: []
+  calculation:
+    disc_pct: 0.0
+    color: ""           # Green | Amber | Red
+    vmult: 1.0
+  step2:
+    delta_g_pp: 0.0
+    flags_pos: []
+    flags_neg: []
+    verdict: ""
+  evidence:
+    level: "T1"          # T1 | T1* | T2
+    sources: []
+    confidence: 0.0
+  lint:
+    ev_used: true
+    ps_used: false
+    same_day: true
+    same_source: true
+
+# ④将来EVバリュ（総合）
+future_valuation:
+  inputs:
+    evs_actual_today: 0.0
+    g_fwd: 0.0
+    opm_fwd: 0.0
+    rdcf_bands:
+      "10x": 0.10
+      "8x": 0.08
+      "6x": 0.06
+  calculation:
+    evs_fair_12m: 0.0
+    fd_pct: 0.0
+    star_score: 0
+  evidence:
+    level: "T1"          # T1 | T1* | T2
+    sources: []
+    confidence: 0.0
+  direction:
+    prob_up_pct: 0.0
+    prob_down_pct: 0.0
+
+# 証拠階層サマリー
+evidence_summary:
+  total_items: 0
+  t1_count: 0
+  t1star_count: 0
+  t2_count: 0
+  contradiction_count: 0
+
+# データギャップ
+data_gap:
+  lec: false
+  nes: false
+  current_valuation: false
+  future_valuation: false
+  t1: false
+  t1star: false
+
+# ギャップ理由
+gap_reason:
+  lec: ""
+  nes: ""
+  current_valuation: ""
+  future_valuation: ""
+  t1: ""
+  t1star: ""

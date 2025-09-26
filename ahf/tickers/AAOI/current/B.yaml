@@ -1,0 +1,40 @@
+# B｜総合判断（Horizon＋ΔIRR＋KPI×2）
+horizon:
+  6M: {verdict: "GO", ΔIRRbp: 300}
+  1Y: {verdict: "GO", ΔIRRbp: 450}
+  3Y: {verdict: "GO", ΔIRRbp: 600}
+  5Y: {verdict: "GO", ΔIRRbp: 750}
+
+stance:
+  decision: "GO"
+  size: "Med"
+  reason: "800GのH2実出荷見込みとQ3 q/q+17.5%ガイダンスでNESは満点、EV/S≈4.0×でVRGはGreen—量産達成を待たず先行コア採用が合理的。外部整合性（MSFT CapEx増、AWS成長）で地合い強含み"
+
+# 判断ゲート: ①＞②＞③＞④、ΔIRR≥+300–500bp
+decision_gates:
+  structure_quality: "流動性ヘッドルーム拡張（US$35M＋CN枠）。一方、台湾リースで固定費レバー増。8/31リース解約でMIXED調整。★は据え置き→★3"
+  slope_quality: "キャパ確度↑（稼働11/1/25〜）。量産接続でNESの持続性を補強。外部整合性（MSFT CapEx増）で地合い強含み。★据え置き（満点維持）→★5"
+  time_profile: "Amazon需要連動（T1）・ATM/CB条件で認知補助、800G月産10万台能力確保→★4"
+  time_annotation: "色=Green据え置き（EV/S×Ro40に変更なし）。リボ枠は認知補助→★4"
+  irr_threshold: "達成（ΔIRR≥300bp）"
+
+# Holdでも舵を切る（Decision Overlay参照）
+hold_override_gate: "未適用"
+
+# KPI×2固定（質×実行）
+kpi_watch: [2項目]
+  - name: "800g_actual_shipment_commencement"
+    current: "未確証（forward-looking のみ）"
+    target: "実出荷開始を示すT1逐語確認"
+  - name: "amazon_warrant_vesting_progress"
+    current: "10年間$40億購入条件"
+    target: "Amazon購入進捗とベスティング状況"
+
+# 差分管理（必須）
+diff_summary: "800G実出荷開始は未確証（forward-looking のみ）だが、Q3ガイドと資格進展でNESは満点、EV/S≈4.0×でVRGはGreen"
+
+# T1カバレッジ目標
+t1_coverage_targets:
+  6M: "≥70%"
+  1Y: "≥80%"
+  3Y_plus: "≥90%"

@@ -1,0 +1,148 @@
+{
+  "as_of": "2025-09-23",
+  "hypotheses": [
+    {
+      "id": "H1",
+      "hypothesis": "出荷≠売上の時差がQ3で残存",
+      "status": "DEFER",
+      "t1_evidence": "most often upon shipment… or delivery",
+      "t1_url": "https://www.sec.gov/Archives/edgar/data/1158114/000143774925005575/aaoi20241231_10k.htm#:~:text=most%20often%20upon%20shipment%20of%20a%20product%20to%20the%20customer%20or%20delivery",
+      "test_condition": "AR_Q3 ≤ 211.5 − (Rev_Q3 − 103.0) または acceptance不在",
+      "ttl_days": 14,
+      "external_validation": "MIXED",
+      "alpha_reserve": 0.04,
+      "di_impact": 0.0
+    },
+    {
+      "id": "H2′",
+      "hypothesis": "Q4に固定費ステップアップがOPMを圧迫",
+      "status": "RUN",
+      "t1_evidence": "lease term… Nov 1, 2025 to Oct 31, 2040",
+      "t1_url": "https://www.sec.gov/Archives/edgar/data/1158114/000168316825006678/aaoi_8k.htm#:~:text=lease%20term%20is%20for%20fifteen%20(15)%20years%2C%20commencing%20on%20November%201%2C%202025",
+      "test_condition": "Opex/Revenue_Q4 ≥ Q3比 +100bps かつ GMのq/q変化が±50bps以内",
+      "ttl_days": 75,
+      "external_validation": "VALID+",
+      "alpha_reserve": 0.03,
+      "di_impact": 0.0,
+      "external_support": "LITE需要、COHR出荷で勾配の地合い強化"
+    },
+    {
+      "id": "H3",
+      "hypothesis": "800Gヘッドライン近辺でATM第2弾実行",
+      "status": "DEFER",
+      "t1_evidence": "aggregate… up to $150,000,000",
+      "t1_url": "https://www.sec.gov/Archives/edgar/data/1158114/000110465925084005/tm2523795-1_424b5.htm#:~:text=aggregate%20offering%20price%20of%20up%20to%20%24150%2C000%2C000",
+      "test_condition": "ATM sales to date > 0 が8-K/10-Qに出る",
+      "ttl_days": 14,
+      "external_validation": "WEAK",
+      "alpha_reserve": -0.03,
+      "di_impact": 0.0
+    },
+    {
+      "id": "H4′",
+      "hypothesis": "AR集中による回収遅延リスク",
+      "status": "RUN",
+      "t1_evidence": "$171.6M was due from DigiComm",
+      "t1_url": "https://www.sec.gov/Archives/edgar/data/1158114/000143774925025450/aaoi20250630_10q.htm#:~:text=%24171.6%20million%20was%20due%20from%20DigiComm",
+      "test_condition": "DigiComm/AR比 −20pp以上 か 返品引当↑",
+      "ttl_days": 30,
+      "external_validation": "VALID",
+      "alpha_reserve": -0.02,
+      "di_impact": 0.0
+    },
+    {
+      "id": "H5",
+      "hypothesis": "単一/限定供給が量産上限を律速",
+      "status": "DEFER",
+      "t1_evidence": "sole source… single supplier",
+      "t1_url": "https://www.sec.gov/Archives/edgar/data/1158114/000143774925005575/aaoi20241231_10k.htm#:~:text=available%20only%20from%20a%20sole%20source%20or%20have%20been%20qualified%20only%20from%20a%20single%20supplier",
+      "test_condition": "Raw/WIP比 上昇が2Q連続",
+      "ttl_days": 30,
+      "external_validation": "MIXED",
+      "alpha_reserve": -0.05,
+      "di_impact": 0.0,
+      "external_support": "LITE需要、COHR出荷で律速緩和の芽"
+    },
+    {
+      "id": "H6′",
+      "hypothesis": "Ro40高位は低基底に依存（持続性は低下）",
+      "status": "RUN",
+      "t1_evidence": "GAAP revenue was $103.0M… compared with $43.3M",
+      "t1_url": "https://www.sec.gov/Archives/edgar/data/1158114/000168316825005755/aaoi_ex9901.htm#:~:text=GAAP%20revenue%20was%20%24103.0%20million%2C%20compared%20with%20%2443.3%20million",
+      "test_condition": "YoY成長の減速幅 ≥ 50pp（Q2 138% → ≤88%）",
+      "ttl_days": 90,
+      "external_validation": "VALID",
+      "alpha_reserve": -0.05,
+      "di_impact": 0.0
+    }
+  ],
+  "external_validation": {
+    "msft_capex_fy2024": "VALID",
+    "msft_capex_q1_fy2025_guidance": "VALID", 
+    "aws_sales_growth_19pct": "MIXED",
+    "lite_ai_dc_demand": "VALID",
+    "cohr_1_6t_shipment": "VALID",
+    "mrvl_avgo_supply_constraints": "WEAK"
+  },
+  "alpha_reserve_total": -0.08,
+  "di_reflection_status": "pending_test_results",
+  "s3_softoverlay": {
+    "version": "v0.5",
+    "target": "RUN_hypotheses_only",
+    "weights": {
+      "VALID+": 0.60,
+      "VALID": 0.50,
+      "MIXED": 0.30,
+      "WEAK": 0.15
+    },
+    "di_calculation": {
+      "H2′_fixed_cost_opm": {
+        "status": "VALID+",
+        "alpha_base": 0.06,
+        "weight": 0.60,
+        "di_impact": 0.036
+      },
+      "H6′_ro40_base_effect": {
+        "status": "VALID",
+        "alpha_base": -0.05,
+        "weight": 0.50,
+        "di_impact": -0.025
+      },
+      "H4′_ar_concentration": {
+        "status": "VALID",
+        "alpha_base": -0.02,
+        "weight": 0.50,
+        "di_impact": -0.010
+      },
+      "H1_timing_difference": {
+        "status": "MIXED",
+        "alpha_base": 0.04,
+        "weight": 0.30,
+        "di_impact": 0.012
+      },
+      "H5_supply_constraint": {
+        "status": "MIXED",
+        "alpha_base": -0.05,
+        "weight": 0.30,
+        "di_impact": -0.015
+      },
+      "H3_atm_execution": {
+        "status": "WEAK",
+        "alpha_base": -0.03,
+        "weight": 0.15,
+        "di_impact": -0.0045
+      }
+    },
+    "total_softoverlay_di": -0.007,
+    "clipping_applied": false,
+    "reversible": true,
+    "reversal_trigger": "Q3/Q4_T1_Fail"
+  },
+  "data_gaps": [
+    "Q3 PR/8-K EX-99.1（売上・GM・YoY）",
+    "Q3 10-Q（AR、DigiComm、Inventories、Opex）",
+    "ATM sales-to-date記載",
+    "代替ソース認定の逐語（qualified a second source等）"
+  ],
+  "s3_compliance": "PASS"
+}

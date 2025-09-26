@@ -1,0 +1,167 @@
+# AHF v0.8.1-r2 反証テンプレート
+# 固定4軸評価の反証テスト
+
+meta:
+  asof: YYYY-MM-DD
+  ticker: ""
+  version: "v0.8.1-r2"
+  purpose: "投資判断に直結する固定4軸で評価"
+  mvp: "①②③④の名称と順序を絶対固定／T1 or T1*で確証（不足はn/a）／定型テーブル＋1行要約を即出力"
+
+# 固定4テスト
+tests:
+  # ①長期EV確度テスト
+  lec_test:
+    name: "長期EV確度無効化テスト"
+    description: "長期EV確度の前提条件が無効化される場合のテスト"
+    test_type: "time_off"
+    formula: ""
+    threshold: ""
+    result: ""
+    reasoning: ""
+    evidence_level: "T1"
+    ttl_days: 30
+  
+  # ②長期EV勾配テスト
+  nes_test:
+    name: "長期EV勾配遅延テスト"
+    description: "t1+0.5Qでの長期EV勾配の変化テスト"
+    test_type: "delay_plus_0_5Q"
+    formula: ""
+    threshold: ""
+    result: ""
+    reasoning: ""
+    evidence_level: "T1"
+    ttl_days: 30
+  
+  # ③現バリュエーションテスト
+  current_val_test:
+    name: "現バリュエーション整合性テスト"
+    description: "売上↔GM/CF/在庫の整合性テスト"
+    test_type: "alignment_sales_pnl"
+    formula: ""
+    threshold: ""
+    result: ""
+    reasoning: ""
+    evidence_level: "T1"
+    ttl_days: 30
+  
+  # ④将来EVバリュテスト
+  future_val_test:
+    name: "将来EVバリュ整合性テスト"
+    description: "将来EVバリュの前提条件整合性テスト"
+    test_type: "future_val_alignment"
+    formula: ""
+    threshold: ""
+    result: ""
+    reasoning: ""
+    evidence_level: "T1"
+    ttl_days: 30
+
+# Stage-3（半透明α）
+stage3:
+  cards:
+    - id: "S3-001"
+      hypothesis: ""
+      t1_verbatim: ""
+      url_anchor: ""
+      test_formula: ""
+      ttl_days: 30
+      reasoning: ""
+      result: ""
+      reflection: ""
+      star_adjustment: 0
+      di_adjustment: 0.0
+      alpha_adjustment: 0.0
+      evidence_level: "T1"
+      dual_anchor_status: "PENDING_SEC"
+      contradiction_flag: false
+  
+  tests:
+    - id: "S3-TEST-001"
+      card_id: "S3-001"
+      test_type: "single_test"
+      formula: ""
+      threshold: ""
+      result: ""
+      reasoning: ""
+      ttl_days: 30
+      reflection: ""
+      star_adjustment: 0
+      di_adjustment: 0.0
+      alpha_adjustment: 0.0
+  
+  alpha_adjustments:
+    lec_adjustment: 0.0
+    nes_adjustment: 0.0
+    current_val_adjustment: 0.0
+    future_val_adjustment: 0.0
+    total_adjustment: 0.0
+
+# 反証サマリー
+contradiction_summary:
+  total_tests: 0
+  passed_tests: 0
+  failed_tests: 0
+  warning_tests: 0
+  pass_rate: 0.0
+  
+  lec_tests: 0
+  nes_tests: 0
+  current_val_tests: 0
+  future_val_tests: 0
+  
+  stage3_cards: 0
+  stage3_tests: 0
+  stage3_adjustments: 0.0
+
+# 証拠階層
+evidence_ladder:
+  T1:
+    count: 0
+    sources: []
+    domains: []
+  T1_STAR:
+    count: 0
+    sources: []
+    domains: []
+  T2:
+    count: 0
+    sources: []
+    domains: []
+
+# バリデーション結果
+validation:
+  anchor_lint:
+    pass_rate: 0.0
+    status: ""
+  anchor_lint_t1star:
+    pass_rate: 0.0
+    status: ""
+  price_lint:
+    pass_rate: 0.0
+    status: ""
+  math_guard:
+    pass_rate: 0.0
+    status: ""
+  s3_lint:
+    pass_rate: 0.0
+    status: ""
+
+# データギャップ
+data_gap:
+  lec_test: false
+  nes_test: false
+  current_val_test: false
+  future_val_test: false
+  stage3_cards: false
+  stage3_tests: false
+
+# ギャップ理由
+gap_reason:
+  lec_test: ""
+  nes_test: ""
+  current_val_test: ""
+  future_val_test: ""
+  stage3_cards: ""
+  stage3_tests: ""

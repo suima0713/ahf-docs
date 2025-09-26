@@ -1,0 +1,137 @@
+# AHF v0.8.1-r2 総合判断テンプレート
+# 固定4軸評価結果の総合判断
+
+meta:
+  asof: YYYY-MM-DD
+  ticker: ""
+  version: "v0.8.1-r2"
+  purpose: "投資判断に直結する固定4軸で評価"
+  mvp: "①②③④の名称と順序を絶対固定／T1 or T1*で確証（不足はn/a）／定型テーブル＋1行要約を即出力"
+
+# 意思決定
+decision:
+  di_calculation:
+    formula: "DI = (0.6·s2 + 0.4·s1) · Vmult(③)"
+    s1: 0.0              # ①LEC正規化スコア
+    s2: 0.0              # ②NES正規化スコア
+    vmult: 1.0           # ③Vmult
+    di: 0.0              # 最終DI
+  action:
+    verdict: ""          # GO | WATCH | NO-GO
+    threshold: 0.0
+    reasoning: ""
+  size:
+    percentage: 0.0
+    category: ""         # High | Med | Low
+    formula: "Size% ≈ 1.2% × DI"
+  soft_overlay:
+    t1star_bonus: 0.0
+    future_val_overlay: 0.0
+    total_overlay: 0.0
+    t1star_limit: 0.03
+    future_val_limit: 0.05
+
+# 4軸評価結果
+axes_scores:
+  lec:
+    score: 0.0
+    star_score: 0
+    confidence: 0.0
+    evidence_level: "T1"
+  nes:
+    score: 0.0
+    star_score: 0
+    confidence: 0.0
+    evidence_level: "T1"
+  current_valuation:
+    status: ""
+    evs_actual_ttm: 0.0
+    evs_peer_median_ttm: 0.0
+    disc_pct: 0.0
+    color: ""
+    vmult: 1.0
+  future_valuation:
+    status: ""
+    evs_fair_12m: 0.0
+    fd_pct: 0.0
+    star_score: 0
+    confidence: 0.0
+
+# 確信度
+confidence:
+  base: 0.5
+  anchor_lint_boost: 0.0
+  anchor_lint_t1star_boost: 0.0
+  price_lint_boost: 0.0
+  math_guard_boost: 0.0
+  s3_lint_boost: 0.0
+  total: 0.0
+
+# リスク要因
+risk_factors: []
+
+# バリデーション結果
+validation:
+  anchor_lint:
+    pass_rate: 0.0
+    status: ""
+  anchor_lint_t1star:
+    pass_rate: 0.0
+    status: ""
+  price_lint:
+    pass_rate: 0.0
+    status: ""
+  math_guard:
+    pass_rate: 0.0
+    status: ""
+  s3_lint:
+    pass_rate: 0.0
+    status: ""
+
+# 定型テーブル
+summary_table:
+  axes:
+    - name: "①長期EV確度"
+      kpi: "LEC ≈ g_fwd + ΔOPM_fwd − Dilution − Capex_intensity"
+      current_snap: ""
+      star: 0
+      confidence: 0.0
+      market_pricing: ""
+      alpha_opacity: ""
+      direction_pct: 0.0
+    - name: "②長期EV勾配"
+      kpi: "NES = 0.5·(次Q q/q%) + 0.3·(ガイド改定%) + 0.2·(受注/Backlog増勢%) + Margin_term + Health_term"
+      current_snap: ""
+      star: 0
+      confidence: 0.0
+      market_pricing: ""
+      alpha_opacity: ""
+      direction_pct: 0.0
+    - name: "③現バリュエーション"
+      kpi: "EV/S_actual_TTM vs EV/S_peer_median_TTM"
+      current_snap: ""
+      star: 0
+      confidence: 0.0
+      market_pricing: ""
+      alpha_opacity: ""
+      direction_pct: 0.0
+    - name: "④将来EVバリュ"
+      kpi: "FD% = (EVS_fair_12m − EVS_actual_today) / EVS_fair_12m"
+      current_snap: ""
+      star: 0
+      confidence: 0.0
+      market_pricing: ""
+      alpha_opacity: ""
+      direction_pct: 0.0
+
+# 1行要約
+one_line_summary: "DI=0.00 → NO-GO (Size≈0.0%)"
+
+# アクションログ
+action_log: []
+
+# データギャップ
+data_gap: {}
+
+# ギャップ理由
+gap_reason: {}

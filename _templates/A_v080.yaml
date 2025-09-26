@@ -1,0 +1,57 @@
+meta:
+  asof: YYYY-MM-DD
+
+# A｜材料（T1逐語のみ、≤25語）
+# 固定3軸：①長期EV確度 → ②長期EV勾配 → ③バリュエーション＋認知ギャップ
+
+core:
+  # ①長期EV確度（LEC: Long-term EV Certainty）
+  # 目的：どの環境でも生き残り、需要と利益を生み続ける確度
+  # 主要入力（T1）：流動性・負債・希薄化・CapEx強度・運転資本回転・大型契約・コベナンツ等
+  long_term_ev_certainty:
+    liquidity_metrics: []      # 流動性指標（T1逐語≤25語）
+    debt_metrics: []           # 負債指標（T1逐語≤25語）
+    dilution_risk: []          # 希薄化リスク（T1逐語≤25語）
+    capex_intensity: []        # CapEx強度（T1逐語≤25語）
+    working_capital: []        # 運転資本回転（T1逐語≤25語）
+    major_contracts: []        # 大型契約（T1逐語≤25語）
+    covenants: []              # コベナンツ（T1逐語≤25語）
+    lec_score: 0               # ★1-5（LEC≥+20pp→★5／15-20→★4／8-15→★3／3-8→★2／<3→★1）
+    lec_calculation: ""        # LEC ≈ g_fwd + ΔOPM_fwd − Dilution − Capex_intensity
+
+  # ②長期EV勾配（NES: Near-term EV Slope）
+  # 目的：12-24ヶ月の伸び"傾き"（短期加速の手応え）
+  long_term_ev_slope:
+    next_quarter_growth: []    # 次Q q/q%（T1逐語≤25語）
+    guidance_revision: []      # ガイド改定%（T1逐語≤25語）
+    backlog_momentum: []       # 受注/Backlog増勢%（T1逐語≤25語）
+    margin_improvement: []     # GM改善（T1逐語≤25語）
+    health_metrics: []         # Ro40指標（T1逐語≤25語）
+    nes_score: 0               # ★1-5（NES≥+8→★5／+5-8→★4／+2-5→★3／0-2→★2／<0→★1）
+    nes_calculation: ""        # NES = 0.5·(次Q q/q%) + 0.3·(ガイド改定%) + 0.2·(受注/Backlog増勢%) + Margin_term + Health_term
+
+  # ③バリュエーション＋認知ギャップ（Two-Step）
+  # 役割：価格（EV/S_actual）に対する"フェア"との差を測り、その差が将来期待や認知で妥当かを注釈
+  valuation_cognition_gap:
+    # Step-1｜フェアバリュー差（素点）
+    evs_actual: []             # EV/S_actual（Price-Mode：市場データ、日付・出典名必須）
+    evs_peer_median: []       # EV/S_peer_median（T1逐語≤25語）
+    evs_fair_rdcf: []         # EV/S_fair_rDCF（逆DCFライトの帯：T1のg_fwd・OPM_fwdのみ）
+    discount_percentage: 0    # Disc% = (EV/S_fair_base − EV/S_actual) / EV/S_fair_base
+    color_vmult: ""           # Green(1.05)/Amber(0.90)/Red(0.75)
+    
+    # Step-2｜適正性チェック（注釈のみ／色は変えない）
+    expectation_gap: []        # 期待成長の相対差：Δg = g_fwd − g_peer_median（T1逐語≤25語）
+    cognition_flags_pos: []    # 認知フラグ（＋）：ガイダンス上方・実出荷・契約負債↑・ATM未実行・集中低下
+    cognition_flags_neg: []    # 認知フラグ（−）：acceptance要件・在庫滞留・希薄化・集中悪化
+    verdict: ""               # Underpriced/Overpriced/Neutral ×（適正/不適正）
+
+# Fast-Screen判定
+fast_screen_mode: false       # Fast-Screen mode判定フラグ
+
+# 固定ガード
+# - T1逐語のみ使用（Lead/推論禁止）
+# - 価格やマルチプルは①で使用不可
+# - ③ではRo40/GM/OPM/成長を直接指標として使わない（②で反映済）
+# - 逐語≤25語＋#:~:text=必須（PDFはanchor_backup{pageno,quote,hash}）
+

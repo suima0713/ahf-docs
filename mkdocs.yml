@@ -1,0 +1,10 @@
+site_name: AHF Docs
+theme: { name: material }
+docs_dir: docs
+nav:
+  - Overview: index.md
+  - Supplements:
+    - Evidence Ladder: supplements/evidence_ladder/README.md
+    - Price Mode: supplements/price_mode/README.md
+    - Stage-3: supplements/stage3/README.md
+    - Turbo Screen: supplements/turbo_screen/README.md

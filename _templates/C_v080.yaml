@@ -1,0 +1,48 @@
+# C｜反証（固定3テスト）
+# 固定3軸：①長期EV確度 → ②長期EV勾配 → ③バリュエーション＋認知ギャップ
+
+tests:
+  # 〔Time〕無効化テスト
+  time_off: ""
+  
+  # t1+0.5Qテスト
+  delay_plus_0_5Q: ""
+  
+  # 売上↔GM/CF/在庫の整合
+  alignment_sales_pnl: ""
+
+# Stage-3（半透明αの最大化）
+stage3_hypotheses:
+  - id: ""
+    hypothesis: ""            # 仮説（違和感）
+    t1_verbatim: ""          # T1逐語（≤25語）
+    url_anchor: ""           # URL（#:~:text=/anchor_backup）
+    test_formula: ""         # テスト式（四則1行）
+    threshold_result: ""     # 閾値/合否
+    reasoning: ""            # 推論（1段）
+    result: ""               # PASS/FAIL/DEFER/REWRITE
+    ttl_days: 0              # TTL（7–90d）
+    reflection: ""           # 反映（★調整±1内/DI/α±0.08内）
+
+# S3-Lint（最小5チェック）
+s3_lint:
+  l1_verbatim_25w: false     # L1逐語≤25語
+  l2_anchor_present: false  # L2アンカー有り
+  l3_single_formula: false  # L3四則1行
+  l4_ttl_7_90d: false       # L4TTL=7–90d
+  l5_reasoning_1step: false # L5推論≤1段
+  overall_pass: false        # 全体パス
+
+# トリップワイヤ
+tripwires:
+  a3_unexplained: false      # A3_UNEXPLAINED
+  balance_weak: false        # BALANCE_WEAK
+  item1a_change: false       # ITEM1A_CHANGE
+  anchor_fail: false         # ANCHOR_FAIL
+
+# 固定ガード
+# - 反証対象の設定のみ（構造①/傾き②はOverlayに分離）
+# - テスト条件に反映（逆行時にΔIRR記載）
+# - 固定3テストのみ（横論点禁止）
+# - ③にRo40が出たらFAIL／③はPM+rDCF以外NG／Price-Modeは日付＋出典必須
+

@@ -1,0 +1,11 @@
+guards:
+  gm_bps_max_abs: 50     # ±0.5pp
+  residual_gp_usd_max: 12000000
+  alpha5_grid_min: -2500000
+admission:
+  edge_p_min: 60
+  ttl_days_max: 14
+confidence:
+  boost_pp_max: 10
+  clip_min: 45
+  clip_max: 95

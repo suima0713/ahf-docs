@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "valuation_overlay (Axis ③)",
+  "type": "object",
+  "properties": {
+    "evs_actual_ttm": {"type": "object", "properties": {
+      "value":{"type":"number"}, "date":{"type":"string"}, "source":{"type":"string"}
+    }, "required":["value","date","source"]},
+    "evs_peer_median_ttm": {"type": "object", "properties":{
+      "value":{"type":"number"}, "date":{"type":"string"}, "source":{"type":"string"}, "peer_set":{"type":"array","items":{"type":"string"}}
+    }, "required":["value","date","source","peer_set"]},
+    "disc_pct":{"type":"number"},
+    "color":{"enum":["Green","Amber","Red"]},
+    "vmult":{"type":"number"},
+    "lint":{"type":"object","properties":{
+      "ev_used":{"type":"boolean"},"ps_used":{"type":"boolean"},"same_day":{"type":"boolean"},"same_source":{"type":"boolean"}
+    }, "required":["ev_used","ps_used","same_day","same_source"]},
+    "step2":{"type": "object","properties":{
+      "dg_pp":{"type":"string"},"flags_pos":{"type":"array","items":{"type":"string"}},"flags_neg":{"type":"array","items":{"type":"string"}},"verdict":{"type":"string"}
+    }}
+  },
+  "required": ["evs_actual_ttm","evs_peer_median_ttm","disc_pct","color","vmult","lint"]
+}

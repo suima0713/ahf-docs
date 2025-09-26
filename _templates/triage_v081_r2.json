@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "asof": "YYYY-MM-DD",
+    "ticker": "",
+    "version": "v0.8.1-r2",
+    "purpose": "投資判断に直結する固定4軸で評価",
+    "mvp": "①②③④の名称と順序を絶対固定／T1 or T1*で確証（不足はn/a）／定型テーブル＋1行要約を即出力"
+  },
+  "CONFIRMED": [
+    {
+      "id": "T1-001",
+      "kpi": "LEC",
+      "value": 0.15,
+      "unit": "decimal",
+      "asof": "YYYY-MM-DD",
+      "tag": "T1-core",
+      "url": "https://sec.gov/edgar/...#:~:text=Free%20cash%20flow",
+      "verbatim": "Free cash flow $150M for the quarter.",
+      "source_domain": "sec.gov",
+      "evidence_level": "T1",
+      "ttl_days": 14,
+      "dual_anchor_status": "APPROVED",
+      "contradiction_flag": false
+    }
+  ],
+  "UNCERTAIN": [
+    {
+      "id": "U-001",
+      "kpi": "NES",
+      "status": "blocked_source",
+      "url_index": "https://investor.company.com/...",
+      "reason": "EDGAR障害",
+      "ttl_days": 7,
+      "grace_until": "YYYY-MM-DD",
+      "priority": "high",
+      "next_action": "再試行",
+      "related_impact": "NES計算不可"
+    }
+  ],
+  "T1_STAR": [
+    {
+      "id": "T1STAR-001",
+      "kpi": "Current_Val",
+      "value": 15.2,
+      "unit": "multiple",
+      "asof": "YYYY-MM-DD",
+      "tag": "T1*-core",
+      "url": "https://investor.company.com/...#:~:text=EV%20multiple",
+      "verbatim": "EV multiple of 15.2x based on TTM revenue.",
+      "source_domain": "investor.company.com",
+      "evidence_level": "T1*",
+      "two_sources": true,
+      "independent": true,
+      "ttl_days": 14,
+      "dual_anchor_status": "PENDING_SEC",
+      "contradiction_flag": false
+    }
+  ],
+  "CONTRADICTION": [
+    {
+      "id": "CONTRADICT-001",
+      "kpi": "LEC",
+      "conflicting_items": ["T1-001", "T1-002"],
+      "description": "LEC計算で矛盾する値が発見",
+      "resolution": "pending",
+      "ttl_days": 7,
+      "impact": "LEC計算停止"
+    }
+  ],
+  "evidence_summary": {
+    "total_items": 0,
+    "t1_count": 0,
+    "t1star_count": 0,
+    "t2_count": 0,
+    "uncertain_count": 0,
+    "contradiction_count": 0,
+    "pending_sec_count": 0,
+    "approved_sec_count": 0
+  },
+  "data_gap": {
+    "lec": false,
+    "nes": false,
+    "current_valuation": false,
+    "future_valuation": false,
+    "t1": false,
+    "t1star": false,
+    "t2": false
+  },
+  "gap_reason": {
+    "lec": "",
+    "nes": "",
+    "current_valuation": "",
+    "future_valuation": "",
+    "t1": "",
+    "t1star": "",
+    "t2": ""
+  },
+  "ttl_tracking": {
+    "expired_items": [],
+    "expiring_soon": [],
+    "grace_period_items": []
+  }
+}

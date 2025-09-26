@@ -1,0 +1,92 @@
+{
+  "as_of": "2025-09-23",
+  "decision": "WATCH",
+  "di_base": 0.65,
+  "di_high": 0.86,
+  "di_low": 0.41,
+  "valuation_status": "PENDING",
+  "reason": "ATMで資金厚み、無担保枠・旧枠整理、Q3 q/q+17.5%＋800G量産接近で勾配強化も、EV/S×Ro40未確定のためエントリー判断は色確定待ち",
+  "axis_scores": {
+    "axis1_long_term_ev_certainty": {
+      "score": 3,
+      "confidence": 0.68,
+      "market_embedded": "部分織込み",
+      "alpha_opacity": "中",
+      "up_down_ratio": "58/42"
+    },
+    "axis2_long_term_ev_gradient": {
+      "score": 4,
+      "confidence": 0.70,
+      "market_embedded": "一部未織込み",
+      "alpha_opacity": "中",
+      "up_down_ratio": "65/35"
+    },
+    "axis3_valuation_cognitive_gap": {
+      "score": 2,
+      "confidence": 0.55,
+      "market_embedded": "価格主導",
+      "alpha_opacity": "高",
+      "up_down_ratio": "50/50"
+    }
+  },
+  "scenario_analysis": {
+    "base": {
+      "revenue": "n/a",
+      "opm_gaap": "n/a",
+      "ro40": "n/a",
+      "s1_s2": "3/4",
+      "di": 0.65,
+      "v_multiplier": 0.90
+    },
+    "high": {
+      "revenue": "n/a",
+      "opm_gaap": "n/a",
+      "ro40": "n/a",
+      "s1_s2": "4/5",
+      "di": 0.86,
+      "v_multiplier": 1.05
+    },
+    "low": {
+      "revenue": "n/a",
+      "opm_gaap": "n/a",
+      "ro40": "n/a",
+      "s1_s2": "2/3",
+      "di": 0.41,
+      "v_multiplier": 0.75
+    }
+  },
+  "key_factors": {
+    "atm_completion": "completed the ATM Offering… $98M",
+    "credit_facility": "obligations… are unsecured",
+    "old_facility_termination": "terminated the agreements… CZB",
+    "q3_guidance": "Revenue $115–$127M（Q3'25）",
+    "q2_revenue": "GAAP revenue was $103.0M",
+    "800g_timeline": "meaningful shipments of 800G… H2'25",
+    "revenue_recognition": "revenue recognition… most often upon shipment",
+    "customer_concentration": "top ten customers represented 95%"
+  },
+  "data_gaps": {
+    "ev_s_calculation": {
+      "reason": "EV/S算出用の最新現金・有利子負債（Q2'25 10-Q）とGAAP OPM（四半期ベース）が未取得",
+      "ttl_hours": 72,
+      "status": "UNCERTAIN"
+    },
+    "backlog_proxy_kpis": {
+      "reason": "Δ在庫・ΔA/R・契約負債）Q2→Q3の連続系列未取得",
+      "ttl_hours": 72,
+      "status": "UNCERTAIN"
+    }
+  },
+  "price_mode": {
+    "stock_price": 30.54,
+    "shares_outstanding": 62.37,
+    "currency": "USD",
+    "date": "2025-09-23",
+    "ev_calculation_status": "PENDING"
+  },
+  "next_milestones": [
+    "EV/S×Ro40の確定",
+    "800G実出荷のT1逐語確認",
+    "GAAP OPM改善の実績確認"
+  ]
+}

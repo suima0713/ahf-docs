@@ -1,0 +1,4 @@
+vendor,ev_formula,ttm_sales_def,time_basis,notes
+Yahoo,MC+Debt+Pref+Minority-Cash,Sum(last4Q revenue),ET close,Key Statistics基準
+WSJ,MC+Debt- Cash,Reported TTM,ET close,定義差は備考で明示
+YCharts,Reported EV,Reported TTM,ET close,EVとTTMのスナップ時点差に注意

@@ -1,0 +1,79 @@
+# B｜総合判断（Horizon＋ΔIRR＋KPI×2）
+# 固定3軸：①長期EV確度 → ②長期EV勾配 → ③バリュエーション＋認知ギャップ
+
+horizon:
+  6M: {verdict: "", ΔIRRbp: }
+  1Y: {verdict: "", ΔIRRbp: }
+  3Y: {verdict: "", ΔIRRbp: }
+  5Y: {verdict: "", ΔIRRbp: }
+
+# 意思決定（Decision-Wired）
+decision:
+  # 正規化：s1=①★/5、s2=②★/5
+  # 合成：DI = (0.6·s2 + 0.4·s1) · Vmult（Vmultは③Step-1の色で決定）
+  di_score: 0.0               # Decision Index（0.0-1.0）
+  s1_score: 0.0              # ①長期EV確度の正規化スコア（★/5）
+  s2_score: 0.0              # ②長期EV勾配の正規化スコア（★/5）
+  vmult: 1.0                  # ③バリュエーションのVmult（Green1.05/Amber0.90/Red0.75）
+  
+  # アクション：GO ≥0.55｜WATCH 0.32–0.55｜NO-GO <0.32
+  action: ""                  # GO/WATCH/NO-GO
+  size_percentage: 0.0        # Size% ≈ 1.2% × DI
+  size_category: ""          # Low/Med/High
+
+# SoftOverlay（半透明α）
+soft_overlay:
+  enabled: false             # 任意・可逆で合算±0.08にクリップ
+  adjustment: 0.0            # ±0.08以内の調整値
+  reason: ""                  # 調整理由
+  reversible: true           # 可逆性
+
+# 判断ゲート: ①＞②＞③、ΔIRR≥+300–500bp
+decision_gates:
+  lec_quality: ""            # ①長期EV確度（要旨1行）
+  nes_quality: ""            # ②長期EV勾配（要旨1行）
+  valuation_gap: ""           # ③バリュエーション＋認知ギャップ（要旨1行）
+  irr_threshold: ""           # ΔIRR≥+300–500bp
+
+# Holdでも舵を切る（Decision Overlay参照）
+hold_override_gate: "S高×Q中以上×ΔIRR≥+700bp → Pilot Buy（1/4）"
+
+# KPI×2固定（質×実行）
+kpi_watch: [2項目]
+  - name: "coverage_ratio"
+    current: 
+    target: "RPO≤12M / FY26 mid"
+  - name: "contract_liabilities_roll"
+    current: 
+    target: "match"
+
+# Turbo Screen（オーバーレイ：最小差分）
+turbo_screen:
+  enabled: false             # Edge採用 P≥60（CoreはP≥70）
+  ttl_days: 14              # TTL ≤14日
+  contradiction_flag: false # 矛盾フラグtrueは除外
+  star_adjustment: 0         # Screen★は±2★まで（Coreは±1★）
+  confidence_boost: 0        # ±10ppを1回（Coreは±5pp）、クリップ45-95%
+  
+  # 数理ガード（Screenのみ緩和）
+  math_guards:
+    gm_deviation: 0.5        # GM乖離 ≤0.5pp（Core 0.2pp）
+    residual_gp: 12.0        # 残差GP ≤$12M（Core $8M）
+    alpha5_grid: -2.5        # α5格子 ≤−$2.5M（Core −$3〜−$5M）
+
+# アンカー運用
+anchor_management:
+  dual_anchor_status: ""     # CONFIRMED｜PENDING_SEC｜SINGLE
+  primary_source: "SEC"      # primary=SEC、secondary=IR
+  secondary_source: "IR"     # SEC未取得時はIR一次→PENDING_SEC（TTL≤7日）
+  ttl_days: 7               # TTL≤7日→後日SECでCONFIRMED
+
+# 差分管理（必須）
+diff_summary: ""             # 何が・どれだけ・いつ
+
+# T1カバレッジ目標
+t1_coverage_targets:
+  6M: "≥70%"
+  1Y: "≥80%"
+  3Y_plus: "≥90%"
+

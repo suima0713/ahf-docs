@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Evidence Tags",
+  "type": "object",
+  "properties": {
+    "evidence_tag": {
+      "enum": ["T1", "T1*", "T2"]
+    },
+    "dual_anchor_status": {
+      "enum": ["CONFIRMED", "PENDING_SEC", "SINGLE", "T1*"]
+    },
+    "anchor_backup": {
+      "type": "object",
+      "properties": {
+        "pageno": {"type": "integer"},
+        "quote": {"type": "string", "maxLength": 200},
+        "hash": {"type": "string"}
+      },
+      "required": ["pageno", "quote", "hash"]
+    }
+  },
+  "required": ["evidence_tag"]
+}
