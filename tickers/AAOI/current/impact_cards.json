@@ -1,0 +1,22 @@
+{
+  "cards": [
+    {
+      "id": "nes_calculation",
+      "inputs": ["Q3_guidance_mid", "Q2_actual", "Q3_gross_margin_guidance", "Q2_gross_margin_actual", "800G_timeline"],
+      "expr": "0.5*((Q3_guidance_mid-Q2_actual)/Q2_actual*100) + 0.3*0 + 0.2*0 + Margin_term + Health_term",
+      "gates": { "up": ">=8", "down": "<5" }
+    },
+    {
+      "id": "lec_achievement",
+      "inputs": ["A_R_trend", "DOH_trend", "CL_trend", "concentration_trend"],
+      "expr": "achievement_count(A_R_trend, DOH_trend, CL_trend, concentration_trend)",
+      "gates": { "up": ">=3", "down": "<2" }
+    },
+    {
+      "id": "discount_absolute",
+      "inputs": ["fair_band", "EVS_today"],
+      "expr": "(fair_band - EVS_today) / fair_band",
+      "gates": { "up": ">=0.20", "down": "<0.10" }
+    }
+  ]
+}

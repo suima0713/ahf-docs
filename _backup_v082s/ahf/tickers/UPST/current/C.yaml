@@ -1,4 +1,0 @@
-tests:
-  time_off: "Warehouse advance rate redaction persists despite maturity extensions and margin improvements"          # 〔Time〕無効化テスト
-  delay_plus_0_5Q: "Forward-flow covenant terms remain unresolved despite warehouse facility updates"   # t1+0.5Qテスト
-  alignment_sales_pnl: "Warehouse capacity expansion vs. operating cash flow negative trend in H1 2025" # 売上↔GM/CF/在庫の整合

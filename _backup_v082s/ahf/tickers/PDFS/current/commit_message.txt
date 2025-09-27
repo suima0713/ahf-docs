@@ -1,5 +1,0 @@
-feat(stage2): adopt Deep-first with interrupts
-- α3/α5 並列＋最小アンカー化、WATCHは必要時のみ
-- α3 FAILでも同一Q MD&Aの非ミックス1文があれば PASS_EXPLAINED
-- EBITDA 欠落時は OI+D&A（floor $5M）で α5 実行
-- Interrupt ログ（A3_UNEXPLAINED, BALANCE_WEAK, ITEM1A_CHANGE, ANCHOR_FAIL）を記録

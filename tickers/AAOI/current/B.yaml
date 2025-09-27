@@ -1,0 +1,19 @@
+# B｜結論&Horizon&KPI×2
+horizon:
+  6M: {verdict: "GO", ΔIRRbp: 300}
+  1Y: {verdict: "GO", ΔIRRbp: 450}
+  3Y: {verdict: "GO", ΔIRRbp: 600}
+  5Y: {verdict: "GO", ΔIRRbp: 750}
+
+stance:
+  decision: "GO"
+  size: "Med"
+  reason: "800GのH2実出荷見込みとQ3 q/q+17.5%ガイダンスでNESは満点、EV/S≈4.0×でVRGはGreen—量産達成を待たず先行コア採用が合理的"
+
+kpi_watch: [2項目]
+  - name: "800g_actual_shipment_commencement"
+    current: "未確証（forward-looking のみ）"
+    target: "実出荷開始を示すT1逐語確認"
+  - name: "amazon_warrant_vesting_progress"
+    current: "10年間$40億購入条件"
+    target: "Amazon購入進捗とベスティング状況"

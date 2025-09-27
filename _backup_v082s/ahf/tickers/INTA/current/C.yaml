@@ -1,4 +1,0 @@
-tests:
-  time_off: "「〔Time〕=FY25期末」→妥当（直近10-K/IR）。"
-  delay_plus_0_5Q: "次四半期で橋渡し/契約負債の追加定量を再点検。"
-  alignment_sales_pnl: "Test: (RPO≤12M / Guidance) in [0.6, 1.1] → PASS（0.77）。次QでRPO・繰延の再観測。"

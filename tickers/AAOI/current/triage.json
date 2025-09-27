@@ -1,0 +1,57 @@
+{
+  "as_of": "2025-09-27",
+  "CONFIRMED": [
+    {
+      "kpi": "Q3_revenue_guidance",
+      "value": "115-127",
+      "unit": "million_usd",
+      "asof": "2025-09-27",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1158114/000168316825005755/aaoi_ex9901.htm#:~:text=Revenue%20in%20the%20range%20of%20%24115%20million%20to%20%24127%20million"
+    },
+    {
+      "kpi": "Q2_revenue_actual",
+      "value": "103.0",
+      "unit": "million_usd",
+      "asof": "2025-09-27",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1158114/000168316825005755/aaoi_ex9901.htm#:~:text=GAAP%20revenue%20was%20%24103.0%20million"
+    },
+    {
+      "kpi": "Q2_gross_margin",
+      "value": "30.4",
+      "unit": "percent",
+      "asof": "2025-09-27",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1158114/000168316825005755/aaoi_ex9901.htm#:~:text=Non%2DGAAP%20gross%20margin%20was%2030.4%25"
+    },
+    {
+      "kpi": "800G_shipment_timeline",
+      "value": "H2 2025",
+      "unit": "timeframe",
+      "asof": "2025-09-27",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1158114/000168316825005755/aaoi_ex9901.htm#:~:text=meaningful%20shipments%20of%20800G"
+    },
+    {
+      "kpi": "customer_concentration",
+      "value": "98",
+      "unit": "percent",
+      "asof": "2025-09-27",
+      "tag": "T1-core",
+      "url": "https://www.sec.gov/Archives/edgar/data/1158114/000143774925025450/aaoi20250630_10q.htm#:~:text=top%20ten%20customers%20represented%2098%25%20of%20our%20revenue"
+    }
+  ],
+  "UNCERTAIN": [
+    {
+      "kpi": "800G_actual_shipment_start",
+      "status": "not_found",
+      "url_index": "forward-lookingのみ、実績未確認"
+    },
+    {
+      "kpi": "amazon_warrant_vesting_progress",
+      "status": "not_found",
+      "url_index": "条件は確認済み、進捗は未開示"
+    }
+  ]
+}
